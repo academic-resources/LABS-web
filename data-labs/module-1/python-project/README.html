@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png" alt="IronHack Logo" /><figcaption aria-hidden="true">IronHack Logo</figcaption>
+</figure>
+<h1 id="project-escape-room-python-game">Project: Escape Room Python Game</h1>
+<h2 id="overview">Overview</h2>
+<p>The goal of this project is for you to apply the Python programming skills you have learned this week in solving a real problem. We present you the design of a classic game that can be played via text - Escape Room. Your goal is to develop the game using Python based on the game design.</p>
+<p>Read the game narratives and technical requirements carefully. Plan how you will achieve your goal with pseudo codes and/or flowchart. Review the logic and process in order to avoid potential errors. Then implement with Python code. After that, test your code several times with different inputs and make sure it’s rock solid. The instructional team is standing by to help you in case you run into any problems.</p>
+<hr />
+<h2 id="game-design">Game Design</h2>
+<h3 id="game-map">Game Map</h3>
+<figure>
+<img src="escape-room-plan.jpg" alt="Game Map" /><figcaption aria-hidden="true">Game Map</figcaption>
+</figure>
+<h3 id="game-narratives">Game Narratives</h3>
+<h4 id="game-room">Game Room</h4>
+<p>You wake up on a couch and find yourself in a strange house with no windows which you have never been to before. You don’t remember why you are here and what had happened before. You feel some unknown danger is approaching and you must get out of the house, NOW!</p>
+<p>You are now in game room.</p>
+<p>What would you like to do?</p>
+<p>You explore the room. This is Game Room. You find couch, piano, and Door A.</p>
+<p>You examine couch. There isn’t anything interesting about it.</p>
+<p>You examine Door A. It is locked but you don’t have the key.</p>
+<p>You examine piano. You find key for Door A.</p>
+<p>You examine Door A. Your unlock it with a key you have.</p>
+<p>Do you want to go to the next room?</p>
+<h4 id="bedroom-1">Bedroom 1</h4>
+<p>You are now in Bedroom 1.</p>
+<p>What would you like to do?</p>
+<p>You explore the room. This is Bedroom 1. You find queen bed, Door A, Door B, and Door C.</p>
+<p>You examine queen bed. You find key for Door B.</p>
+<p>You examine Door C. It is locked but you don’t have the key.</p>
+<p>You examine Door B. Your unlock it with a key you have.</p>
+<p>Do you want to go to the next room?</p>
+<h4 id="bedroom-2">Bedroom 2</h4>
+<p>You are now in Bedroom 2.</p>
+<p>What would you like to do?</p>
+<p>You explore the room. This is Bedroom 2. You find double bed, dresser, and Door B.</p>
+<p>You examine double bed. You find key for Door C.</p>
+<p>You examine dresser. You find key for Door D.</p>
+<p>You examine Door B. Your unlock it with a key you have.</p>
+<p>Do you want to go to the next room?</p>
+<h4 id="bedroom-1-1">Bedroom 1</h4>
+<p>You are now in Bedroom 1.</p>
+<p>What would you like to do?</p>
+<p>You examine Door C. Your unlock it with a key you have.</p>
+<p>Do you want to go to the next room?</p>
+<h4 id="living-room">Living Room</h4>
+<p>You are now in Living Room.</p>
+<p>What would you like to do?</p>
+<p>You explore the room. This is Living Room. You find dining table, Door C, and Door D.</p>
+<p>You examine Door D. Your unlock it with a key you have.</p>
+<p>Do you want to go to the next room?</p>
+<h4 id="outside">Outside</h4>
+<p>Congrats! You escaped the room!</p>
+<hr />
+<h2 id="getting-started">Getting Started</h2>
+<p>Overwhelmed and don’t know where to start? This is a touch challenge we know. But don’t worry. We have included a working example for you to reference in which only 1 room (game room) is included. Read the example and make sure you understand it. Then you can expand on top of the example to code the rest of the rooms.</p>
+<p>The provided example is just a Minimal Viable Product (MVP). It is fully functional but not bullet proof. You should be aware of its limitations while you are working and try to make your final product as robust as possible.</p>
+<h2 id="technical-requirements">Technical Requirements</h2>
+<ul>
+<li><p>Use Python lists and dictionaries to define the rooms, items, and relations of them.</p></li>
+<li><p>Use a Python dictionary to store the game state. Update the state dictionary when progresses are made such as a key is collected.</p></li>
+<li><p>Use Python functions to play the game. Don’t use procedural code.</p></li>
+<li><p>After completing each game action, call the next function to continue playing until the winning condition is reached.</p></li>
+<li><p>The winning condition is for the player to successfully make to the “Outside” room. When this happens, congrat the player and end the game.</p></li>
+</ul>
+<h2 id="necessary-deliverables">Necessary Deliverables</h2>
+<p>The following deliverables should be pushed to your Github repo.</p>
+<ul>
+<li><code>main.ipynb</code> that contains your solution.</li>
+</ul>
+<h2 id="suggested-ways-to-get-started">Suggested Ways to Get Started</h2>
+<ol type="1">
+<li><p>Start Jupyter Notebook from this lab directory.</p></li>
+<li><p>Launch <code>sample-code.ipynb</code> and read through the file. Also execute the code and play the game. Make sure you understand what each line of the codes does.</p></li>
+<li><p>Create <code>main.ipynb</code> and copy the codes from <code>sample-code.ipynb</code>. Expand the code following the example to create Bedroom 1.</p></li>
+<li><p>Test the game with Game Room and Bedroom 1. Make sure everything works then work on Bedroom 2 then Living Room.</p></li>
+<li><p>Test the whole game. Try to make all kinds of inputs to make sure your game is rock solid and will not break.</p></li>
+</ol>
+</body>
+</html>

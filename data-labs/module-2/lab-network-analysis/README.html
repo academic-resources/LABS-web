@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png" alt="IronHack Logo" /><figcaption aria-hidden="true">IronHack Logo</figcaption>
+</figure>
+<h1 id="lab-network-analysis">Lab: Network Analysis</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Network analysis (also called graph analysis) is a very important, very useful, but often underrated part of data analytics. Its primary purpose is to examine relationships between entities. One of the most obvious targets for network analysis are social networks, where the entities are people and the relationships between them are based on whether someone is friends with (or has followed) someone else.</p>
+<p>However, only applying network analysis to social networks is limiting and merely scratches the surface of what you can do with it. Networks are actually ubiquitous: they are everywhere. Look around you. Every object you see is an entity, and they can be connected to each other as part of a network based on anything they have in common - whether or not they belong to you, they are electronic, they are writing instruments, they are furniture, they are located in the same room, etc. When you practice thinking about connections in this way, then you start to see networks everywhere. This is the type of thinking you should utilize when analyzing networks.</p>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>Understand the basics of network/graph analysis</li>
+<li>Build graphs from scratch using the Python Networkx library</li>
+<li>Compute graph statistics and conduct basic network analysis</li>
+<li>Create graphs from existing data in pandas data frames</li>
+<li>Create data visualizations from network data</li>
+<li>Perform deeper analysis of network graphs</li>
+<li>Understand how to incorporate network analysis in your final project</li>
+</ul>
+<h2 id="graph-theory-and-network-composition">Graph Theory and Network Composition</h2>
+<p><a href="https://en.wikipedia.org/wiki/Graph_theory">Graph theory</a> is the study of mathematical structures called graphs which model the pairwise relationships between entities. Graph theory provides us with a mathematical foundation and tools with which we can analyze networks, since networks are essentially constructed from relationships between pairs of entities.</p>
+<p>Whenever we define a graph, we define it in terms of its <em>nodes</em> and <em>edges</em>, and visually, they look like the image below. The nodes in the graph represent the entities in our network and the edges are visualized as lines that connect nodes where a relationship exists between the entities they represent.</p>
+<figure>
+<img src="./images/graph-nodes-and-edges.png" alt="Graph Nodes and Edges" /><figcaption aria-hidden="true">Graph Nodes and Edges</figcaption>
+</figure>
+<p>There are also two main types of graphs:</p>
+<ul>
+<li><strong>Directed</strong> - there is a direction to the relationship (e.g. Person A follows Person B).</li>
+<li><strong>Undirected</strong> - the relationship is nondirectional (e.g. Person A and Person B are friends).</li>
+</ul>
+<p><a href="https://networkx.github.io/documentation/stable/">Networkx</a> is a Python library for performing network analysis. It has a variety of methods for building graph objects, computing graph statistics, running algorithms on them, and even visualizing them.</p>
+<p>If you don’t already have Networkx installed, you can pip install it as follows.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip install networkx</span></code></pre></div>
+<p>Once it is installed, you can import it as follows. It is typically aliased to <code>nx</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> networkx <span class="im">as</span> nx</span></code></pre></div>
+<p>From there, you can create a graph by using the <code>Graph</code> method.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>G <span class="op">=</span> nx.Graph()</span></code></pre></div>
+<p>Once the graph is created, you can add nodes and edges to the graph using the respective <code>add_node</code> and <code>add_edge</code> methods.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>G.add_node(<span class="dv">1</span>)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>G.add_nodes_from([<span class="dv">2</span>, <span class="dv">3</span>])</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>G.add_edge(<span class="dv">1</span>, <span class="dv">2</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>G.add_edges_from([(<span class="dv">1</span>, <span class="dv">2</span>), (<span class="dv">1</span>, <span class="dv">3</span>)])</span></code></pre></div>
+<p>These topics are covered in greater detail in the following tutorial and in the Networkx documentation:</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=HkbMUrgzwMs">PyCon 2018: Network Analysis Made Simple, Part 1 Tutorial</a></li>
+<li><a href="https://networkx.github.io/documentation/stable/tutorial.html">Networkx Documentation Tutorial</a></li>
+</ul>
+<p>You are highly encouraged to watch the <em>Network Analysis Made Simple</em> tutorial and work through the examples in the <em>Networkx Documentation Tutorial</em> so that you gain a solid understanding of network composition and some practice creating graphs with the Networkx library.</p>
+<p>You should also try to complete the exercises in the <em>Networkx Basics Notebook</em> (up until the Tests section) that accompanies the <em>Network Analysis Made Simple</em> tutorial:</p>
+<ul>
+<li><a href="https://github.com/ericmjl/Network-Analysis-Made-Simple/blob/master/2-networkx-basics-student.ipynb">Network Analysis Made Simple: Networkx Basics Notebook</a></li>
+</ul>
+<h2 id="analyzing-networks">Analyzing Networks</h2>
+<p>Once we have a built a graph, we can begin to analyze the properties of the network. Two of the basic things we would want to know about a graph is its <em>order</em> (number of nodes) and <em>size</em> (number of edges). We can calculate those with Networkx using the <code>order</code> or <code>number_of_nodes</code> methods to get the total nodes and the <code>size</code> or <code>number_of_edges</code> methods to get the total edges.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>G.order()</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>G.number_of_nodes()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>G.size()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>G.number_of_edges()</span></code></pre></div>
+<p>There are a few other important statistics that we would want to know about a graph that Networkx can compute for us. For example, each node in a graph has a <em>degree</em>, or the number of nodes you can reach from that node by traversing along the edges of the graph (jumping from one node to other connected nodes). The <em>average degree</em> of the graph tells you the average number of nodes that can be reached from a node in the graph and is a measure of how connected your graph is. We can retrieve the degree for each node in a graph by calling the <code>degree</code> method, so obtaining the average degree is just a matter of summing up all the degree values and then dividing by the number of nodes in the graph.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="bu">sum</span>(<span class="bu">dict</span>(G.degree()).values())<span class="op">/</span>G.order()</span></code></pre></div>
+<p>A related metric is the <em>density</em> of the graph, which is calculated by dividing the average degree (computed above) by the number of nodes in the graph. This tells us the percentage of the graph that can be reached by the average node. It can be calculated easily by calling Networkx’s <code>density</code> method.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>nx.density(G)</span></code></pre></div>
+<p>There are a couple other graph statistics you should know about: <em>diameter</em> and <em>average distance</em>. However, these statistics are only applicable when you have a <em>completely connected graph</em> or one where all nodes can reach all other nodes. When this is the case, the diameter of the graph tells you the what the longest path in the network is, or the maximum number of nodes you’ll encounter getting between two nodes. Average distance is simply the average number of nodes you’ll encounter getting between two nodes. Both can be computed as follows.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>nx.diameter(G)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>nx.average_shortest_path_length(G)</span></code></pre></div>
+<h3 id="node-centrality-metrics">Node Centrality Metrics</h3>
+<p>In addition to calculating statistics that inform us about the properties of the graph as a whole, we can compute centrality metrics that tell us which nodes are most important and influential. Networkx comes with a variety of centrality metrics such as betweenness, closeness, eigenvector, degree, and pagerank. Each of these metrics calculate node importance slightly differently.</p>
+<p>Betweenness centrality tells us which nodes in our network are likely pathways for information. Closeness centrality measures node reach or how fast information would spread from that node to other nodes. Degree centrality is a measure of popularity based on a node’s degree. Eigenvector centrality measures related influence or who is closest to the most important nodes in the network. PageRank centrality is a variant of Eigenvector centrality that uses edges from other important nodes as a measure of a node’s importance.</p>
+<p>Each of these centrality measures can be obtained for each node in a graph as follows.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>betweenness <span class="op">=</span> nx.betweenness_centrality(G, weight<span class="op">=</span><span class="st">&#39;edge&#39;</span>)</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>closeness <span class="op">=</span> nx.closeness_centrality(G, distance<span class="op">=</span><span class="st">&#39;edge&#39;</span>)</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>eigenvector <span class="op">=</span> nx.eigenvector_centrality_numpy(G)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>degree <span class="op">=</span> nx.degree_centrality(G)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>pagerank <span class="op">=</span> nx.pagerank(G)</span></code></pre></div>
+<h2 id="building-and-analyzing-graphs-from-tabular-data">Building and Analyzing Graphs from Tabular Data</h2>
+<p>In order to perform network analysis, we need to have our data structured in a way that shows pairwise entity relationships. We mentioned earlier that networks are everywhere. If that is true, we should be able to create a network from just about any data set. So how do we convert an ordinary, tabular data set into graph format?</p>
+<p>When data is structured in a tabular format, the rows typically represent either entities, transactions, or interactions and the columns usually represent attributes or features of whatever the rows represent. This gives us three potential things we can analyze from a network perspective:</p>
+<ul>
+<li>Entities</li>
+<li>Relationships</li>
+<li>Transactions or Interactions</li>
+</ul>
+<h3 id="rows-represent-transactions-or-interactions">Rows Represent Transactions or Interactions</h3>
+<p>When rows represent transactions or interactions, they often have both parties of the transaction identified, so we can derive relationships directly from those. Examples of these types of data sets can include communication records, marketplace transactions, social media interactions, and other types of records where there are two parties. The relationships attributes for these records are the transaction attributes and they are sometimes directed (one party calls another, a seller sells something to a buyer, etc.), but they don’t have to be.</p>
+<p>When our rows represent transactions or interactions, we can transform our tabular data to a graph structure by aggregating the data, grouping by the fields containing the two parties, and counting the number of transactions or interactions. Once we have a data frame in this format, Networkx provides us with an easy way to turn it into a graph via the <code>from_pandas_edgelist</code> method.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>G <span class="op">=</span> nx.from_pandas_edgelist(df, source, target)</span></code></pre></div>
+<h3 id="rows-represent-entities">Rows Represent Entities</h3>
+<p>When we have a data set where the rows represent entities, we need to infer relationships based on attributes that different rows have in common. These relationships can be constructed based on entities belonging to the same group (same categorical variable values) or from having similar numeric variable values. These relationships are typically undirected.</p>
+<p>Below is a <code>df_to_graph</code> function that creates pairwise relationships from data sets where rows represent entities. It creates a copy of the data set and then leverages the Pandas <code>merge</code> method to join the two copies together via whatever categorical column or list of columns you choose to define the edges of the network.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> df_to_graph(df, entity, edge):</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>    df2 <span class="op">=</span> df.copy()</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    graph_df <span class="op">=</span> pd.merge(df, df2, how<span class="op">=</span><span class="st">&#39;inner&#39;</span>, on<span class="op">=</span>edge)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    graph_df <span class="op">=</span> graph_df.groupby([entity <span class="op">+</span> <span class="st">&#39;_x&#39;</span>, entity <span class="op">+</span> <span class="st">&#39;_y&#39;</span>]).count().reset_index()</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>    graph_df <span class="op">=</span> graph_df[graph_df[entity <span class="op">+</span> <span class="st">&#39;_x&#39;</span>] <span class="op">!=</span> graph_df[entity <span class="op">+</span> <span class="st">&#39;_y&#39;</span>]]</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">type</span>(edge) <span class="op">==</span> <span class="bu">list</span>:</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>        graph_df <span class="op">=</span> graph_df[[entity <span class="op">+</span> <span class="st">&#39;_x&#39;</span>, entity <span class="op">+</span> <span class="st">&#39;_y&#39;</span>] <span class="op">+</span> edge]</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>        graph_df <span class="op">=</span> graph_df[[entity <span class="op">+</span> <span class="st">&#39;_x&#39;</span>, entity <span class="op">+</span> <span class="st">&#39;_y&#39;</span>, edge]]</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> graph_df</span></code></pre></div>
+<h2 id="visualization-of-network-data">Visualization of Network Data</h2>
+<p>In addition to analyzing our graph via graph statistics and node centrality metrics, we can also create visualizations that have the potential to be informative to our analysis. Networkx has a few different options for drawing graphs, but we will also be using the <code>nxviz</code> library as well.</p>
+<p>The most basic way to create a network visualization is with Networkx’s <code>draw</code> method.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>nx.draw(G)</span></code></pre></div>
+<p>However, just using this method usually produces some pretty ugly visualizations. To make it look nicer, try setting different values for the <code>node_size</code> and <code>node_color</code> parameters as well as modifying the default size of the plot. For example, the version below should make your graph look a bit nicer.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>,<span class="dv">5</span>))</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>nx.draw(G, node_size<span class="op">=</span><span class="dv">20</span>, node_color<span class="op">=</span><span class="st">&#39;cyan&#39;</span>)</span></code></pre></div>
+<p>Graphs can be visualized via different layouts. The default one is spring layout, which is what you get when you call <code>nx.draw()</code>. You can also view the graph in a circular layout, a Kamada-Kawai force-directed layout, or via a <a href="https://networkx.github.io/documentation/stable/reference/drawing.html">few other layouts</a>. Below are examples for how to draw graphs with circular and Kamada-Kawai force-directed layouts via Networkx.</p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a>nx.draw_circular(G, node_size<span class="op">=</span><span class="dv">20</span>, node_color<span class="op">=</span><span class="st">&#39;cyan&#39;</span>)</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>nx.draw_kamada_kawai(G, node_size<span class="op">=</span><span class="dv">20</span>, node_color<span class="op">=</span><span class="st">&#39;cyan&#39;</span>)</span></code></pre></div>
+<p>In addition to Networkx’s drawing capabilities, the <a href="https://nxviz.readthedocs.io/en/stable/">nxviz</a> library also has a few useful graph visualization layouts that you can apply to the graphs you construct with Networkx. The visualizations in the nxviz library are typically more visually appealing than the layouts in Networkx. In order to use it, we will need to pip install it.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip install nxviz</span></code></pre></div>
+<p>Once you have it installed, you can generate network visualizations in the following layouts.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Circos Plots</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nxviz <span class="im">import</span> CircosPlot</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> CircosPlot(G)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>c.draw()</span></code></pre></div>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Matrix Plots</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nxviz <span class="im">import</span> MatrixPlot</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> MatrixPlot(G)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>m.draw()</span></code></pre></div>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Arc Plots</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> nxviz <span class="im">import</span> ArcPlot</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> ArcPlot(G)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>a.draw()</span></code></pre></div>
+<p>In addition to the variety of layouts you can use to visualize networks, it’s important to remember that you also have all the other types of visualizations you have learned about that you can leverage to visually analyze your network data.</p>
+<h3 id="bar-charts">Bar Charts</h3>
+<p>For example, you can aggregate your data by entity, count the number of connections or the total number of interactions, sort them, filter to get just the top 20, and visualize it as a horizontal bar chart. By this point in the program, you should have all the tools in your arsenal to be able to do this.</p>
+<h3 id="scatter-plots">Scatter Plots</h3>
+<p>Another thing you can do is generate a scatter plot that shows the relationship that exists between the number of connections and the number of interactions in the data set.</p>
+<h2 id="deeper-analysis-of-networks">Deeper Analysis of Networks</h2>
+<h3 id="subgraphs">Subgraphs</h3>
+<p>Up until this point, we have been calculating statistics and visualizing entire networks, or at least what we thought were entire networks. In reality, all graphs can be viewed as part of larger graphs. Therefore, what we have been analyzing are essentially <em>subgraphs</em>. Analyzing subgraphs is useful because full graphs have a tendency to get extremely large and complex. Subgraphs allow you to focus and really be able to examine the connections in a graph without getting overwhelmed with too much information. They also usually produce much more coherent network visualizations, whereas full graph visualization tends to suffer from the “hairball effect.”</p>
+<p>One way to analyze a subgraph is by filtering a data set before converting it to a graph and then creating a Networkx graph object from the data. Another way to create a subgraph is to zoom in and look at an ego graph, which is a subgraph that focuses on one node and its connections in the network. Networkx has a handy <code>ego_graph</code> method that will create a ego graph from a node that we specify.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>ego <span class="op">=</span> nx.ego_graph(G, <span class="st">&#39;NodeName&#39;</span>, radius<span class="op">=</span><span class="dv">1</span>)</span></code></pre></div>
+<p>The <code>radius</code> parameter specifies how many degrees away from the node to create the ego graph. The default radius is 1, which means that only nodes that are directly connected to the node you specify will be included in the ego graph. If you were to set the radius to 2, it would include all nodes connected to your node’s first degree connections, and so forth.</p>
+<p>Which nodes does it make the most sense to analyze ego graphs for? A good place to start would be with the nodes that have the highest centrality metrics. When visualizing ego graphs, you can add a <code>with_labels=True</code> parameter to any of the Networkx <code>draw</code> methods to show the entity names next to each node.</p>
+<h3 id="community-detection">Community Detection</h3>
+<p>Another useful thing you can do with network data is community detection, where nodes in the graph are grouped together based on the other nodes they are connected to. One of the most straightforward ways to do this is using the <code>python-louvain</code> library, which you can pip install as follows.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pip install python-louvain</span></code></pre></div>
+<p>Once installed, you can import its <code>community</code> module and use the <code>best_partition</code> method to figure out which nodes in the graph to group together.</p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> community</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>parts <span class="op">=</span> community.best_partition(G)</span></code></pre></div>
+<p>This produces a dictionary containing the name of each node and which community it has been grouped into. You can extract the values of this dictionary and pass it to the <code>node_color</code> parameter of a <code>draw</code> method to color code the nodes in your network visualizations according to their community. Below is an example of how to do this.</p>
+<div class="sourceCode" id="cb22"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>values <span class="op">=</span> <span class="bu">list</span>(parts.values())</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>nx.draw_kamada_kawai(G, node_size<span class="op">=</span><span class="dv">20</span>, node_color<span class="op">=</span>values)</span></code></pre></div>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Graph_theory">Wikipedia: Graph Theory</a></li>
+<li><a href="https://www.youtube.com/watch?v=HkbMUrgzwMs">PyCon 2018: Network Analysis Made Simple, Part 1 Tutorial</a></li>
+<li><a href="https://www.youtube.com/watch?v=MRCLwmYTVpc">PyCon 2018: Network Analysis Made Simple, Part 2 Tutorial</a></li>
+<li><a href="https://github.com/ericmjl/Network-Analysis-Made-Simple">Network Analysis Made Simple Github Repo</a></li>
+<li><a href="https://networkx.github.io/documentation/stable/">Networkx Documentation</a></li>
+<li><a href="https://networkx.github.io/documentation/stable/reference/drawing.html">Networkx Drawing</a></li>
+<li><a href="https://nxviz.readthedocs.io/en/stable/">nxviz Documentation</a></li>
+<li><a href="https://python-louvain.readthedocs.io/en/latest/api.html">Python-Louvain Documentation</a></li>
+<li><a href="https://www.datacamp.com/community/tutorials/social-network-analysis-python">DataCamp Social Network Analysis Article</a></li>
+</ul>
+</body>
+</html>

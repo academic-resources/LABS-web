@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png" alt="IronHack Logo" /><figcaption aria-hidden="true">IronHack Logo</figcaption>
+</figure>
+<h1 id="project-api-and-web-data-scraping">Project: API and Web Data Scraping</h1>
+<h2 id="overview">Overview</h2>
+<p>The goal of this project is for you to practice what you have learned in the APIs and Web Scraping chapter of this program. For this project, you will choose both an API to obtain data from and a web page to scrape. For the API portion of the project will need to make calls to your chosen API, successfully obtain a response, request data, convert it into a Pandas data frame, and export it as a CSV file. For the web scraping portion of the project, you will need to scrape the HTML from your chosen page, parse the HTML to extract the necessary information, and either save the results to a text (txt) file if it is text or into a CSV file if it is tabular data.</p>
+<p><strong>You will be working individually for this project</strong>, but we’ll be guiding you along the process and helping you as you go. Show us what you’ve got!</p>
+<hr />
+<h2 id="technical-requirements">Technical Requirements</h2>
+<p>The technical requirements for this project are as follows:</p>
+<ul>
+<li>You must obtain data from an API using Python.</li>
+<li>You must scrape and clean HTML from a web page using Python.</li>
+<li>The results should be two files - one containing the tabular results of your API request and the other containing the results of your web page scrape.</li>
+<li>Your code should be saved in a Jupyter Notebook and your results should be saved in a folder named output.</li>
+<li>You should include a README.md file that describes the steps you took and your thought process for obtaining data from the API and web page.</li>
+</ul>
+<h2 id="necessary-deliverables">Necessary Deliverables</h2>
+<p>The following deliverables should be pushed to your Github repo for this chapter.</p>
+<ul>
+<li><strong>A Jupyter Notebook (.ipynb) file</strong> that contains the code used to work with your API and scrape your web page.</li>
+<li><strong>An output folder</strong> containing the outputs of your API and scraping efforts.</li>
+<li><strong>A <code>README.md</code> file</strong> containing a detailed explanation of your approach and code for retrieving data from the API and scraping the web page as well as your results, obstacles encountered, and lessons learned.</li>
+</ul>
+<h2 id="suggested-ways-to-get-started">Suggested Ways to Get Started</h2>
+<ul>
+<li><strong>Find an API to work with</strong> - a great place to start looking would be <a href="https://apilist.fun/">API List</a> and <a href="https://github.com/toddmotto/public-apis">Public APIs</a>. If you need authorization for your chosen API, make sure to give yourself enough time for the service to review and accept your application. Have a couple back-up APIs chosen just in case!</li>
+<li><strong>Find a web page to scrape</strong> and determine the content you would like to scrape from it - blogs and news sites are typically good candidates for scraping text content, and <a href="https://www.wikipedia.org/">Wikipedia</a> is usually a good source for HTML tables (search for “list of…”).</li>
+<li><strong>Break the project down into different steps</strong> - note the steps covered in the API and web scraping lessons, try to follow them, and make adjustments as you encounter the obstacles that are inevitable due to all APIs and web pages being different.</li>
+<li><strong>Use the tools in your tool kit</strong> - your knowledge of intermediate Python as well as some of the things you’ve learned in previous chapters. This is a great way to start tying everything you’ve learned together!</li>
+<li><strong>Work through the lessons in class</strong> &amp; ask questions when you need to! Think about adding relevant code to your project each night, instead of, you know… <em>procrastinating</em>.</li>
+<li><strong>Commit early, commit often</strong>, don’t be afraid of doing something incorrectly because you can always roll back to a previous version.</li>
+<li><strong>Consult documentation and resources provided</strong> to better understand the tools you are using and how to accomplish what you want.</li>
+</ul>
+<h2 id="useful-resources">Useful Resources</h2>
+<ul>
+<li><a href="http://docs.python-requests.org/en/master/user/quickstart/">Requests Library Documentation: Quickstart</a></li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/bs4/doc/">BeautifulSoup Documentation</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/python-requests">Stack Overflow Python Requests Questions</a></li>
+<li><a href="https://stackoverflow.com/questions/tagged/beautifulsoup">StackOverflow BeautifulSoup Questions</a></li>
+</ul>
+</body>
+</html>

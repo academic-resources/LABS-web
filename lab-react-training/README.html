@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-react-training">LAB | React Training</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The goal of this repository is to create a lot of React components.</p>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<pre class="shell"><code>$ cd lab-react-training
+$ npm install
+$ npm start</code></pre>
+<!-- You can find the starter code in the starter code folder of this GitHub repo. -->
+<h2 id="submission">Submission</h2>
+<ul>
+<li><p>Upon completion, run the following commands</p>
+<pre><code>git add .
+git commit -m &quot;done&quot;
+git push origin master</code></pre></li>
+<li><p>Create Pull Request so your TAs can check up your work.</p></li>
+</ul>
+<p>You can preview the solution here: https://5c6c2a0de07b084ce35373ee–determined-aryabhata-a8a833.netlify.com/</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-1-component-idcard">Iteration 1 | Component: <code>IdCard</code></h3>
+<p>Create a <code>IdCard</code> component with 6 props:</p>
+<ul>
+<li><code>lastName</code>: A string</li>
+<li><code>firstName</code>: A string</li>
+<li><code>gender</code>: A string, <code>'male'</code> or <code>'female'</code></li>
+<li><code>height</code>: A number</li>
+<li><code>birth</code>: A date</li>
+<li><code>picture</code>: A string</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>IdCard</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  lastName<span class="op">=</span><span class="st">&#39;Doe&#39;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  firstName<span class="op">=</span><span class="st">&#39;John&#39;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  gender<span class="op">=</span><span class="st">&#39;male&#39;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  height<span class="op">=</span>{<span class="dv">178</span>}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  birth<span class="op">=</span>{<span class="kw">new</span> <span class="bu">Date</span>(<span class="st">&quot;1992-07-14&quot;</span>)}</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  picture<span class="op">=</span><span class="st">&quot;https://randomuser.me/api/portraits/men/44.jpg&quot;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="op">/&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>IdCard</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  lastName<span class="op">=</span><span class="st">&#39;Delores &#39;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  firstName<span class="op">=</span><span class="st">&#39;Obrien&#39;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>  gender<span class="op">=</span><span class="st">&#39;female&#39;</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>  height<span class="op">=</span>{<span class="dv">172</span>}</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>  birth<span class="op">=</span>{<span class="kw">new</span> <span class="bu">Date</span>(<span class="st">&quot;1988-05-11&quot;</span>)}</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>  picture<span class="op">=</span><span class="st">&quot;https://randomuser.me/api/portraits/women/44.jpg&quot;</span></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52976030-22b0d200-33c8-11e9-91fe-e3ce0fa14078.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-2-component-greetings">Iteration 2 | Component: <code>Greetings</code></h3>
+<p>Create a <code>Greetings</code> component with 2 props:</p>
+<ul>
+<li><code>lang</code>: A string that could be ,<code>"de"</code>,<code>"en"</code>,<code>"es"</code>,<code>"fr"</code></li>
+<li><code>children</code>: A text</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Greetings lang<span class="op">=</span><span class="st">&quot;de&quot;</span><span class="op">&gt;</span>Ludwig<span class="op">&lt;/</span>Greetings<span class="op">&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Greetings lang<span class="op">=</span><span class="st">&quot;fr&quot;</span><span class="op">&gt;</span>François<span class="op">&lt;/</span>Greetings<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52957158-57edfd80-3391-11e9-8726-93c1a3389016.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-3-component-random">Iteration 3 | Component: <code>Random</code></h3>
+<p>Create a <code>Random</code> component with 2 props:</p>
+<ul>
+<li><code>min</code>: A number</li>
+<li><code>max</code>: A number</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Random min<span class="op">=</span>{<span class="dv">1</span>} max<span class="op">=</span>{<span class="dv">6</span>}<span class="op">/&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Random min<span class="op">=</span>{<span class="dv">1</span>} max<span class="op">=</span>{<span class="dv">100</span>}<span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52957202-718f4500-3391-11e9-9b45-d1172067e877.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-4-component-boxcolor">Iteration 4 | Component: <code>BoxColor</code></h3>
+<p>Create a <code>BoxColor</code> component that displays a rectangle with a background color based on props. For this, you will need a inline style (<a href="https://reactjs.org/docs/dom-elements.html#style">documentation</a>).</p>
+<p>It takes 3 props:</p>
+<ul>
+<li><code>r</code>: A number between 0 and 255 representing the amount of red</li>
+<li><code>g</code>: A number between 0 and 255 representing the amount of green</li>
+<li><code>b</code>: A number between 0 and 255 representing the amount of blue</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>BoxColor r<span class="op">=</span>{<span class="dv">255</span>} g<span class="op">=</span>{<span class="dv">0</span>} b<span class="op">=</span>{<span class="dv">0</span>} <span class="op">/&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>BoxColor r<span class="op">=</span>{<span class="dv">128</span>} g<span class="op">=</span>{<span class="dv">255</span>} b<span class="op">=</span>{<span class="dv">0</span>} <span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52957816-ec0c9480-3392-11e9-9e00-67094fa2b431.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>As a bonus, you can also display the hex values of the color (ex: <code>#ff0000</code> for red).</p>
+<h3 id="iteration-5-component-creditcard">Iteration 5 | Component: <code>CreditCard</code></h3>
+<p>Create a <code>CreditCard</code> component that displays a square with a background color based on props. For this. You will need a styled component.</p>
+<p>It takes 8 props:</p>
+<ul>
+<li><code>type</code>: A string that can be <code>"Visa"</code> or <code>"Master Card"</code></li>
+<li><code>number</code>: A string that is a number of the credit card. You will only display the 4 last digits for security reasons 😉</li>
+<li><code>expirationMonth</code>: A number that represents the month, between 1 and 12</li>
+<li><code>expirationYear</code>: A number that represents the year</li>
+<li><code>bank</code>: A string that represents the name of the bank</li>
+<li><code>owner</code>: A string that represents the name of the owner</li>
+<li><code>bgColor</code>: A string for the background color of the card</li>
+<li><code>color</code>: A string for the text color of the card</li>
+</ul>
+<p>Take your time to do as close to the output. You probably have to use flexbox.</p>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>CreditCard</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  type<span class="op">=</span><span class="st">&quot;Visa&quot;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  number<span class="op">=</span><span class="st">&quot;0123456789018845&quot;</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>  expirationMonth<span class="op">=</span>{<span class="dv">3</span>}</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  expirationYear<span class="op">=</span>{<span class="dv">2021</span>}</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>  bank<span class="op">=</span><span class="st">&quot;BNP&quot;</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  owner<span class="op">=</span><span class="st">&quot;Maxence Bouret&quot;</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>  bgColor<span class="op">=</span><span class="st">&quot;#11aa99&quot;</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>  color<span class="op">=</span><span class="st">&quot;white&quot;</span> <span class="op">/&gt;</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>CreditCard</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>  type<span class="op">=</span><span class="st">&quot;Master Card&quot;</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>  number<span class="op">=</span><span class="st">&quot;0123456789010995&quot;</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>  expirationMonth<span class="op">=</span>{<span class="dv">3</span>}</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>  expirationYear<span class="op">=</span>{<span class="dv">2021</span>}</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>  bank<span class="op">=</span><span class="st">&quot;N26&quot;</span></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>  owner<span class="op">=</span><span class="st">&quot;Maxence Bouret&quot;</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>  bgColor<span class="op">=</span><span class="st">&quot;#eeeeee&quot;</span></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>  color<span class="op">=</span><span class="st">&quot;#222222&quot;</span> <span class="op">/&gt;</span></span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>CreditCard</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>  type<span class="op">=</span><span class="st">&quot;Visa&quot;</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>  number<span class="op">=</span><span class="st">&quot;0123456789016984&quot;</span></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>  expirationMonth<span class="op">=</span>{<span class="dv">12</span>}</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>  expirationYear<span class="op">=</span>{<span class="dv">2019</span>}</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>  bank<span class="op">=</span><span class="st">&quot;Name of the Bank&quot;</span></span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>  owner<span class="op">=</span><span class="st">&quot;Firstname Lastname&quot;</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>  bgColor<span class="op">=</span><span class="st">&quot;#ddbb55&quot;</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>  color<span class="op">=</span><span class="st">&quot;white&quot;</span> <span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52975678-ac5fa000-33c6-11e9-8cbf-7d13a8a0f625.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-6-component-rating">Iteration 6 | Component: <code>Rating</code></h3>
+<p>Create a <code>Rating</code> component that displays 5 stars, some of them must be empty (☆), some must be full (★).</p>
+<p>It takes 1 prop:</p>
+<ul>
+<li><code>children</code>: A number between 0 and 5. Be careful, it can be a float number. If it’s 3.9, it will display 4 stars.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Rating<span class="op">&gt;</span><span class="dv">0</span><span class="op">&lt;/</span>Rating<span class="op">&gt;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Rating<span class="op">&gt;</span><span class="fl">1.49</span><span class="op">&lt;/</span>Rating<span class="op">&gt;</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Rating<span class="op">&gt;</span><span class="fl">1.5</span><span class="op">&lt;/</span>Rating<span class="op">&gt;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Rating<span class="op">&gt;</span><span class="dv">3</span><span class="op">&lt;/</span>Rating<span class="op">&gt;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Rating<span class="op">&gt;</span><span class="dv">4</span><span class="op">&lt;/</span>Rating<span class="op">&gt;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Rating<span class="op">&gt;</span><span class="dv">5</span><span class="op">&lt;/</span>Rating<span class="op">&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52972787-39512c00-33bc-11e9-93d8-428d835442fd.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-7-component-drivercard">Iteration 7 | Component: <code>DriverCard</code></h3>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>DriverCard</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  name<span class="op">=</span><span class="st">&quot;Travis Kalanick&quot;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  rating<span class="op">=</span>{<span class="fl">4.2</span>}</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  img<span class="op">=</span><span class="st">&quot;https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&amp;height=428&quot;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  car<span class="op">=</span>{{</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">model</span><span class="op">:</span> <span class="st">&quot;Toyota Corolla Altis&quot;</span><span class="op">,</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">licensePlate</span><span class="op">:</span> <span class="st">&quot;CO42DE&quot;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  }} <span class="op">/&gt;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>DriverCard</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  name<span class="op">=</span><span class="st">&quot;Dara Khosrowshahi&quot;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  rating<span class="op">=</span>{<span class="fl">4.9</span>}</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  img<span class="op">=</span><span class="st">&quot;https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg&quot;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>  car<span class="op">=</span>{{</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>    <span class="dt">model</span><span class="op">:</span> <span class="st">&quot;Audi A3&quot;</span><span class="op">,</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">licensePlate</span><span class="op">:</span> <span class="st">&quot;BE33ER&quot;</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>  }} <span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52972847-66054380-33bc-11e9-92e0-8e48d1ab0212.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-8-state-likebutton">Iteration 8 | State: <code>LikeButton</code></h3>
+<p>Create a component <code>LikeButton</code> that displays a button “0 Likes” and with a number increases when the user clicks on it.</p>
+<p>As a bonus, you can change the background color and set it to one of these: <code>['purple','blue','green','yellow','orange','red']</code></p>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>LikeButton <span class="op">/&gt;</span> <span class="op">&lt;</span>LikeButton <span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<p><img src="https://media.giphy.com/media/OQJkfIEkYTUdYkgNP7/giphy.gif" /></p>
+<h3 id="iteration-9-state-clickablepicture">Iteration 9: State: <code>ClickablePicture</code></h3>
+<p>Create a component <code>ClickablePicture</code> that displays a picture and toggle to the next picture on click.</p>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>ClickablePicture</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  img<span class="op">=</span><span class="st">&#39;./assets/images/maxence.png&#39;</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  imgClicked<span class="op">=</span><span class="st">&#39;./assets/images/maxence-glasses.png&#39;</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<p><img src="https://media.giphy.com/media/9FXwCr2LLLIlgNL2sL/giphy.gif" /></p>
+<p>PS: If you want your own picture instead, you can do it yourself with this picture: http://www.stickpng.com/assets/images/584999937b7d4d76317f5ffd.png 😎</p>
+<h3 id="iteration-10-state-dice">Iteration 10 | State: <code>Dice</code></h3>
+<p>Create a <code>Dice</code> component that displays a random picture (example: <code>'./assets/images/dice3.png'</code>). Then every time the user clicks on the component:</p>
+<ul>
+<li>An empty picture is displayed (<code>'./assets/images/dice-empty.png'</code>)</li>
+<li>1 second later, a new random picture is displayed (example: <code>'./assets/images/dice6.png'</code>).</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Dice <span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output before a click</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52976705-c13e3280-33ca-11e9-8684-f4dbff643b79.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><strong>Output 1 millisecond after a click</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52976790-25f98d00-33cb-11e9-864e-ec14b4ec2a31.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><strong>Output 1 second after a click</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/52976752-f64a8500-33ca-11e9-98ee-b0b17f5e85b2.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-11-state-carousel">Iteration 11 | State: <code>Carousel</code></h3>
+<p>Create a <code>Carousel</code> component that displays an image and two buttons (‘left’ and ‘right’), and that changes the picture every time.</p>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>Carousel</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  imgs<span class="op">=</span>{[</span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;https://randomuser.me/api/portraits/women/1.jpg&#39;</span><span class="op">,</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;https://randomuser.me/api/portraits/men/1.jpg&#39;</span><span class="op">,</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;https://randomuser.me/api/portraits/women/2.jpg&#39;</span><span class="op">,</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">&#39;https://randomuser.me/api/portraits/men/2.jpg&#39;</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  ]}</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<p><img src="https://media.giphy.com/media/1n7cAJu0MWerLnnohR/giphy.gif" /></p>
+<h3 id="iteration-12-list-and-keys-numberstable">Iteration 12 | List and Keys | <code>NumbersTable</code></h3>
+<p>Create a <code>NumbersTable</code> component that displays a list of numbers between 1 and a limit. Even numbers must be red.</p>
+<p>It takes 1 prop:</p>
+<ul>
+<li><code>limit</code>: A number.</li>
+</ul>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb14"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>NumbersTable limit<span class="op">=</span>{<span class="dv">12</span>} <span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/53028410-13349600-3467-11e9-8199-407375e61ab0.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-13-list-and-keys---facebook-simple">Iteration 13 | List and Keys - <code>FaceBook</code> (Simple)</h3>
+<p>Create a <code>FaceBook</code> component that displays the list of all profiles from <code>src/data/berlin.json</code>. You will probably have to write:</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> profiles <span class="im">from</span> <span class="st">&#39;./data/berlin.json&#39;</span><span class="op">;</span></span></code></pre></div>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>FaceBook <span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong> (you should see about 28 profiles)</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/53018529-e8d8dd80-3452-11e9-9912-1221eef67be6.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-14-list-and-keys---facebook-advanced">Iteration 14 | List and Keys - <code>FaceBook</code> (Advanced)</h3>
+<p>On your <code>FaceBook</code> component, add as many buttons as you have <code>country</code>. Then, when the user clicks on one of the buttons (example: ‘USA’), add a blue background to all the profiles where their country is the one selected.</p>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>FaceBook <span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong> (you should see more profiles and more countries)</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/53018961-f8a4f180-3453-11e9-9c82-1f57a2f66a30.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Example of extra iterations:</p>
+<ul>
+<li>By default, only display the picture. Then, when a user clicks on a picture, display more information</li>
+<li>Add sort buttons</li>
+<li>Add a search input</li>
+</ul>
+<h3 id="iteration-15-form---signuppage">Iteration 15 | Form - SignupPage</h3>
+<p>Create a <code>SignupPage</code> component with the following elements:</p>
+<ul>
+<li>An input “email” (bonus: make the input green/red when the email is valid/invalid)</li>
+<li>An input “password” (bonus: make the input green/red when the password is strong/weak)</li>
+<li>A select input “nationality” (possible values: “en”,“de”,“fr”)</li>
+<li>A text “Hello”, “Hallo” or “Bonjour” based on the selected nationality</li>
+<li>A text “Your email is john@doe.com”</li>
+</ul>
+<p>For this, you will need 3 states:</p>
+<ul>
+<li><code>email</code></li>
+<li><code>password</code></li>
+<li><code>nationality</code></li>
+</ul>
+<p>If you want to include Bootstrap with <a href="https://reactstrap.github.io">Reactstrap</a>, you should run</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="ex">npm</span> install reactstrap bootstrap</span></code></pre></div>
+<p>And add the following line in <code>src/index.js</code></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> <span class="st">&#39;bootstrap/dist/css/bootstrap.min.css&#39;</span><span class="op">;</span></span></code></pre></div>
+<p><strong>Example</strong></p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;</span>SignupPage <span class="op">/&gt;</span></span></code></pre></div>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/53089348-9c51d880-350c-11e9-9621-cad9d87bdd48.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-16-lifting-state-up---rgbcolorpicker">Iteration 16 | Lifting State Up - RGBColorPicker</h3>
+<p>Create 2 components:</p>
+<ul>
+<li><code>RGBColorPicker</code>:
+<ul>
+<li><code>state.rValue</code>: A number between 0 and 255, representing the amount of red</li>
+<li><code>state.gValue</code>: A number between 0 and 255, representing the amount of green</li>
+<li><code>state.bValue</code>: A number between 0 and 255, representing the amount of blue</li>
+</ul></li>
+<li><code>SingleColorPicker</code>: A box with an input range to select an amount of a value
+<ul>
+<li><code>props.color</code>: A string that is either “r”, “g” or “b”</li>
+<li><code>props.value</code>: A number between 0 and 255</li>
+<li><code>props.onChange</code>: A method that is triggered when the input is changed</li>
+</ul></li>
+</ul>
+<p><strong>Output</strong></p>
+<figure>
+<img src="https://user-images.githubusercontent.com/5306791/53166207-f918c600-35d4-11e9-8c47-c58cdc2d05b0.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><strong>Happy coding!</strong> :heart:</p>
+</body>
+</html>

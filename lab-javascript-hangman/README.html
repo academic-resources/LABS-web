@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="js-hangman">JS | Hangman</h1>
+<h2 id="section"></h2>
+<h2 id="introduction">Introduction</h2>
+<p>In this learning unit, we are going to create the classic game Hangman. In this game, we have to figure out which is the secret word before the man gets hanged. With each error, the man will be closer to die!</p>
+<p><img src="https://i.imgur.com/wrQrY1T.png" /></p>
+<p>As we have learned, we can’t confront the whole game without splitting it up in different steps to make the solution. We will split it up in three different parts: structure, logic, and game layout.</p>
+<h2 id="structure">Structure</h2>
+<p>To do the game, we will need four different data structures to play the game. This structures are the following:</p>
+<ul>
+<li>Words. An array with some words. We will take a random word from this array, and it will be the word that the player will have to figure out.</li>
+<li>Secret word. This will be an string to store the word selected randomly.</li>
+<li>Letters. Another array, in this case just for letters. This one will store all the letters used by the player, to show them all. It will be very helpful for the player, to avoid select the same letter twice.</li>
+<li>Errors left. Number of errors that the user can make until the end of the game.</li>
+</ul>
+<p>All these variables will be defined in the constructor of the game, as it follows:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">Hangman</span> () {</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">words</span>      <span class="op">=</span> [<span class="st">&quot;IRONHACK&quot;</span><span class="op">,</span> <span class="st">&quot;NODEJS&quot;</span><span class="op">,</span> <span class="st">&quot;JAVASCRIPT&quot;</span><span class="op">,</span> <span class="st">&quot;METEOR&quot;</span><span class="op">,</span> <span class="st">&quot;ANGULAR&quot;</span>]<span class="op">;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">secretWord</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">letter</span>     <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">errorsLeft</span> <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Those are all the data structures we need to play the game. The next step is to create the game logic with all the methods we need.</p>
+<h2 id="game-logic">Game logic</h2>
+<h3 id="get-random-word">Get random word</h3>
+<p>The first thing we need to play the game is the word that the player will have to discern. We need to choose a random word and assign it to the <code>secretWord</code> variable we declared in the constructor.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Hangman<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">_getWord</span> <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> random <span class="op">=</span> <span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> <span class="kw">this</span><span class="op">.</span><span class="at">words</span><span class="op">.</span><span class="at">length</span>)<span class="op">;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">words</span>[random]<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>We will execute this function in the constructor of the game, and assign it to the correct variable:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">Hangman</span> () {</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">words</span>      <span class="op">=</span> [<span class="st">&quot;IRONHACK&quot;</span><span class="op">,</span> <span class="st">&quot;NODEJS&quot;</span><span class="op">,</span> <span class="st">&quot;JAVASCRIPT&quot;</span><span class="op">,</span> <span class="st">&quot;METEOR&quot;</span><span class="op">,</span> <span class="st">&quot;ANGULAR&quot;</span>]<span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">secretWord</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">letters</span>    <span class="op">=</span> []<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">errorsLeft</span> <span class="op">=</span> <span class="dv">10</span><span class="op">;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">secretWord</span> <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="fu">_getWord</span>()<span class="op">;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>All right, we have the word, now the player should be able to indicate a letter to play.</p>
+<h3 id="insert-a-letter">Insert a letter</h3>
+<p>The user should be able to indicate a letter that he thinks that the word contains. We have to create a function, that we will call <code>askLetter</code> that will receive as a parameter the user’s selection. Once we receive the letter, we have to add it to the <code>letters</code> array, update the errors left (if the letter is not in the word), and we have to check out if the letter had been inserted before:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Hangman<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">askLetter</span> <span class="op">=</span> <span class="kw">function</span> (letter) {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  letter <span class="op">=</span> letter<span class="op">.</span><span class="fu">toUpperCase</span>()<span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="kw">this</span><span class="op">.</span><span class="at">letters</span><span class="op">.</span><span class="fu">indexOf</span>(letter) <span class="op">&gt;</span> <span class="op">-</span><span class="dv">1</span>) {</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">this</span><span class="op">.</span><span class="at">letters</span><span class="op">.</span><span class="fu">push</span>(letter)<span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> correct <span class="op">=</span> <span class="kw">this</span><span class="op">.</span><span class="at">secretWord</span><span class="op">.</span><span class="fu">indexOf</span>(letter) <span class="op">&gt;</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>correct) {</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">errorsLeft</span> <span class="op">-=</span> <span class="dv">1</span><span class="op">;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> correct<span class="op">;</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>We use capital letters to compare the player’s selection with the secret word. <strong>Use capital (or lower) case letter to compare strings is a good practice.</strong></p>
+<h3 id="show-the-current-word">Show the current word</h3>
+<p>The following method we need will be used to show the current status of the word. In other words, how many letters have to figure out the player. This method will be called <code>getWordStatus</code>, and it will be as it follows:</p>
+<pre class="javscript"><code>Hangman.prototype.getWordStatus = function () {
+  var that        = this;
+  var wordStatus  = [];
+  var splitedWord = this.secretWord.split(&quot;&quot;);
+
+  splitedWord.forEach(function (letter) {
+    if (that.letters.indexOf(letter) &gt; -1) {
+      wordStatus.push(letter);
+    } else {
+      wordStatus.push(&quot;_&quot;);
+    }
+  });
+
+  return wordStatus;
+};</code></pre>
+<p>We iterate over all the letters of the secret word. If a letter hasn’t been selected by the player, it will be represented as an underscore. By doing this, we will get a result similiar to: “IRON_ACK”.</p>
+<h3 id="game-status">Game status</h3>
+<p>To finish up the game logic, we will need to create a method to get its status. We will have three different status:</p>
+<ul>
+<li>Completed.</li>
+<li>Game over.</li>
+<li>Ongoing game.</li>
+</ul>
+<p>We will create three different functions:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Hangman<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">_isFinished</span> <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="fu">getWordStatus</span>()<span class="op">.</span><span class="fu">indexOf</span>(<span class="st">&quot;_&quot;</span>) <span class="op">&lt;</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>If the current word doesn’t have any underscore, the word will be completed. So this function will help us to determine if the player has won the game. We also need a function to figure out if the game is over:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Hangman<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">_gameOver</span> <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> <span class="kw">this</span><span class="op">.</span><span class="at">errorsLeft</span> <span class="op">===</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>With the variable we defined in the constructor it’s very easy to know if the game is over or not. Note that both functions are private, so we have to create a public method to check out those possible status:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>Hangman<span class="op">.</span><span class="at">prototype</span><span class="op">.</span><span class="at">gameStatus</span> <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="kw">this</span><span class="op">.</span><span class="fu">_isFinished</span>()) {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;You Win&quot;</span><span class="op">;</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (<span class="kw">this</span><span class="op">.</span><span class="fu">_gameOver</span>()) {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">&quot;Game Over&quot;</span><span class="op">;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>This function will return three possible values: “You Win”, if the player has won, “Game Over” if the player has lost, and finally, undefined if the game has to go on.</p>
+<p>We already have all what we need to play our game. The next step is to create the layout and put them all together.</p>
+<h2 id="game-layout">Game Layout</h2>
+<h3 id="html-css">HTML &amp; CSS</h3>
+<p>First of all, we are going to create the layout with HTML and CSS. After that, we will create the JavaScript that will join the game logic with its layout. Let’s do a list of all the things we need to do the layout:</p>
+<ul>
+<li>New game. We will add a button to start a new game. It will be always available to allow the user restart a game if the word is too complicated.</li>
+<li>Hangman. We need, of course, to draw the man to let the player know how much life left he has.</li>
+<li>Word. We need some kind of container to show the user the current status of the word.</li>
+<li>Letters. We also need another container to let the user know which letter have been already inserted.</li>
+<li>Win/Lose. Last, but not least, we need some kind of container to let the user know if he has won or not.</li>
+</ul>
+<h4 id="new-game">New game</h4>
+<p>First of all we will create the new button game. It will be in the top part of the page. We will add customized styles, without using any kind of library like Bootstrap. The HTML, CSS, and result of this button is the following:</p>
+<p><strong>HTML</strong></p>
+<pre class="htmlmixed"><code>&lt;button id=&quot;new-game&quot;&gt;
+  New game
+&lt;/button&gt;</code></pre>
+<p><strong>CSS</strong></p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#new-game</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="cn">#43a3e6</span><span class="op">;</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#43a3e6</span><span class="op">;</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span>: <span class="dv">6</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">box-shadow</span>: <span class="dv">1</span><span class="dt">px</span> <span class="dv">1</span><span class="dt">px</span> <span class="dv">2</span><span class="dt">px</span> <span class="cn">#999</span><span class="op">;</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#fff</span><span class="op">;</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span>: <span class="dv">6</span><span class="dt">px</span> <span class="dv">14</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">outline</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><strong>Layout</strong></p>
+<p><img src="https://i.imgur.com/cZ3SJPH.png" /></p>
+<p>Note that the font is not the default browser’s font. We have imported the ‘Open Sans’ font from <a href="https://fonts.google.com/">Google Fonts</a>. You can find several font types in this directory :)</p>
+<h4 id="hangman">Hangman</h4>
+<p>We will draw the hangman with HTML and CSS. A lot of people is usually afraid of doing something similar to that in HTML and CSS. Let’s prove that it’s easier than it seems:</p>
+<p><strong>HTML</strong></p>
+<pre class="htmlmixed"><code>&lt;div id=&quot;hangman&quot;&gt;
+  &lt;div class=&quot;right-bar&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;top-bar&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;left-bar&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;base&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;head&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;body&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;left-arm&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;right-arm&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;left-leg&quot;&gt;&lt;/div&gt;
+  &lt;div class=&quot;right-leg&quot;&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+<p>You can see how we have created a <code>&lt;div&gt;</code> for each part of the hangman. Each of these parts represent a life, so we will have to find a good way to show them all, depending on the status of the game. Let’s take a look at the CSS and the layout:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> div {</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.base</span> {</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">300</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.left-bar</span> {</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">400</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.top-bar</span> {</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-19"><a href="#cb12-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-20"><a href="#cb12-20" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.right-bar</span> {</span>
+<span id="cb12-21"><a href="#cb12-21" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb12-22"><a href="#cb12-22" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">30</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-23"><a href="#cb12-23" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-24"><a href="#cb12-24" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-25"><a href="#cb12-25" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-26"><a href="#cb12-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-27"><a href="#cb12-27" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.head</span> {</span>
+<span id="cb12-28"><a href="#cb12-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb12-29"><a href="#cb12-29" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span>: <span class="dv">100</span><span class="dt">%</span><span class="op">;</span></span>
+<span id="cb12-30"><a href="#cb12-30" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb12-31"><a href="#cb12-31" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="dv">175</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-32"><a href="#cb12-32" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">-375</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-33"><a href="#cb12-33" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">50</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-34"><a href="#cb12-34" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">50</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-35"><a href="#cb12-35" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-36"><a href="#cb12-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-37"><a href="#cb12-37" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.body</span> {</span>
+<span id="cb12-38"><a href="#cb12-38" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb12-39"><a href="#cb12-39" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">140</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-40"><a href="#cb12-40" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">-321</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-41"><a href="#cb12-41" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="dv">200</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-42"><a href="#cb12-42" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-43"><a href="#cb12-43" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-44"><a href="#cb12-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-45"><a href="#cb12-45" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.left-arm</span><span class="op">,</span></span>
+<span id="cb12-46"><a href="#cb12-46" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.right-arm</span><span class="op">,</span></span>
+<span id="cb12-47"><a href="#cb12-47" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.left-leg</span><span class="op">,</span></span>
+<span id="cb12-48"><a href="#cb12-48" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.right-leg</span> {</span>
+<span id="cb12-49"><a href="#cb12-49" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">left</span><span class="op">;</span></span>
+<span id="cb12-50"><a href="#cb12-50" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">90</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-51"><a href="#cb12-51" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">-321</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-52"><a href="#cb12-52" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="dv">173</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-53"><a href="#cb12-53" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transform</span>: <span class="fu">rotate(</span><span class="dv">35</span><span class="dt">deg</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb12-54"><a href="#cb12-54" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">2</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-55"><a href="#cb12-55" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-56"><a href="#cb12-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-57"><a href="#cb12-57" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.right-arm</span><span class="op">,</span></span>
+<span id="cb12-58"><a href="#cb12-58" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.right-leg</span> {</span>
+<span id="cb12-59"><a href="#cb12-59" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-left</span>: <span class="dv">230</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-60"><a href="#cb12-60" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">-324</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-61"><a href="#cb12-61" aria-hidden="true" tabindex="-1"></a>  <span class="kw">transform</span>: <span class="fu">rotate(</span><span class="dv">140</span><span class="dt">deg</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb12-62"><a href="#cb12-62" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb12-63"><a href="#cb12-63" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-64"><a href="#cb12-64" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.left-leg</span><span class="op">,</span></span>
+<span id="cb12-65"><a href="#cb12-65" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> <span class="fu">.right-leg</span> {</span>
+<span id="cb12-66"><a href="#cb12-66" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin-top</span>: <span class="dv">-192</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb12-67"><a href="#cb12-67" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>As you can see, we are using the div background color to draw it. To show the arms and legs, we are rotating the containers, and we play a lot with the margins to allocate all the pieces on their correct position. The result will is the following:</p>
+<p><strong>Layout</strong></p>
+<p><img src="https://i.imgur.com/V4xwngn.png" /></p>
+<p>As we said, we will have to show each part depending on how many lifes does the player have. We will solve that by doing setting up the default background color as white. We will also create classes for each life, and depending on how many lifes he has, we are going to change the background color and set it up to black:</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span> div { <span class="kw">background</span>: <span class="cn">#fff</span><span class="op">;</span> }</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co">/* ... */</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-10</span> <span class="fu">.base</span>     { <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span> }</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-9</span> <span class="fu">.left-bar</span>  { <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span> }</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-8</span> <span class="fu">.top-bar</span>   { <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span> }</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-7</span> <span class="fu">.right-bar</span> { <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span> }</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-6</span> <span class="fu">.head</span>      { <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#000</span><span class="op">;</span> }</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-5</span> <span class="fu">.body</span>      { <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span> }</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-4</span> <span class="fu">.left-arm</span>  { <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span> }</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-3</span> <span class="fu">.right-arm</span> { <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span> }</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-2</span> <span class="fu">.left-leg</span>  { <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span> }</span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a><span class="pp">#hangman</span><span class="fu">.lifes-1</span> <span class="fu">.right-leg</span> { <span class="kw">background</span>: <span class="cn">#000</span><span class="op">;</span> }</span></code></pre></div>
+<p>The only class that is not changing tha background color is the <code>.head</code> class, that will change the border-color, because we are using a borde-radius to make it circular. We will have to add the classes to the <code>#hangman</code> container through JavaScript during the game. We will see this later.</p>
+<h4 id="word-container">Word container</h4>
+<p>The following step is to add the container where we will place the word that has to be discerned. We have to think in the usability of this container: we have to separate the letters between them to let the player know how many letters compose the word:</p>
+<p><strong>HTML</strong></p>
+<pre class="htmlmixed"><code>&lt;div id=&quot;currentWord&quot;&gt;
+  &lt;span&gt;I&lt;/span&gt;
+  &lt;span&gt;R&lt;/span&gt;
+  &lt;span&gt;O&lt;/span&gt;
+  &lt;span&gt;N&lt;/span&gt;
+  &lt;span&gt;H&lt;/span&gt;
+  &lt;span&gt;A&lt;/span&gt;
+  &lt;span&gt;C&lt;/span&gt;
+  &lt;span&gt;K&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+<p>We will use an <code>&lt;span&gt;</code> for each letter in the word. The CSS for this section is the following:</p>
+<p><strong>CSS</strong></p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#currentWord</span> span {</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">inline-block</span><span class="op">;</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">0</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>The container by itself doesn’t have an specific style, but we add some spacing between <code>&lt;span&gt;</code> through margin property.</p>
+<p><strong>Layout</strong></p>
+<p>The resulting layout is the following:</p>
+<p><img src="https://i.imgur.com/5GnF5Su.png" /></p>
+<h4 id="letters-container">Letters container</h4>
+<p>We also need another container to indicate which letters have already been used. It will be very similar to the current word container, but the font color will be different to distingish between the word and the letters.</p>
+<p><strong>HTML</strong></p>
+<pre class="htmlmixed"><code>&lt;div id=&quot;letters&quot;&gt;
+&lt;/div&gt;</code></pre>
+<p><strong>CSS</strong></p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#letters</span> {</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#999</span><span class="op">;</span></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">letter-spacing</span>: <span class="dv">5</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">20</span><span class="dt">px</span> <span class="bu">auto</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">400</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><strong>Layout</strong></p>
+<p><img src="https://i.imgur.com/CF6Dbhv.png" /></p>
+<h4 id="winlose">Win/Lose</h4>
+<p>Finally, we have to add the containers to show the win/lose message. It has no secret, we just have to create the container, add the message and stylize them.</p>
+<p><strong>HTML</strong></p>
+<pre class="htmlmixed"><code>&lt;div id=&quot;you-win&quot;&gt;
+  &lt;p&gt;Good job, you saved our man!&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;game-over&quot;&gt;
+  &lt;p&gt;Game over!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p><strong>CSS</strong></p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#you-win</span><span class="op">,</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#game-over</span> {</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="cn">#87D892</span><span class="op">;</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border</span>: <span class="dv">2</span><span class="dt">px</span> <span class="dv">solid</span> <span class="cn">#407847</span><span class="op">;</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-radius</span>: <span class="dv">6</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#407847</span><span class="op">;</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">40</span><span class="dt">px</span> <span class="bu">auto</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-align</span>: <span class="dv">center</span><span class="op">;</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">300</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a><span class="pp">#game-over</span> {</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background</span>: <span class="cn">#F9C3B9</span><span class="op">;</span></span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>  <span class="kw">border-color</span>: <span class="cn">#8A2512</span><span class="op">;</span></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="cn">#8A2512</span><span class="op">;</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p><strong>Layout</strong></p>
+<p><img src="https://i.imgur.com/CQnF27k.png" /></p>
+<h4 id="css-details">CSS details</h4>
+<p>Okay, let’s analyze what we already have:</p>
+<p><img src="https://i.imgur.com/lPZDFa5.png" /></p>
+<p>We have to do the following things before start coding our JavaScript:</p>
+<ul>
+<li>Center all the content in the screen</li>
+<li>Hide the elements we don’t need to start the game</li>
+</ul>
+<p>To do the first thing, we will create a container and add some styles to it:</p>
+<p><strong>HTML</strong></p>
+<pre class="htmlmixed"><code>&lt;div id=&quot;main&quot;&gt;
+  &lt;button id=&quot;new-game&quot;&gt;
+    New game
+  &lt;/button&gt;
+
+  &lt;!-- ... --&gt;
+&lt;/div&gt;</code></pre>
+<p><strong>CSS</strong></p>
+<div class="sourceCode" id="cb21"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#main</span> {</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">40</span><span class="dt">px</span> <span class="bu">auto</span><span class="op">;</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">width</span>: <span class="dv">600</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>On the other hand, we will create a class to hide the elements we don’t need to start the game. With JavaScript, we are going to add and hide the elements by adding and removing this class:</p>
+<p><strong>HTML</strong></p>
+<pre class="htmlmixed"><code>&lt;div id=&quot;game&quot; class=&quot;hide&quot;&gt;
+  &lt;div id=&quot;currentWord&quot;&gt;&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;letters&quot;&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;you-win&quot; class=&quot;hide&quot;&gt;
+  &lt;p&gt;Good job, you saved our man!&lt;/p&gt;
+&lt;/div&gt;
+
+&lt;div id=&quot;game-over&quot; class=&quot;hide&quot;&gt;
+  &lt;p&gt;Game over!&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+<p><strong>CSS</strong></p>
+<div class="sourceCode" id="cb23"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.hide</span> {</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<h3 id="javascript">JavaScript</h3>
+<p>The last part of the game is to join both the game logic and the game layout. We are going to add all the functionality in a file called <code>application.js</code>. We have to add both files in the correct order in the HTML, just before the closing tag <code>&lt;/body&gt;</code>.</p>
+<pre class="htmlmixed=46"><code>&lt;script src=&quot;js/hangman.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;js/application.js&quot;&gt;&lt;/script&gt;</code></pre>
+<p>We will have to create, more or less, the same functionality that we have created in the layout. Let’s do it.</p>
+<h4 id="new-game-1">New game</h4>
+<p>First of all we will declare a global variable to access to the game functions. This variable will be initialized every time that the “New game” button is clicked.</p>
+<pre class="javascript="><code>var hangman;
+
+var newGameClick = function () {
+  hangman = new Hangman();
+};
+
+document.getElementById(&quot;new-game&quot;).addEventListener(&quot;click&quot;, newGameClick);</code></pre>
+<p>We are also attaching the click event to the button, so it will execute the <code>newGameClick</code> function. Which is the next thing we have to do? Show the user the word he has to discern.</p>
+<h4 id="draw-current-word">Draw current word</h4>
+<p>We will create a function to draw the current word. It will take the word from the <code>hangman</code> global variable, and add it into the container we created in the layout. It will be executed when we create a new game.</p>
+<pre class="javascript=3"><code>var newGameClick = function () {
+  hangman = new Hangman();
+  drawCurrentWord();
+};
+
+var resetCurrentWord = function () {
+  var word = document.getElementById(&quot;currentWord&quot;);
+
+  while (word.firstChild) {
+    word.removeChild(word.firstChild);
+  }
+};
+
+var drawCurrentWord = function (word) {
+  resetCurrentWord();
+
+  var currentWord    = word || hangman.getWordStatus();
+  var currentWordDom = document.getElementById(&quot;currentWord&quot;);
+
+  currentWord.forEach(function (letter) {
+    var spanLetter = document.createElement(&quot;span&quot;);
+    var content    = document.createTextNode(letter);
+
+    spanLetter.appendChild(content);
+    currentWordDom.appendChild(spanLetter);
+  });
+};</code></pre>
+<p>We have also created a function that will reset the current word container before draw the new status. The following we need is to create a function that will wait for the player to insert a letter to the game.</p>
+<h4 id="insert-letter">Insert letter</h4>
+<p>There are several ways to insert the letter to check out if it’s in the secret word. We could have a form where the player inserts a letter and press a button to send it. Another option is to add an event to the document to capture any press key, and send it to the hangman. We will do the second option.</p>
+<p>We will create the <code>insertLetter</code> method that will be triggered every time a key is pressed on the document. We have to do several things:</p>
+<ul>
+<li>We don’t want to execute the event when <strong>any</strong> key is pressed. We just want to capture the event when a letter is pressed.</li>
+<li>If the selected letter is not in the word, we have to add it to the used letters list.</li>
+<li>After receive the letter, we have to render the current word, the current hangman status, and check out if the game has finished.</li>
+</ul>
+<p>Let’s go step by step, first of all let’s create the method and attach it to the “keyDown” event of the document.</p>
+<div class="sourceCode" id="cb27"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> insertLetter <span class="op">=</span> <span class="kw">function</span> (<span class="bu">event</span>) {</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&quot;keydown&quot;</span><span class="op">,</span> insertLetter)<span class="op">;</span></span></code></pre></div>
+<p>You can check out the <a href="https://developer.mozilla.org/en-US/docs/Web/API/KeyboardEvent">keydown documentation</a> to see the received parameter. Through this parameter we can access to the pressed key, with the <code>event.keyCode</code> property, that will give us the letter ASCII code.</p>
+<div class="sourceCode" id="cb28"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> insertLetter <span class="op">=</span> <span class="kw">function</span> (<span class="bu">event</span>) {</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&lt;</span> <span class="dv">65</span> <span class="op">||</span> <span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&gt;</span> <span class="dv">90</span>)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>The following step is to check out if the inserted letter is contained in the secret word:</p>
+<div class="sourceCode" id="cb29"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> insertLetter <span class="op">=</span> <span class="kw">function</span> (<span class="bu">event</span>) {</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&lt;</span> <span class="dv">65</span> <span class="op">||</span> <span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&gt;</span> <span class="dv">90</span>)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> letter  <span class="op">=</span> <span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span>)<span class="op">;</span></span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> correct <span class="op">=</span> hangman<span class="op">.</span><span class="fu">askLetter</span>(letter)<span class="op">;</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p><a href="https://developer.mozilla.org/en/docs/Web/JavaScript/Reference/Global_Objects/String/fromCharCode"><code>String.fromCharCode</code></a> returns a string created by using the ASCII representation of the same. Remember that the <code>hangman.askLetter</code> method returns true if the letter is in the secret word, false if it’s not, and undefined if the letter was already inserted. We can use this value to add the used letter if it’s not correct, and to draw the current status of the word if it exists:</p>
+<div class="sourceCode" id="cb30"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> insertLetter <span class="op">=</span> <span class="kw">function</span> (<span class="bu">event</span>) {</span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>hangman <span class="op">||</span> (<span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&lt;</span> <span class="dv">65</span> <span class="op">||</span> <span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&gt;</span> <span class="dv">90</span>))</span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> letter  <span class="op">=</span> <span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span>)<span class="op">;</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> correct <span class="op">=</span> hangman<span class="op">.</span><span class="fu">askLetter</span>(letter)<span class="op">;</span></span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (correct <span class="op">!==</span> <span class="kw">undefined</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>correct) {</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">_addLetter</span>(letter)<span class="op">;</span></span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drawCurrentWord</span>()<span class="op">;</span></span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>We will add the wrong letter just if it is not in the container yet. We also have to draw the hangman if the letter is incorrect. We haven’t defined this method yet, so it could be the next one:</p>
+<h4 id="draw-hangman">Draw hangman</h4>
+<div class="sourceCode" id="cb31"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> drawHangman <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;hangman&quot;</span>)<span class="op">.</span><span class="at">classList</span> <span class="op">+=</span> <span class="st">&quot; lifes-&quot;</span> <span class="op">+</span> (hangman<span class="op">.</span><span class="at">errorsLeft</span> <span class="op">+</span> <span class="dv">1</span>)<span class="op">;</span></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>We are going to add each <code>lifes-*</code> class to the <code>hangman</code> container, so it will appear a piece of picture with each error. We just have to call it when the letter is incorrect:</p>
+<div class="sourceCode" id="cb32"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> insertLetter <span class="op">=</span> <span class="kw">function</span> (<span class="bu">event</span>) {</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>hangman <span class="op">||</span> (<span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&lt;</span> <span class="dv">65</span> <span class="op">||</span> <span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&gt;</span> <span class="dv">90</span>))</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> letter  <span class="op">=</span> <span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span>)<span class="op">;</span></span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> correct <span class="op">=</span> hangman<span class="op">.</span><span class="fu">askLetter</span>(letter)<span class="op">;</span></span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (correct <span class="op">!==</span> <span class="kw">undefined</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>correct) {</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">_addLetter</span>(letter)<span class="op">;</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drawHangman</span>()<span class="op">;</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drawCurrentWord</span>()<span class="op">;</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>To finish up this method, we just need to check out if the game has finished. We will create an <code>afterRound</code> function to do that, and it will be called at the end of the <code>insertLetter</code> method:</p>
+<h4 id="after-round">After round</h4>
+<div class="sourceCode" id="cb33"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> afterRound <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> status <span class="op">=</span> hangman<span class="op">.</span><span class="fu">gameStatus</span>()<span class="op">;</span></span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>status)</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(status<span class="op">.</span><span class="fu">toLowerCase</span>() <span class="op">===</span> <span class="st">&quot;you win&quot;</span>) {</span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;you-win&quot;</span>)<span class="op">.</span><span class="at">classList</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drawCurrentWord</span>(hangman<span class="op">.</span><span class="at">secretWord</span><span class="op">.</span><span class="fu">split</span>(<span class="st">&quot;&quot;</span>))<span class="op">;</span></span>
+<span id="cb33-11"><a href="#cb33-11" aria-hidden="true" tabindex="-1"></a>    <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;game-over&quot;</span>)<span class="op">.</span><span class="at">classList</span> <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
+<span id="cb33-12"><a href="#cb33-12" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb33-13"><a href="#cb33-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-14"><a href="#cb33-14" aria-hidden="true" tabindex="-1"></a>  hangman <span class="op">=</span> <span class="kw">undefined</span><span class="op">;</span></span>
+<span id="cb33-15"><a href="#cb33-15" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>If the game is not finished, the status will be undefined. On the other hand, if its finished, it will return an string to indicate if the player has won or lost. We also set the <code>hangman</code> variable to undefined to avoid game interactions once it’s finished.</p>
+<p>If the player has lost the game, we should show him the secret word he couldn’t discern. We do that by calling the <code>drawCurrentWord</code> method, indicating as a parameter the secret word splitted up by characters. Now we will add the call to the <code>afterRound</code> method after each round:</p>
+<div class="sourceCode" id="cb34"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> insertLetter <span class="op">=</span> <span class="kw">function</span> (<span class="bu">event</span>) {</span>
+<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="op">!</span>hangman <span class="op">||</span> (<span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&lt;</span> <span class="dv">65</span> <span class="op">||</span> <span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span> <span class="op">&gt;</span> <span class="dv">90</span>))</span>
+<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span><span class="op">;</span></span>
+<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-5"><a href="#cb34-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> letter  <span class="op">=</span> <span class="bu">String</span><span class="op">.</span><span class="fu">fromCharCode</span>(<span class="bu">event</span><span class="op">.</span><span class="at">keyCode</span>)<span class="op">;</span></span>
+<span id="cb34-6"><a href="#cb34-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">var</span> correct <span class="op">=</span> hangman<span class="op">.</span><span class="fu">askLetter</span>(letter)<span class="op">;</span></span>
+<span id="cb34-7"><a href="#cb34-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-8"><a href="#cb34-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (correct <span class="op">!==</span> <span class="kw">undefined</span> <span class="op">&amp;&amp;</span> <span class="op">!</span>correct) {</span>
+<span id="cb34-9"><a href="#cb34-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">_addLetter</span>(letter)<span class="op">;</span></span>
+<span id="cb34-10"><a href="#cb34-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drawHangman</span>()<span class="op">;</span></span>
+<span id="cb34-11"><a href="#cb34-11" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
+<span id="cb34-12"><a href="#cb34-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drawCurrentWord</span>()<span class="op">;</span></span>
+<span id="cb34-13"><a href="#cb34-13" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb34-14"><a href="#cb34-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb34-15"><a href="#cb34-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">afterRound</span>()<span class="op">;</span></span>
+<span id="cb34-16"><a href="#cb34-16" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>Once the game is over, we have to give the option to start a new game. This means that we have to create the functionality to reset the controls when the “New game” buttons is clicked.</p>
+<h4 id="reset-controls">Reset controls</h4>
+<p>We will create a function to initialize the controls of the game. It will be called at the beginning of the <code>newGame</code> method, and will add and remove the necessary classes to the containers of the game.</p>
+<div class="sourceCode" id="cb35"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> newGameClick <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">_initializeControls</span>()<span class="op">;</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a>  hangman <span class="op">=</span> <span class="kw">new</span> <span class="fu">Hangman</span>()<span class="op">;</span></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drawCurrentWord</span>()<span class="op">;</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a><span class="kw">var</span> _initializeControls <span class="op">=</span> <span class="kw">function</span> () {</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;you-win&quot;</span>)<span class="op">.</span><span class="at">classList</span>   <span class="op">=</span> <span class="st">&quot;hide&quot;</span><span class="op">;</span></span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;game-over&quot;</span>)<span class="op">.</span><span class="at">classList</span> <span class="op">=</span> <span class="st">&quot;hide&quot;</span><span class="op">;</span></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;hangman&quot;</span>)<span class="op">.</span><span class="at">classList</span>   <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a>  <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&quot;letters&quot;</span>)<span class="op">.</span><span class="at">innerHTML</span>   <span class="op">=</span> <span class="st">&quot;&quot;</span><span class="op">;</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>}<span class="op">;</span></span></code></pre></div>
+<p>This was the last feature we had to implement to finish the game. Our hangman is ready to play, let’s enjoy it :)</p>
+<p><img src="https://i.imgur.com/B7lJNOq.png" /></p>
+<h2 id="summary">Summary</h2>
+<p>To sum up, we have seen how we can create a game like Hangman splitting it up into different parts. The best way to face this kind of problems is to create first of all the game logic, then create the layout with HTML and CSS, and finally code the necessary JavaScript that will join both the logic and the layout.</p>
+<p>Once we have the basic functionality of this game, we could think about future actions over it. For example, we could allow to select words with spaces, add sounds to make it fancy, or call an external API to load a bigger dictionary of words.</p>
+<h2 id="extra-resources">Extra Resources</h2>
+<ul>
+<li><a href="http://www.hangman.no/">Hangman online</a></li>
+</ul>
+</body>
+</html>

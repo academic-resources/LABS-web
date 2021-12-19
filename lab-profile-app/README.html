@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-react-ironprofile">LAB | React IronProfile</h1>
+<p>Profile page is one of the most common features you will need to add to your projects, so today we are going to practice creating one.</p>
+<h2 id="introduction">Introduction</h2>
+<p>We will create a backend REST API using NodeJS and a front-end app using React where users will be able to <strong>signup, login, upload a profile picture, check their profiles and edit it.</strong></p>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<pre class="shell"><code>$ cd lab-profile-app</code></pre>
+<h2 id="submission">Submission</h2>
+<ul>
+<li><p>Upon completion, run the following commands:</p>
+<pre><code>git add .
+git commit -m &quot;done&quot;
+git push origin master</code></pre></li>
+<li><p>Create Pull Request so your TAs can check up your work.</p></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-1-the-rest-api">Iteration 1 | The REST API</h3>
+<p>You will start by creating the backend REST API. Create a new <em>server</em> app using the <a href="https://www.npmjs.com/package/ironlauncher">Ironlauncher</a> with the command <code>npx ironlauncher profile-app-server --json</code>.</p>
+<p>Once done, create the <strong>user model</strong> in the <code>user.model.js</code> file with the following fields:</p>
+<ul>
+<li><strong>username</strong>: String,</li>
+<li><strong>password</strong>: String</li>
+<li><strong>campus</strong>: String. Possible values: <code>"Madrid"</code>, <code>"Barcelona"</code>, <code>"Miami"</code>, <code>"Paris"</code>, <code>"Berlin"</code>, <code>"Amsterdam"</code>, <code>"México"</code>, <code>"Sao Paulo"</code>, <code>"Lisbon"</code>, <code>"Remote"</code>.</li>
+<li><strong>course</strong>: String. Possible values: <code>"Web Dev"</code>, <code>"UX/UI"</code>, <code>"Data Analytics"</code>,<code>"Cyber Security"</code>.</li>
+<li><strong>image</strong>: String.</li>
+</ul>
+<p>The server should have the following routes:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Method</th>
+<th>Endpoint</th>
+<th>Request</th>
+<th>Return Value</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>POST</td>
+<td><code>/auth/signup</code></td>
+<td>{ <code>username</code>, <code>password</code>, <code>campus</code>, <code>course</code> }</td>
+<td>User object</td>
+</tr>
+<tr class="even">
+<td>POST</td>
+<td><code>/auth/login</code></td>
+<td>{ <code>username</code>, <code>password</code> }</td>
+<td>Authentication Token</td>
+</tr>
+<tr class="odd">
+<td>GET</td>
+<td><code>/auth/verify</code></td>
+<td></td>
+<td>Current user object</td>
+</tr>
+<tr class="even">
+<td>PUT</td>
+<td><code>/api/user</code></td>
+<td>{ <code>image</code> }</td>
+<td>Updated user object</td>
+</tr>
+<tr class="odd">
+<td>GET</td>
+<td><code>/api/user</code></td>
+<td></td>
+<td>Current user object</td>
+</tr>
+<tr class="even">
+<td>POST</td>
+<td><code>/api/upload</code></td>
+<td>form-data with the image file</td>
+<td>Image URL</td>
+</tr>
+</tbody>
+</table>
+<div class="info">
+<p>Remember to test the REST API using Postman, to make sure everything is working! :wink:</p>
+</div>
+<h3 id="iteration-2-the-react-app">Iteration 2 | The React App</h3>
+<p>Create a new React App using the command <code>npx create-react-app profile-app-client</code>.</p>
+<p>Once done, set up the app routing using the <code>react-router-dom</code>. Create a page component called <code>HomePage</code> that displays two buttons: <code>Sign up</code> and <code>Log in</code>. Buttons should redirect to the front-end routes <code>/signup</code> and <code>/login</code> respectively.</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/43786924-1c5d3d5a-9a6a-11e8-90c4-7ff2f92ef983.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>::: All the assets you need for the design are stored inside the <code>assets/</code> folder, but for now, don’t worry about that, focus on the functionality! :::</p>
+<h3 id="iteration-3-signuplogin-components">Iteration 3 | Signup/Login Components</h3>
+<p>You should create the <code>Signup</code> and <code>Login</code> page components, where the user will be able to fill the form with the specified fields.</p>
+<p>If the <em>signup</em> is successful, the user should be redirected to the <strong>Login Page</strong> page. If the <em>login</em> is successful, the user should be redirected to the <strong>Home Page</strong> page.</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/43787810-2c9dc94e-9a6c-11e8-8854-0993c5de16a3.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/43787823-37a22ed4-9a6c-11e8-9c8e-70cd622f4d96.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-4-implement-the-authentication-logic">Iteration 4 | Implement the authentication logic</h3>
+<p>You should create a new folder named <code>context/</code> and inside of it a file <code>auth.context.js</code>. Inside of the file you should create a new <em>Context</em> object and the <code>AuthProviderWrapper</code> component.</p>
+<ol type="1">
+<li><p>To create a <em>Context</em> object use the method <code>React.createContext()</code> (<a href="https://github.com/ironhack-labs/lesson-code-h-react-authentication-frontend/blob/master/src/context/auth.context.js#L5">example</a>).</p></li>
+<li><p>The <code>AuthProviderWrapper</code> component should have the following state variables for storing the user information and the authentication state: <code>isLoggedIn</code>, <code>isLoading</code> and <code>user</code> (<a href="https://github.com/ironhack-labs/lesson-code-h-react-authentication-frontend/blob/master/src/context/auth.context.js#L8-L10">example</a>).</p></li>
+<li><p>The <code>AuthProviderWrapper</code> component should also have functions <code>verifyStoredToken</code>, <code>logInUser</code> and <code>logOutUser</code> used for handling the authentication logic (<a href="https://github.com/ironhack-labs/lesson-code-h-react-authentication-frontend/blob/master/src/context/auth.context.js#L13-L64">example</a>). You will need to provide the above mentioned state values and functions through the <code>value</code> prop (<a href="https://github.com/ironhack-labs/lesson-code-h-react-authentication-frontend/blob/master/src/context/auth.context.js#L73">example</a>).</p></li>
+<li><p>Finally, remember to wrap the <code>&lt;App /&gt;</code> component with the <code>&lt;AuthProviderWrapper&gt;&lt;/AuthProviderWrapper&gt;</code> (<a href="https://github.com/ironhack-labs/lesson-code-h-react-authentication-frontend/blob/master/src/index.js#L13-L15">example</a>).</p></li>
+<li><p>Use the React hook <code>useContext()</code> to access the values coming from the <code>AuthProviderWrapper</code> and to finish implementing the log in (<a href="https://github.com/ironhack-labs/lesson-code-h-react-authentication-frontend/blob/812bdce8d55cdad3d428dc9a8f4b3fdd8e3f6fd0/src/pages/LoginPage.js#L14">example</a>).</p></li>
+</ol>
+<h3 id="iteration-5-upload-the-photo">Iteration 5 | Upload the Photo</h3>
+<p>On the profile route, the user should be able to upload a photo to the profile. In this iteration, you should create all that is necessary to upload a new profile picture and store it in the database.</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/43787903-6a370928-9a6c-11e8-89b1-15e86e0397e4.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-6-auth-service">Iteration 6 | Auth Service</h3>
+<p>Create an <code>authService</code> file, where you will have the methods to abstract the axios requests to your REST API. Create the following methods:</p>
+<ul>
+<li><strong>signUp</strong> that makes a <code>POST</code> request to the server endpoint <code>/auth/signup</code> passing <em>username</em>, <em>password</em>, <em>campus</em> and <em>course</em> info,</li>
+<li><strong>logIn</strong> that makes a <code>POST</code> request to the server endpoint <code>/auth/login</code> passing <em>username</em> and <em>password</em>,</li>
+<li><strong>verifyToken</strong> that makes a <code>GET</code> request to the server endpoint <code>/auth/verify</code> to check if a user is logged in.</li>
+<li><strong>uploadPhoto</strong> that makes a <code>POST</code> request to the server endpoint <code>/api/upload</code> and sends the <em>file</em>,</li>
+<li><strong>getCurrentUser</strong> that makes a <code>GET</code> request to the server endpoint <code>/api/user</code> to retrieve the current user data,</li>
+<li><strong>editUser</strong> that makes a <code>PUT</code> request to the server endpoint <code>/api/user</code> passing <em>username</em>, <em>campus</em>, <em>course</em> and <em>image</em>.</li>
+</ul>
+<h3 id="iteration-7-bonus-styling-your-app">Iteration 7 (Bonus) | Styling your App</h3>
+<p>Feel free to style it how ever you want. :art: Or you can use <code>.png</code> inside of the <code>assets</code> folder that you can use as a background image. Don’t forget to copy (or move) the image inside public folder of your React app. Here you can check the colors:</p>
+<ul>
+<li>Gradient background color: <code>#C1DFC4</code> to <code>#DEECDD</code></li>
+<li>Green: <code>#638165</code></li>
+<li>Red: <code>#D0021B</code></li>
+</ul>
+<p>Happy coding! :heart:</p>
+</body>
+</html>

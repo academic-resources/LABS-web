@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>readme</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-js-ironchronometer">LAB | JS IronChronometer</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this lab, we are going to create a <a href="https://www.dictionary.com/browse/chronometer">chronometer</a>. Chronometers are very commonly used in many sports - car racing, athletics, etc. Why wouldn’t we practice a bit of our JS and DOM manipulation knowledge and create our own IronChronometer? And then, we can use to see how many minutes and seconds will take us to complete any of our labs. Sounds like a plan.</p>
+<p>Let’s go!</p>
+<p>These are our milestones:</p>
+<ol type="1">
+<li>Our chronometer will have an <em>LCD screen</em>, where we will see the minutes and seconds moving forward.</li>
+<li>It will also have two different buttons that will change their behavior depending on the status of the chronometer. For example, the start button will become a stop button when the chronometer is running.</li>
+<li>As a bonus, we are going to add a split functionality. If you are questioning the usefulness of this functionality, well, it could be helpful to remember how much time we spent in each iteration of the exercise. :wink: As we finish an iteration, we will be able to press the split button, so we will know how hard or easy it was, depending on how much time it took us to finish it.</li>
+</ol>
+<p>Let’s do it!</p>
+<p>To check how your final version should look like check this <strong><a href="https://sandrabosk.github.io/demo-chrono/index.html">demo</a></strong>.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo.</li>
+<li>Clone this repo.</li>
+<li>Visit the “Actions” tab in your fork, and enable workflows.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Upon completion, run the following commands:</li>
+</ul>
+<pre class="shell"><code>$ git add .
+$ git commit -m &quot;Solved lab&quot;
+$ git push origin master</code></pre>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<h2 id="tests-tests-tests">Tests, tests, tests!</h2>
+<p>As you know by now, most of our labs are supported by tests. In the <code>tests/chronometer.spec.js</code> file, you can find the tests you need to pass to finish this exercise successfully.</p>
+<p>Please, open your terminal, change directories into the root of the lab, and run <code>npm install</code> to install the test runner. Next run the <code>npm run test:watch</code> command to run automated tests. Open the resulting <code>lab-solution.html</code> file with the “Live Server” VSCode extension to always see the most up to date test results.</p>
+<p>To see more details about failing tests, open the <code>tests/chronometer.spec.js</code> file.</p>
+<h2 id="instructions">Instructions</h2>
+<p>To kick-off, we are provided with the following files and folders:</p>
+<pre><code>├── README.md
+├── index.html
+├── javascript
+│   ├── chronometer.js
+│   └── index.js
+├── styles
+│   ├── fonts
+│   │   ├── ds-digi.ttf
+│   └── style.css
+└── tests
+    └── chronometer.spec.js</code></pre>
+<p>The stylesheet already has the <code>ds-digi</code> font inserted. This font helps us to have a classic LCD screen to achieve the styles of the traditional chronometers.</p>
+<p>We have also created the clock to let you focus on the JavaScript portion of this exercise. Click below to see the image you should get when you open the <code>index.html</code> file:</p>
+<p><br></p>
+<details>
+<summary>
+Click here
+</summary>
+<img src="https://education-team-2020.s3-eu-west-1.amazonaws.com/web-dev/labs/chronometer.png" />
+</details>
+<p><strong>This lab is primarily split into two main parts</strong>:</p>
+<ul>
+<li>Part 1: the logic (which you will be adding to the <code>javascript/chronometer.js</code> file).</li>
+<li>Part 2: the DOM manipulation, so we can visually represent and showcase the previously written logic (the code you will add in the <code>javascript/index.js</code>).</li>
+</ul>
+<p>Your solution will require the usage of the <code>setInterval</code> and <code>clearInterval</code> globally available methods.</p>
+<p><code>setInterval</code> can be called with a function as first argument and a number of milliseconds as the second argument. It will run said function every number of milliseconds that you passed it.</p>
+<p>When called, <code>setInterval</code> returns a number that can be used to identify the <em>interval</em> that was initialized. That same interval can later be stopped by running <code>clearInterval</code> and passing it the id of the interval we want to interrupt.</p>
+<h3 id="iteration-1-the-logic">Iteration 1: The logic</h3>
+<p>To start, you should be working on the <code>javascript/chronometer.js</code> file.</p>
+<h4 id="the-chronometer-class">The <code>Chronometer</code> class</h4>
+<p>Let’s create our <code>Chronometer</code> class. The <code>constructor</code> method shouldn’t expect any arguments. It should initialize two properties of the chronometer:</p>
+<ul>
+<li><code>currentTime</code>, which should start of as the number <code>0</code>.</li>
+<li><code>intervalId</code>, which should start as <code>null</code>.</li>
+</ul>
+<p>Let’s proceed with the creation of the <code>Chronometer</code> methods.</p>
+<h4 id="method-start">Method <code>start</code></h4>
+<p>The <code>Chronometer</code> class needs to have a <code>start</code> method. When called, <code>start</code> will start keeping track of time, by running a function in a 1 second interval, which will increment the amount of seconds stored in the property <code>currentTime</code> by <code>1</code>.</p>
+<p>You should rely on the <code>setInterval</code> method to achieve this. The interval id that is returned by calling <code>setInterval</code> should be assigned to our <code>intervalId</code> property, so this way, we will be able to clear it later on when we need to stop the timer.</p>
+<p>Additionally, the <code>start</code> method should accept a function as an argument. Let’s name it <code>callback</code>. The <code>callback</code> argument is optional. If <code>start</code> is called and a <code>callback</code> is passed, said <code>callback</code> should be executed inside of the function you have passed to <code>setInterval</code>. If no callback is passed, it should be disregarded (hint: you should check whether <em>if</em> the <code>callback</code> was passed before attempting to run it).</p>
+<p>:bulb: <em>Hint 1</em>: Keep in mind, if you pass a function declaration to the <code>setInterval()</code> method (by writing <code>setInterval(function () {/* */})</code>), the keyword <code>this</code> will not refer to the object <em>chronometer</em>, but to global scope. To enable referencing the chronometer by accessing <code>this</code>, pass a function expression (a so-called arrow function) to the <code>setInterval()</code> method (by writing <code>setInterval(() =&gt; {/* */})</code> instead).</p>
+<h4 id="method-getminutes">Method <code>getMinutes</code></h4>
+<p>We’re storing the number of seconds that have passed on the <code>currentTime</code> property. However, we might want to find out how many minutes have passed.</p>
+<p>The <code>getMinutes</code> method should take no arguments, and it should return the <em>number</em> of minutes that have passed as an integer.</p>
+<h4 id="method-getseconds">Method <code>getSeconds</code></h4>
+<p>We’re now able to get the number of minutes that have passed. But what if we wanted to get the number of seconds that have passed after the start of the current minute?</p>
+<p>The <code>getSeconds</code> method should return the number of seconds that have passed after the start of the current minute.</p>
+<p>For example, if the property <code>currentTime</code> holds <code>75</code>, <code>getSeconds</code> should return <code>15</code>. If <code>currentTime</code> holds <code>210</code>, <code>getSeconds</code> should return <code>30</code>, and so on.</p>
+<p>Hint: The <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Remainder">remainder math operator</a> could be tremendously helpful in this situation.</p>
+<h4 id="method-computetwodigitnumber">Method <code>computeTwoDigitNumber</code></h4>
+<p>Our chronometer has a super cool screen that needs two digits number to display minutes and seconds. However, sometimes the <code>getMinutes</code> and <code>getSeconds</code> methods return a single-digit number. Let’s create a super simple algorithm that will turn into two-digits number any received value.</p>
+<p>The <code>computeTwoDigitNumber</code> method should take a number, and return a string where the number received as an argument has been padded with 0s to ensure the value is at least 2 characters long.</p>
+<p>For example, if <code>computeTwoDigitNumber</code> is called with the number <code>7</code>, it should return a string with the value of <code>"07"</code>. If called with with the number <code>36</code>, it should return a string with the value of <code>"36"</code>.</p>
+<p>Later, we’ll use the <code>computeTwoDigitNumber</code> method to format the values returned by <code>getMinutes</code> and <code>getSeconds</code> and display them in our chronometer.</p>
+<h4 id="method-stop">Method <code>stop</code></h4>
+<p>We can already start our chronometer. Let’s create a method that stops it.</p>
+<p>When invoked, the <code>stop</code> method should clear the interval with the id that had been stored in the <code>intervalId</code> property. It’s as simple as that.</p>
+<p>:bulb: <em>Hint</em>: Use <code>clearInterval</code>.</p>
+<h4 id="method-reset">Method <code>reset</code></h4>
+<p>The <code>reset()</code> will reset our chronometer. Since our code is super clean, we just need to set our <code>currentTime</code> property back to 0, and that’s it!</p>
+<h4 id="method-split">Method <code>split</code></h4>
+<p>At certain points, we might want to extract a formatted timestamp for the time elapsed since the chronometer was started. We call this “obtaining the split time”.</p>
+<p>The <code>split</code> method should expect no arguments, and return a string where the time since the start is formatted as “<em>mm:ss</em>”. Internally, the <code>split</code> method can make usage of previously declared methods such as <code>getMinutes</code>, <code>getSeconds</code>, and <code>computeTwoDigitNumber</code>.</p>
+<h3 id="iteration-2-dom-manipulation">Iteration 2: DOM Manipulation</h3>
+<p>Your Chronometer class is now complete! That means that we can go ahead and actually create a visual interface that allows us to use all of the logic we’ve just coded.</p>
+<p>At this point, you should start working in the <code>javascript/index.js</code> file. Note that, for now, you don’t have to change anything in the HTML or CSS files.</p>
+<p>In this iteration, your goal is to create a new chronometer, and use its methods (which we previously defined in <code>chronometer.js</code>) while interacting with the DOM. Example: when clicked, the <code>start</code> button should invoke the chronometer’s <code>start</code> method.</p>
+<p>As you can see, we have two different buttons: <code>start</code> and <code>clear</code>. These are the button values when the chronometer is not running. When the chronometer is running, the start button will change its behavior to stop the chronometer. In contrast, the reset button will change to split.</p>
+<p>Both buttons will have different behavior depending on the status of the chronometer. These buttons are <code>btnLeft</code> and <code>btnRight</code> in our HTML. We can see the different values they will have in the following table:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Chronometer Status</th>
+<th>Button ID</th>
+<th>Text</th>
+<th>CSS Class</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Stopped</td>
+<td><code>btnLeft</code></td>
+<td>START</td>
+<td><code>btn start</code></td>
+</tr>
+<tr class="even">
+<td>Stopped</td>
+<td><code>btnRight</code></td>
+<td>RESET</td>
+<td><code>btn reset</code></td>
+</tr>
+<tr class="odd">
+<td>Running</td>
+<td><code>btnLeft</code></td>
+<td>STOP</td>
+<td><code>btn stop</code></td>
+</tr>
+<tr class="even">
+<td>Running</td>
+<td><code>btnRight</code></td>
+<td>SPLIT</td>
+<td><code>btn split</code></td>
+</tr>
+</tbody>
+</table>
+<p>You will find two click event listeners that are already linked with both <code>btnLeft</code> and <code>btnRight</code> buttons. You have to create the necessary code to change the status of buttons.</p>
+<p>:bulb: <em>Hint</em>: To change the <em>status</em> of the buttons, we have to <em>toggle</em> their classes.</p>
+<p>It means that when we click in the <code>btnLeft</code>, if it has the <code>start</code> class, you will have to change the <code>btnLeft</code> and <code>btnRight</code> buttons, setting them up with the Running status described in the table above.</p>
+<p>On the other hand, if the <code>btnLeft</code> doesn’t have the <code>start</code> class when we click, we will have to change both <code>btnLeft</code> and <code>btnRight</code> properties setting them up with the Stopped status described in the table above.</p>
+<h4 id="changing-buttons-texts">Changing buttons texts</h4>
+<p>We will be working on the <code>javascript/index.js</code> file. We need to do the following:</p>
+<ul>
+<li><p>When the left button is clicked while the chronometer is stopped, we need to:</p>
+<ul>
+<li>Set the <code>btnLeft</code> button with the text STOP, and the class <code>btn stop</code>.</li>
+<li>Set the <code>btnRight</code> button with the text SPLIT, and the class <code>btn split</code>.</li>
+</ul></li>
+<li><p>When the left button is clicked while the chronometer is running we need to:</p>
+<ul>
+<li>Set the <code>btnLeft</code> button with the text START, and the class <code>btn start</code>.</li>
+<li>Set the <code>btnRight</code> button with the text RESET, and the class <code>btn reset</code>.</li>
+</ul></li>
+<li><p>In the <code>index.js</code> file, create a new instance of the <code>Chronometer</code> object.</p></li>
+<li><p>Create the necessary code in the <code>index.js</code> to call the Chronometer’s <code>start</code> method if the button has the <code>start</code> class, or the <code>stop</code> method if the button has the <code>stop</code> class applied.</p></li>
+</ul>
+<h4 id="print-our-chronometer">Print our chronometer</h4>
+<p>Each second we need to update our screen. So go ahead and create a function that will receive the value for minutes and seconds, and print that on our HTML.</p>
+<p>Using our <code>Chronometer</code> methods to get the values, this should be easy!</p>
+<details>
+<summary>
+Click here
+</summary>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_1a87e0edfb6efea2ae0c77c490e8563b.png" /></p>
+</details>
+<h3 id="iteration-3-split-time">Iteration 3: Split time</h3>
+<p>The following feature we will implement is the split button. Remember that the split button is located in the <code>btnRight</code> button when the chronometer is running. In this iteration, we will have to create two different things: HTML &amp; CSS, and the associated JavaScript.</p>
+<h4 id="html-css">HTML &amp; CSS</h4>
+<p>First of all, we have to create in our <code>index.html</code> file an ordered list where we are going to append the current time every time we press the split button.</p>
+<h4 id="javascript">JavaScript</h4>
+<p>Once we have created the ordered list in our HTML, we have to create the button functionality. Every time we click on the split button, we will have to create a new <code>li</code> element and append it to the ordered list. The text of this element will be the current time of the chronometer (we have a method on our Chronometer that returns this :wink:).</p>
+<details>
+<summary>
+Click here
+</summary>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_a5c9687f25bd710b2e7658ee6d997174.png" /></p>
+</details>
+<h3 id="iteration-4-reset">Iteration 4: Reset</h3>
+<p>To finish up with this lesson, we are going to create the <em>clear</em> feature. Remember, we will execute this when the chronometer is stopped, and the user clicks on the right button. The behavior here is straightforward: we have to clear all the data on the clock.</p>
+<p>To do that, we will have to set the minutes and seconds to zero in our clock and remove all the <code>li</code> elements that we could have in the list we created in the previous iteration.</p>
+<h3 id="bonus-iteration-5-milliseconds">BONUS Iteration 5: Milliseconds</h3>
+<p>Now, we can use our chronometer to calculate how much time we spend on each Ironhack exercise. What happens if we want to calculate our time in a race? We need to be more accurate with our chronometer. How can we be more accurate? By adding milliseconds!</p>
+<p>If we want to add milliseconds to the chronometer, we will have to manipulate the HTML, the CSS, and the JavaScript. In the HTML, we will have to a container to show the milliseconds, changing the style of this container. Finally, in JavaScript, we will have to add all the logic to show the milliseconds in the clock. You will also have to add these milliseconds to the split counter.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_82e9d1fd5976a3f98bb1382f2385f6a1.png" /></p>
+<p>Your goal is to create the JavaScript logic to:</p>
+<ul>
+<li>Be able to count the milliseconds.</li>
+<li>Show the milliseconds going forward.</li>
+<li>Show the milliseconds when you capture a split time.</li>
+<li>Clear the milliseconds when the Reset button is clicked.</li>
+</ul>
+<p>This lab is a little bit complex, but it will guide you through the logical process of solving the problem and, at the same time, by following the guidelines, you will learn how to separate concerns between the logic and the DOM manipulation (which are the visuals).</p>
+<p><strong>Happy coding!</strong> :heart:</p>
+</body>
+</html>

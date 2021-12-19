@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-axios-crud-exercise">LAB | Axios CRUD exercise</h1>
+<h2 id="introduction">Introduction</h2>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36733655-8c9903fa-1bd1-11e8-82f7-d425ab140c09.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>In this exercise, we will use all what we have learned about APIs and how to connect an application to them through <strong>Axios</strong>.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Then clone this repo</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Upon completion, run the following commands:</li>
+</ul>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<p>We will first create a fake API using <strong>JSON-Server</strong> to then do an application to Create, Read, Update, and Delete characters from it. The routes available in this API are the following:</p>
+<ul>
+<li><strong>Verb:</strong> GET, <strong>Route:</strong> “/characters”
+<ul>
+<li>It receives NO parameters</li>
+<li>It returns the full characters list</li>
+<li>It returns JSON</li>
+</ul></li>
+<li><strong>Verb:</strong> GET, <strong>Route:</strong> “/characters/:id”
+<ul>
+<li>It receives the character ID as a parameter (route)</li>
+<li>It returns the character with the indicated <code>id</code></li>
+<li>It returns JSON</li>
+</ul></li>
+<li><strong>Verb:</strong> POST, <strong>Route:</strong> “/characters”
+<ul>
+<li>It receives an object as a parameter, with the following format: <code>{ name: string, occupation: string, cartoon: boolean, weapon: string }</code></li>
+<li>It returns the created character if there are no errors</li>
+<li>It returns the wrong fields if there is some error</li>
+<li>It returns JSON</li>
+</ul></li>
+<li><strong>Verb:</strong> PATCH/PUT, <strong>Route:</strong> “/characters/:id”
+<ul>
+<li>It receives the character <code>id</code> as a parameter (route)</li>
+<li>It receives an object as a parameter, with the following format: <code>{ name: string, occupation: string, cartoon: boolean, weapon: string }</code></li>
+<li>All the fields are optional</li>
+<li>It returns the updated character if there are no errors</li>
+<li>It returns “Character not found” if there is no character with the indicated <code>id</code></li>
+<li>It returns JSON / text</li>
+</ul></li>
+<li><strong>Verb:</strong> DELETE, <strong>Route:</strong> “/characters/:id”
+<ul>
+<li>It receives the character <code>id</code> as a parameter (route)</li>
+<li>It returns “Character has been successfully deleted” if there are no errors</li>
+<li>It returns “Character not found” if there is no character with the indicated id</li>
+<li>It returns text</li>
+</ul></li>
+</ul>
+<h3 id="iteration-1-the-fake-api">Iteration 1: The Fake API</h3>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_99257e2c4240770e6b4bdd406d943ac8.png" /></p>
+<p>In the <code>api</code> folder, create a <code>db.json</code> file. Inside our <code>db.json</code> we will specify the first 2 characters of our API, so we can start working with some data. Copy/paste the following characters in the file:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>{</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&quot;characters&quot;</span><span class="op">:</span> [</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;id&quot;</span><span class="op">:</span> <span class="dv">1</span><span class="op">,</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;name&quot;</span><span class="op">:</span> <span class="st">&quot;Han Solo&quot;</span><span class="op">,</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;occupation&quot;</span><span class="op">:</span> <span class="st">&quot;Smuggler&quot;</span><span class="op">,</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;weapon&quot;</span><span class="op">:</span> <span class="st">&quot;Blaster Pistol&quot;</span><span class="op">,</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;cartoon&quot;</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;id&quot;</span><span class="op">:</span> <span class="dv">2</span><span class="op">,</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;name&quot;</span><span class="op">:</span> <span class="st">&quot;Luke Skywalker&quot;</span><span class="op">,</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;occupation&quot;</span><span class="op">:</span> <span class="st">&quot;Jedi Knight&quot;</span><span class="op">,</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;weapon&quot;</span><span class="op">:</span> <span class="st">&quot;Lightsaber&quot;</span><span class="op">,</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;cartoon&quot;</span><span class="op">:</span> <span class="kw">false</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    }<span class="op">,</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    {</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;id&quot;</span><span class="op">:</span> <span class="dv">3</span><span class="op">,</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;name&quot;</span><span class="op">:</span> <span class="st">&quot;Sponge Bob&quot;</span><span class="op">,</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;occupation&quot;</span><span class="op">:</span> <span class="st">&quot;Lives under the sea&quot;</span><span class="op">,</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;weapon&quot;</span><span class="op">:</span> <span class="st">&quot;Crabby Patty&quot;</span><span class="op">,</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;cartoon&quot;</span><span class="op">:</span> <span class="kw">true</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a>    }</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>  ]</span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Then run the following code in the terminal to make our API start working:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> json-server <span class="at">--watch</span> db.json <span class="at">--port</span> 8000</span></code></pre></div>
+<h3 id="iteration-2-the-apihandler.js-file">Iteration 2: The <code>APIHandler.js</code> file</h3>
+<p>We have our API running, so now we will construct a class <code>APIHandler</code> to deal with the Axios calls. The only responsibility of this class is to display the JSON result that comes from the API, or give the needed information to the API via a function argument.</p>
+<p>The functionalities of the <code>APIHandler</code> class are:</p>
+<ul>
+<li>Get all the characters info from <em><a href="http://localhost:8000/characters">http://localhost:8000/characters</a></em></li>
+<li>Get a single character info from <em><a href="http://localhost:8000/characters/:id">http://localhost:8000/characters/:id</a></em></li>
+<li>Create a single character posting the data to <em><a href="http://localhost:8000/characters">http://localhost:8000/characters</a></em></li>
+<li>Delete a single character through his id in <em><a href="http://localhost:8000/characters/:id">http://localhost:8000/characters/:id</a></em></li>
+<li>Edit a single character through his id in <em><a href="http://ih-crud-api.herokuapp.com/characters/:id">http://localhost:8000/characters/:id</a></em></li>
+</ul>
+<p>You have to create an Axios call for each of these actions. You can create as many functions as you need inside the class, but remember this class should only manage the API request and display the resulting value.</p>
+<!-- :::success -->
+<p><strong>Micro-advice</strong></p>
+<p>To make sure everything is working, use <a href="https://www.getpostman.com/">POSTMAN</a>.</p>
+<!-- ::: -->
+<p>In this iteration, it’s enough to show results in the console.</p>
+<h3 id="iteration-3-the-index.js-file">Iteration 3: The <code>index.js</code> file</h3>
+<p>Once we have the results served by the API in the application, we will create the events that will handle with the CRUD operations.</p>
+<h4 id="fetch-all-characters">Fetch all characters</h4>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36733634-7b6b6dca-1bd1-11e8-9803-5282681159ba.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Retrieve all the available characters in the API and show them in the application. In order to do that, we need to:</p>
+<ul>
+<li>Create a button (<em>Fetch all</em> in the image above) that calls a function in the <code>APIHandler</code>.</li>
+<li>The function will return a JSON object with all the characters.</li>
+<li>Get the data and show the characters. Finally, with JavaScript, we will create a structure similar to a card (image above) to show detailed info about each character.</li>
+</ul>
+<h4 id="fetch-one-character">Fetch one character</h4>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36733678-97ecd42a-1bd1-11e8-8e60-6aab38d632a0.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Following the same idea as with fetching all, to retrieve a single character’s data we need to:</p>
+<ul>
+<li>Create a button (<em>Fetch one</em> in the image above) to, through an input field, get the <code>id</code> of an existing character.</li>
+<li>Search that character in the API with <em><a href="http://ih-crud-api.herokuapp.com/characters/:id">http://localhost:8000/characters/:id</a></em></li>
+<li>Get the data and show the character info as a card.</li>
+</ul>
+<h4 id="delete-one-character">Delete one character</h4>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_3d893f20f95e5b13369375cdfd7900a5.png" /></p>
+<p>To be able to delete a character from the API database, we need to:</p>
+<ul>
+<li>Create a button (<em>Delete</em> one in the image above) to get the <code>id</code> of the character we want to delete.</li>
+<li>Delete that character in the API with <em><a href="http://ih-crud-api.herokuapp.com/characters/:id">http://localhost:8000/characters/:id</a></em> <!-- :::danger --> <strong>Remember which HTTP verb you need in the request!!</strong> <!-- ::: --></li>
+<li>If the character is successfully removed, change the background color of the button to green.</li>
+<li>If something went wrong, change the background color of the button to red.</li>
+</ul>
+<h4 id="create-new-character">Create new character</h4>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36733698-a7c64f8e-1bd1-11e8-9b7d-b37c7a800a27.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>We will create a form with 4 inputs: name(text), occupation(text), weapon(text) and cartoon(checkbox).</p>
+<ul>
+<li>Create a submit button (<em>Create</em> in the image above) to get all the data from the form.</li>
+<li>Create an event handler function for managing the form submission. To prevent the default form behaviour (page reload), use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>event.preventDefault()</code></a> method.</li>
+<li>Send the data to the <code>APIHandler</code> function to save the new character through <em><a href="http://ih-crud-api.herokuapp.com/characters">http://localhost:8000/characters</a></em> <!-- :::danger --> <strong>Remember which HTTP verb you need in the request!!</strong> <!-- ::: --></li>
+<li>If the character was successfully created, set the background color of the button to green.</li>
+<li>If something went wrong, change the background color of the button to red.</li>
+</ul>
+<h4 id="edit-a-character">Edit a character</h4>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36733714-b6257b36-1bd1-11e8-8518-c3f7e2ba034c.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>We will create a form with 4 inputs: name(text), occupation(text), weapon(text) and cartoon(checkbox). Also, we will create a new input to indicate the <code>id</code> of the character we want to edit.</p>
+<ul>
+<li>Create a submit button (<em>Update</em> in the image above) to get all the data from the form.</li>
+<li>Create an event handler function for managing the form submission. To prevent the default form behaviour (page reload), use the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Event/preventDefault"><code>event.preventDefault()</code></a> method.</li>
+<li>Send the data to the <code>APIHandler</code> function to save the new character through <em><a href="http://ih-crud-api.herokuapp.com/characters/:id">http://localhost:8000/characters/:id</a></em> <!-- :::danger --> <strong>Remember which HTTP verb you need in the request!!</strong> <!-- ::: --></li>
+<li>If the character was successfully updated, set the background color of the button to green.</li>
+<li>If something went wrong, change the background color of the button to red.</li>
+</ul>
+<p>That would be all!</p>
+<p>Happy coding! :heart:</p>
+</body>
+</html>

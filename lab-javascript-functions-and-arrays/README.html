@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-js-functions-arrays">LAB | JS Functions &amp; Arrays</h1>
+<p><br></p>
+<h2 id="introduction">Introduction</h2>
+<p>Manipulating arrays in code is a very common operation. Whether you are creating a total for a shopping cart, grabbing only the first names out of a list of people, or moving a piece on a chessboard, you are probably going to be modifying or manipulating an array in some way.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone it to your machine</li>
+<li>Visit the “actions” tab in your fork, and enable workflows.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, run the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;Solved lab&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin master</span></code></pre></div>
+<p>Create Pull Request so your TAs can check up your work.</p>
+<p><br></p>
+<h2 id="automated-testing-introduction">Automated Testing Introduction</h2>
+<p><br></p>
+<h3 id="what-is-automated-testing">What is automated testing?</h3>
+<p>Automated software testing is the process of programmatically executing an application in order to validate and verify that it meets the business needs, as well as the technical requirements, and that it behaves as expected.</p>
+<p>Testing should be viewed as a continuous process, not a discrete operation or single activity in the development lifecycle. Designing tests at the beginning of the product lifecycle can be help to mitigate common issues that arise when developing complex code bases.</p>
+<p>Having strong <em>test suites</em> can provide you ease of mind, since you will be able to confidently improve upon your work while knowing that your not breaking a previously developed feature.</p>
+<p><br></p>
+<h3 id="testing-labs">Testing labs</h3>
+<p>This lab, along with some of the labs you will be working on during the bootcamp, has a complete test suite that is meant to ensure that your work fulfills the requirements we established.</p>
+<p><br></p>
+<h3 id="testing-with-jest">Testing with Jest</h3>
+<p>Jest is an automated test-runner for JavaScript.</p>
+<p>Before start coding, we will explain the project structure we have provided you.</p>
+<p>We will be working with the <code>src/functions-and-arrays.js</code> file. The process you will be following step by step in this lab stays the same for all the following labs. It will take you a bit to actually become comfortable with it, but don’t worry, it is completely okay to get stuck! We are here to help. 🤝</p>
+<p>Let’s go!</p>
+<p>To run your tests, open your terminal at the root directory of the lab, run <code>npm install</code> to install your dependencies and <code>npm run test:watch</code> to run the tests and generate the <code>lab-solution.html</code> file.</p>
+<pre class="shell"><code>$ cd lab-javascript-functions-and-arrays
+$ npm install
+$ npm run test:watch</code></pre>
+<p><br></p>
+<p>In case you want to check the tests, they are in the <code>tests/functions-and-arrays.spec.js</code> file.</p>
+<p>Open the <code>lab-solution.html</code> file using the <a href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server</a> VSCode extension.</p>
+<p><br></p>
+<h4 id="pass-the-tests">Pass the tests</h4>
+<p>You should work on the <code>src/functions-and-arrays.js</code> file. While following the instructions for each iteration, you should check every test and make sure it’s <em>passing</em>, before moving on.</p>
+<p>Do not rush. You should take your time to carefully read every iteration, and you should address the <em>breaking</em> tests as you progress through the exercise.</p>
+<p>When coding with tests, it is super important that you carefully read and understand the errors you are getting, this way you will know for sure what’s expected from your code.</p>
+<p>Note that <strong>you don’t need to execute the functions yourself</strong>, the tests are responsible for doing that. All you should do is declare them, make sure they deal with the parameters passed and that they return what is indicated on the iterations and in the test messages. For some iterations we provide you with a sample array, so that you can do some <strong>manual</strong> testing, if you wish.</p>
+<p><br></p>
+<h2 id="instructions">Instructions</h2>
+<p><br></p>
+<h3 id="iteration-1-find-the-maximum">Iteration #1: Find the maximum</h3>
+<p>Implement the function <code>maxOfTwoNumbers</code> that takes two numbers as arguments and returns the largest.</p>
+<p><br></p>
+<h3 id="iteration-2-find-the-longest-word">Iteration #2: Find the longest word</h3>
+<p>Implement the function <code>findLongestWord</code> that takes as an argument an array of words and returns the longest one. If there are 2 with the same length, it should return the first occurrence.</p>
+<p>You can use the following array to test your solution:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> words <span class="op">=</span> [<span class="st">&#39;mystery&#39;</span><span class="op">,</span> <span class="st">&#39;brother&#39;</span><span class="op">,</span> <span class="st">&#39;aviator&#39;</span><span class="op">,</span> <span class="st">&#39;crocodile&#39;</span><span class="op">,</span> <span class="st">&#39;pearl&#39;</span><span class="op">,</span> <span class="st">&#39;orchard&#39;</span><span class="op">,</span> <span class="st">&#39;crackpot&#39;</span>]<span class="op">;</span></span></code></pre></div>
+<p><br></p>
+<h3 id="iteration-3-calculate-the-sum">Iteration #3: Calculate the sum</h3>
+<p>Calculating a sum can be as simple as iterating over an array and adding each of the elements together.</p>
+<p>Implement the function named <code>sumNumbers</code> that takes an array of numbers as an argument, and returns the sum of all of the numbers in the array. Later in the course we will learn how to do this by using the <code>reduce</code> array method, which will make your work significantly easier. For now, let’s practice <em>“declarative”</em> way adding values, using loops.</p>
+<p>You can use the following array to test your solution:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> numbers <span class="op">=</span> [<span class="dv">6</span><span class="op">,</span> <span class="dv">12</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">18</span><span class="op">,</span> <span class="dv">13</span><span class="op">,</span> <span class="dv">16</span><span class="op">,</span> <span class="dv">2</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">8</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">;</span></span></code></pre></div>
+<p><br></p>
+<h4 id="bonus---iteration-3.1-a-generic-sum-function">Bonus - Iteration #3.1: A generic <code>sum()</code> function</h4>
+<p><strong>The goal: Learn how to refactor your code.</strong> :muscle:</p>
+<p>In the iteration 3, you created a function that returns the sum of an array of numbers. But what if we wanted to know how much is the sum of the length of all of the words in an array? What if we wanted to add <em>boolean</em> values to the mix? We wouldn’t be able to use the same function as above, or better saying, we would have to <em>tweak</em> it a little bit so that it can be reused no matter what is in the array that is passed as argument when function <code>sumNumbers()</code> is called.</p>
+<p>Here we are applying a concept we call <strong>polymorphism</strong>, that is, dealing with a functions’ input independently of the types they are passed as.</p>
+<p>Let’s implement the function <code>sum()</code> that calculates the sum for array filled with (<em>almost</em>) any type of data. Note that strings should have their length added to the total, and boolean values should be coerced into their corresponding numeric values. Check the tests for more details.</p>
+<p>You can use the following array to test your solution:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> mixedArr <span class="op">=</span> [<span class="dv">6</span><span class="op">,</span> <span class="dv">12</span><span class="op">,</span> <span class="st">&#39;miami&#39;</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="kw">true</span><span class="op">,</span> <span class="st">&#39;barca&#39;</span><span class="op">,</span> <span class="st">&#39;200&#39;</span><span class="op">,</span> <span class="st">&#39;lisboa&#39;</span><span class="op">,</span> <span class="dv">8</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">// should return: 57</span></span></code></pre></div>
+<p><br></p>
+<h3 id="iteration-4-calculate-the-average">Iteration #4: Calculate the average</h3>
+<p>Calculating an average is an extremely common task. Let’s practice it a bit.</p>
+<p><strong>The logic behind this:</strong></p>
+<ol type="1">
+<li>Find the sum as we did in the first exercise (or how about reusing that the <em>sumNumbers()</em>?)</li>
+<li>Take that sum and divide it by the number of elements in the list.</li>
+</ol>
+<p><br></p>
+<h4 id="level-1-array-of-numbers">Level 1: Array of numbers</h4>
+<p>Implement the function <code>averageNumbers</code> that expects an array of numbers and returns the average of the numbers:</p>
+<p>You can use the following array to test your solution:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> numbers <span class="op">=</span> [<span class="dv">2</span><span class="op">,</span> <span class="dv">6</span><span class="op">,</span> <span class="dv">9</span><span class="op">,</span> <span class="dv">10</span><span class="op">,</span> <span class="dv">7</span><span class="op">,</span> <span class="dv">4</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="dv">9</span>]<span class="op">;</span></span></code></pre></div>
+<p><br></p>
+<h4 id="level-2-array-of-strings">Level 2: Array of strings</h4>
+<p>Implement the function named <code>averageWordLength</code> that receives as a single argument an array of words and returns the average length of the words:</p>
+<p>You can use the following array to test your solution:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> words <span class="op">=</span> [<span class="st">&#39;seat&#39;</span><span class="op">,</span> <span class="st">&#39;correspond&#39;</span><span class="op">,</span> <span class="st">&#39;linen&#39;</span><span class="op">,</span> <span class="st">&#39;motif&#39;</span><span class="op">,</span> <span class="st">&#39;hole&#39;</span><span class="op">,</span> <span class="st">&#39;smell&#39;</span><span class="op">,</span> <span class="st">&#39;smart&#39;</span><span class="op">,</span> <span class="st">&#39;chaos&#39;</span><span class="op">,</span> <span class="st">&#39;fuel&#39;</span><span class="op">,</span> <span class="st">&#39;palace&#39;</span>]<span class="op">;</span></span></code></pre></div>
+<p><br></p>
+<h4 id="bonus---iteration-4.1-a-generic-avg-function">Bonus - Iteration #4.1: A generic <code>avg()</code> function</h4>
+<p>Create function <code>avg(arr)</code> that receives any mixed array and calculates average. Consider as mixed array an array filled with numbers and/or strings and/or booleans. We are following a similar logic to the one applied on the bonus iteration 4.1. :wink:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> mixedArr <span class="op">=</span> [<span class="dv">6</span><span class="op">,</span> <span class="dv">12</span><span class="op">,</span> <span class="st">&#39;miami&#39;</span><span class="op">,</span> <span class="dv">1</span><span class="op">,</span> <span class="kw">true</span><span class="op">,</span> <span class="st">&#39;barca&#39;</span><span class="op">,</span> <span class="st">&#39;200&#39;</span><span class="op">,</span> <span class="st">&#39;lisboa&#39;</span><span class="op">,</span> <span class="dv">8</span><span class="op">,</span> <span class="dv">10</span>]<span class="op">;</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">// should return: 5.7</span></span></code></pre></div>
+<p><br></p>
+<h3 id="iteration-5-unique-arrays">Iteration #5: Unique arrays</h3>
+<p>Take the following array, remove the duplicates, and return a new array. You are more than likely going to want to check out the <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf"><code>indexOf</code></a> Array method.</p>
+<p>Do this in the form of a function <code>uniquifyArray</code> that receives an array of words as a argument.</p>
+<p>You can use the following array to test your solution:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> words <span class="op">=</span> [</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;crab&#39;</span><span class="op">,</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;poison&#39;</span><span class="op">,</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;contagious&#39;</span><span class="op">,</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;simple&#39;</span><span class="op">,</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;bring&#39;</span><span class="op">,</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;sharp&#39;</span><span class="op">,</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;playground&#39;</span><span class="op">,</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;poison&#39;</span><span class="op">,</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;communion&#39;</span><span class="op">,</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;simple&#39;</span><span class="op">,</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;bring&#39;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span></code></pre></div>
+<p><br></p>
+<h3 id="iteration-6-find-elements">Iteration #6: Find elements</h3>
+<p>Let’s create a simple array search.</p>
+<p>Declare a function named <code>doesWordExist</code> that will take in an array of words as one argument, and a word to search for as the other. Return <code>true</code> if it exists, otherwise, return <code>false</code>. <strong>Don’t</strong> use <code>indexOf</code> for this one.</p>
+<p>You can use the following array to test your solution:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> words <span class="op">=</span> [<span class="st">&#39;machine&#39;</span><span class="op">,</span> <span class="st">&#39;subset&#39;</span><span class="op">,</span> <span class="st">&#39;trouble&#39;</span><span class="op">,</span> <span class="st">&#39;starting&#39;</span><span class="op">,</span> <span class="st">&#39;matter&#39;</span><span class="op">,</span> <span class="st">&#39;eating&#39;</span><span class="op">,</span> <span class="st">&#39;truth&#39;</span><span class="op">,</span> <span class="st">&#39;disobedience&#39;</span>]<span class="op">;</span></span></code></pre></div>
+<p><br></p>
+<h3 id="iteration-7-count-repetition">Iteration #7: Count repetition</h3>
+<p>Declare a function named <code>howManyTimes</code> that will take in an array of words as the first argument, and a word to search for as the second argument. The function will return the number of times that word appears in the array.</p>
+<p>You can use the following array to test your solution:</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> words <span class="op">=</span> [</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;machine&#39;</span><span class="op">,</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;matter&#39;</span><span class="op">,</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;subset&#39;</span><span class="op">,</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;trouble&#39;</span><span class="op">,</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;starting&#39;</span><span class="op">,</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;matter&#39;</span><span class="op">,</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;eating&#39;</span><span class="op">,</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;matter&#39;</span><span class="op">,</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;truth&#39;</span><span class="op">,</span></span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;disobedience&#39;</span><span class="op">,</span></span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">&#39;matter&#39;</span></span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span></code></pre></div>
+<p><br></p>
+<h3 id="bonus---iteration-8-product-of-adjacent-numbers">Bonus - Iteration #8: Product of adjacent numbers</h3>
+<p>What is the greatest product of four adjacent numbers? We consider adjacent any four numbers that are next to each other horizontally or vertically.</p>
+<p>For example, if we have a 5x5 Matrix like:</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 1,  2, 3, <span class="er">4,</span> <span class="ex">5]</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 1, 20, 3, <span class="er">4,</span> <span class="ex">5]</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 1, 20, 3, <span class="er">4,</span> <span class="ex">5]</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 1, 20, 3, <span class="er">4,</span> <span class="ex">5]</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="bu">[</span> 1,  4, 3, <span class="er">4,</span> <span class="ex">5]</span></span></code></pre></div>
+<p>The greatest product will be the <code>20</code>x<code>20</code>x<code>20</code>x<code>4</code> = <code>32000</code>.</p>
+<p>Declare a function named <code>greatestProduct(matrix)</code> to find it in the 20×20 grid below!</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> matrix <span class="op">=</span> [</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">08</span><span class="op">,</span> <span class="bn">02</span><span class="op">,</span> <span class="dv">22</span><span class="op">,</span> <span class="dv">97</span><span class="op">,</span> <span class="dv">38</span><span class="op">,</span> <span class="dv">15</span><span class="op">,</span> <span class="dv">00</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">00</span><span class="op">,</span> <span class="dv">75</span><span class="op">,</span> <span class="bn">04</span><span class="op">,</span> <span class="bn">05</span><span class="op">,</span> <span class="bn">07</span><span class="op">,</span> <span class="dv">78</span><span class="op">,</span> <span class="dv">52</span><span class="op">,</span> <span class="dv">12</span><span class="op">,</span> <span class="dv">50</span><span class="op">,</span> <span class="dv">77</span><span class="op">,</span> <span class="dv">91</span><span class="op">,</span> <span class="dv">08</span>]<span class="op">,</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">49</span><span class="op">,</span> <span class="dv">49</span><span class="op">,</span> <span class="dv">99</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">81</span><span class="op">,</span> <span class="dv">18</span><span class="op">,</span> <span class="dv">57</span><span class="op">,</span> <span class="dv">60</span><span class="op">,</span> <span class="dv">87</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">98</span><span class="op">,</span> <span class="dv">43</span><span class="op">,</span> <span class="dv">69</span><span class="op">,</span> <span class="dv">48</span><span class="op">,</span> <span class="bn">04</span><span class="op">,</span> <span class="dv">56</span><span class="op">,</span> <span class="dv">62</span><span class="op">,</span> <span class="dv">00</span>]<span class="op">,</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">81</span><span class="op">,</span> <span class="dv">49</span><span class="op">,</span> <span class="dv">31</span><span class="op">,</span> <span class="dv">73</span><span class="op">,</span> <span class="dv">55</span><span class="op">,</span> <span class="dv">79</span><span class="op">,</span> <span class="dv">14</span><span class="op">,</span> <span class="dv">29</span><span class="op">,</span> <span class="dv">93</span><span class="op">,</span> <span class="dv">71</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">67</span><span class="op">,</span> <span class="dv">53</span><span class="op">,</span> <span class="dv">88</span><span class="op">,</span> <span class="dv">30</span><span class="op">,</span> <span class="bn">03</span><span class="op">,</span> <span class="dv">49</span><span class="op">,</span> <span class="dv">13</span><span class="op">,</span> <span class="dv">36</span><span class="op">,</span> <span class="dv">65</span>]<span class="op">,</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">52</span><span class="op">,</span> <span class="dv">70</span><span class="op">,</span> <span class="dv">95</span><span class="op">,</span> <span class="dv">23</span><span class="op">,</span> <span class="bn">04</span><span class="op">,</span> <span class="dv">60</span><span class="op">,</span> <span class="dv">11</span><span class="op">,</span> <span class="dv">42</span><span class="op">,</span> <span class="dv">69</span><span class="op">,</span> <span class="dv">24</span><span class="op">,</span> <span class="dv">68</span><span class="op">,</span> <span class="dv">56</span><span class="op">,</span> <span class="bn">01</span><span class="op">,</span> <span class="dv">32</span><span class="op">,</span> <span class="dv">56</span><span class="op">,</span> <span class="dv">71</span><span class="op">,</span> <span class="dv">37</span><span class="op">,</span> <span class="bn">02</span><span class="op">,</span> <span class="dv">36</span><span class="op">,</span> <span class="dv">91</span>]<span class="op">,</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">22</span><span class="op">,</span> <span class="dv">31</span><span class="op">,</span> <span class="dv">16</span><span class="op">,</span> <span class="dv">71</span><span class="op">,</span> <span class="dv">51</span><span class="op">,</span> <span class="dv">67</span><span class="op">,</span> <span class="dv">63</span><span class="op">,</span> <span class="dv">89</span><span class="op">,</span> <span class="dv">41</span><span class="op">,</span> <span class="dv">92</span><span class="op">,</span> <span class="dv">36</span><span class="op">,</span> <span class="dv">54</span><span class="op">,</span> <span class="dv">22</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">28</span><span class="op">,</span> <span class="dv">66</span><span class="op">,</span> <span class="dv">33</span><span class="op">,</span> <span class="dv">13</span><span class="op">,</span> <span class="dv">80</span>]<span class="op">,</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">24</span><span class="op">,</span> <span class="dv">47</span><span class="op">,</span> <span class="dv">32</span><span class="op">,</span> <span class="dv">60</span><span class="op">,</span> <span class="dv">99</span><span class="op">,</span> <span class="bn">03</span><span class="op">,</span> <span class="dv">45</span><span class="op">,</span> <span class="bn">02</span><span class="op">,</span> <span class="dv">44</span><span class="op">,</span> <span class="dv">75</span><span class="op">,</span> <span class="dv">33</span><span class="op">,</span> <span class="dv">53</span><span class="op">,</span> <span class="dv">78</span><span class="op">,</span> <span class="dv">36</span><span class="op">,</span> <span class="dv">84</span><span class="op">,</span> <span class="dv">20</span><span class="op">,</span> <span class="dv">35</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">12</span><span class="op">,</span> <span class="dv">50</span>]<span class="op">,</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">32</span><span class="op">,</span> <span class="dv">98</span><span class="op">,</span> <span class="dv">81</span><span class="op">,</span> <span class="dv">28</span><span class="op">,</span> <span class="dv">64</span><span class="op">,</span> <span class="dv">23</span><span class="op">,</span> <span class="dv">67</span><span class="op">,</span> <span class="dv">10</span><span class="op">,</span> <span class="dv">26</span><span class="op">,</span> <span class="dv">38</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">67</span><span class="op">,</span> <span class="dv">59</span><span class="op">,</span> <span class="dv">54</span><span class="op">,</span> <span class="dv">70</span><span class="op">,</span> <span class="dv">66</span><span class="op">,</span> <span class="dv">18</span><span class="op">,</span> <span class="dv">38</span><span class="op">,</span> <span class="dv">64</span><span class="op">,</span> <span class="dv">70</span>]<span class="op">,</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">67</span><span class="op">,</span> <span class="dv">26</span><span class="op">,</span> <span class="dv">20</span><span class="op">,</span> <span class="dv">68</span><span class="op">,</span> <span class="bn">02</span><span class="op">,</span> <span class="dv">62</span><span class="op">,</span> <span class="dv">12</span><span class="op">,</span> <span class="dv">20</span><span class="op">,</span> <span class="dv">95</span><span class="op">,</span> <span class="dv">63</span><span class="op">,</span> <span class="dv">94</span><span class="op">,</span> <span class="dv">39</span><span class="op">,</span> <span class="dv">63</span><span class="op">,</span> <span class="dv">08</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">91</span><span class="op">,</span> <span class="dv">66</span><span class="op">,</span> <span class="dv">49</span><span class="op">,</span> <span class="dv">94</span><span class="op">,</span> <span class="dv">21</span>]<span class="op">,</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">24</span><span class="op">,</span> <span class="dv">55</span><span class="op">,</span> <span class="dv">58</span><span class="op">,</span> <span class="bn">05</span><span class="op">,</span> <span class="dv">66</span><span class="op">,</span> <span class="dv">73</span><span class="op">,</span> <span class="dv">99</span><span class="op">,</span> <span class="dv">26</span><span class="op">,</span> <span class="dv">97</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">78</span><span class="op">,</span> <span class="dv">78</span><span class="op">,</span> <span class="dv">96</span><span class="op">,</span> <span class="dv">83</span><span class="op">,</span> <span class="dv">14</span><span class="op">,</span> <span class="dv">88</span><span class="op">,</span> <span class="dv">34</span><span class="op">,</span> <span class="dv">89</span><span class="op">,</span> <span class="dv">63</span><span class="op">,</span> <span class="dv">72</span>]<span class="op">,</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">21</span><span class="op">,</span> <span class="dv">36</span><span class="op">,</span> <span class="dv">23</span><span class="op">,</span> <span class="dv">09</span><span class="op">,</span> <span class="dv">75</span><span class="op">,</span> <span class="dv">00</span><span class="op">,</span> <span class="dv">76</span><span class="op">,</span> <span class="dv">44</span><span class="op">,</span> <span class="dv">20</span><span class="op">,</span> <span class="dv">45</span><span class="op">,</span> <span class="dv">35</span><span class="op">,</span> <span class="dv">14</span><span class="op">,</span> <span class="dv">00</span><span class="op">,</span> <span class="dv">61</span><span class="op">,</span> <span class="dv">33</span><span class="op">,</span> <span class="dv">97</span><span class="op">,</span> <span class="dv">34</span><span class="op">,</span> <span class="dv">31</span><span class="op">,</span> <span class="dv">33</span><span class="op">,</span> <span class="dv">95</span>]<span class="op">,</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">78</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">53</span><span class="op">,</span> <span class="dv">28</span><span class="op">,</span> <span class="dv">22</span><span class="op">,</span> <span class="dv">75</span><span class="op">,</span> <span class="dv">31</span><span class="op">,</span> <span class="dv">67</span><span class="op">,</span> <span class="dv">15</span><span class="op">,</span> <span class="dv">94</span><span class="op">,</span> <span class="bn">03</span><span class="op">,</span> <span class="dv">80</span><span class="op">,</span> <span class="bn">04</span><span class="op">,</span> <span class="dv">62</span><span class="op">,</span> <span class="dv">16</span><span class="op">,</span> <span class="dv">14</span><span class="op">,</span> <span class="dv">09</span><span class="op">,</span> <span class="dv">53</span><span class="op">,</span> <span class="dv">56</span><span class="op">,</span> <span class="dv">92</span>]<span class="op">,</span></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">16</span><span class="op">,</span> <span class="dv">39</span><span class="op">,</span> <span class="bn">05</span><span class="op">,</span> <span class="dv">42</span><span class="op">,</span> <span class="dv">96</span><span class="op">,</span> <span class="dv">35</span><span class="op">,</span> <span class="dv">31</span><span class="op">,</span> <span class="dv">47</span><span class="op">,</span> <span class="dv">55</span><span class="op">,</span> <span class="dv">58</span><span class="op">,</span> <span class="dv">88</span><span class="op">,</span> <span class="dv">24</span><span class="op">,</span> <span class="dv">00</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">54</span><span class="op">,</span> <span class="dv">24</span><span class="op">,</span> <span class="dv">36</span><span class="op">,</span> <span class="dv">29</span><span class="op">,</span> <span class="dv">85</span><span class="op">,</span> <span class="dv">57</span>]<span class="op">,</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">86</span><span class="op">,</span> <span class="dv">56</span><span class="op">,</span> <span class="dv">00</span><span class="op">,</span> <span class="dv">48</span><span class="op">,</span> <span class="dv">35</span><span class="op">,</span> <span class="dv">71</span><span class="op">,</span> <span class="dv">89</span><span class="op">,</span> <span class="bn">07</span><span class="op">,</span> <span class="bn">05</span><span class="op">,</span> <span class="dv">44</span><span class="op">,</span> <span class="dv">44</span><span class="op">,</span> <span class="dv">37</span><span class="op">,</span> <span class="dv">44</span><span class="op">,</span> <span class="dv">60</span><span class="op">,</span> <span class="dv">21</span><span class="op">,</span> <span class="dv">58</span><span class="op">,</span> <span class="dv">51</span><span class="op">,</span> <span class="dv">54</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">58</span>]<span class="op">,</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">19</span><span class="op">,</span> <span class="dv">80</span><span class="op">,</span> <span class="dv">81</span><span class="op">,</span> <span class="dv">68</span><span class="op">,</span> <span class="bn">05</span><span class="op">,</span> <span class="dv">94</span><span class="op">,</span> <span class="dv">47</span><span class="op">,</span> <span class="dv">69</span><span class="op">,</span> <span class="dv">28</span><span class="op">,</span> <span class="dv">73</span><span class="op">,</span> <span class="dv">92</span><span class="op">,</span> <span class="dv">13</span><span class="op">,</span> <span class="dv">86</span><span class="op">,</span> <span class="dv">52</span><span class="op">,</span> <span class="dv">17</span><span class="op">,</span> <span class="dv">77</span><span class="op">,</span> <span class="bn">04</span><span class="op">,</span> <span class="dv">89</span><span class="op">,</span> <span class="dv">55</span><span class="op">,</span> <span class="dv">40</span>]<span class="op">,</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  [<span class="bn">04</span><span class="op">,</span> <span class="dv">52</span><span class="op">,</span> <span class="dv">08</span><span class="op">,</span> <span class="dv">83</span><span class="op">,</span> <span class="dv">97</span><span class="op">,</span> <span class="dv">35</span><span class="op">,</span> <span class="dv">99</span><span class="op">,</span> <span class="dv">16</span><span class="op">,</span> <span class="bn">07</span><span class="op">,</span> <span class="dv">97</span><span class="op">,</span> <span class="dv">57</span><span class="op">,</span> <span class="dv">32</span><span class="op">,</span> <span class="dv">16</span><span class="op">,</span> <span class="dv">26</span><span class="op">,</span> <span class="dv">26</span><span class="op">,</span> <span class="dv">79</span><span class="op">,</span> <span class="dv">33</span><span class="op">,</span> <span class="dv">27</span><span class="op">,</span> <span class="dv">98</span><span class="op">,</span> <span class="dv">66</span>]<span class="op">,</span></span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">88</span><span class="op">,</span> <span class="dv">36</span><span class="op">,</span> <span class="dv">68</span><span class="op">,</span> <span class="dv">87</span><span class="op">,</span> <span class="dv">57</span><span class="op">,</span> <span class="dv">62</span><span class="op">,</span> <span class="dv">20</span><span class="op">,</span> <span class="dv">72</span><span class="op">,</span> <span class="bn">03</span><span class="op">,</span> <span class="dv">46</span><span class="op">,</span> <span class="dv">33</span><span class="op">,</span> <span class="dv">67</span><span class="op">,</span> <span class="dv">46</span><span class="op">,</span> <span class="dv">55</span><span class="op">,</span> <span class="dv">12</span><span class="op">,</span> <span class="dv">32</span><span class="op">,</span> <span class="dv">63</span><span class="op">,</span> <span class="dv">93</span><span class="op">,</span> <span class="dv">53</span><span class="op">,</span> <span class="dv">69</span>]<span class="op">,</span></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>  [<span class="bn">04</span><span class="op">,</span> <span class="dv">42</span><span class="op">,</span> <span class="dv">16</span><span class="op">,</span> <span class="dv">73</span><span class="op">,</span> <span class="dv">38</span><span class="op">,</span> <span class="dv">25</span><span class="op">,</span> <span class="dv">39</span><span class="op">,</span> <span class="dv">11</span><span class="op">,</span> <span class="dv">24</span><span class="op">,</span> <span class="dv">94</span><span class="op">,</span> <span class="dv">72</span><span class="op">,</span> <span class="dv">18</span><span class="op">,</span> <span class="dv">08</span><span class="op">,</span> <span class="dv">46</span><span class="op">,</span> <span class="dv">29</span><span class="op">,</span> <span class="dv">32</span><span class="op">,</span> <span class="dv">40</span><span class="op">,</span> <span class="dv">62</span><span class="op">,</span> <span class="dv">76</span><span class="op">,</span> <span class="dv">36</span>]<span class="op">,</span></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">20</span><span class="op">,</span> <span class="dv">69</span><span class="op">,</span> <span class="dv">36</span><span class="op">,</span> <span class="dv">41</span><span class="op">,</span> <span class="dv">72</span><span class="op">,</span> <span class="dv">30</span><span class="op">,</span> <span class="dv">23</span><span class="op">,</span> <span class="dv">88</span><span class="op">,</span> <span class="dv">34</span><span class="op">,</span> <span class="dv">62</span><span class="op">,</span> <span class="dv">99</span><span class="op">,</span> <span class="dv">69</span><span class="op">,</span> <span class="dv">82</span><span class="op">,</span> <span class="dv">67</span><span class="op">,</span> <span class="dv">59</span><span class="op">,</span> <span class="dv">85</span><span class="op">,</span> <span class="dv">74</span><span class="op">,</span> <span class="bn">04</span><span class="op">,</span> <span class="dv">36</span><span class="op">,</span> <span class="dv">16</span>]<span class="op">,</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  [<span class="dv">20</span><span class="op">,</span> <span class="dv">73</span><span class="op">,</span> <span class="dv">35</span><span class="op">,</span> <span class="dv">29</span><span class="op">,</span> <span class="dv">78</span><span class="op">,</span> <span class="dv">31</span><span class="op">,</span> <span class="dv">90</span><span class="op">,</span> <span class="bn">01</span><span class="op">,</span> <span class="dv">74</span><span class="op">,</span> <span class="dv">31</span><span class="op">,</span> <span class="dv">49</span><span class="op">,</span> <span class="dv">71</span><span class="op">,</span> <span class="dv">48</span><span class="op">,</span> <span class="dv">86</span><span class="op">,</span> <span class="dv">81</span><span class="op">,</span> <span class="dv">16</span><span class="op">,</span> <span class="dv">23</span><span class="op">,</span> <span class="dv">57</span><span class="op">,</span> <span class="bn">05</span><span class="op">,</span> <span class="dv">54</span>]<span class="op">,</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>  [<span class="bn">01</span><span class="op">,</span> <span class="dv">70</span><span class="op">,</span> <span class="dv">54</span><span class="op">,</span> <span class="dv">71</span><span class="op">,</span> <span class="dv">83</span><span class="op">,</span> <span class="dv">51</span><span class="op">,</span> <span class="dv">54</span><span class="op">,</span> <span class="dv">69</span><span class="op">,</span> <span class="dv">16</span><span class="op">,</span> <span class="dv">92</span><span class="op">,</span> <span class="dv">33</span><span class="op">,</span> <span class="dv">48</span><span class="op">,</span> <span class="dv">61</span><span class="op">,</span> <span class="dv">43</span><span class="op">,</span> <span class="dv">52</span><span class="op">,</span> <span class="bn">01</span><span class="op">,</span> <span class="dv">89</span><span class="op">,</span> <span class="dv">19</span><span class="op">,</span> <span class="dv">67</span><span class="op">,</span> <span class="dv">48</span>]</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span></code></pre></div>
+<p><br></p>
+<h3 id="bonus---iteration-8.1-product-of-diagonals">Bonus - Iteration #8.1: Product of diagonals</h3>
+<p>Following the logic you’ve used in iteration #8, declare a function called <code>greatestProductOfDiagonals(matrix)</code>. It takes a matrix as a parameter and returns the greatest product of any four values layed out diagonally, in either direction.</p>
+<p><br></p>
+<p><strong>Happy coding!</strong> :heart:</p>
+</body>
+</html>

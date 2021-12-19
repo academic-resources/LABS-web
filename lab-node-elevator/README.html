@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="de-the-elevator">DE | The Elevator</h1>
+<h2 id="section"></h2>
+<p>After this learning unit, you will be able to:</p>
+<ul>
+<li>Build your own elevator using node asynchrony concepts</li>
+<li>Create as many elevator requests as you want and save them in a queue</li>
+<li>Create callback functions to respond asynchronously to the orders received</li>
+<li>Original idea: http://play.elevatorsaga.com/</li>
+</ul>
+<figure>
+<img src="https://media.giphy.com/media/P8XjmO1TTX3Nu/giphy.gif" alt="Crazy giphy" /><figcaption aria-hidden="true">Crazy giphy</figcaption>
+</figure>
+<h2 id="introduction">Introduction</h2>
+<p>Elevators are a common device in real-life that requires asynchrony. In this Lab, we are going to create an elevator able to respond to different asynchronous requests.</p>
+<p>The elevator will have a queue where it’s going to store all the requests in the order they are made. Then, the elevator will move up or down depending on the next floor requested. Once it arrives to the actual requested floor, it will go the next one until there are no more requests in the queue.</p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li><a href="https://guides.github.com/activities/forking/">Fork this repo</a></li>
+<li>Clone this repo into your <code>~/code/labs</code></li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, run the following commands</p>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<p>Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.</p>
+<p>In the Pull request name, add your name and last names separated by a dash “-”</p>
+<h2 id="deliverables">Deliverables</h2>
+<p>In your starter code folder you will find every file you need to finish the game. Push every file needed to make your game work properly.</p>
+<h2 id="exercise">Exercise</h2>
+<h3 id="iteration-1">Iteration 1</h3>
+<p>In the <code>starter_code</code> we have three files:</p>
+<ol type="1">
+<li><code>elevator.js</code></li>
+</ol>
+<ul>
+<li>For the logic of the elevator: accepting requests, moving up or down, etc.</li>
+</ul>
+<ol type="1">
+<li><code>person.js</code></li>
+</ol>
+<ul>
+<li>For a person class with a name, the starting floor and the requested floor.</li>
+</ul>
+<ol type="1">
+<li><code>index.js</code></li>
+</ol>
+<ul>
+<li>Main file that uses these classes. Remember to require the other files in this file.</li>
+</ul>
+<p>Most of the functions we need to create will be in <code>elevator.js</code>, so let’s begin there.</p>
+<h4 id="the-elevator-class">The <em>Elevator</em> class</h4>
+<p>First, the elevator needs methods to move. We will take care of what triggers the movement later.</p>
+<p>In order to make it move, it will need a direction and a current position (floor). Let’s focus on four main methods:</p>
+<ul>
+<li>The <code>update</code> function should (for now) display the current status of the elevator by calling the <code>log</code> function.</li>
+<li>The <code>log</code> function should just print the information related with position and direction:</li>
+</ul>
+<pre><code>Direction: up | Floor: 0</code></pre>
+<ul>
+<li>The <code>start</code> function should start a <code>setInterval</code> call the <code>update</code> function every second</li>
+<li>The <code>stop</code> function should stop the elevator’s <code>setInterval</code> listening for requests</li>
+</ul>
+<p>These last two functions are key to the exercise.</p>
+<p>Remember to use JavaScript functions such as <a href="https://nodejs.org/api/timers.html#timers_settimeout_callback_delay_args">setTimeout()</a> to create the listener</p>
+<h3 id="iteration-2">Iteration 2</h3>
+<p>In the second iteration, the elevator should move up and down depending on its direction and the future passengers’ requests.</p>
+<p>Write the code for the <code>floorUp</code> function to update the current floor by incrementing it by one. So, if the current floor was 0, it will become 1. If it’s 3, it should become 4.</p>
+<p>Then, write the code for <code>floorUp</code>’s sister function, <code>floorDown</code>. It should update the current floor by subtracting one from the current floor. So, if the current floor was 6, it will become 5.</p>
+<blockquote>
+<p>Remember to consider the limits of the elevator so it doesn’t go higher than the top floor or below the ground floor.</p>
+</blockquote>
+<p><strong>Test the elevator.</strong> Make it go to the top floor and the ground floor by using <code>floorUp</code> and <code>floorDown</code>. Display its status in the console with the <code>log</code> method.</p>
+<p>Test what happens when you go past the top floor and below the ground floor.</p>
+<h3 id="iteration-3">Iteration 3</h3>
+<p>Elevators pick up and drop off passengers, so we will have to represent those passengers in our program. Let’s use our class <code>Person</code> to describe passengers.</p>
+<h4 id="the-person-class">The <em>Person</em> class</h4>
+<p>A person should have three attributes: - A <code>name</code> - A <code>originFloor</code>: the floor they are in when they call the elevator - A <code>destinationFloor</code>: the floor they intend to go to</p>
+<p>Now, we need to think about what happens when a person ‘calls’ the elevator. In the <code>Elevator</code> class, it’s time to write the code for the <code>call</code> method. This method should receive a person object and add it as a request into the elevator’s queue.</p>
+<blockquote>
+<p>Add the whole person object to the requests array. The elevator will need all that information later.</p>
+</blockquote>
+<p>In later iterations, the elevator will process the list of requests as it travels up and down. We will need a list of floors that the elevator should serve in the <code>update</code> method.</p>
+<h3 id="iteration-4">Iteration 4</h3>
+<p>When elevators travel up and down, it has to pick up people so that they can enter the elevator.</p>
+<p>To keep a track of everyone, you will have three different lists:</p>
+<ul>
+<li><code>waitingList</code>: people waiting for the elevator -they made the request and they’re waiting the elevator to come</li>
+<li><code>passengers</code>: people currently in the elevator</li>
+<li><code>requests</code>: a list of pending requests. Floors where the elevator must stop.</li>
+</ul>
+<h4 id="the-waiting-list">The Waiting List</h4>
+<p>When a person calls the elevator (the <code>call</code> function is executed), we will add that person into the <code>waitingList</code> array. Notice they’re not in the <code>passengers</code> collection because they’re not yet in the elevator.</p>
+<p>Also, add the (<code>originFloor</code>) to the <code>requests</code> array to let the elevator know where it has to stop to pick the passenger up.</p>
+<h4 id="a-passenger-enters-the-elevator">A passenger enters the elevator</h4>
+<p>When the elevator arrives to any floor, it should check the <code>waitingList</code> array to verify if a person is waiting there. If this condition occurs:</p>
+<ul>
+<li>add the person into the <code>passengers</code> array</li>
+<li>delete the passenger from the <code>waitingList</code></li>
+<li>Add the destination floor of the passenger to the elevator <code>requests</code></li>
+</ul>
+<p>We will show a message to indicate what just happens:</p>
+<p><code>Julia has enter the elevator</code></p>
+<h4 id="a-passenger-leaves-the-elevator">A passenger leaves the elevator</h4>
+<p>When the elevator arrives to a floor, it should check the <code>passengers</code> collection. If a passenger’s <code>destinationFloor</code> matches the current floor:</p>
+<ul>
+<li>we will delete that person from the <code>passengers</code> array.</li>
+</ul>
+<p>We will show a message to indicate what just happens:</p>
+<p><code>Julia has left the elevator</code></p>
+<p><strong>Good luck!</strong></p>
+<figure>
+<img src="https://media.giphy.com/media/l0MYIyrdQeWyEtQm4/giphy.gif" alt="Giphy IMAGE" /><figcaption aria-hidden="true">Giphy IMAGE</figcaption>
+</figure>
+<h2 id="extra-resources">Extra resources</h2>
+<ul>
+<li><a href="http://play.elevatorsaga.com/">The Elevator Saga</a></li>
+<li><a href="http://codepen.io/brigham/pen/AErDk">Codepen</a> - Ok, we’re in the backend, right? But this is a pretty simulation :stuck_out_tongue_closed_eyes:</li>
+</ul>
+</body>
+</html>

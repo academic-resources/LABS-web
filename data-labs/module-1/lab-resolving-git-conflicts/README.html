@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-resolving-git-conflicts">Lab | Resolving Git Conflicts</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Resolving Git conflicts and merging branches is an important skill every software/data engineer must possess because code conflicts occur on daily basis in collaborative projects. This lab will help you learn the complete process of resolving and merging conflicts and become prepared to solve Git conflicts next time you encounter them.</p>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li><p>At this point you should have created a fork in your own Git account from the bootcamp’s lab repo.</p></li>
+<li><p>You should also have cloned your forked repo to your computer.</p></li>
+</ul>
+<p>If you have any doubts about the prerequisites please clarify with your instructor or teaching assistants.</p>
+<h3 id="overview-of-steps">Overview of Steps</h3>
+<p>Below is a summary of the steps you will follow in this lab:</p>
+<ol type="1">
+<li>Commit changes on local branch and sync with remote.</li>
+<li>Create a conflict with the master branch.</li>
+<li>Resolve the conflict.</li>
+<li>Merge your branch.</li>
+<li>Push to remote.</li>
+</ol>
+<p><strong>Note: The above is also the general procedure with which you submit assignments in this course. You are not likely to encounter conflicts in this course because only you will be working on your own Git repo. But in your future professional work you’ll find yourself using these steps a lot.</strong></p>
+<h3 id="deliverables">Deliverables</h3>
+<ul>
+<li><p>Your branch in which conflicts are resolved and merged</p></li>
+<li><p>File <code>your-code/about-me.md</code> updated with introductions about yourself</p></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="step-1---check-local-branch-status">Step 1 - Check Local Branch Status</h3>
+<p>If you work in a team, every time before you start working on the code you should check if there is any unstaged or uncommited changes in your local branch by executing <code>git status</code> within the project directory in Terminal.</p>
+<p>In the git status output, check whether there is any <strong>file with unstaged changes</strong> or <strong>untracked files</strong>. Sometimes you may also find <strong>files with changes to be committed</strong>. If you see any of those, you need to stage and commit the changes in Step 2. If you don’t see any of those, jump to Step 3.</p>
+<h3 id="step-2---optional-stage-and-commit-changes">Step 2 - [OPTIONAL] Stage and Commit Changes</h3>
+<p>If you identified unstaged or uncommitted changes in the previous step, you need to stage and commit those changes. Git will not allow you to sync your local branch with the remote if you have unstaged/uncommitted changes that conflict with the remote branch.</p>
+<p>To stage changes, execute <code>git add</code> for all the files that are untracked or have unstaged changes. Then commit the changes with <code>git commit</code>.</p>
+<p>After committing, if you do <code>git status</code> again you should see something like:</p>
+<pre><code>Your branch is up to date with &#39;origin/master&#39;.
+
+nothing to commit, working tree clean</code></pre>
+<h3 id="step-3---pull-latest-changes-from-the-remote-branch">Step 3 - Pull Latest Changes From the Remote Branch</h3>
+<p>Now that you have staged and committed all changes, you can obtain the latest changes from the remote branch. This step is not required but it is generally a good practice because it can reduce the chance of conflicts when you push your code to remote. Git conflicts occur when more than one developers have changed the same regions of the same files and subsequently merge their respective branches. If you don’t pull the latest changes from remote before working on the files that have remote changes, you may run into conflicts at a later time when you push your code back to remote. So it’s a good idea is to obtain the latest changes from remote and start working from there.</p>
+<p>To pull the latest changes from the remote (assuming you are working on the master branch), execute:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> pull origin master</span></code></pre></div>
+<p>If your local branch is lagged behind, git will auto merge the codes in your local branch with remote. If the latest code in the remote branch has conflicts with your local branch, you will see warnings and you will need to resolve the conflicts in the next step. However, if there is no conflict or auto merging is successful, you can skip to Step 5.</p>
+<h3 id="step-4---optional-resolve-conflicts">Step 4 - [OPTIONAL] Resolve Conflicts</h3>
+<p>If you encounter conflicts when you sync your branch with the remote, fix the conflicts as the lesson showed you. After resolving the conflict, commit your changes and push your code back to remote.</p>
+<h3 id="step-5---create-conflicting-changes">Step 5 - Create Conflicting Changes</h3>
+<p>In your real work you don’t create conflicting changes on purpose. But for the sake of practicing in this lab, let’s create a conflicting change. Here’s how:</p>
+<ol type="1">
+<li><p>Currently you should be on the master branch. You will update the <code>your-code/about-me.md</code> file by adding or removing anything from the file. Then <strong>add this file to git, commit, and push it to the remote master branch</strong>.</p></li>
+<li><p>Now, find out the ID of the commit prior to your latest commit. You can do this by executing the following command in Terminal:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> log</span></code></pre></div>
+<p>You will see the history of Git commits with the most recent commits at the top. There is a long ID string associated with each commit that consists of random numbers and letters. Find out <strong>the commit immediately before your recent commit</strong> and copy its ID string.</p>
+<p>Let’s assume the commit ID of your recent commit is <code>a887d71f8107294bf4f05cca8a0d584e4914f05c</code>, and the commit prior to your recent commit is <code>32a63d7d09589d80a8ff614be85d854792798aee</code>.</p></li>
+<li><p>Revert to the commit before you made the latest change. You can do that by executing:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> reset <span class="at">--hard</span> 32a63d7d09589d80a8ff614be85d854792798aee</span></code></pre></div></li>
+<li><p>Now you are still on the master branch but the tip of your local branch is at the previous commit. Create a new branch called <code>lab-resolving-git-conflicts</code>:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> checkout <span class="at">-b</span> lab-resolving-git-conflicts</span></code></pre></div></li>
+<li><p>On the new branch, open <code>your-code/about-me.md</code>, remove everything in the file and replace with an introduction about yourself.</p>
+<p>Below is a template you can use to introduce yourself:</p>
+<pre><code># Who am I
+
+* Where are you from?
+* What do you do?
+* Do you have previous experience with technology/data?
+
+# Why am I here
+
+* What has brought you to Ironhack?
+* What knowledge/skills do you expect to learn in this bootcamp?
+
+# What will I do after the bootcamp?
+
+* Which industry will you seek employment in?
+* What will your future role look like?
+* What is your career goal?</code></pre></li>
+<li><p>Now, add the updated <code>your-code/about-me.md</code> file to git and commit and let’s assume the ID of the new commit is <code>338cc201764793e1896744e8fd575e3c09c97a09</code>. Now execute <code>git pull origin master</code> and Git will report you have a conflict that prevents you from merging the branches. Your Git tree currently looks like below.</p>
+<figure>
+<img src="git-conflict.png" alt="Git tree with conflict" /><figcaption aria-hidden="true">Git tree with conflict</figcaption>
+</figure></li>
+</ol>
+<h3 id="step-6---resolve-conflicts">Step 6 - Resolve Conflicts</h3>
+<p>Resolve the conflicts in the affected files. You can see which files have conflicts by executing <code>git status</code>. You will need to examine each of the files with conflicts and fix them manually. After you are done fixing conflicts, double check / test the files to make sure you haven’t missed anything.</p>
+<h3 id="step-7---commit-and-push-changes">Step 7 - Commit and push Changes</h3>
+<p>After resolving the conflicts, add the fixed files and commit. In the commit message, use descriptive words such as <code>resolving conflicts with master branch</code>. Then push your local branch to remote. Now your git tree will look like this:</p>
+<figure>
+<img src="conflict-merged.png" alt="Git tree with conflict resolved" /><figcaption aria-hidden="true">Git tree with conflict resolved</figcaption>
+</figure>
+<h3 id="step-8---make-pull-request">Step 8 - Make Pull Request</h3>
+<p>Make a pull request to <strong>merge the <code>lab-resolving-git-conflicts</code> branch of your fork to the bootcamp’s lab repo</strong>. This can be done in the webpage of your bootcamp’s lab repo. Select the correct repos and branches in both the <em>base</em> and <em>head</em>. Git should tell you the pull request is able to be merged. Your pull request should look like:</p>
+<figure>
+<img src="git-pull-request.png" alt="Git pull request" /><figcaption aria-hidden="true">Git pull request</figcaption>
+</figure>
+</body>
+</html>

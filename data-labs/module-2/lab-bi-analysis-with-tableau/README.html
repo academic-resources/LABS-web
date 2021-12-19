@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-bi-analysis-with-tableau">Lab | BI Analysis with Tableau</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this lab, we will practice performing business intelligence analysis on a company’s customer data. We will use a public dataset from Kaggle which can be obtained <a href="https://www.kaggle.com/blastchar/telco-customer-churn">here</a>. The dataset is likely to be the customer records of a telecom company where customers’ personal identifiable information has been removed. It contains customer information such as their demographic information, what telecom services the customer uses, billing information, etc. In specific, the last column of the dataset is <code>Churn</code>, which is a business jargon indicating customers who have cancelled their service. In the Kaggle project, data scientists use this dataset to practice predicting customer behavior in order to retain them. In our lab today, we will use the dataset to practice Business Intelligence Analysis with Tableau.</p>
+<p>But before you start, we would like you to spend 10 minutes to study the following resources on what is a <em>measure</em> versus <em>dimension</em>?</p>
+<ul>
+<li><strong><a href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/datafields_typesandroles.htm">Dimensions and Measures, Blue and Green</a></strong></li>
+</ul>
+<h2 id="getting-started">Getting Started</h2>
+<p>To complete this lab, follow each of the steps below.</p>
+<ol type="1">
+<li>Open Tableau and import the <code>churn.csv</code> file.</li>
+<li>Let’s start out by exploring the company’s customers from a demographics perspective. The goal is to get familiar with the dataset and obtain some general insights of the characteristics of the customers. But remember this is only for the purpose of practicing Tableau BI analysis. You can choose to do some of these explorations or some other preliminary analyses as you consider relevant in your real projects.
+<ol type="1">
+<li>Create a new worksheet and drop the Number of Records measure into the center. You should see that the total customer count is 7,043.</li>
+<li>Drag and drop the Gender dimension into the Rows area and the Partners dimension into the Columns area.</li>
+<li>Click on the Show Me menu at the top right of the screen and select the highlight table visualization so that we can see the density of records as we continue to build our view.</li>
+<li>Add the Dependents dimension to the Columns area (next to Partners).</li>
+<li>Convert the Senior Citizen measure to a dimension by right clicking on it and selecting <em>Convert to Dimension</em>.
+<ul>
+<li>Why do we convert this column from measure to dimension? From the article resource you read, measures contain numeric, quantitative values that Tableau can automatically aggregate, calculate average and median, etc. But dimensions contain qualitative values that are typically categorical where Tableau can perform actions like count, groupby, etc.</li>
+<li>If you look into the values in the <code>Senior Citizen</code> column, you’ll see <code>0</code> and <code>1</code> instead of <code>Yes</code> and <code>No</code>. That is why Tableau thought this column is a measure. But we human beings are smarter and know in this context <code>0</code> means <code>No</code> and <code>1</code> means <code>Yes</code>. Therefore it is actually categorical data. It makes total sense to convert it to a dimension so that we can group by it.</li>
+</ul></li>
+<li>Drag and drop the new Senior Citizen dimension into the Rows area (right next to Gender).</li>
+<li>From the Analysis menu, select <em>Totals &gt; Show Row Grand Totals</em> and then <em>Totals &gt; Show Column Grand Totals</em>.</li>
+<li>From the statistical summary, We should be able to obtain 3 insights:
+<ul>
+<li>The majority of the company’s customers tend to be non-senior individuals.</li>
+<li>There is a fairly even split between male and female customers.</li>
+<li>For customers who have no partners, they tend to have no dependents as well.</li>
+</ul></li>
+</ol></li>
+<li>Another perspective from which we can view the customer data is the core services they signed up for. The relevant columns include <code>Phone Service</code>, <code>Multiple Lines</code>, and <code>Internet Service</code>. In case you haven’t noticed, <code>Multiple Lines</code> refers to whether the customer signed up for multiple phone lines with the company.
+<ul>
+<li>Create a new worksheet containing another highlighted table visualization with the Phone Service and Multiple Lines dimensions as rows and the Internet Service dimension as columns.</li>
+<li>Add row and column grand totals to this visualization as well.</li>
+<li>There are a few insights that we should be able to derive from this visualization.
+<ul>
+<li>Most of the company’s customers have both phone and internet service with the company.</li>
+<li>Fiber optic is the most popular type of internet service, especially among customers that have phone service with multiple lines.</li>
+<li>DSL is the only type of internet service provided to customers that do not have phone service.</li>
+</ul></li>
+</ul></li>
+<li>We can also look at what billing options are most popular among customers. This time we ask you to figure out how to create a stacked bar chart that:
+<ul>
+<li><p>Shows an intuitive view on which Payment Method (i.e. Bank Transfer, Credit Card, Electronic Check, and Mailed Check) is most popular with the Paperless Billing option (<code>Yes</code> and <code>No</code>).</p></li>
+<li><p>Displays a number of records label on each segment of the stacked bars.</p></li>
+<li><p>Your visualization should look like this:</p>
+<p><img src="payment-vs-paperless-billing.png" alt="Payment Method vs Paperless Billing" />.</p></li>
+<li><p>From this visualization, we can see that most customers who have paperless billing also pay via electronic payment methods (with electronic check being the most popular), while payment via mailed check is the most popular payment option for customers who do not have paperless billing.</p></li>
+<li><p>Bonus: You can also blend in the Contract dimension to get a more granular view of which billing options are most popular among customers on Month-to-Month, One Year, and Two Year service contracts. How? Your visualization should look like this:</p>
+<p><img src="payment-vs-paperless-billing-by-contract-type.png" alt="Payment Method vs Paperless Billing by Contract Type" />.</p></li>
+<li><p>What are your observations?</p></li>
+</ul></li>
+<li>Now that we have looked at customer distribution from a variety of perspectives, let’s shift our focus to some of the other measures in our data set. Specifically, let’s take a look at how pricing (Monthly Charge) changes with longevity (Tenure).
+<ul>
+<li><p>Create a visualization that:</p>
+<ul>
+<li>Is a line chart where Tenure is the X axis and Average Monthly Charges is the Y Axis.</li>
+<li>Shows Average Monthly Charges as labels on the data points of the line chart.</li>
+</ul></li>
+<li><p>Your line chart should look like below:</p>
+<p><img src="monthly-charge-vs-tenure.png" alt="Avg. Monthly Charge vs Tenure" />.</p></li>
+<li><p>We can see that the average monthly charge across all customers starts out at $41.42, increases sharply in the first three months to $57.21, and then continues to increase gradually to eventually reach the $80 price range.</p></li>
+</ul></li>
+<li>We can observe the relationship between Monthly Charges and Tenure from a variety of perspectives to gain insight into how pricing changes for different subsets of customers.
+<ol type="1">
+<li>The first perspective we want to gain insight is the gender difference.
+<ol type="1">
+<li><p>Create a duplicate of the previous Monthly Charge by Tenure visualization.</p></li>
+<li><p>Add the Gender dimension to the Marks section so that we have two lines now on the same chart - one for men and one for women. Your new chart should look like below:</p>
+<p><img src="monthly-charge-vs-tenure-by-gender.png" alt="Avg. Monthly Charge vs Tenure by Gender" />.</p></li>
+</ol></li>
+<li>One of the interesting insights we can see from this perspective is that the company charges new women customers twice as much on average than new male customers. However, we see that by the third month, the price level for men is back up to where it is for women.</li>
+<li>How to interpret the insight above? Well, one possibility is that the company regularly runs low-cost 3-month introductory promotions targeted at men to try their services. Do you have other interpretation?</li>
+<li>Create another duplicate of the original Monthly Charge by Tenure visualization. Add the Senior Citizen dimension.</li>
+<li>Add the Senior Citizen dimension to the chart. What do you notice? Does the company charge more, less, or the same for senior citizens compared to non-senior citizens?</li>
+</ol></li>
+<li>The pricing charts we have looked at thus far makes it seem like the company is providing cheaper services to some customers based on demographics. However, we should also take into consideration that pricing is typically heavily dependent on services purchased (e.g. Multiple Lines and Internet Service. It may just be that seniors purchase more expensive services (i.e. multiple lines and type of Internet service) on average than younger customers. To test our theory, let’s look at how pricing varies across services.
+<ul>
+<li><p>Create another duplicate of the original Monthly Charge by Tenure visualization. Add the relevant dimensions to visualize how average monthly charge varies for seniors vs non-seniors when the customer signed up for multiple lines. Your end product should look like this:</p>
+<figure>
+<img src="senior-monthly-charge-by-multiple-line.png" alt="Senior Montly Charge by Multiple Lines" /><figcaption aria-hidden="true">Senior Montly Charge by Multiple Lines</figcaption>
+</figure></li>
+<li><p>Create another duplicate of the original Monthly Charge by Tenure visualization. Add the relevant dimensions to visualize how average monthly charge varies for seniors vs non-seniors when the customer signed up for different Internet Service. Your end product should look like this:</p>
+<figure>
+<img src="senior-monthly-charge-by-internet-service.png" alt="Senior Montly Charge by Internet Service" /><figcaption aria-hidden="true">Senior Montly Charge by Internet Service</figcaption>
+</figure></li>
+<li><p>The charts above suggest the company charges seniors significantly more than non-seniors for those who sign up for single-line phone service. The company charges seniors slightly more than non-seniors for those who sign up for multiple-line phone service. There is no obvious charge difference between senior and non-senior when they sign up differen types of Internet Service.</p></li>
+</ul></li>
+<li>Instead of using line charts to visualize pricing for different demongraphics vs services separately, we can also visualize both demographics <em>and</em> services at the same time using <em>highlight table</em>.
+<ul>
+<li>Create a highlight table to visualize Average Monthly Charges by Internet Service and Multiple Lines (rows) and Gender and Senior Citizen (columns).</li>
+<li>Display row and column grand totals.</li>
+<li>From this perspective, we can see that the prices for the different combination of core services do not differ significantly across demographic features.</li>
+</ul></li>
+<li>Let’s use the highlight table to visualize with percentages instead of totals.
+<ol type="1">
+<li><p>Create a new highlight table to visualize Internet Service (row) agains Senior Citizen (column) on the Number of Records.</p></li>
+<li><p>Display the Grant Total for both rows and columns.</p></li>
+<li><p>Select Analysis &gt; Percentage Of &gt; Column in the menu. This displays the percentage instead of totals.</p></li>
+<li><p>Your visualization should look like:</p>
+<figure>
+<img src="senior-vs-internet-service.png" alt="Senior vs Internet Service" /><figcaption aria-hidden="true">Senior vs Internet Service</figcaption>
+</figure></li>
+</ol>
+<ul>
+<li>From this visualization, we can see that the proportion of customers that have fiber optic internet (the highest price service) is higher among seniors than it is among non-seniors. This is likely the cause for the price difference among those two groups. Seniors indeed tend to sign up for more expensive services.</li>
+</ul></li>
+<li>The final perspective we will analyze this data set from is the number of customers that churn by demographic and service combination.
+<ul>
+<li>Create another duplicate of the highlight table visualization showing pricing by demographics and services.</li>
+<li>Create a calculated field called Churned by going to <em>Analysis &gt; Create Calculated Field</em> and entering the following formula: <code>IF [Churn]='Yes' THEN 1 ELSE 0 END</code>.</li>
+<li>Drag and drop the newly-created Churned measure to replace Monthly Charges wherever it appears in the Marks section.</li>
+<li>By default, Tableau will sum the measure which will show us the number of customers that churned in each segment. This is useful, but what we really want to see is the percentage of customers that churned. To see this, click on the drop-down next to the dimension wherever it appears in the Marks section, select <em>Measure</em>, and change the value to <em>Average</em>.</li>
+<li>We can see that the churn rates are higher for fiber optic internet across the board than for any other service. We know that fiber is also the highest priced, so perhaps customers aren’t happy paying such high prices.</li>
+</ul></li>
+<li>Next, we are going to combine all the visualizations we used to explore the data into a Tableau Story.
+<ul>
+<li>Create a new Story by clicking on <em>Story &gt; New Story</em>).</li>
+<li>Our story should document our journey throughout this lab, so you should create a Story Point for each visualization we have created. You can create a new Story Point by clicking on the <em>Blank</em> button under the <em>New Story Point</em> heading in the left pane of the workbook.</li>
+<li>Drag and drop each visualization into a new Story Point.</li>
+<li>Add a caption for each Story Point that briefly describes the chart. For example, the first one can be captioned <em>Customer Demographics</em>, the second one can be captioned <em>Customers by Service</em>, etc.</li>
+<li>Add an annotation to each Story Point describing the insights derived from the visualization. If you’re having trouble with what to write, you can copy and paste the insights we have been documenting throughout each of the tasks above.</li>
+</ul></li>
+<li>Save your work to Tableau Public, ensure that your workbook is viewable, and copy the URL for the workbook into the deliverables file for this lab.</li>
+</ol>
+<h2 id="deliverables">Deliverables</h2>
+<ul>
+<li><code>main.txt</code> file with a link to your Tableau Public workbook.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, add your deliverables to git. Then commit git and push your branch to the remote.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><p><a href="https://www.kaggle.com/blastchar/telco-customer-churn/home">Telco Customer Churn</a></p></li>
+<li><p><a href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/datafields_typesandroles.htm">Dimensions and Measures, Blue and Green</a></p></li>
+<li><p><a href="https://www.tableau.com/learn/training">Tableau Training Videos</a></p></li>
+<li><p><a href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/datafields_typesandroles_convertdimtomeas.htm">Convert a Measure to a Dimension | Tableau</a></p></li>
+<li><p><a href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_totals_grandtotal_turnon.htm">Show Totals in a Visualization | Tableau</a></p></li>
+<li><p><a href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/calculations_calculatedfields_create.htm">Get Started with Calculations in Tableau</a></p></li>
+<li><p><a href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/stories.htm">Stories | Tableau</a></p></li>
+<li><p><a href="https://onlinehelp.tableau.com/current/pro/desktop/en-us/viewparts_marks_marktypes.htm">Change the Type of Mark in the View</a></p></li>
+</ul>
+</body>
+</html>

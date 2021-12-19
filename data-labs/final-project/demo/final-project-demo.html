@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>final-project-demo</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png" alt="IronHack Logo" /><figcaption aria-hidden="true">IronHack Logo</figcaption>
+</figure>
+<h1 id="final-project-demo">Final Project Demo</h1>
+<h2 id="overview">Overview</h2>
+<p>This demo is meant to serve as a simplified version of the type of analysis expected from you for your final project. In the sections below, we will go through each step of the data analysis workflow applying the appropriate operations at each step. You can use the code snippets and examples below as a guide for your own final project, but also feel free to go beyond what we have done and apply whichever methods are applicable to the data set you have chosen.</p>
+<h2 id="the-data">The Data</h2>
+<p>The data set we will be using for this demo will be a housing price data set. The data set contains a variety of features for over 1,400 properties listed for sale in a geographic area as well as the sale price at which each property was ultimately sold.</p>
+<h2 id="data-ingestion">Data Ingestion</h2>
+<p>In order to work with this data set, we first had to ingest it. The file containing the data was in CSV format, so after downloading it, we used the <code>read_csv</code> method to read the data into a Pandas data frame.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_csv(<span class="st">&#39;housing_prices.csv&#39;</span>)</span></code></pre></div>
+<p>Next, we checked that the data set loaded correctly by checking the shape of the data frame, looking at the first few rows of the data, and evaluating the column names to ensure that they look as we would expect.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>data.shape</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>(<span class="dv">1460</span>, <span class="dv">81</span>)</span></code></pre></div>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>data.head(<span class="dv">10</span>)</span></code></pre></div>
+<figure>
+<img src="./images/housing-data.png" alt="Housing Data" /><figcaption aria-hidden="true">Housing Data</figcaption>
+</figure>
+<div class="sourceCode" id="cb4"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">list</span>(data.columns))</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>[<span class="st">&#39;Id&#39;</span>, <span class="st">&#39;MSSubClass&#39;</span>, <span class="st">&#39;MSZoning&#39;</span>, <span class="st">&#39;LotFrontage&#39;</span>, <span class="st">&#39;LotArea&#39;</span>, <span class="st">&#39;Street&#39;</span>, <span class="st">&#39;Alley&#39;</span>, <span class="st">&#39;LotShape&#39;</span>, <span class="st">&#39;LandContour&#39;</span>, <span class="st">&#39;Utilities&#39;</span>, <span class="st">&#39;LotConfig&#39;</span>, <span class="st">&#39;LandSlope&#39;</span>, <span class="st">&#39;Neighborhood&#39;</span>, <span class="st">&#39;Condition1&#39;</span>, <span class="st">&#39;Condition2&#39;</span>, <span class="st">&#39;BldgType&#39;</span>, <span class="st">&#39;HouseStyle&#39;</span>, <span class="st">&#39;OverallQual&#39;</span>, <span class="st">&#39;OverallCond&#39;</span>, <span class="st">&#39;YearBuilt&#39;</span>, <span class="st">&#39;YearRemodAdd&#39;</span>, <span class="st">&#39;RoofStyle&#39;</span>, <span class="st">&#39;RoofMatl&#39;</span>, <span class="st">&#39;Exterior1st&#39;</span>, <span class="st">&#39;Exterior2nd&#39;</span>, <span class="st">&#39;MasVnrType&#39;</span>, <span class="st">&#39;MasVnrArea&#39;</span>, <span class="st">&#39;ExterQual&#39;</span>, <span class="st">&#39;ExterCond&#39;</span>, <span class="st">&#39;Foundation&#39;</span>, <span class="st">&#39;BsmtQual&#39;</span>, <span class="st">&#39;BsmtCond&#39;</span>, <span class="st">&#39;BsmtExposure&#39;</span>, <span class="st">&#39;BsmtFinType1&#39;</span>, <span class="st">&#39;BsmtFinSF1&#39;</span>, <span class="st">&#39;BsmtFinType2&#39;</span>, <span class="st">&#39;BsmtFinSF2&#39;</span>, <span class="st">&#39;BsmtUnfSF&#39;</span>, <span class="st">&#39;TotalBsmtSF&#39;</span>, <span class="st">&#39;Heating&#39;</span>, <span class="st">&#39;HeatingQC&#39;</span>, <span class="st">&#39;CentralAir&#39;</span>, <span class="st">&#39;Electrical&#39;</span>, <span class="st">&#39;1stFlrSF&#39;</span>, <span class="st">&#39;2ndFlrSF&#39;</span>, <span class="st">&#39;LowQualFinSF&#39;</span>, <span class="st">&#39;GrLivArea&#39;</span>, <span class="st">&#39;BsmtFullBath&#39;</span>, <span class="st">&#39;BsmtHalfBath&#39;</span>, <span class="st">&#39;FullBath&#39;</span>, <span class="st">&#39;HalfBath&#39;</span>, <span class="st">&#39;BedroomAbvGr&#39;</span>, <span class="st">&#39;KitchenAbvGr&#39;</span>, <span class="st">&#39;KitchenQual&#39;</span>, <span class="st">&#39;TotRmsAbvGrd&#39;</span>, <span class="st">&#39;Functional&#39;</span>, <span class="st">&#39;Fireplaces&#39;</span>, <span class="st">&#39;FireplaceQu&#39;</span>, <span class="st">&#39;GarageType&#39;</span>, <span class="st">&#39;GarageYrBlt&#39;</span>, <span class="st">&#39;GarageFinish&#39;</span>, <span class="st">&#39;GarageCars&#39;</span>, <span class="st">&#39;GarageArea&#39;</span>, <span class="st">&#39;GarageQual&#39;</span>, <span class="st">&#39;GarageCond&#39;</span>, <span class="st">&#39;PavedDrive&#39;</span>, <span class="st">&#39;WoodDeckSF&#39;</span>, <span class="st">&#39;OpenPorchSF&#39;</span>, <span class="st">&#39;EnclosedPorch&#39;</span>, <span class="st">&#39;3SsnPorch&#39;</span>, <span class="st">&#39;ScreenPorch&#39;</span>, <span class="st">&#39;PoolArea&#39;</span>, <span class="st">&#39;PoolQC&#39;</span>, <span class="st">&#39;Fence&#39;</span>, <span class="st">&#39;MiscFeature&#39;</span>, <span class="st">&#39;MiscVal&#39;</span>, <span class="st">&#39;MoSold&#39;</span>, <span class="st">&#39;YrSold&#39;</span>, <span class="st">&#39;SaleType&#39;</span>, <span class="st">&#39;SaleCondition&#39;</span>, <span class="st">&#39;SalePrice&#39;</span>]</span></code></pre></div>
+<p>From this initial assessment, it looks like we have successfully ingested the data set. We can now move on to evaluating the quality of the data, cleaning it, and wrangling it so that it is ready to be analyzed and modeled.</p>
+<h2 id="data-wrangling-and-cleaning">Data Wrangling and Cleaning</h2>
+<p>One of the first things we do in the wrangling and cleaning phase of the workflow is ensure that each column is of the correct data type. Below, we produce a data frame of numeric fields (including various descriptives statistics about them) using the <code>describe</code> method and then transposing the results since so that we can see all the resulting fields. We will also add a unique column to the results that returns the number of unique values in each column and a null column that calculates the number of missing values.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>stats <span class="op">=</span> data.describe().T</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>stats[<span class="st">&#39;unique&#39;</span>] <span class="op">=</span> [<span class="bu">len</span>(data[column].unique()) <span class="cf">for</span> column <span class="kw">in</span> stats.index]</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>stats[<span class="st">&#39;null&#39;</span>] <span class="op">=</span> [data[column].isnull().<span class="bu">sum</span>() <span class="cf">for</span> column <span class="kw">in</span> stats.index]</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>stats</span></code></pre></div>
+<figure>
+<img src="./images/housing-data-describe.png" alt="Describe Data" /><figcaption aria-hidden="true">Describe Data</figcaption>
+</figure>
+<p>We call the <code>describe</code> method for categorical fields by setting the <code>include</code> parameter to contain only object and category data types.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>cat_stats <span class="op">=</span> data.describe(include<span class="op">=</span>[<span class="st">&#39;object&#39;</span>,<span class="st">&#39;category&#39;</span>]).T</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>cat_stats[<span class="st">&#39;null&#39;</span>] <span class="op">=</span> [data[column].isnull().<span class="bu">sum</span>() <span class="cf">for</span> column <span class="kw">in</span> cat_stats.index]</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>cat_stats</span></code></pre></div>
+<figure>
+<img src="./images/housing-data-describe-cat.png" alt="Describe Data Categorical" /><figcaption aria-hidden="true">Describe Data Categorical</figcaption>
+</figure>
+<p>Below are a few insights we derived from this brief look at the data that can help guide our data wrangling and cleaning efforts.</p>
+<ul>
+<li><p>There are several fields that are currently numeric that should be categorical. We can identify these via a combination of their column name and their low number of unique values.</p></li>
+<li><p>There are several fields in the data that contain null values. We will need to figure out how to address those.</p></li>
+<li><p>There is an opportunity to create a couple of additional informative fields by performing calculations on existing fields.</p></li>
+</ul>
+<p>To fix the incorrect data types, we will simply identify the columns that are incorrectly typed and use the <code>astype</code> method to change the data type of each field to object.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>categorical <span class="op">=</span> categorical <span class="op">=</span> [<span class="st">&#39;MSSubClass&#39;</span>, <span class="st">&#39;OverallQual&#39;</span>, <span class="st">&#39;OverallCond&#39;</span>, </span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>                             <span class="st">&#39;BsmtFullBath&#39;</span>, <span class="st">&#39;BsmtHalfBath&#39;</span>, <span class="st">&#39;FullBath&#39;</span>, </span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>                             <span class="st">&#39;HalfBath&#39;</span>, <span class="st">&#39;BedroomAbvGr&#39;</span>, <span class="st">&#39;KitchenAbvGr&#39;</span>, </span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>                             <span class="st">&#39;TotRmsAbvGrd&#39;</span>, <span class="st">&#39;Fireplaces&#39;</span>, <span class="st">&#39;GarageCars&#39;</span>, </span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>                             <span class="st">&#39;PoolArea&#39;</span>, <span class="st">&#39;MoSold&#39;</span>, <span class="st">&#39;YrSold&#39;</span>]</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i <span class="kw">in</span> categorical:</span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    data[i] <span class="op">=</span> data[i].astype(<span class="st">&#39;object&#39;</span>)</span></code></pre></div>
+<p>In order to address null values in the data, we looked at which fields contained them and decided whether we would like to leave them as is or replace them with an appropriate value.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>fill_zeros <span class="op">=</span> [<span class="st">&#39;LotFrontage&#39;</span>, <span class="st">&#39;MasVnrArea&#39;</span>]</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> column <span class="kw">in</span> fill_zeros:</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    data[column] <span class="op">=</span> data[column].fillna(<span class="dv">0</span>)</span></code></pre></div>
+<p>As far as creating additional informative fields, we could add together the 1st floor, 2nd floor, and basement square footage to get the total square footage of the property. Once we have total square footage, we could divide the sale price by it to arrive at a price per square foot metric.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&#39;Total Sqft&#39;</span>] <span class="op">=</span> data[<span class="st">&#39;1stFlrSF&#39;</span>] <span class="op">+</span> data[<span class="st">&#39;2ndFlrSF&#39;</span>] <span class="op">+</span> data[<span class="st">&#39;TotalBsmtSF&#39;</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>data[<span class="st">&#39;Price Per Sqft&#39;</span>] <span class="op">=</span> data[<span class="st">&#39;SalePrice&#39;</span>] <span class="op">/</span> data[<span class="st">&#39;Total Sqft&#39;</span>]</span></code></pre></div>
+<h2 id="data-storage">Data Storage</h2>
+<p>Once the data had been ingested and cleaned, we stored it in a MySQL database. To do this we first created a <em>housing</em> database using the <code>CREATE DATABASE</code> command.</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode sql"><code class="sourceCode sql"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">DATABASE</span> housing;</span></code></pre></div>
+<p>We then used <code>pymsql</code> and <code>sqlalchemy</code> to write the data to the database.</p>
+<div class="sourceCode" id="cb11"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pymysql</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sqlalchemy <span class="im">import</span> create_engine</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>engine <span class="op">=</span> create_engine(<span class="st">&#39;mysql+pymysql://user:password@localhost/housing&#39;</span>)</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>data.to_sql(<span class="st">&#39;housing&#39;</span>, engine, if_exists<span class="op">=</span><span class="st">&#39;replace&#39;</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div>
+<p>To read the stored data back into Pandas at a later date, we used the <code>read_sql_query</code> method.</p>
+<div class="sourceCode" id="cb12"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>data <span class="op">=</span> pd.read_sql_query(<span class="st">&#39;SELECT * FROM housing.housing&#39;</span>, engine)</span></code></pre></div>
+<p>We also exported the cleaned data set as a CSV file that could be imported into Tableau for exploration and reporting.</p>
+<div class="sourceCode" id="cb13"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>data.to_csv(<span class="st">&#39;housing_clean&#39;</span>, index<span class="op">=</span><span class="va">False</span>)</span></code></pre></div>
+<h2 id="data-exploration-and-analysis">Data Exploration and Analysis</h2>
+<p>After cleaning and storing the data, the next steps we took were exploring and analyzing the data. Each row in the data set represents a property and each column represents attributes belonging to those properties. We looked through these attributes to determine which ones would potentially yield the most informative insights. Below are a list of those fields followed by a series of data visualizations conveying insights discovered.</p>
+<ul>
+<li>Type of Sale</li>
+<li>Sale condition</li>
+<li>Neighborhood</li>
+<li>Total square footage of the property</li>
+<li>Numbers of bedrooms and bathrooms</li>
+<li>Overall quality</li>
+<li>Overall condition</li>
+<li>Month and year of sale</li>
+<li>Sale Price</li>
+<li>Price per square foot</li>
+</ul>
+<p>The first thing we wanted to look at was the number of sales and average sale prices by type of sale and sale condition.</p>
+<figure>
+<img src="./images/sales-avg-price-by-sale-type.png" alt="Price by Sales Type" /><figcaption aria-hidden="true">Price by Sales Type</figcaption>
+</figure>
+<figure>
+<img src="./images/price-by-sale-condition.png" alt="Price by Sales Condition" /><figcaption aria-hidden="true">Price by Sales Condition</figcaption>
+</figure>
+<p>Most of the property sales in this data set were of the <em>Warranty Deed - Conventional</em> type and under <em>Normal</em> conditions and the average price for those was in the low-to-mid $170,000’s. The next most common were new construction sales, which were priced about $100,000 higher on average.</p>
+<p>One of the most obvious drivers of sales price for a property its size, typically represented by the total number of square feet. Below is a scatter plot showing the relationship between <em>Total Sqft</em> and <em>Sale Price</em> with regression line fit to the data.</p>
+<figure>
+<img src="./images/sqft-vs-price.png" alt="Sqft vs. Price" /><figcaption aria-hidden="true">Sqft vs. Price</figcaption>
+</figure>
+<p>The R-squared for the trend line is 0.65 and the equation for the line is as follows, which can be used to set a base price for a given property given its square footage.</p>
+<pre class="text"><code>ln(Total SQFT) = 0.63358*ln(Sale Price) + 0.184256</code></pre>
+<p>Another important factor in the value of a property is its location. Because of this, we wanted to examine how the neighborhood the property was located in impacted the value of the property. We evaluated this from three perspectives - average price by number of bedrooms, how price per square foot changes based on size of the property, and price per square foot by the number of bedrooms.</p>
+<figure>
+<img src="./images/price-by-neighborhood.png" alt="Price by Neighborhood" /><figcaption aria-hidden="true">Price by Neighborhood</figcaption>
+</figure>
+<figure>
+<img src="./images/price-per-sqft-neighborhood-total-sqft.png" alt="Price Per Sqft by Neighborhood and Total Sqft" /><figcaption aria-hidden="true">Price Per Sqft by Neighborhood and Total Sqft</figcaption>
+</figure>
+<figure>
+<img src="./images/price-per-sqft-neighborhood-bedrooms.png" alt="Price Per Sqft by Neighborhood and Bedrooms" /><figcaption aria-hidden="true">Price Per Sqft by Neighborhood and Bedrooms</figcaption>
+</figure>
+<p>From the visualizations above, we can see that there are some neighborhoods where the properties are valued higher (e.g. StoneBr, NoRidge, NridgHt, etc.) and other neighborhoods where the location hurts the value of the property (BrDale, MeadowV, Edwards, SWISU, etc.). This also lets you see the neighborhoods where someone may be able to get the most property for their money. For example, larger (6-8 bedroom) properties in the NAmes, Sawyer, and SWISU neighborhoods have significantly lower value per square foot than smaller properties in those areas.</p>
+<p>There were a few other perspectives we wanted to look at the data from as well. We noticed that there were fields representing overall condition and overall quality and wanted to take a closer look at the differences between them and the impact they had on sales price.</p>
+<figure>
+<img src="./images/condition-vs-quality.png" alt="Condition vs. Quality" /><figcaption aria-hidden="true">Condition vs. Quality</figcaption>
+</figure>
+<p>It looks like most properties were rated a 5 for condition and were rated somewhere in the 5-8 range for quality. It looks like the quality rating for these properties is especially important as we see an typical increase of between 20% and 35% in average sales price for every point on the scale a property earns.</p>
+<p>We also wanted to take a look at how price varies based on the number of bedrooms and bathrooms a property has. From the visualization below, it looks as though half bathrooms are valued pretty highly - especially in 4 bedroom properties (between 45% and 72% increase in price).</p>
+<figure>
+<img src="./images/bedroom-vs-bathroom.png" alt="Bedroom vs. Bathroom" /><figcaption aria-hidden="true">Bedroom vs. Bathroom</figcaption>
+</figure>
+<p>Finally, we also wanted to look at how average prices have typically changed through out the year and from one year to the next. The visualization below shows an area chart for average price by month, stacked by year.</p>
+<figure>
+<img src="./images/month-year.png" alt="Avg Price by Month and Year" /><figcaption aria-hidden="true">Avg Price by Month and Year</figcaption>
+</figure>
+<p>From this, we can see that average sale prices are relatively consistent throughout the year, aside from a small bump in September. Additionally, it looks as though prices took a slight downturn over the last couple years (2008 and 2009) - down about 6% from the previous two years.</p>
+<h2 id="feature-selection">Feature Selection</h2>
+<p>Once we had a better understanding of the data and some insight as to how different property attributes impact pricing, we proceeded to prep our data set for modeling. To do this, we narrowed down our feature set to just those that we explored and analyzed so that we could see how well those features can inform a machine learning model whose goal is to predict the sale price of a given property.</p>
+<div class="sourceCode" id="cb15"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>features <span class="op">=</span> [<span class="st">&#39;Neighborhood&#39;</span>, <span class="st">&#39;OverallQual&#39;</span>, <span class="st">&#39;OverallCond&#39;</span>, </span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#39;FullBath&#39;</span>, <span class="st">&#39;HalfBath&#39;</span>, <span class="st">&#39;BedroomAbvGr&#39;</span>, </span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#39;MoSold&#39;</span>, <span class="st">&#39;YrSold&#39;</span>, <span class="st">&#39;SaleType&#39;</span>, <span class="st">&#39;SaleCondition&#39;</span>, </span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>            <span class="st">&#39;SalePrice&#39;</span>, <span class="st">&#39;Total Sqft&#39;</span>, <span class="st">&#39;Price Per Sqft&#39;</span>]</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>selected <span class="op">=</span> data[features]</span></code></pre></div>
+<p>Next, we transformed these features so that all categorical variables were one-hot encoded.</p>
+<div class="sourceCode" id="cb16"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>transformed <span class="op">=</span> pd.get_dummies(selected)</span></code></pre></div>
+<h2 id="model-training-and-evaluation">Model Training and Evaluation</h2>
+<p>We decided to compare several supervised learning regression models via k-fold cross validation to see which ones would best be able to predict the sale price of a property. To do this, we imported a variety of regression models from Scikit-learn and wrote a <code>compare_models</code> function that would train and evaluate multiple regressor models (stored in a dictionary) and compute cross validation scores for each so that we can compare their performance.</p>
+<div class="sourceCode" id="cb17"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.model_selection <span class="im">import</span> cross_val_score</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.linear_model <span class="im">import</span> Ridge</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.neighbors <span class="im">import</span> KNeighborsRegressor</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.tree <span class="im">import</span> DecisionTreeRegressor</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> RandomForestRegressor</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> GradientBoostingRegressor</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> AdaBoostRegressor</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> sklearn.ensemble <span class="im">import</span> BaggingRegressor</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>regressors <span class="op">=</span> {<span class="st">&#39;K-Nearest Neighbor&#39;</span>: KNeighborsRegressor(n_neighbors<span class="op">=</span><span class="dv">3</span>),</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>              <span class="st">&#39;Decision Tree&#39;</span>: DecisionTreeRegressor(),</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>              <span class="st">&#39;Ridge Regression&#39;</span>: Ridge(),</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>              <span class="st">&#39;Random Forest&#39;</span>: RandomForestRegressor(),</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>              <span class="st">&#39;Gradient Boosting&#39;</span>: GradientBoostingRegressor(), </span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>              <span class="st">&#39;AdaBoost&#39;</span>: AdaBoostRegressor(),</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>              <span class="st">&#39;Bagging Regressor&#39;</span>: BaggingRegressor()}</span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> compare_models(x, y, model_dict, folds<span class="op">=</span><span class="dv">3</span>):</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>    results <span class="op">=</span> []</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> name, model <span class="kw">in</span> model_dict.items():</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>        scores <span class="op">=</span> cross_val_score(model, x, y, cv<span class="op">=</span>folds)</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>        stats <span class="op">=</span> [name, scores.mean(), <span class="bu">min</span>(scores), <span class="bu">max</span>(scores), scores.std(), pd.Series(scores).mad()]</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>        results.append(stats)</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> pd.DataFrame(results, columns <span class="op">=</span> [<span class="st">&#39;Model&#39;</span>, <span class="st">&#39;Mean&#39;</span>, <span class="st">&#39;Min&#39;</span>, <span class="st">&#39;Max&#39;</span>,<span class="st">&#39;Std&#39;</span>, <span class="st">&#39;Mad&#39;</span>])</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>    df <span class="op">=</span> df.sort_values(<span class="st">&#39;Mean&#39;</span>, ascending <span class="op">=</span> <span class="va">False</span>)</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> df</span></code></pre></div>
+<p>Next, we designated the sale price field as our target (y) variable and the rest of the fields (with the exception of price per sqft since the sale price is used to calculate it) as our independent variable (x) set.</p>
+<div class="sourceCode" id="cb18"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>y <span class="op">=</span> transformed[<span class="st">&#39;SalePrice&#39;</span>]</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> transformed.drop([<span class="st">&#39;SalePrice&#39;</span>, <span class="st">&#39;Price Per Sqft&#39;</span>], axis<span class="op">=</span><span class="dv">1</span>)</span></code></pre></div>
+<p>We then ran our model comparison function using 5-fold cross validation and obtained the following results.</p>
+<div class="sourceCode" id="cb19"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>compare_models(x, y, regressors, <span class="dv">5</span>)</span></code></pre></div>
+<figure>
+<img src="./images/model-comparison.png" alt="Avg Price by Month and Year" /><figcaption aria-hidden="true">Avg Price by Month and Year</figcaption>
+</figure>
+<p>It looks like the Gradient Boosting model performed the best with an average score of 0.85. We then used that algorithm to train a model on the entire data set and pickle it for future use.</p>
+<div class="sourceCode" id="cb20"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pickle</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span> GradientBoostingRegressor()</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>model.fit(x, y)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>pickle.dump(model, <span class="bu">open</span>(<span class="st">&#39;housing_price_model.pkl&#39;</span>, <span class="st">&#39;wb&#39;</span>))</span></code></pre></div>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this demo final project, we have analyzed a data set consisting of over 1,400 properties, their attributes, and their sale prices. We have followed the steps of the data analysis workflow, starting with data ingestion, wrangling and cleaning, and exploration and analysis before moving on to the the machine learning workflow consisting of feature selection/engineering, model selection, and model evaluation. In the end, we were able to predict housing prices with a respectable level of accuracy and we also derived insights about how factors such as neighborhood, square footage, and quality of the property affect the sale price.</p>
+</body>
+</html>

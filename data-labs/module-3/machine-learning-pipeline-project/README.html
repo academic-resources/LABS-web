@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png" alt="IronHack Logo" /><figcaption aria-hidden="true">IronHack Logo</figcaption>
+</figure>
+<h1 id="project-machine-learning-pipeline">Project: Machine Learning Pipeline</h1>
+<h2 id="overview">Overview</h2>
+<p>In the past lesson, you learned about Machine Learning pipelines and how to implement a typical Machine Learning pipeline in Scikit-learn. The current lesson does not present any new content, it is only intended to put to work the knowledge you acquired in the previous lessons, while constructing a solution to a real world problem based on Machine Learning pipelines implemented with Scikit-learn.</p>
+<p>We recommend you follow the process exemplified in the previous lesson “Machine Learning Pipelines”, which consists of 8 clearly defined phases. If you get stuck at any point, you can always go back to the lesson “Machine Learning Pipelines” and re-read the material presented there on the particular phase where you got stuck. Everything you need to know to succeed in this project has already been presented on the previous lesson, so going back to review the material presented there is always a good idea.</p>
+<p>In the previous lessons you “learned by being told”, the current project is a great complement to that because now you “learn by doing.” In this project, you are asked to choose a challenging Machine Learning problem that motivates you, to devise a Machine Learning solution following the phases presented in the previous lesson “Machine Learning Pipelines,” and to implement the solution in Python using the Scikit-learn libraries. Next, we present the requirements your application must comply with.</p>
+<h2 id="external-interface-requirements">External Interface Requirements</h2>
+<ol type="1">
+<li>Input requirement: capacity to read a dataset stored on disk.</li>
+<li>Output requirement: capacity to save a Machine Learning pipeline to a file.</li>
+<li>Output requirement: capacity to output the estimations of a Machine Learning pipeline for a variety of problem instances.</li>
+</ol>
+<h2 id="functional-requirements">Functional Requirements</h2>
+<ol type="1">
+<li>Reading external dataset from file.</li>
+<li>Creation of a Machine Learning pipeline containing a minimum of 2 steps.</li>
+<li>Training of Machine Learning pipeline.</li>
+<li>Evaluation of Machine Learning pipeline using cross validation.</li>
+<li>Saving the Machine Learning pipeline to a file on disk.</li>
+<li>Loading a Machine Learning pipeline from a file on disk.</li>
+<li>Classiying new problem instances with the Machine Learning pipeline read from file.</li>
+</ol>
+<h2 id="technical-requirements">Technical Requirements</h2>
+<ol type="1">
+<li>Use Python as programming language.</li>
+<li>Use Pandas for reading the dataset into a dataframe.</li>
+<li>Use Scikit-learn for creating, training and evaluating the Machine Learning pipeline.</li>
+<li>Use a Scikit-learn pipeline for classifying new problem instances.</li>
+<li>Use the class sklearn.externals.joblib for saving and reading serialized pipelines.</li>
+</ol>
+<h2 id="necessary-deliverables">Necessary Deliverables</h2>
+<ol type="1">
+<li>Software application implemented in one or several Python modules.</li>
+<li>Report explaining the problem, the dataset, the design of the solution, and the evaluation.</li>
+</ol>
+<h2 id="suggestions-to-get-started">Suggestions to Get Started</h2>
+<ol type="1">
+<li>Find an interesting dataset! Look in the Useful Resources section for sources of ideas.</li>
+<li>If you do not find a pre-existing dataset on the problem domain that you like, be creative: consider building the dataset yourself and donating the dataset to one of the public Machine Learning repositories.</li>
+<li>Break down the project into smaller tasks: the 8 phases presented in the previous lesson.</li>
+<li>Decide whether you will implement the software in a single Python module, or in several Python modules.</li>
+<li>If you feel completely lost and do not know where to start, start by executing the program presented in the previous lesson. Then follow the next suggestion in this list.</li>
+<li>Use an iterative approach: implement one phase per iteration.</li>
+<li>Reuse: adapt the code snippets of each phase, presented in the previous lesson, to your current problem.</li>
+</ol>
+<h2 id="potential-project-ideas">Potential Project Ideas</h2>
+<p>Find some problem domain that motivates you, and ideally has a remarkable social and/or economic impact as well.These are a few ideas that you might want to consider:</p>
+<ol type="1">
+<li>Malicious web site detection.</li>
+<li>Detection of spam.</li>
+<li>Diagnosis of Parkinson’s disease.</li>
+</ol>
+<h2 id="useful-resources">Useful Resources</h2>
+<ul>
+<li>University of California at Irvine’s <a href="https://archive.ics.uci.edu/ml">Machine Learning Repository</a></li>
+<li>OpenML <a href="https://www.openml.org">datasets</a></li>
+<li>Kaggle <a href="https://www.kaggle.com/datasets">datasets</a></li>
+</ul>
+<h2 id="rubric">Rubric</h2>
+<ul>
+<li>Read dataset into Pandas dataframe and select the training set from it: 1 point.</li>
+<li>Pipeline formed, trained and evaluated: 3 points.</li>
+<li>Pipeline saved, read from disk and used for estimation of new instances: 2 point.</li>
+<li>Different experiments performed using different pipelines, to determine best choice: up to 2 points.</li>
+</ul>
+</body>
+</html>

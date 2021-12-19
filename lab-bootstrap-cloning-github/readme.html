@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>readme</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="cloning-with-bootstrap">Cloning with Bootstrap</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this lesson we are going to create our own “Bootstrap version” of GitHub. We will recreate the <strong>Issues</strong> page for Airbnb’s CSS repository on GitHub using only Bootstrap styles and components. See the original on GitHub: https://github.com/airbnb/css/issues.</p>
+<p>At the end of the lesson, your GitHub will look something like this:</p>
+<p><img style="border: 1px solid black" src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_366f12c1fab910ed8fd7ece9c7735371.png"></p>
+<p>As we said, we will use Bootstrap <a href="http://getbootstrap.com/css">Styles</a> and <a href="http://getbootstrap.com/components/">Components</a>, and we won’t have any CSS file in the project!</p>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li><a href="https://guides.github.com/activities/forking/">Fork this repo</a>.</li>
+<li>Clone this repo into your <code>~/code/labs</code> folder.</li>
+<li>You can’t use your own styles.</li>
+</ul>
+<h3 id="submission">Submission</h3>
+<p>Upon completion, run the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">&quot;done&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin master</span></code></pre></div>
+<p>Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.</p>
+<p>In the Pull Request name, add your campus, name, and last names separated by a dash “-”</p>
+<h3 id="starter-code">Starter code</h3>
+<p>Your starter code contains just one HTML file with the following content:</p>
+<ul>
+<li>Basic HTML structure to start working on the exercise.</li>
+<li>Link to the <code>jQuery</code> CDN, required by the Bootstrap Components.</li>
+<li>Link to both Bootstrap Styles and Components.</li>
+</ul>
+<p>You can find all the links in the <code>&lt;head&gt;</code> tag:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;link</span> <span class="er">rel</span><span class="ot">=</span><span class="st">&quot;stylesheet&quot;</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css&quot;</span> <span class="er">integrity</span><span class="ot">=</span><span class="st">&quot;sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u&quot;</span> <span class="er">crossorigin</span><span class="ot">=</span><span class="st">&quot;anonymous&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;script</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js&quot;</span> <span class="er">integrity</span><span class="ot">=</span><span class="st">&quot;sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa&quot;</span> <span class="er">crossorigin</span><span class="ot">=</span><span class="st">&quot;anonymous&quot;</span><span class="kw">&gt;&lt;/script&gt;</span></span></code></pre></div>
+<h2 id="iteration-1-menu">Iteration #1: Menu</h2>
+<p>First of all, we are going to build our application’s menu: <img style="border: 1px solid black" src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_4513d3ad0a3631cf0728ec3e994d8951.png"></p>
+<p>We will use the <a href="http://getbootstrap.com/css/#grid">Grid System</a> to split the content in two different columns. The menu bar can be created by using the <a href="http://getbootstrap.com/components/#navbar">Navbar</a>, that contains the nav bar itself and the different dropdown menus that you will need.</p>
+<p>As you can see, we are using some glyphicon icons. Here are the names of the icons we are using:</p>
+<ul>
+<li>Bitcoin</li>
+<li>Bell</li>
+<li>Plus</li>
+<li>User</li>
+</ul>
+<p>Now let’s add some more complexity to this iteration by creating the different dropdowns that you have in the original GitHub:</p>
+<p><img style="border: 1px solid black" src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_80208920739b1c46a348327fbb92629b.png"></p>
+<p><img style="border: 1px solid black" src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_c6c056c3768215bb3d6030ed1120aa7d.png"></p>
+<p>The Navbar documentation shows you how to create a dropdown, so you have all you need there to create the site.</p>
+<p>The last thing you have to consider is that the menu doesn’t have to take the 100% width of the page. You can avoid this by using the <a href="http://getbootstrap.com/css/#overview-container"><code>container</code></a> class in the navbar. :smile:</p>
+<h2 id="iteration-2-repo-header">Iteration #2: Repo Header</h2>
+<p>In the second iteration, we are going to create the header of the repo:</p>
+<p><img style="border: 1px solid black" src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_4774d5e06cf80026ce2648472ae50356.png"></p>
+<p>There is a new component here that you have to use, <a href="http://getbootstrap.com/components/#input-groups">Input Groups</a>. This will help you create the different controls you have in the right side of the header.</p>
+<p>Again, we give you a list with the different icons you will need to complete the iteration:</p>
+<ul>
+<li>Book</li>
+<li>Eye Open</li>
+<li>Star</li>
+<li>Link</li>
+</ul>
+<!-- :::info -->
+<p><strong>Note</strong>: You will need more components and styles to complete this iteration. All of them have been used in the previous iteration. Think about what you will need to compose our header. :smile: <!-- ::: --></p>
+<h2 id="iteration-3-tabs-filters">Iteration #3: Tabs &amp; Filters</h2>
+<p>In this iteration we will create the <a href="http://getbootstrap.com/components/#nav">Tabs and Nav Tabs</a> we have in the page to let the user select the different sections of the project:</p>
+<p><img style="border: 1px solid black" src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_0f29689b6c8010451cc84c0408ee69ae.png"></p>
+<p>As you can see, this iteration also includes some <a href="http://getbootstrap.com/css/#buttons">Buttons</a>. Check out the different styles you can apply to have a green button. To create the buttons that are located at the right side of the search box, you will have to use the <a href="http://getbootstrap.com/components/#btn-groups">Button Groups</a>.</p>
+<p>Finally, it may be interesting to use the <a href="http://getbootstrap.com/css/#grid">Grid System</a> to lay out the filters section.</p>
+<p>The icons you will need to complete this iteration are:</p>
+<ul>
+<li>Menu Left and Menu Right</li>
+<li>Exclamation Sign</li>
+<li>Option Vertical</li>
+<li>Th List</li>
+<li>Resize Horizontal</li>
+<li>Equalizer</li>
+</ul>
+<h2 id="iteration-4-table">Iteration #4: Table</h2>
+<p>In the next step of our development, we will create the table with all the issues of the repository:</p>
+<p><img style="border: 1px solid black" src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_dd0cc8152b96a62c96dc9ff3ff7acfe6.png"></p>
+<p>Let’s start by wrapping the content in a <a href="http://getbootstrap.com/components/#panels">Panel Body</a> that will help us to create the bottom line of the section. Then, we will have to create a <a href="http://getbootstrap.com/css/#tables">Table</a> with its rows and columns. You can set the background color of the first row by adding the <code>active</code> class to it.</p>
+<p>At the bottom of the table, you will have to <a href="http://getbootstrap.com/css/#type-alignment">align the text correctly</a> to add the <strong>ProTip</strong>. To complete this iteration, you will need the following icons:</p>
+<ul>
+<li>Exclamation Sign</li>
+<li>Ok</li>
+<li>Flag</li>
+</ul>
+<h2 id="iteration-5-footer">Iteration #5: Footer</h2>
+<p>Last, but not least, we will create the footer of the application. That should be pretty simple compared to the other steps:</p>
+<p><img style="border: 1px solid black" src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_52d8ad0d4487264a060009860d995d07.png"></p>
+<p>You will need to use the <a href="http://getbootstrap.com/css/#helper-classes-floats">float classes</a> to arrange the different links to the left or right. Finally, we have to place the Bitcoin icon at the center of the footer. You’ll have to do that on your own.</p>
+<!-- :::info -->
+<p><strong>Tip</strong>: You don’t need the Grid System to arrange the footer content. :smile: <!-- ::: --></p>
+<p>// Happy coding!</p>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-canvas-flappy-bird">LAB | Canvas Flappy Bird</h1>
+<h2 id="introduction">Introduction</h2>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_6706fdbfdce80220b94fc6c04e2c990d.jpg" /></p>
+<p>The famous FlappyBird is a game developed by Vietnamese video game artist and programmer Dong Nguyen, under his game development company <a href="https://en.wikipedia.org/wiki/DotGEARS">dotGEARS</a>.</p>
+<p>The objective is to direct a flying bird, named “Faby”, who moves continuously to the right, between sets of pipes. If the player touches the pipes, they lose. Faby briefly flaps each time upward that the player clicks on the spacebar; if the screen is not tapped, Faby falls because of gravity.</p>
+<p>If you want to understand better the game, go ahead and play a bit <a href="http://flappybird.io/">here</a></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li><p>Upon completion, run the following commands:</p>
+<pre><code>git add .
+git commit -m &quot;done&quot;
+git push origin master</code></pre></li>
+<li><p>Create Pull Request so your TAs can check up your work.</p></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-1-create-the-board">Iteration 1: Create the board</h3>
+<p>The canvas tag is already part of the HTML starter code provided in the <code>index.html</code> file. Your first assignment is to add the <code>background</code>. In the <code>images</code> folder, you will find the file you should use for it.</p>
+<p>:wink: Check the previous lesson to remember how to make an infinite loop with an image!</p>
+<h3 id="iteration-2-create-the-player">Iteration 2: Create the Player</h3>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_5279ab3427a72a2fbf77cbc9e2b32664.png" /></p>
+<p>We have the <code>canvas</code> with our beautiful background. Now we need to add ´Faby´.</p>
+<p>Remember he should have the following properties:</p>
+<ul>
+<li><code>width</code></li>
+<li><code>height</code></li>
+<li><code>speedX</code></li>
+<li><code>speedY</code></li>
+<li><code>gravity</code></li>
+<li><code>gravitySpeed</code></li>
+</ul>
+<p>And the functions <code>update</code> and <code>newPos</code> to keep updating its position in every update.</p>
+<p>We should also check the user iteration when he clicks the <strong>spacebar</strong>. Every time the <strong>spacebar</strong> is clicked, the <code>gravity</code> of ‘Faby’ should change to negative, and after the user removes the clicking finger, set the <code>gravity</code> to positive again.</p>
+<h3 id="iteration-3-create-obstacles">Iteration 3: Create obstacles</h3>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_032b5d79ab1c7412e747473b679f0b59.png" alt="" style="width:450px; float:right; margin-left: 50px"/></p>
+<p>You need to add some obstacles to make this fun. If you notice every time we create obstacles, we should create two of them and position one at the top, and the other at the bottom, and of course, make a gap between them where ‘Faby’ could pass.</p>
+<p>It might be a good idea to create an array to store all our obstacles. This will help us later to move them, and check if ‘Faby’ crash with one of them.</p>
+<p>For now, just push them into the array.</p>
+<h3 id="iteration-4-update-the-canvas">Iteration 4: Update the canvas</h3>
+<p>This is the most important function in our project. The <code>update</code> function should do the following:</p>
+<ul>
+<li>Clear the <code>canvas</code></li>
+<li>Update obstacles position</li>
+<li>Update our player position</li>
+<li>Create new obstacles</li>
+</ul>
+<p>:bulb: For creating <strong>new obstacles</strong>, we recommend doing it every certain amount of updates. You should consider adding a counter to see how many times we update our <code>canvas</code>.</p>
+<h3 id="iteration-5-check-the-collision">Iteration 5: Check the collision</h3>
+<p>When ‘Faby’ crashes into one of the obstacles or goes out of the <code>canvas</code> the game should stop.</p>
+<p>In this iteration, your goal is to create this functionality. For that purpose, you can use the array of obstacles we had to create, iterating over it and checking their position comparing to the position of the bird.</p>
+<h3 id="bonus-add-points">BONUS: Add points</h3>
+<p>If we want to challenge somebody, we need to know who makes more points. Go ahead and add it to the game.</p>
+<p>:bulb: You can use the counter we add to the update function!</p>
+<p><br></p>
+<p><strong>Happy coding!</strong> :heart:</p>
+</body>
+</html>

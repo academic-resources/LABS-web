@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>readme</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-financial-data-graphing">LAB | Financial Data Graphing</h1>
+<p><br><br></p>
+<h2 id="introduction">Introduction</h2>
+<p><br></p>
+<p><img src="http://i.giphy.com/l3Uct2K9N3CqxeCoU.gif" /></p>
+<p><br></p>
+<p><a href="http://www.coindesk.com/">CoinDesk</a> is the world leader in news and information on digital currencies such as bitcoin, and its underlying technology - the blockchain.</p>
+<p>They cover news and analysis on the trends, price movements, technologies, companies, and people in bitcoin as well as the digital currency world.</p>
+<p>In this exercise, we will be using one of their data repositories: the <a href="https://web.archive.org/web/20191106152143/https://www.coindesk.com/api">Bitcoin Price Index</a>. CoinDesk provides a simple API to make its Bitcoin Price Index data programmatically, and we are going to use it to represent the values in a chart.</p>
+<p>The Bitcoin Price Index is the value that has bitcoin in different currencies. So we are going to show these variations in a graphic with <a href="http://www.chartjs.org/">Chart.js</a>.</p>
+<p>:eyes: <strong><a href="http://www.chartjs.org/"><strong>ChartJS</strong></a> (also known as chart.js) is an open-source library that allows us to create amazing static and animated charts through HTML5 canvas and JavaScript.</strong></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Then clone this repo.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Upon completion, run the following commands</li>
+</ul>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<p><br></p>
+<h1 id="instructions">Instructions</h1>
+<p>We have already created a JavaScript file to add all your AJAX code: <code>public/js/financial-data.js</code></p>
+<p>The app will be a super simple exercise where we are going to represent some data in a line chart.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_b94d2137d3737b49ecf92ee8709f5a14.png" /></p>
+<p>Let’s start!</p>
+<p><br></p>
+<h2 id="iteration-1-get-the-data">Iteration #1: Get the data</h2>
+<p>The first thing we need to do is to get the data we are going to represent in our chart. To do that, we will use the <a href="https://web.archive.org/web/20191106152143/https://www.coindesk.com/api">CoinDesk API Documentation</a>.</p>
+<p>Since we want to present historical data on the chart, as you can see, you have to make a <code>GET</code> request to the <strong><a href="http://api.coindesk.com/v1/bpi/historical/close.json">http://api.coindesk.com/v1/bpi/historical/close.json</a></strong> URL. The response will be a JSON with the data we want to represent.</p>
+<p>As you can see in the image above, the Y-axis will represent the bitcoin value, while the X-axis will represent the date of each value.</p>
+<p>We are going to use Axios to make the AJAX Request, so we have to import Axios through its CDN.</p>
+<p><strong>Tasks</strong></p>
+<ul>
+<li>Add the Axios reference in the HTML through CDN to be able to use it.</li>
+<li>You have to create an Axios Request to this URL and get the data. Use a <code>console.log()</code> to be sure that we are getting the correct data.</li>
+</ul>
+<p><br></p>
+<h2 id="iteration-2-create-the-chart">Iteration #2: Create the chart</h2>
+<p>Once we have the desired data, we have to show it as a chart. We are going to use <a href="http://www.chartjs.org/">Chart.js</a> to do that. So we have to add the library through CDN.</p>
+<p>Once we have added the CDN reference in the HTML file, we have to represent the values we got in Iteration 1 in a <a href="http://www.chartjs.org/docs/#line-chart-introduction">Line Chart</a>.</p>
+<p><strong>Note</strong>: Before you ask for help in the chart representation, try to read the documentation and figure out how it works. :)</p>
+<p><strong>Tasks</strong></p>
+<ul>
+<li>Add Chart.js reference through CDN.</li>
+<li>Give the correct format to the data we get in the Iteration 1 to show it in a line chart.</li>
+<li>Practice reading documentation with the <a href="http://www.chartjs.org/docs/#line-chart-introduction">Chart line documentation</a>.</li>
+<li>Create a line chart and show the data.</li>
+</ul>
+<p><br></p>
+<h2 id="iteration-3-dates-filter">Iteration #3: Dates Filter</h2>
+<p>As you can see, by default, the API response gives us the last month’s Price Index. In this iteration, we are going to add two date <code>input</code> to be able to filter these dates.</p>
+<!-- Check out the [CoinDesk API documentation](https://web.archive.org/web/20191106152143/https://www.coindesk.com/api) (Historical BPI data) to figure out how we can filter the data and get the values between two dates. -->
+<p>Use the following API endpoint to filter the data and get the values between two dates:</p>
+<pre class="shell"><code>http://api.coindesk.com/v1/bpi/historical/close.json?start=${fromDate}&amp;end=${toDate}&amp;currency=${currency}</code></pre>
+<p>To finish up this iteration, remember that the data has to be loaded every time we select a date, so you must add a listener and trigger the load data function every time that the date selector changes its value.</p>
+<p><strong>Tasks</strong></p>
+<ul>
+<li>Add two <code>&lt;input type="date"&gt;</code> fields to indicate the dates between which you are going to search: from date - to date.</li>
+<li>Add a listener to this <code>input</code> to search the data every time that its values change.</li>
+<li>Add the dates to the API URL to get the correct data.</li>
+</ul>
+<p><br></p>
+<h2 id="iteration-4-bonus-currency">Iteration #4 (Bonus): Currency</h2>
+<p>Another option that the API gives us is to get the bitcoin index in a specific currency. By default, the currency is the US Dollar (USD). We are going to change that by adding another filter.</p>
+<p>We are going to create a <code>&lt;select&gt;</code> input to allow the user to indicate which currency they want to get the results in. By default, we are going to add two different currencies: USD and EUR.</p>
+<p><strong>Feel free to add as many currencies as you like.</strong></p>
+<p>As in the dates filter, the data has to be reloaded every time the currency changes. Again, in the <a href="https://web.archive.org/web/20191106152143/https://www.coindesk.com/api">CoinDesk API documentation</a>, you can find how to indicate a specific currency.</p>
+<p><strong>Tasks</strong></p>
+<ul>
+<li>Add a dropdown to indicate which currency will be shown in the application.</li>
+<li>Add a listener to the <code>select</code> field to reload the data every time its value changes.</li>
+<li>Add the currency to the API URL to load the correct values in our application.</li>
+</ul>
+<p><br></p>
+<h2 id="iteration-5-bonus-maxmin-values">Iteration #5 (Bonus): Max/Min Values</h2>
+<p>To finish up with the exercise, let’s add an information box where we are going to show which are the maximum and minimum values in the indicated filters.</p>
+<p>To do that, we have to get the prices from the response we got in the first iteration and select the max and min values. Once we have these values, we have to show them in the view.</p>
+<p><strong>Tasks</strong></p>
+<ul>
+<li>Add an information box in the HTML to show the max/min values from the chart.</li>
+<li>Create an array with the price values from the response.</li>
+<li>Use <code>Math.min()</code> and <code>Math.max()</code> to filter the array and get the min/max values.</li>
+<li>Show these values in the information box we have added to the view.</li>
+</ul>
+<p><br><br></p>
+<p><strong>Happy coding!</strong> :heart:</p>
+</body>
+</html>

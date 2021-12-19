@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="de-express-linkedin-clone">DE | Express Linkedin Clone</h1>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_b5ba91b16c4029dd5efa047e1a1246eb.png" width="400px"></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://guides.github.com/activities/forking/">Fork this repo</a></li>
+<li>Clone this repo into your <code>~/code/labs</code></li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, run the following commands</p>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<p>Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.</p>
+<p>In the Pull request name, add your name and last names separated by a dash “-”</p>
+<h2 id="deliverables">Deliverables</h2>
+<p>Push your entire Express app to the GitHub.</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="introduction">Introduction</h3>
+<p><a href="https://www.linkedin.com/">LinkedIn</a> is the ubiquitous career-based social networking platform, that many of you should have an account on. <strong>Cough Cough</strong>.</p>
+<p>In this lab, we will be creating a basic version of LinkedIn’s authentication features. If you’d like to continue with this example in the future, apply styles, and add extra features, feel free! <strong>BUT</strong> the goal of this exercise is to work with authentication, and authorization.</p>
+<p>As starter code, we have created a project with <code>express-generator</code>, so you will start the project from scratch!</p>
+<!-- :::warning -->
+<p>:exclamation: <strong>Finish all of the iterations before adding any styles or bonus features.</strong> <!-- ::: --></p>
+<h3 id="iteration-1-authentication-user-accounts">Iteration 1 | Authentication &amp; User Accounts</h3>
+<p>Before we do anything, we need to implement basic authentication, and User accounts. Start with a very basic home page, and the authentication features of signing up, logging in, and logging out.</p>
+<!-- :::info -->
+<p>:bulb: <strong>USBAT</strong> stands for <strong>U</strong>ser <strong>S</strong>hould <strong>B</strong>e <strong>A</strong>ble <strong>T</strong>o <!-- ::: --></p>
+<h4 id="features">Features</h4>
+<ul>
+<li><strong>USBAT</strong> =&gt; View the home page.</li>
+<li><strong>USBAT</strong> =&gt; Register in the application.</li>
+<li><strong>USBAT</strong> =&gt; Login</li>
+<li><strong>USBAT</strong> =&gt; Logout</li>
+</ul>
+<h4 id="routes">Routes</h4>
+<ul>
+<li><code>GET</code> <code>/</code>. Create a very basic home page with a message saying “Welcome &lt; User Name &gt;” once the user is logged in. If the user hasn’t started a session, he should be redirected to <code>/login</code> page.</li>
+<li><code>GET</code> <code>/signup</code>. The signup page has to show a form with the fields <code>username</code>, <code>password</code>, <code>name</code>, and <code>email</code>.</li>
+<li><code>POST</code> <code>/signup</code>. We save the user information in the database.</li>
+<li><code>GET</code> <code>/login</code>. If the user is already logged in, it should redirect him to the home page.</li>
+<li><code>POST</code> <code>/login</code>. We start user’s session.</li>
+<li><code>GET</code> <code>/logout</code>. We end the user’s session.</li>
+</ul>
+<h4 id="pages">Pages</h4>
+<ul>
+<li><code>home.ejs</code></li>
+<li><code>authentication/signup.ejs</code></li>
+<li><code>authentication/login.ejs</code></li>
+</ul>
+<h4 id="models">Models</h4>
+<ul>
+<li><code>User</code>
+<ul>
+<li><code>name</code> - User’s name</li>
+<li><code>email</code> - User’s email</li>
+<li><code>password</code> - Encrypted password with BCrypt</li>
+<li><code>summary</code> - User’s summary: where he has worked, how many years…</li>
+<li><code>imageUrl</code> - Upload your user profile picture to <a href="http://imgur.com/">imgur</a> and use the public link to show the image in our LinkedIn</li>
+<li><code>company</code> - User’s current company</li>
+<li><code>jobTitle</code> - User’s current Job Title</li>
+</ul></li>
+</ul>
+<!-- :::warning -->
+<p>:exclamation: Make sure the user cannot revisit the login or register pages if they’re logged in. <!-- ::: --></p>
+<h3 id="iteration-2-user-profiles-authorization">Iteration 2 | User Profiles &amp; Authorization</h3>
+<p>In this iteration, we will build out the User’s public and private profiles. In the private page, the user will be able to change his information, while in the public page, everyone will be able to see our profile so we can get a cool job.</p>
+<h4 id="features-1">Features</h4>
+<ul>
+<li><strong>USBAT</strong> =&gt; Edit <strong>their own</strong> profile. The user should <em>not</em> be able to edit another user’s profile.</li>
+<li><strong>USBAT</strong> =&gt; View someone else’s public profile <strong>without being logged in</strong>. The public profile should only show the user’s <code>name</code>, <code>jobTitle</code>, <code>image</code>, and <code>company</code>.</li>
+<li><strong>USBAT</strong> =&gt; View someone else’s private profile <strong>only when logged in</strong>. This should display <em>all</em> of the user’s information, <strong>excluding their password</strong>.</li>
+</ul>
+<h4 id="routes-1">Routes</h4>
+<ul>
+<li><code>GET</code> <code>/profile/:userId/edit</code> - This will allow the user to edit their own profile. The user should be redirected to the homepage if they’re trying to edit a profile that isn’t theirs.</li>
+<li><code>POST</code> <code>/profile/:userId</code></li>
+<li><code>GET</code> <code>/profile/:userId</code>
+<ul>
+<li>This will display a user’s profile, based on the <code>userId</code>. If the user is logged in, and viewing their own profile, the page will display a “Edit Your Profile” button.</li>
+<li>If the user is logged in, they will be displayed the <strong>public profile</strong> with limited information. If they are not they will be displayed the <strong>private profile</strong> with all of the information.</li>
+</ul></li>
+</ul>
+<h4 id="pages-1">Pages</h4>
+<ul>
+<li><code>profiles/edit.ejs</code> - Edit user information (private profile page)</li>
+<li><code>profiles/show.ejs</code> - User profile page (public profile page)</li>
+</ul>
+<h3 id="iteration-3-news-feed">Iteration 3 | News Feed</h3>
+<p>Implement a news feed that shows posts from all of the people on LinkedIn. Yes, typically you’d only be browsing posts from people that you are connected with, but that’s for another iteration later.</p>
+<h4 id="features-2">Features</h4>
+<ul>
+<li><strong>USBAT</strong> =&gt; Create a new post <strong>if they are logged in</strong>.</li>
+<li><strong>USBAT</strong> =&gt; Edit a post <strong>they has created</strong>.</li>
+<li><strong>USBAT</strong> =&gt; View a list of all of the user created posts on the home page.</li>
+</ul>
+<h4 id="routes-2">Routes</h4>
+<ul>
+<li><code>GET</code> <code>/users/:userId/posts/new</code> - Create a new post</li>
+<li><code>POST</code> <code>/users/:userId/posts</code> - Save the post information in the database</li>
+</ul>
+<h4 id="pages-2">Pages</h4>
+<ul>
+<li><code>posts/new.ejs</code></li>
+</ul>
+<h4 id="models-1">Models</h4>
+<ul>
+<li><code>Post</code>
+<ul>
+<li><code>content</code> - Information that the user wants to share</li>
+<li><code>_creator</code> - Owner of the post</li>
+</ul></li>
+</ul>
+<h3 id="bonus-styles">BONUS | Styles</h3>
+<p>Let’s do our LinkedIn fancy! Add some styles to your application so our employers can see our profile and our styling skills. Once you are done with this exercise, you will have your own CV, created by yourself 😎</p>
+<h3 id="extra-bonus-connections">EXTRA BONUS | Connections</h3>
+<p>We need to create connections between users. Modeling friendships / connections using mongodb is generally not ideal, and can be a bit tricky.</p>
+<p>Check out <a href="http://stackoverflow.com/a/30705076/4624718">this stackoverflow answer</a> about modelling friendships.</p>
+<p>Once you implement connections, make it so the home page only displays posts from a user’s connections.</p>
+<p>Since this is bonus, we’ll leave the implementation details up to you. :wink:</p>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-express-ironbeers">LAB | Express IronBeers</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Sometimes you would just like to have a very descriptive list of all beers so you could see their type, color, each beer’s percentage of alcohol, or which beer is well pared with some food. In this lab, you will create a web app where the user will be able to see a list of beers, get random suggestions, and read a very descriptive explanation of each beer.</p>
+<p>“How will we get all of this information?”, you might ask. Well, we will be using an npm package :package: as our data source.</p>
+<p>For this exercise, we will work with the <strong><a href="https://www.npmjs.com/package/punkapi-javascript-wrapper">PunkAPI</a></strong> npm package. In the background, the package communicates with a remote <em>database</em> that contains all of the beers. The package enables us to use its methods that can help us to retrieve beers. Each beer has some properties, and we can play around with this data to practice working with Handlebars templates, <code>layouts</code> and <code>partials</code>.</p>
+<p><strong>In this lab, we can also practice reading external (PunkAPI) docs and learn how to get what we need from the database.</strong></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Then clone this repo.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Upon completion, run the following commands:</li>
+</ul>
+<pre class="shell"><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-0-initial-setup">Iteration 0: Initial setup</h3>
+<p>To run our application, the first thing you have to do is to install all of its dependencies. Run the following command:</p>
+<pre class="shell"><code>$ npm install</code></pre>
+<p>To run the app:</p>
+<pre class="shell"><code>$ node app.js
+
+# you can also run: npm start</code></pre>
+<h3 id="iteration-1-layout-barebones">Iteration 1: Layout barebones</h3>
+<p>Our starter code includes the basic configuration needed to run our app. The <strong><code>/</code></strong> route is set to render the <code>index.hbs</code> file. Let’s start by creating a layout.</p>
+<p>Inside of the <code>views</code> folder, create a <code>layout.hbs</code> file. In the bonus iteration, you can give your app some style, but for now, let’s focus on the logic.</p>
+<p>Remember to add the <code>{{{ body }}}</code> to the <strong>main layout</strong>.</p>
+<p>Add a navbar that includes links to 3 pages:</p>
+<ul>
+<li><em>Home</em> ==&gt; should navigate to <code>/</code>.</li>
+<li><em>Beers</em> ==&gt; should navigate to <code>/beers</code>.</li>
+<li><em>Random Beer</em> ==&gt; should navigate to <code>/random-beer</code>.</li>
+</ul>
+<p>Layout done, let’s move to creating these three pages.</p>
+<h3 id="iteration-2---home-page">Iteration 2 - Home <em>page</em></h3>
+<ul>
+<li>The first page should be <strong>Home</strong> and should be rendered on <strong><code>/</code></strong>. The file that gets rendered is <code>index.hbs</code>.</li>
+<li>This file should include the <em>beer image</em>, which you can find at <code>/public/images</code>. Together with the image, <code>index.hbs</code> should have two links: <code>Check the Beers!</code> and <code>Check a Random Beer</code>. Both links should navigate to the corresponding routes (which we previously defined in our navbar as well). Later, you can style these <code>a</code> tags to make them look like buttons.</li>
+</ul>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36723774-7d791ef2-1bb1-11e8-991b-39dbf4fd8a59.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-3---beers-page">Iteration 3 - Beers <em>page</em></h3>
+<p>The next thing we will be working on is a page where we can present all the beers we will retrieve from the remote database. This page will be rendered every time the user visits the the <code>/beers</code> route.</p>
+<p>This leads us to the conclusion that in this step, we have the two main focus areas:</p>
+<ul>
+<li>the <code>/beers</code> route and</li>
+<li>the <code>beers.hbs</code> view.</li>
+</ul>
+<h4 id="iteration-3.1-the-beers-route">Iteration 3.1 The <code>/beers</code> route</h4>
+<p>In this step, we will have a couple of micro-steps:</p>
+<ul>
+<li>Create a <code>/beers</code> route inside the <code>app.js</code> file.</li>
+<li>Inside the <code>/beers</code> route, call the <code>getBeers()</code> method (the <strong>PunkAPI</strong> provides this method, and you can find more about it <a href="https://www.npmjs.com/package/punkapi-javascript-wrapper#getbeersoptions">here</a>). <strong>Calling the <code>.getBeers()</code> method returns a promise that should be resolved with an array of 25 beers</strong>.</li>
+<li>Down the road, you should pass that array to the <code>beers.hbs</code> view.</li>
+</ul>
+<p>The example of how this method works is shown below:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>punkAPI</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">getBeers</span>()</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(beersFromApi <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;Beers from the database: &#39;</span><span class="op">,</span> beersFromApi))</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">catch</span>(error <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(error))<span class="op">;</span></span></code></pre></div>
+<h4 id="the-beers.hbs-view">3.2 The <code>beers.hbs</code> view</h4>
+<ul>
+<li>Create a <code>beers.hbs</code> file to render every time we call this route.</li>
+<li>This file should have access to the beers we get as a response from the database. Remember, you should call the <code>render</code> method after getting the <em>beers</em> array. <em>Hint:</em> That means inside of the function you’re passing to the <code>then</code> method. :wink:</li>
+<li>On the <code>beers.hbs</code> view, loop over the <strong>array of beers</strong> using an <code>{{#each}}</code> loop. Display an <strong>image</strong>, <strong>name</strong>, <strong>description</strong> and <strong>tagline</strong>.</li>
+</ul>
+<p>Now, when you click on the <code>Beers</code> link on the top navigation or on the <code>Check the beers</code> button, you should be able to see all the beers. Boom! :boom:</p>
+<h3 id="iteration-4---random-beer-page">Iteration 4 - Random beer <em>page</em></h3>
+<p>As in the previous step, we will have to focus on creating a route to display a random beer. When a random beer is retrieved, we have to pass it to the view.</p>
+<h4 id="the-random-beer-route">4.1 The <code>/random-beer</code> route</h4>
+<ul>
+<li>Let’s create the <code>/random-beer</code> route.</li>
+<li>Inside the route, you should call the PunkAPI <code>getRandom()</code> method. It returns a promise that will resolve with a different beer object on every call. Look at the <a href="https://www.npmjs.com/package/punkapi-javascript-wrapper#getrandom">documentation</a> to understand the structure of the data that you’re supposed to get back. :+1:</li>
+</ul>
+<p>The example of how this method works is shown below:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>punkAPI</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">getRandom</span>()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(responseFromAPI <span class="kw">=&gt;</span> {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// your magic happens here</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">catch</span>(error <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(error))<span class="op">;</span></span></code></pre></div>
+<ul>
+<li>Eventually, the received beer needs to be passed to the <code>random-beer.hbs</code> file. You still don’t have this file, so let’s proceed to create it.</li>
+</ul>
+<h4 id="the-random-beer.hbs-view">4.2 The <code>random-beer.hbs</code> view</h4>
+<ul>
+<li>The <code>random-beer.hbs</code> should display the random beer that was retrieved from the database. You should display an <strong>image</strong>, <strong>name</strong>, <strong>description</strong>, <strong>tagline</strong>, <strong>food pairing</strong> and <strong>brewer tips</strong>. The following image shows how this page could look like if you give it a bit of style. However, the styling will come later, so, for now, focus on rendering all the information:</li>
+</ul>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36724536-c5924892-1bb3-11e8-8f22-fd1f8ce316af.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Now, every time the user clicks on the <em>Random beer</em> link in the navbar or on the <em>Check a random beer</em> button on the home page, they should see this page with a new, random beer.</p>
+<p><strong>You’ve just finished all the mandatory iterations. Good job!</strong></p>
+<p>Let’s proceed to the bonus iterations.</p>
+<div class="info">
+<p>On every iteration, you should render a <code>partial</code> passing the information regarding the corresponding beer.</p>
+</div>
+<h3 id="bonus-iteration-5---beer-partial">Bonus: Iteration 5 - Beer partial</h3>
+<p><strong>Partials represent templates that are likely to be reused.</strong></p>
+<p>Let’s see what beer properties we display on the <code>/beers</code> <em>(the beers page)</em> and compare them with the properties we displayed on the <code>/random-beer</code> <em>(random beer)</em> page:</p>
+<table>
+<thead>
+<tr class="header">
+<th style="text-align: center;">properties/ page</th>
+<th style="text-align: center;"><code>/beers</code></th>
+<th style="text-align: center;"><code>/random-beer</code></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">image</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">name</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">description</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">tagline</td>
+<td style="text-align: center;">:white_check_mark:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">food pairing</td>
+<td style="text-align: center;">:x:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">brewer tips</td>
+<td style="text-align: center;">:x:</td>
+<td style="text-align: center;">:white_check_mark:</td>
+</tr>
+</tbody>
+</table>
+<p>As we can see, we have 4 in common properties, which means our code could be a bit more <strong>DRY</strong> if we refactor it using <em>partials</em>.</p>
+<p>You should create a partial to show each beer.</p>
+<ul>
+<li>First, we need to register where our <code>partials</code> will be located. So you need to add the following code to the <code>app.js</code> file:</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>hbs<span class="op">.</span><span class="fu">registerPartials</span>(path<span class="op">.</span><span class="fu">join</span>(<span class="bu">__dirname</span><span class="op">,</span> <span class="st">&#39;views/partials&#39;</span>))<span class="op">;</span></span></code></pre></div>
+<ul>
+<li>Next, you should create a <code>partials</code> folder inside the <code>views</code>, and <code>beerpartial.hbs</code> file inside the <code>partials</code> folder (<strong>Note</strong>: We’re not including dashes in the <code>hbs</code> partial names, since handlebars partials need to follow the same naming conventions as JavaScript variables).</li>
+<li>Our <code>beerpartial.hbs</code> will display the properties that both views share: <strong>image</strong>, <strong>name</strong>, <strong>description</strong>, and <strong>tagline</strong> of the beer.</li>
+<li>Now, you can go ahead and plug in this partial in the <code>beers.hbs</code> view inside the <code>each</code> loop.</li>
+</ul>
+<p>After creating the partial, and looping over the array of beers, on our <code>/beers</code> route, we should have the following:</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36724392-61fa7336-1bb3-11e8-8468-189908167e10.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<ul>
+<li>Also, you can use it in the <code>random-beer.hbs</code> page.</li>
+</ul>
+<p>Our code shrunk by a lot just because we managed to create a reusable piece of code (the partial), which we can now place wherever we need to use this set of properties.</p>
+<h3 id="bonus-iteration-6">Bonus: Iteration 6</h3>
+<p>Make all the beers on the beers page clickable. If users click on a specific beer, they should be able to see a page with the detailed information of that particular beer. <strong>You can reuse the same partial you used for iteration 5</strong>. As a matter of fact, you should. That’s what partials are for. The trick is to wrap an anchor tag around every beer that has the beer <code>id</code> in the <code>href</code> property. Something like:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/beers/beer-i3f4d34s34b&quot;</span><span class="kw">&gt;</span><span class="co">&lt;!-- name of the beer --&gt;</span><span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<p>To understand how you can get the <code>id</code> from the URL, read this section of the <a href="http://expressjs.com/en/4x/api.html#req.params">Express docs</a>.</p>
+<p>To find out how you can get an individual beer from the punkAPI using the <em>beerId</em>, check out the <a href="https://www.npmjs.com/package/punkapi-javascript-wrapper#getbeerid"><code>.getBeer(id)</code> method on the punkAPI docs</a>.</p>
+<h3 id="bonus-iteration-7">Bonus: Iteration 7</h3>
+<p>The overall layout should look like this:</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36723450-8bbcb164-1bb0-11e8-81c3-4fe939730bb9.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>You will find the <code>colors</code> and <code>fonts</code> on the <code>css</code> file. Remember to link the <code>css</code> file to your <strong>main layout</strong>.</p>
+<p>Let your artsy side shine! :sparkles:</p>
+<p>Happy Coding! 💙</p>
+</body>
+</html>

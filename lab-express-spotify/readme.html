@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>readme</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="express-spotify-searcher">Express Spotify Searcher</h1>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_eb6313ef8c1bd11e3732034ebd4edafa.png" /></p>
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://www.spotify.com/us/">Spotify</a> is a super cool music streaming service that provides you access to tons of music without ever having to buy an album.</p>
+<p>Today, we’re going to build an Express app to search Spotify for artists, albums, and tracks. Also, we’ll be able to play a preview of some of these songs.</p>
+<!-- To see the final product check out the deployed version: https://spotify-lab.herokuapp.com. -->
+<p>It may seem like a lot, but let’s break it down into steps!</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Upon completion, run the following commands:</li>
+</ul>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<h2 id="the-key-helper-spotify-web-api-node-npm-package">The key helper: <code>spotify-web-api-node</code> npm package</h2>
+<p>Spotify is great for streaming music from the app, but they also have a <a href="https://en.wikipedia.org/wiki/Web_service">Web Service</a> for us developers to play with.</p>
+<p>For the purpose of this exercise, we will be using the <a href="https://www.npmjs.com/package/spotify-web-api-node"><code>spotify-web-api-node</code> npm package</a> (this is the link that will take you to the documentation so go ahead and open it). As we can find in the docs, this package gives us simple methods to make requests to Spotify, and give us back artists, albums, tracks, and more.</p>
+<p><strong>In this lab, we have two main goals</strong>:</p>
+<ul>
+<li>We are going to apply our knowledge of GET method and when and why to use <code>req.query</code> and <code>req.params</code>.</li>
+<li>We are going to practice how to <strong>read the documentation</strong> (of this npm package particularly) and how to use the examples provided by the docs to successfully finish all the iterations.</li>
+</ul>
+<h3 id="registering-the-app-and-getting-the-credentials">Registering the app and getting the credentials</h3>
+<p>The <strong>Spotify</strong> API will need a <code>clientId</code> and <code>clientSecret</code> in order to give us permission to make requests and get some data back. To get <code>clientId</code> and <code>clientSecret</code>, we have to register our app on the official Spotify Developers web site (you won’t be charged for this, and no credit card information will be required). Let’s follow these steps:</p>
+<ol type="1">
+<li>Navigate to <a href="https://developer.spotify.com/my-applications/#!/">Spotify Developers</a>.</li>
+<li>Click on the “Log In” button. If you do not have an account, you will be asked to create one, it´s free :wink:.</li>
+<li>After logging in, click on the <strong>Create an App</strong> button.</li>
+</ol>
+<p>The following screens might be out of date, since Spotify is constantly iterating on their interface, but that shouldn’t stop you from completing these steps. You got this!</p>
+<!-- ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_a3a19d215083c5526df1f53f3c1fdf6f.png) -->
+<ol start="4" type="1">
+<li>Fill the fields and submit the form.</li>
+</ol>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_db933b4f08d71ceff0b0d5d4ca124594.png" /></p>
+<ol start="5" type="1">
+<li>We are ready to go! We have all the info we need :muscle: Let´s start!</li>
+</ol>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_8859d022ca1d53adc9f9ec829ec3d17b.png" /></p>
+<h2 id="iteration-1-spotify-api-setup">Iteration 1 | Spotify API Setup</h2>
+<p>In the next few steps, you’ll create all of the files that you need. So far, you have some basic setup in <code>app.js</code>, but that’s not quite enough. As you remember, to get some packages (including <code>express</code>) in our app, we have to have them in the <code>package.json</code> file. So let’s start listing the steps:</p>
+<ol type="1">
+<li><p>Let’s install all the dependencies we need to successfully run this app: <code>npm install express hbs spotify-web-api-node dotenv</code>.</p></li>
+<li><p><code>nodemon</code> is installed as a dev dependency (our app doesn’t depend on it but it helps us in the development process), which means we can use nodemon to run the app with: <strong><code>npm run dev</code></strong>.</p></li>
+<li><p>Inside of the <code>app.js</code> file, require <code>spotify-web-api-node</code>.</p></li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> SpotifyWebApi <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;spotify-web-api-node&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<ol start="4" type="1">
+<li>Inside of the <code>app.js</code> file, you’ll find the place where you should paste the following code:</li>
+</ol>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> spotifyApi <span class="op">=</span> <span class="kw">new</span> <span class="fu">SpotifyWebApi</span>({</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">clientId</span><span class="op">:</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">CLIENT_ID</span><span class="op">,</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">clientSecret</span><span class="op">:</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">CLIENT_SECRET</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co">// Retrieve an access token</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>spotifyApi</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">clientCredentialsGrant</span>()</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(data <span class="kw">=&gt;</span> spotifyApi<span class="op">.</span><span class="fu">setAccessToken</span>(data<span class="op">.</span><span class="at">body</span>[<span class="st">&#39;access_token&#39;</span>]))</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">catch</span>(error <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;Something went wrong when retrieving an access token&#39;</span><span class="op">,</span> error))<span class="op">;</span></span></code></pre></div>
+<ol start="5" type="1">
+<li>See this above?</li>
+</ol>
+<div class="sourceCode" id="cb4"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> spotifyApi <span class="op">=</span> <span class="kw">new</span> <span class="fu">SpotifyWebApi</span>({</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="dt">clientId</span><span class="op">:</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">CLIENT_ID</span><span class="op">,</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="dt">clientSecret</span><span class="op">:</span> <span class="bu">process</span><span class="op">.</span><span class="at">env</span><span class="op">.</span><span class="at">CLIENT_SECRET</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>To avoid making our API keys public, we don’t want to add and commit them. We’ll use a package named <code>dotenv</code> for that.</p>
+<p>This package is imported at the very beginning of <code>app.js</code>. All that is left to do is to add your keys in the <code>.env</code> file. So go ahead and create a <code>.env</code> file and paste the following lines there, replacing the text with your credentials.</p>
+<pre><code>CLIENT_ID=your clientId goes here
+CLIENT_SECRET=your clientSecret goes here</code></pre>
+<p>:zap: The <code>.env</code> is referred to in the <code>.gitignore</code> file so you’re safe!</p>
+<p>:fire: <em>Styling should be the last thing you focus on. Functionality first!</em> 🙏🏻</p>
+<h2 id="iteration-2-express-setup">Iteration 2 | Express Setup</h2>
+<p>Now let’s create a <code>views</code> folder and let’s add the <code>layout.hbs</code> file in it. At this moment we should have the following structure of folders and files:</p>
+<pre><code>lab-express-spotify
+      ├── app.js
+      ├── package.json
+      ├── package-lock.json
+      ├── public
+      │    ├── images
+      │    └── stylesheets
+      │         └── style.css
+      └── views
+            └── layout.hbs</code></pre>
+<p>As we can see, in your <em>app.js</em> we have required all the packages we need for now:</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> express <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;express&#39;</span>)<span class="op">;</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> hbs <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;hbs&#39;</span>)<span class="op">;</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> SpotifyWebApi <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;spotify-web-api-node&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<p>We are good to go. Let’s open the <a href="https://www.npmjs.com/package/spotify-web-api-node">spotify-web-api-node</a> documentation and start our journey!</p>
+<h2 id="iteration-3-search-for-an-artist">Iteration 3 | Search for an Artist</h2>
+<p><strong>You can keep all your routes in the <code>app.js</code> after where it states: <em>// Our routes go here:</em>.</strong></p>
+<h3 id="step-1-create-a-homepage">Step 1 | Create a Homepage</h3>
+<p>Create a route that renders a simple home page. You’ll need a basic index route, that renders a home page. On this page, you should have a small search <code>form</code> that has an input field receiving an artist’s name and a button that submits the request.</p>
+<p>This form should direct its query to <code>/artist-search</code> (<code>action="/artist-search", method="GET"</code>). The result should be something along these lines but leave styling for the end.</p>
+<p><img src="https://i.imgur.com/YuTA0vQ.png=400x" /></p>
+<h3 id="step-2-display-results-for-artist-search">Step 2 | Display results for artist search</h3>
+<p>Okay, our search form submitted to <code>/artist-search</code> route. We still don’t have this route created so let’s do it! This route will receive the search term from the <code>query</code> string, and make a search request using one of the methods of the Spotify npm package. You have the documentation open :wink: but we will help you with your first step.</p>
+<p>The method we will use from the npm package is: <code>spotifyApi.searchArtists()</code>. In this route, you should have something like this:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>spotifyApi</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">searchArtists</span>(<span class="co">/*&#39;HERE GOES THE QUERY ARTIST&#39;*/</span>)</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(data <span class="kw">=&gt;</span> {</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;The received data from the API: &#39;</span><span class="op">,</span> data<span class="op">.</span><span class="at">body</span>)<span class="op">;</span></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ----&gt; &#39;HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API&#39;</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">catch</span>(err <span class="kw">=&gt;</span> <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;The error while searching artists occurred: &#39;</span><span class="op">,</span> err))<span class="op">;</span></span></code></pre></div>
+<p>In order to display the found artists’ information, create <code>artist-search-results.hbs</code> file inside <code>views</code> folder and display name, image, and button (or link) to show the albums for a particular artist on a new view (for now just create the button/link and we will take care of the rest in the next step). Again, styling is not your priority, so let’s move to the next step. <br><br> <img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_9dc721e76158df1836ef07565b5385c2.png" /></p>
+<h2 id="iteration-4-view-albums">Iteration 4 | View Albums</h2>
+<p>On the <code>artist-search-results.hbs</code> page we created the <code>View albums</code> button/link. Users should be taken to <em>some other page</em> after clicking on it and there be able to see all the albums of that particular artist. <strong>Hint</strong>: the URL should include artist’s <code>id</code> 🤓 and should change dynamically.</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;a</span> <span class="er">href</span><span class="ot">=</span><span class="st">&quot;/albums/someArtistIdGoesHere&quot;</span><span class="kw">&gt;</span>View Albums<span class="kw">&lt;/a&gt;</span></span></code></pre></div>
+<p>So let’s create a new page - <code>albums.hbs</code> where all the results will be displayed. Make sure you show the <em>name</em> and the <em>cover</em> of each album and add a button/link to see the tracks (next iteration).</p>
+<p>:zap: Check out the <code>.getArtistAlbums()</code> method in the <a href="https://www.npmjs.com/package/spotify-web-api-node">spotify-web-api-node</a> documentation.</p>
+<p><strong>Hint</strong>:</p>
+<p>Your route should look like the following:</p>
+<div class="sourceCode" id="cb10"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>app<span class="op">.</span><span class="fu">get</span>(<span class="st">&#39;/albums/:artistId&#39;</span><span class="op">,</span> (req<span class="op">,</span> res<span class="op">,</span> next) <span class="kw">=&gt;</span> {</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// .getArtistAlbums() code goes here</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p><img src="https://i.imgur.com/oaoqQMj.png" /></p>
+<p>This is going good so far, so let’s finish up with our last iteration.</p>
+<h2 id="iteration-5-view-tracks">Iteration 5 | View Tracks</h2>
+<p>Create the <code>View tracks</code> link on the albums page. This link should take you to a page with a list of all of the tracks on a particular album.</p>
+<p><strong>Hint</strong>: The link to the tracks page should have each album’s <em>id</em> in it. <br> <strong>Note</strong>: :zap: Check out the <code>.getAlbumTracks()</code> method in the <code>spotify-web-api-node</code> documentation.</p>
+<p>A track object comes with a <code>preview_url</code>, which is the source for a 30-second preview of a particular song. You can plug this into an HTML <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio"><code>audio</code></a> tag, and it will play the preview.</p>
+<p><img src="https://i.imgur.com/XVKoeqg.png" /></p>
+<h3 id="the-summary-of-requirements">The summary of requirements</h3>
+<ul>
+<li>Total of five pages with (1)artist / (2)album / (3)track information (all populated from Spotify) + (4)layout + (5)home.</li>
+<li>Some styling, it doesn’t have to look like the example.</li>
+</ul>
+<p>Happy Coding! 💙</p>
+</body>
+</html>

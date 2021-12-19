@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="mongoose-movies">Mongoose Movies</h1>
+<figure>
+<img src="https://images.unsplash.com/photo-1534253893894-10d024888e49?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=2250&amp;q=80" alt="hollywood" /><figcaption aria-hidden="true">hollywood</figcaption>
+</figure>
+<h2 id="introduction">Introduction</h2>
+<p>Everyone likes celebrities, right? Well, even if you don’t, now is your chance to create your own, better, fictional celebrities! Let’s create an Express app with all the basic CRUD actions that will allow the user to create their own celebrities and edit them as they see fit.</p>
+<p>The user should be able to:</p>
+<p><strong>1. See the list of celebrities</strong><br />
+<strong>2. See the details of a celebrity</strong><br />
+<strong>3. Add new celebrities</strong><br />
+<strong>4. Update existing celebrities</strong><br />
+<strong>5. Delete celebrities</strong></p>
+<p>But wait! That’s not all!</p>
+<p>Once we have our celebrities, we need something for them to do! Let’s make up some movie ideas for our celebrities to star in.<br />
+That means we’ll need all the basic CRUD actions for movies as well.</p>
+<p>The user should be able to:</p>
+<p><strong>6. See the list of movies.</strong><br />
+<strong>7. See the details of a movie.</strong><br />
+<strong>8. Add new movies.</strong><br />
+<strong>9. Update existing movies.</strong><br />
+<strong>10. Delete movies.</strong><br />
+</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Upon completion, run the following commands:</li>
+</ul>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-0-initialize-the-project">Iteration 0 | Initialize the project</h3>
+<p>After forking and cloning the project, you will have to add a <code>.env</code> file:</p>
+<pre><code>PORT=3000</code></pre>
+<p>And you have to install all the dependencies:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> npm install</span></code></pre></div>
+<p>Now you are ready to start 🚀</p>
+<h2 id="iteration-1-the-celebrity-model">Iteration #1: The <code>Celebrity</code> Model</h2>
+<p>Once we have generated our Express app, our first step is to create the <code>Celebrity</code> model and seed some initial celebrities in our database.</p>
+<p>The <code>Celebrity</code> model should have: - <code>name</code> - String (like <em>Tom Cruise, Beyonce, Daffy Duck,</em> etc.) - <code>occupation</code> - String (what the celebrity does, why they are famous. For example <em>actor, singer, comedian</em>, or you can put <em>unknown</em> if your celebrity is someone like Kim Kardashian) - <code>catchPhrase</code> - String (every celebrity needs a good catch phrase. Well maybe not all of them have one in real life, but all of <em>our</em> celebrities will have a catch phrase. This can be pretty much anything)</p>
+<h3 id="steps-we-will-follow-in-this-iteration">Steps we will follow in this iteration:</h3>
+<ol type="1">
+<li>Create the <code>celebrity.js</code> model file in the <code>models/</code> folder.</li>
+<li>In the <code>celebrity.js</code> model file:
+<ul>
+<li>Create the <code>Celebrity</code> model with the schema.</li>
+<li>Create the celebrity schema with <code>name</code>, <code>occupation</code> and <code>catchPhrase</code>.</li>
+<li>Export the <code>Celebrity</code> model.</li>
+</ul></li>
+<li>Create the <code>seeds.js</code> file in the <code>bin/</code> folder.</li>
+<li>In <code>seeds.js</code> file:
+<ul>
+<li>Create an array of 3 objects, each with <code>name</code>, <code>occupation</code> and <code>catchPhrase</code> for our initial celebrities.</li>
+<li>Call the <code>Celebrity</code> model’s <code>create</code> method with the array as argument.</li>
+<li>In the <code>create</code> method’s callback, display feedback.</li>
+</ul></li>
+<li>Run the seed file with <code>node</code> to seed your database.</li>
+<li>Check the database with the <code>mongo</code> command to confirm that your data was saved.</li>
+</ol>
+<h2 id="iteration-2-listing-our-celebrities">Iteration #2: Listing Our Celebrities</h2>
+<p>Now that we’ve got some celebrities in the database, we can start working with them in our Express app. Let’s <strong>display a list of all the celebrities</strong>.</p>
+<p>Here’s the route we will be using:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/celebrities</code></td>
+<td>GET</td>
+<td>Show all celebrities</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-1">Steps we will follow in this iteration:</h3>
+<ol type="1">
+<li>Locate the <code>/celebrities</code> GET route in <code>routes/celebrities.js</code>.</li>
+<li>In the route callback:
+<ul>
+<li>Call the <code>Celebrity</code> model’s <code>find</code> method to retrieve all the celebrities.</li>
+<li>If there’s an error, call the route’s <code>next</code> function and return the error.</li>
+<li>If there isn’t an error, render the <code>celebrities/index</code> view.</li>
+<li>Pass the array of celebrities into the view as a variable.</li>
+</ul></li>
+<li>Create the <code>celebrities/</code> folder inside <code>views/</code>.</li>
+<li>Create the <code>index.hbs</code> view file inside the <code>views/celebrities/</code> folder.</li>
+<li>In the <code>views/celebrities/index.hbs</code> view file:
+<ul>
+<li>Add an <code>&lt;h2&gt;</code> tag for the page’s heading.</li>
+<li>Use a <code>forEach</code> loop to display tags with each celebrity’s <code>name</code>.</li>
+</ul></li>
+<li>In the <code>views/index.hbs</code> (homepage) file:
+<ul>
+<li>Add a link that goes to the <code>/celebrities</code> route.</li>
+</ul></li>
+</ol>
+<h2 id="iteration-3-the-celebrity-details-page">Iteration #3: The Celebrity Details Page</h2>
+<p>We’ve got a list of celebrities that displays each of their <code>name</code>, but what if we want to see the other details? In our <code>views/celebrities/index.hbs</code> view with our list of celebrities, let’s add links so that the user can click on any celebrity’s name, and go to a page specifically for that celebrity. On this page, we will show all the details of that celebrity.</p>
+<p>Here’s the route we will be using:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/celebrities/:id</code></td>
+<td>GET</td>
+<td>Show a specific celebrity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-2">Steps we will follow in this iteration:</h3>
+<ol type="1">
+<li>Create the <code>/celebrities/:id</code> GET route in <code>routes/celebrities.js</code>.</li>
+<li>In the route callback:
+<ul>
+<li>Call the <code>Celebrity</code> model’s <code>findOne</code> or <code>findById</code> method to retrieve the details of a specific celebrity by its id.</li>
+<li>If there’s an error, call the route’s <code>next</code> function and return the error.</li>
+<li>If there isn’t an error, render the <code>celebrities/show</code> view.</li>
+<li>Pass the variable with the celebrity’s details into the view.</li>
+</ul></li>
+<li>Create the <code>show.hbs</code> view file inside the <code>views/celebrities/</code> folder.</li>
+<li>In the <code>views/celebrities/show.hbs</code> view file:
+<ul>
+<li>Add an <code>&lt;h2&gt;</code> for the page’s heading.</li>
+<li>Display tags with the celebrity’s <code>name</code>, <code>occupation</code> and <code>catchPhrase</code>.</li>
+</ul></li>
+<li>In the <code>views/celebrities/index.hbs</code> view file:
+<ul>
+<li>As part of the loop that displays each celebrity’s name, add a link that goes to the <code>/celebrities/:id</code> route with the <code>:id</code> replaced by the actual celebrity’s id.</li>
+</ul></li>
+</ol>
+<h2 id="iteration-4-adding-new-celebrities">Iteration #4: Adding New Celebrities</h2>
+<p>Now that we have a list of celebrities, as well as a personalized details page for each celebrity, let’s make it so the user can <strong>add new celebrities to the database</strong></p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 19%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/celebrities/new</code></td>
+<td>GET</td>
+<td>Show a form to create a celebrity</td>
+</tr>
+<tr class="even">
+<td><code>/celebrities</code></td>
+<td>POST</td>
+<td>Send the data from the form to this route to create the celebrity and save to the database</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-3">Steps we will follow in this iteration:</h3>
+<ol type="1">
+<li>Locate the <code>/celebrities/new</code> GET route in <code>routes/celebrities.js</code>:</li>
+<li>In that route’s callback:</li>
+</ol>
+<ul>
+<li>Render the <code>celebrities/new</code> view.</li>
+</ul>
+<ol start="3" type="1">
+<li>Create the <code>new.hbs</code> view file inside the <code>views/celebrities</code> folder</li>
+<li>In the <code>views/celebrities/new.hbs</code> view file:
+<ul>
+<li>Add an <code>&lt;h2&gt;</code> for the page’s heading.</li>
+<li>Add a <code>&lt;form&gt;</code> tag that makes a POST request to <code>/celebrities</code>.</li>
+<li>Add <code>&lt;input&gt;</code> tags inside the form so the user can fill in values for each attribute of the celebrity. Make an input for <code>name</code>, <code>occupation</code>, and <code>catchPhrase</code></li>
+<li>Add a <code>&lt;button&gt;</code> tag in the form so the user can submit the form once they are done filling it out.</li>
+</ul></li>
+<li>Locate the <code>/celebrities</code> post route in <code>routes/celebrities.js</code>.</li>
+<li>In that route’s callback:
+<ul>
+<li>Create an object with keys for <code>name</code>, <code>occupation</code>, and <code>catchPhrase</code>.</li>
+<li>Values for those keys should come from the form (<code>req.body</code> is the object full of the values from the form)</li>
+<li>Create an instance of the <code>Celebrity</code> model with the object you made in the previous step</li>
+<li>Call the <code>save</code> method to save the new celebrity to the database</li>
+<li>If there is an error, render the <code>celebrities/new</code> view so the user can try again.</li>
+<li>If there is no error, redirect to the page with the list of celebrities</li>
+</ul></li>
+<li>In the <code>views/celebrities/index.hbs</code> view file:
+<ul>
+<li>Add a link that goes to the page you just created with the form to create a new celebrity.</li>
+</ul></li>
+</ol>
+<h2 id="iteration-5-deleting-celebrities">Iteration #5: Deleting Celebrities</h2>
+<p>Now that we have a list of celebrities, a celebrity details page, and a page to create new celebrities, we only have 2 features left to implement: editing celebrities and deleting them. Since deleting is simpler, let’s start with that.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/celebrities/:id/delete</code></td>
+<td>POST</td>
+<td>Delete a specific celebrity</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-4">Steps we will follow in this iteration:</h3>
+<ol type="1">
+<li>In the <code>views/celebrities/index.hbs</code> file:
+<ul>
+<li>As part of the loop, add a <code>&lt;form&gt;</code> tag that makes a POST request to <code>celebrities/:id/delete</code> where the <code>:id</code> is replaced by the actual ID of each celebrity.</li>
+<li>Add a <code>&lt;button&gt;</code> tag inside the form so that it can be submitted.</li>
+</ul></li>
+<li>Create the <code>/celebrities/:id/delete</code> POST route in your <code>routes/celebrities.js</code> file</li>
+<li>In that route’s callback:
+<ul>
+<li>Use the <code>Celebrity</code> model’s <code>findByIdAndRemove</code> method to delete the celebrity by its ID.</li>
+<li>If there’s an error, call the route’s <code>next</code> function and return the error</li>
+<li>If there is no error, redirect to the list of celebrities page.</li>
+</ul></li>
+</ol>
+<h2 id="iteration-6-bonus-editing-celebrities">Iteration #6 (Bonus): Editing celebrities</h2>
+<p>Final piece of our CRUD puzzle: <strong>editing existing celebrities</strong>.</p>
+<p>Here are the routes we will be using:</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 17%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/celebrities/:id/edit</code></td>
+<td>GET</td>
+<td>Show a form to edit a celebrity</td>
+</tr>
+<tr class="even">
+<td><code>/celebrities/:id</code></td>
+<td>POST</td>
+<td>Send the data from the form to this route to update and save the celebrity from the database</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-5">Steps we will follow in this iteration:</h3>
+<ol type="1">
+<li>Create the <code>/celebrities/:id/edit</code> GET route in <code>routes/celebrities.js</code>.</li>
+<li>In that route’s callback:
+<ul>
+<li>Call the <code>Celebrity</code> model’s <code>findOne</code> or <code>findById</code> method to retrieve a specific celebrity by its id.</li>
+<li>If there’s an error, call the route’s <code>next</code> function and return the error.</li>
+<li>If there isn’t an error, render the <code>celebrities/edit</code> view.</li>
+<li>Pass the variable with the celebrity’s details into the view.</li>
+</ul></li>
+<li>Create the <code>edit.hbs</code> view file inside the <code>views/celebrities/</code> folder.</li>
+<li>In the <code>views/celebrities/edit.hbs</code> view file:
+<ul>
+<li>Add an <code>&lt;h2&gt;</code> tag for the page’s heading.</li>
+<li>Add a <code>&lt;form&gt;</code> tag that makes a POST request to <code>/celebrities/:id</code> with the <code>:id</code> replaced by the actual celebrity’s id.</li>
+<li>Add <code>&lt;input&gt;</code> tags inside the form for each attirbute of the celebrity.
+<ul>
+<li>Bonus: When you render the edit form, make sure each of the input fields is pre-filled with the current value of the attribute for that celebrity</li>
+</ul></li>
+<li>Add a <code>&lt;button&gt;</code> tag inside the form so that the user can submit the form once they are done editing.</li>
+</ul></li>
+<li>Locate the <code>/celebrities/:id</code> POST route in the <code>routes/celebrities.js</code> file.</li>
+<li>In that route’s callback:
+<ul>
+<li>Create an object with keys for each attribute of a celebrity (celebrity has 3 attributes. What were they again? Look back and review if you forgot.)</li>
+<li>Values for those keys should come from the form submission (<code>req.body</code>).</li>
+<li>Call the <code>Celebrity</code> model’s <code>update</code> method and use the celebrity’s id to specify which celebrity we are updating. Also, use the object you just created with the updated attributes for the celebrity and pass this object into the <code>update</code> method as the second argument.</li>
+<li>If there is an error retrieving that celebrity, call the route’s <code>next</code> function and return the error</li>
+<li>If there is no error, redirect back to the list of celebrities.</li>
+</ul></li>
+</ol>
+<h2 id="celebrities---done">Celebrities - Done!</h2>
+<p>At this point, we have implemented all the basic CRUD actions for the Celebrity model in our app. Nice work!</p>
+<p>Now that we’ve done all this good work, it’s time to do it all over again, but for the <code>Movie</code> model. After all, what’s the point of having all these celebrities if we can’t make up fake movies to cast them in?</p>
+<p>We are going to create a <code>Movie</code> model and implement all the same CRUD actions for this model as well. Don’t worry, it’s really much easier the second time around.</p>
+<h2 id="iteration-7-the-movie-model">Iteration #7: The <code>Movie</code> model</h2>
+<p>Now when we’ve started all this good work, let’s keep up strong and build all the routes for the <code>Movie</code> model. But first, let’s create the <code>Movie</code> model.</p>
+<p>The <code>Movie</code> model should have: - <code>title</code> - String - <code>genre</code> - String - <code>plot</code> - String - <code>cast</code> - Array of object IDs referencing the <em>celebrity</em> model (basically, the array of celebrities’ IDs)</p>
+<h3 id="steps-we-will-follow-in-this-iteration-6">Steps we will follow in this iteration:</h3>
+<p>Go back and review what you did to create the <code>celebrity</code> model. You’ll need to create a file for the model, and in that file, you’ll need to create a schema for the model as well. Don’t forget, you have to <code>module.exports</code> the <code>Movie</code> model.</p>
+<h2 id="iteration-8-adding-new-movies">Iteration #8: Adding new movies</h2>
+<p>Okay, the next step is to make it so the user can <strong>add new movies to the database</strong>.</p>
+<table>
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 19%" />
+<col style="width: 54%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/movies/new</code></td>
+<td>GET</td>
+<td>Show a form to create a movie</td>
+</tr>
+<tr class="even">
+<td><code>/movies</code></td>
+<td>POST</td>
+<td>Send the data from the form to this route to create the movie and save it to the database</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-7">Steps we will follow in this iteration:</h3>
+<p>Review how you did this for the <code>celebrity</code> model. - Create 2 new routes, one to render page with the form on it, and one to send the data to after the form is filled out - In the GET route that displays the form to create a new movie (which renders the <code>movies/new</code> view), make sure you pass all the celebrities from your database so your users can choose which ones are in the cast of the movie you’re just creating (<strong>hint</strong>: You will have to use <a href="https://www.w3schools.com/tags/att_select_multiple.asp">select multiple</a> tag) - Make sure the form is making a POST request to the other route you just created (<code>/movies</code>) - In your post route, create an object with all the info you just received from the form. (Remember, <code>req.body</code>) - Use this object to create a new movie in the database and redirect back to the page with your list of all movies - Make sure to add a link to the form on the movies index page so the user can easier navigate</p>
+<h2 id="iteration-9-listing-our-movies">Iteration #9: Listing our movies</h2>
+<p>Now that we’ve got some movies in the database, let’s make a page where we list all our movies, just like we did with the <code>celebrity</code> model.</p>
+<p>Here’s the route we will be using:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/movies</code></td>
+<td>GET</td>
+<td>Show all movies</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-8">Steps we will follow in this iteration:</h3>
+<p>Go back and review how you did this for the <code>celebrity</code> model. You’ll need to: - Create a GET route that will render the file in which we will display movies (<code>movies/index</code> view) - Use a database query to retrieve all the movies from your database and render the view - Use a <code>{{#each}}</code> loop to display all your <em>movie titles</em> on that page - Add a link to the page you just created on the home page so the user can navigate to it.</p>
+<h2 id="iteration-10-the-movie-details-page">Iteration #10: The movie details page</h2>
+<p>We’ve got a list of all movies that displays each of their <em>titles</em>, but what if we want to see the other details? In our <code>movies/index</code> view with our list of movies, let’s add links so that the user can click on any movie’s title, and go to a details page of each movie. On this page, we will show all the details of that movie. Here’s the route we will be using:</p>
+<table>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/movies/:id</code></td>
+<td>GET</td>
+<td>Show a specific movie</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-9">Steps we will follow in this iteration:</h3>
+<ol type="1">
+<li>We need <code>/:id</code> part to change dynamically as we click on different movies’ titles. This being said, as part of the loop that displays each movie’s title, add a link that goes to the <code>/movies/:id</code> route with the <code>:id</code> replaced by the actual movie’s id 🔑</li>
+<li>Create the <code>/movies/:id</code> GET route in <code>routes/movies.js</code>.</li>
+<li>In the route:
+<ul>
+<li>On the <code>Movie</code> model call <code>findOne()</code> or <code>findById()</code> method to retrieve the details of a specific movie by its ID
+<ul>
+<li>Don’t forget you have <code>cast</code> as the array of celebrity IDs, and we need to <code>populate()</code> in order to get the full data about the celebrities 🎯</li>
+</ul></li>
+<li>If everything is fine (<em>.then()</em>), render the <code>movies/show</code> view and pass the variable with the movie’s details into the view</li>
+<li>If there’s an error, catch it.</li>
+</ul></li>
+<li>In the <code>views/movies/show.hbs</code> view file:
+<ul>
+<li>Add an <code>&lt;h2&gt;</code> for the page’s heading.</li>
+<li>Display tags with the movie’s <code>title</code>, <code>genre</code>, <code>plot</code> and <code>cast</code>.</li>
+</ul></li>
+</ol>
+<h2 id="iteration-11-deleting-movies">Iteration #11: Deleting movies</h2>
+<p>Now that we have a list of movies, a movie details page, and a page to create new movies, we only have 2 features left to implement: <em>editing</em> celebrities and <em>deleting</em> them. Since deleting is simpler, let’s start with that.</p>
+<table>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/movies/:id/delete</code></td>
+<td>POST</td>
+<td>Delete a specific movie</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-10">Steps we will follow in this iteration:</h3>
+<ol type="1">
+<li>In the <code>views/movies/show.hbs</code> file:
+<ul>
+<li>Add a <code>&lt;form&gt;</code> tag that makes a POST request to <code>/movies/:id/delete</code> where the <code>:id</code> is replaced by the actual ID of the movie.</li>
+<li>Add a <code>&lt;button&gt;</code> tag inside the form so that it can be submitted.</li>
+</ul></li>
+<li>Create the <code>/movies/:id/delete</code> POST route in your <code>routes/movies.js</code> file</li>
+<li>In the route:
+<ul>
+<li>Use the <code>Movie</code> model’s <code>findByIdAndRemove()</code> method to delete the specific movie by its ID.</li>
+<li>If everything is good (<code>.then()</code>), redirect to the list of movies page<br />
+</li>
+<li>If there’s an error, catch it</li>
+</ul></li>
+</ol>
+<h2 id="iteration-12-editing-movies">Iteration #12: Editing movies</h2>
+<p>Final piece of our CRUD puzzle: <strong>editing existing movies</strong>.</p>
+<p>Here are the routes we will be using:</p>
+<table>
+<colgroup>
+<col style="width: 32%" />
+<col style="width: 17%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Route</th>
+<th>HTTP Verb</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>/movies/:id/edit</code></td>
+<td>GET</td>
+<td>Show a form to edit a movie</td>
+</tr>
+<tr class="even">
+<td><code>/movies/:id</code></td>
+<td>POST</td>
+<td>Send the data from the form to this route to update the specific movie</td>
+</tr>
+</tbody>
+</table>
+<h3 id="steps-we-will-follow-in-this-iteration-11">Steps we will follow in this iteration:</h3>
+<ol type="1">
+<li>Create the <code>/:id/edit</code> GET route in <code>routes/movies.js</code>.</li>
+<li>In that route:
+<ul>
+<li>Call the <code>Movie</code> model’s <code>findOne()</code> or <code>findById()</code> method to retrieve a specific movie by its ID</li>
+<li>If everything is good, render the <code>movies/edit</code> view</li>
+<li>Pass the variable with the movie’s details into the view</li>
+</ul></li>
+<li>In the <code>views/movies/edit.hbs</code> view file:
+<ul>
+<li>Add an <code>&lt;h2&gt;</code> tag for the page’s heading.</li>
+<li>Add a <code>&lt;form&gt;</code> tag that makes a POST request to <code>/movies/:id</code> with the <code>:id</code> replaced by the actual movie’s ID.</li>
+<li>Add <code>&lt;input&gt;</code> tags inside the form for each attribute of the movie.
+<ul>
+<li><strong>Hint</strong>: When you render the edit form, make sure each of the input fields is pre-filled with the current value of the attribute for that movie</li>
+</ul></li>
+<li>Add a <code>&lt;button&gt;</code> tag inside the form so that the user can submit the form once they are done editing.</li>
+<li><strong>BONUS</strong>: Make the current cast members <em>selected</em> so the user knows who is in the cast currently.</li>
+</ul></li>
+<li>Create <code>/movies/:id</code> POST route in the <code>routes/movies.js</code> file</li>
+<li>In that route:
+<ul>
+<li>Create an object with <code>Movie</code> model keys and it’s values should come from the form submission (which is <code>req.body</code>)</li>
+<li>Now you can apply different methods - <code>update()</code> or <code>findByIdAndUpdate()</code> to find the movie and send the updated values to the database.</li>
+<li>If there is no error, redirect back to the movie details page.</li>
+</ul></li>
+</ol>
+<p>Now you can come back to the bonus part related to the celebrity model :wink:.</p>
+<p><strong>That’s it! 🏆</strong></p>
+<p>Happy Coding! :heart:</p>
+</body>
+</html>

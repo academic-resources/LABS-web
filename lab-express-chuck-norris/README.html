@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="pp-express-chuck-norris-jokes">PP | Express: Chuck Norris Jokes</h1>
+<h2 id="section"></h2>
+<p>After this learning unit, you will be able to:</p>
+<ul>
+<li>Create a basic web application using Express</li>
+<li>Add a static route to display content</li>
+<li>Get in touch for the first time with an API</li>
+<li>Create a request to the Chuck Norris API to retrieve content and display it</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><a href="https://guides.github.com/activities/forking/">Fork this repo</a></li>
+<li>Clone this repo into your <code>~/code/labs</code></li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, run the following commands</p>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<p>Navigate to your repo and create a Pull Request -from your master branch to the original repository master branch.</p>
+<p>In the Pull request name, add your name and last names separated by a dash “-”</p>
+<h2 id="deliverables">Deliverables</h2>
+<p>Please, push every file needed to make your app properly on GitHub before creating the pull request.</p>
+<h2 id="introduction">Introduction</h2>
+<p><a href="https://en.wikipedia.org/wiki/Chuck_Norris">Chuck Norris</a> is a famous actor and martial artist that starred in many American movies in the ’80s and ’90s.</p>
+<figure>
+<img src="https://i.imgur.com/hAmRT5L.jpg" alt="Chuck Norris Picture" /><figcaption aria-hidden="true">Chuck Norris Picture</figcaption>
+</figure>
+<p>After his film career died off, the <em>people of the internet</em> turned him into a living meme. <a href="https://en.wikipedia.org/wiki/Chuck_Norris_facts">Chuck Norris Facts</a> quickly became all the rage. These “facts” are just hyperbolic jokes on the skills of Chuck Norris.</p>
+<blockquote>
+<p>Chuck Norris counted to infinity… twice</p>
+</blockquote>
+<blockquote>
+<p>Chuck Norris can put out a fire… with gasoline</p>
+</blockquote>
+<blockquote>
+<p>Michael Jackson can moonwalk but Chuck Norris can sun walk</p>
+</blockquote>
+<p>Today, we will be building a Chuck Norris joke finder using Express.</p>
+<h2 id="setting-up-a-new-project">Setting up a new project</h2>
+<p>Once you fork this repo, remember to initialize a new project</p>
+<pre><code>$ npm init</code></pre>
+<p>Type <code>enter</code> to approve default settings.</p>
+<p>Install <code>express</code> into your project and <code>ejs</code> to use views. Remember to tell your Express app that EJS will be in charge of rendering the HTML and specify the path where the views will be available.</p>
+<p>At the end of the exercise you should have at least four routes:</p>
+<ul>
+<li><code>/</code>- The homepage with a description and links to the other pages</li>
+<li><code>/random</code>- To display a random joke</li>
+<li><code>/categories</code> - To display a joke by category</li>
+<li><code>/search</code> - To search for a joke by keyword (so it will have to display a form to be filled by the user)</li>
+</ul>
+<h2 id="iteration-1---get-a-random-joke">Iteration 1 - Get a random joke</h2>
+<p>To retrieve data from the API, we need to install a package: <a href="https://www.npmjs.com/package/chucknorris-io">chucknorris-io</a>:</p>
+<pre><code>$ npm install --save chucknorris-io</code></pre>
+<p>Remember you need to require the package once installed. In this case it will be:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> Chuck    <span class="op">=</span> <span class="pp">require</span>(<span class="st">&#39;chucknorris-io&#39;</span>)<span class="op">;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> client   <span class="op">=</span> <span class="kw">new</span> <span class="fu">Chuck</span>()<span class="op">;</span></span></code></pre></div>
+<p>Create a route using Express for the <code>/random</code> Web address. When a user visits http://localhost:3000/random, the application should request a random joke using the <code>chucknorris-io</code> package and show it in a <code>p</code> tag.</p>
+<p>The package has a <code>getRandomJoke()</code> method that you should use here:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Retrieve a random chuck joke</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>client<span class="op">.</span><span class="fu">getRandomJoke</span>()</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((response) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// use the response here</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">catch</span>((err) <span class="kw">=&gt;</span> {</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// handle error</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code></pre></div>
+<h2 id="iteration-2---get-a-joke-by-category">Iteration 2 - Get a joke by category</h2>
+<h3 id="the-categories-list">The Categories List</h3>
+<p>To be able to filter our jokes by category, first we need to display the available categories.</p>
+<p>Create a new route <code>/categories</code> in your Express application. When a user visits http://localhost:3000/categories, the application should show the full list of joke categories.</p>
+<p>The <a href="https://www.npmjs.com/package/chucknorris-io">chucknorris-io</a> package offers a method to retrieve the available categories:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>client<span class="op">.</span><span class="fu">getJokeCategories</span>()</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((response)<span class="kw">=&gt;</span>  {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// use the response here</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">catch</span>((err)<span class="kw">=&gt;</span> {</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// handle error</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code></pre></div>
+<p>:bulb: When your app requests the list of categories to the Chuck Norris API, the response will be an array. Prepare the data to show it in the view by sending as a view local with <code>res.render()</code>.</p>
+<p>Each category should be a link. When a user clicks one of them, they should be sent to the category page. For example:</p>
+<ul>
+<li>If the user clicks on <code>dev</code>, they should be taken to http://localhost:3000/categories?cat=dev</li>
+<li>If the user clicks on <code>sport</code>, they should be taken to http://localhost:3000/categories?cat=sport</li>
+</ul>
+<p>Set the <code>href</code> of your anchor tags to match that.</p>
+<h3 id="the-url-with-the-new-joke">The URL with the new joke</h3>
+<p>In your <code>app.js</code>, create a new route with the name of the selected category as a parameter in the Web address (remember the <code>params</code>).</p>
+<p>Use this parameter to make the request to the API using the <code>getRandomJoke()</code> method provided by the <a href="https://www.npmjs.com/package/chucknorris-io">chucknorris-io</a> package. The method can receive the name of a category as an argument.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Retrieve a random chuck joke</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>client<span class="op">.</span><span class="fu">getRandomJoke</span>(<span class="st">&#39;dev&#39;</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>((response) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// use the response here</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">catch</span>((err) <span class="kw">=&gt;</span> {</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// handle error</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code></pre></div>
+<p>Display the result in the view <code>joke-by-category.ejs</code>.</p>
+<h2 id="iteration-3---get-a-joke-by-keyword">Iteration 3 - Get a joke by keyword</h2>
+<h3 id="the-form">The Form</h3>
+<p>Users will need a field to enter the keyword that your application will use to request the joke.</p>
+<p>Create a new get route <code>/search</code> in your Express application. Once the user goes to http://localhost:3000/search, the application should display a form.</p>
+<p>Create a new view <code>search-form.ejs</code> with the form HTML. Add a <code>post</code> action and send it to the same route <code>/search</code>.</p>
+<p>The form should have one input for the search term and a submit button.</p>
+<p>Create a new post route <code>/search</code> to capture the data sent from the form. In this route, let’s perform the search using the <a href="https://www.npmjs.com/package/chucknorris-io">chucknorris-io</a> package.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>client<span class="op">.</span><span class="fu">search</span>(searchTerm)</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(<span class="kw">function</span> (response) {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">// to stuff here</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  })<span class="op">.</span><span class="fu">catch</span>(<span class="kw">function</span> (err) {</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">// handle error</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span></code></pre></div>
+<h3 id="rendering-the-result">Rendering the result</h3>
+<p>Use the same route to render your result.</p>
+<h3 id="iteration-4---home-page">Iteration 4 - Home page</h3>
+<p>Add a home page route with a heading and a description of the app. Include <code>&lt;a&gt;</code> tags to link to the different pages the app.</p>
+<h2 id="extra-resources">Extra Resources</h2>
+<ul>
+<li><a href="https://expressjs.com/en/guide/routing.html">Express Routing</a></li>
+<li><a href="https://www.npmjs.com/package/chucknorris-io">chucknorris-io</a></li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Readme</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="typescript-basic-exercises">Typescript | Basic Exercises</h1>
+<h2 id="section"></h2>
+<ul>
+<li>Develop some basic TypeScript functions.</li>
+<li>Create a TypeScript interface, and use it from a class.</li>
+<li>Implement two different interfaces and use them from classes.</li>
+</ul>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li><p><a href="https://guides.github.com/activities/forking/">Fork this repo</a>.</p></li>
+<li><p>Clone this repo into your <code>~/code/labs</code> folder.</p></li>
+<li><p>Install TypeScript on your computer</p>
+<pre><code>$ npm install -g typescript</code></pre></li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, run the following commands:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">&quot;done&quot;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin master</span></code></pre></div>
+<p>Navigate to your repo and create a pull request from your master branch to the original repository master branch.</p>
+<p>In the pull request name, add your name and last names separated by a dash “-”</p>
+<h2 id="introduction">Introduction</h2>
+<p>When we are studying, it’s very common to create to-do lists so we remember to do specific exercises and tasks. Some of them are more important than others, but we have to remember all of them.</p>
+<p>We are going to help you with this. How? We are going to create a to-do list project in TypeScript. We are going to create different lists following different strategies with TypeScript. In the process, we will cover several important basic topics: variable types, functions, classes, and interfaces.</p>
+<h3 id="project-structure">Project Structure</h3>
+<p>The project structure will be as follows:</p>
+<pre><code>starter-code/
+├── iteration-1
+│   ├── index.html
+│   ├── main.js
+│   └── main.ts
+├── iteration-2
+│   ├── index.html
+│   ├── main.js
+│   ├── main.ts
+│   ├── todointerfaces.js
+│   └── todointerfaces.ts
+└── iteration-3
+    ├── index.html
+    ├── main.js
+    ├── main.ts
+    ├── interfaces.js
+    └── interfaces.ts</code></pre>
+<p>You are going to work over the <code>*.ts</code> files in the different folders, one for each iteration that we are going to cover.</p>
+<!-- :::info -->
+<p><strong>Note</strong>: Remember that the <code>*.js</code> files are generated every time we save the TypeScript files in our solution. <!-- ::: --></p>
+<h3 id="iteration-1-functions">Iteration #1: Functions</h3>
+<p>In the first iteration of the exercise, we are going to create our to-do list using functions. Let’s consider what we need to implement all the necessary functions for our list.</p>
+<p>First of all, we need to be able to save tasks. In order to do this, we will need somewhere to store them. We will use an array, which will be able to:</p>
+<ul>
+<li>Add a new task (a string).</li>
+<li>Remove a task that we’ve completed.</li>
+<li>Iterate over all the tasks so that we can see them.</li>
+</ul>
+<p>Each of these features is a function that we will have to create. To add and remove tasks, we will need to specify as a parameter the string for the task itself (“Buy eggs”, for example).</p>
+<p>Once we have inserted or removed the task, we should return the number of elements that are in the list. We should also print the following in the console:</p>
+<p><strong>For adding a task</strong></p>
+<pre><code>=========== NEW TASK ===========
+Task &quot;Buy eggs&quot; inserted in the list
+Number of items: 1</code></pre>
+<p><strong>For removing a task</strong></p>
+<pre><code>=========== TASK REMOVED ===========
+Task &quot;Buy eggs&quot; removed from the list
+Number of items: 0</code></pre>
+<p>In both cases, “Buy eggs” is the text of the task we just inserted/deleted.</p>
+<!-- :::info -->
+<p><strong>Example</strong>: If the first task we add is “Start working with TypeScript”, the output should be the following:</p>
+<pre><code>=========== NEW TASK ===========
+Task &quot;Start working with TypeScript&quot; inserted in the list
+Number of items: 1</code></pre>
+<!-- ::: -->
+<p>We also need a function to list all of our tasks. For this function, we just need to print in console all the items in our array. This function doesn’t need a return value.</p>
+<p>Once you have implemeneted all these features, you will have the first iteration completetd.</p>
+<p><strong>Tasks</strong></p>
+<ul>
+<li>Create an array of strings.</li>
+<li>Create an <code>addTask</code> function:
+<ul>
+<li>It receives a <code>string</code> as a parameter called <code>task</code>.</li>
+<li>It adds the task to the array.</li>
+<li>It prints a message indicating the insertion.</li>
+<li>It returns the number of elements in the list and prints that number in the console as well.<br />
+</li>
+</ul></li>
+<li>Create a <code>listAllTasks</code> function:
+<ul>
+<li>It iterates over all the tasks in the list.</li>
+<li>It prints each list item in the console.</li>
+</ul></li>
+<li>Create a <code>deleteTask</code> function:
+<ul>
+<li>It receives a <code>string</code> as a parameter called <code>task</code>.</li>
+<li>It removes that string from the array.</li>
+<li>It returns the number of elements in the list after the deletion.</li>
+<li>It prints a message indicating the deletion.</li>
+<li>It returns the number of elements in the list and prints that number in the console as well.</li>
+</ul></li>
+</ul>
+<h3 id="iteration-2-class-with-one-interface">Iteration #2: Class with one Interface</h3>
+<p>In this iteration, we are going to implement the same functionality by using an Interface. We are going to be working with the <code>iteration-2</code> folder.</p>
+<p>Remember that an interface specifies all the functions that a class will have, and also the parameters of each function.</p>
+<p>We will create an Interface in the <code>todointerface.ts</code> file that will specify the different properties and methods described in the first iteration:</p>
+<ul>
+<li>An Array of tasks.</li>
+<li>A function to add tasks that will receive the task as a parameter.</li>
+<li>A function to list all the tasks.</li>
+<li>A function to delete tasks that will receive the task as a parameter.</li>
+</ul>
+<p>Once we have defined and exported the Interface, we will create a class called <code>Todo</code> that will implement the interface and its methods. We are going to add this class in the <code>main.ts</code> file.</p>
+<p>We will keep the same inputs and outputs we used in the previous iteration.</p>
+<p><strong>Tasks</strong></p>
+<p><strong>Interface (<code>todointerface.ts</code>)</strong></p>
+<ul>
+<li>Array of strings.</li>
+<li><code>addTask</code> function:
+<ul>
+<li>It receives a <code>string</code> as a parameter</li>
+<li>It returns a number.</li>
+</ul></li>
+<li><code>listAllTasks</code> function:
+<ul>
+<li>It has no parameters.</li>
+<li>It doesn’t return anything.</li>
+</ul></li>
+<li><code>deleteTask</code> function:
+<ul>
+<li>It receives a <code>string</code> as a parameter</li>
+<li>It returns a number.</li>
+</ul></li>
+</ul>
+<p><strong>Class (<code>main.ts</code>)</strong></p>
+<ul>
+<li>Create a class that implements the Interface:</li>
+<li>Remember that you need to import the interface before you use it.</li>
+<li>Implement all the properties and functions indicated in the interface:</li>
+<li>Create an array of strings.</li>
+<li>Create an <code>addTask</code> function:
+<ul>
+<li>It receives a <code>string</code> as a parameter.</li>
+<li>It prints the same message as iteration 1.</li>
+<li>It returns the number of elements in the list and prints this number to the console as well.</li>
+</ul></li>
+<li>Create a <code>listAllTasks</code> function:
+<ul>
+<li>It prints in console all the tasks of the list.</li>
+<li>It doesn’t return anything.</li>
+</ul></li>
+<li>Create a <code>deleteTask</code> function:
+<ul>
+<li>It receives a <code>string</code> as a parameter.</li>
+<li>It prints the same message as iteration 1.</li>
+<li>It returns the number of elements in the list and prints the number in the console also.</li>
+</ul></li>
+</ul>
+<h3 id="iteration-3-two-classes-with-two-interfaces">Iteration #3: Two classes with two interfaces</h3>
+<p>To finish up with this exercise, we are going to create the same Todo list by adding another interface (and class) to our implementation. In the final iteration, we will be working with the code in the <code>iteration-3</code> folder.</p>
+<p>When we have different elements in a project, it’s very common (and also a good practice) to treat each of them as an independent element and create a class and interface for each of these elements. In this case, we have been creating a Todo list without considering the possibility of splitting that into two different parts: the list, and the items.</p>
+<p>In this iteration, we are going to create two different interfaces, one for the list elements, and another one for the list itself. So inside the list, we are going to have a reference to the other interface.</p>
+<p>The list item interface will have the following properties:</p>
+<ul>
+<li>Title of the task, which will be a string.</li>
+<li>Status of the task, represented by a boolean value.</li>
+<li>updatedAt, which will store the date when the task was last modified.</li>
+<li>toggleStatus function, which will set the status as true if it’s false, and vice versa.</li>
+</ul>
+<p>In the Todo list interface, we will have the following properties:</p>
+<ul>
+<li>An array of list item elements.</li>
+<li>A function to add a task, which will receive the TodoItem as a parameter.</li>
+<li>A function to list all the items in the list.</li>
+<li>A function to delete a task, which will receive the TodoItem as a parameter.</li>
+</ul>
+<p>Once we have implemented both interfaces, we will have to create the classes that will implement them. In the <code>main.ts</code> file, we will add a <code>TodoItem</code> class, which should implement the <code>TodoItemInterface</code>, and the <code>TodoList</code> class, which should implement the <code>TodoListInterface</code> interface.</p>
+<p>Once you are done with that, the exercise will be finished!</p>
+<p><strong>Tasks</strong></p>
+<p><strong>Interfaces (<code>interfaces.ts</code>)</strong></p>
+<ul>
+<li>TodoItemInterface
+<ul>
+<li>Define a <code>title</code> as string.</li>
+<li>Add a <code>status</code> as a boolean.</li>
+<li><code>updatedAt</code> is a Date that represents when the task was last updated.</li>
+<li>Add a function called <code>toggleStatus</code> that will update the task status.</li>
+</ul></li>
+<li>TodoListInterface
+<ul>
+<li>Define an Array of <code>TodoItem</code>s.</li>
+<li>Create an <code>addTask</code> function:
+<ul>
+<li>It receives a <code>TodoItem</code> as a parameter.</li>
+<li>It returns the number of elements in the list and prints the number.</li>
+</ul></li>
+<li>Add a <code>listAllTasks</code> function:
+<ul>
+<li>It doesn’t return anything.</li>
+<li>It lists all the titles of all the TodoItems in the list</li>
+</ul></li>
+<li>Create a <code>deleteTask</code> function:
+<ul>
+<li>It receives a <code>TodoItem</code> as a parameter.</li>
+<li>It returns the number of elements in the list and prints the number.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p><strong>Class (<code>main.ts</code>)</strong></p>
+<ul>
+<li>Create a <code>TodoItem</code> class that implements the <code>TodoItemInterface</code> interface, adding all the required properties and functions specified in the interface:
+<ul>
+<li><code>title</code> string field, to indicate what the task entails.</li>
+<li><code>status</code> that will indicate if the task is completed or not.</li>
+<li><code>updatedAt</code> date field, to indicate the date that the task was last updated.</li>
+<li>We have to add a <code>constructor</code> to the class to set up the task <code>title</code> and the <code>updatedAt</code> values when creating a task.</li>
+<li><code>toggleStatus</code> function to change the status of a <code>TodoItem</code>. It should:
+<ul>
+<li>Change the status of the task. If the status is currently ‘finished’, the new status will be ‘unfinished’, and viceversa.</li>
+<li>Update the <code>updatedAt</code> value, by setting up the current date. <!-- :::warning --> <strong>Without supplying a parameter, how can you accomplish this with a simple function?</strong> <!-- ::: --></li>
+</ul></li>
+</ul></li>
+<li>Create a <code>TodoList</code> class that implements the <code>TodoListInterface</code> interface, adding all the required properties and functions specified in the interface:
+<ul>
+<li>An <code>Array</code> of <code>TodoItem</code>s to be able to save the different tasks you want to do.</li>
+<li>Create an <code>addTask</code> function:
+<ul>
+<li>It receives a string as a parameter.</li>
+<li>It prints in console the same message as iteration 1.</li>
+<li>It returns the number of elements in the list and prints the number.</li>
+</ul></li>
+<li>Create a <code>listAllTasks</code> function:
+<ul>
+<li>It prints all the tasks of the list. In this case, we want to print the title and the updated date of the task.</li>
+<li>It doesn’t return anything.</li>
+</ul></li>
+<li>Create a <code>deleteTask</code> function:
+<ul>
+<li>It receives a string as a parameter.</li>
+<li>It prints in console the same message as iteration 1.</li>
+<li>It returns the number of elements in the list and prints the number.</li>
+</ul></li>
+</ul></li>
+</ul>
+<p>Happy coding!</p>
+<h2 id="extra-resources">Extra Resources</h2>
+<p><a href="https://www.typescriptlang.org/docs/tutorial.html">Typescript Documentation</a></p>
+</body>
+</html>

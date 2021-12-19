@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-feature-extraction-and-introduction-to-supervised-learning">Lab | Feature Extraction and Introduction to Supervised Learning</h1>
+<h2 id="introduction">Introduction</h2>
+<p>As data analysts or data scientists, we find that we don’t always get the data we need, but the data that we deserve. Many times it is up to us to extract meaningful information from our data. It could be done by transforming the data using derived columns, grouping the data and using aggregated information, or cleaning and reformatting the data. We will explore these techniques in this lab.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>Before working on today’s main lab, we’d like you to review some Pandas functions. Open the <code>Pandas-concat-merge-join.ipynb</code> file in the <code>your-code</code> directory, review the information there, and warm up yourself by doing some coding.</p>
+<p>Then open the <code>main.ipynb</code> file in the <code>your-code</code> directory. Follow the instructions and add your code and explanations as necessary. By the end of this lab, you will have learned how to prepare a dataset for most scikit-learn algorithms.</p>
+<h2 id="deliverables">Deliverables</h2>
+<ul>
+<li><code>Pandas-concat-merge-join.ipynb</code> with your responses.</li>
+<li><code>main.ipynb</code> with your responses.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, add your deliverables to git. Then commit git and push your branch to the remote.</p>
+<h2 id="resources">Resources</h2>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/merging.html">Joining and Merging in Pandas</a></p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.concat.html">pandas.concat</a></p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.merge.html">pandas.DataFrame.merge</a></p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.join.html">pandas.DataFrame.join</a></p>
+<p><a href="https://www.w3schools.com/sql/sql_join.asp">SQL Joins</a></p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.unique.html">pandas.Series.unique</a></p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.dropna.html">pandas.DataFrame.dropna</a></p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.to_datetime.html">pandas.to_datetime</a></p>
+<p><a href="https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.where.html">numpy.where</a></p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.Series.value_counts.html">pandas.Series.value_counts</a></p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.core.groupby.DataFrameGroupBy.agg.html">pandas.core.groupby.DataFrameGroupBy.agg</a></p>
+</body>
+</html>

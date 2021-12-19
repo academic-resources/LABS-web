@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-string-operations-and-bag-of-words">Lab | String Operations and Bag of Words</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this lab, we will learn how to manipulate strings. There are two challenges: 1) to practice how to manipulate strings, and 2) to use string manipulation techniques to create Bag of Words (BoW). BoW is an essential technique in Natural Language Processing.</p>
+<h3 id="getting-started">Getting Started</h3>
+<p>In your Terminal, navigate into the directory <code>your-code</code> of this lab that contains <code>challenge-1.ipynb</code>, <code>challenge-2.ipynb</code>, <code>doc1.txt</code>, <code>doc2.txt</code>, and <code>doc3.txt</code>. Start Jupyter Notebook by executing <code>jupyter notebook</code>. A webpage should automatically open for you but in case not, go to <a href="http://localhost:8888">http://localhost:8888</a>. Then click the link to each ipynb file to complete the challenges.</p>
+<h2 id="deliverables">Deliverables</h2>
+<p><code>challenge-1.ipynb</code> and <code>challenge-2.ipynb</code> with your responses.</p>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, add your deliverables to git. Then commit git and push your branch to the remote.</p>
+<h2 id="resources">Resources</h2>
+<ul>
+<li><p><a href="https://docs.python.org/3/library/re.html">The <code>re</code> Library</a></p></li>
+<li><p><a href="https://www.python.org/dev/peps/pep-0498/">F-strings</a></p></li>
+<li><p><a href="https://developers.google.com/edu/python/regular-expressions">Regular Expressions</a></p></li>
+<li><p><a href="https://docs.python.org/3/tutorial/inputoutput.html">Python Input and Output (how to read file content)</a></p></li>
+<li><p><a href="https://www.quora.com/How-do-I-remove-punctuation-from-a-Python-string">How to Remove Punctuation in Python String</a></p></li>
+<li><p><a href="https://docs.python.org/3/library/stdtypes.html#str.lower">Convert String to Lowercase in Python</a></p></li>
+<li><p><a href="https://docs.python.org/3/library/stdtypes.html#str.split">Break Python String into Array</a></p></li>
+<li><p><a href="https://en.wikipedia.org/wiki/Text_corpus">What is Text Corpus?</a></p></li>
+<li><p><a href="https://machinelearningmastery.com/gentle-introduction-bag-words-model/">A Gentle Introduction to the Bag-of-Words Model</a></p></li>
+</ul>
+<h2 id="additional-reading">Additional Reading</h2>
+<p>If you are a research-type person, you will find <a href="http://rstb.royalsocietypublishing.org/content/royptb/366/1567/1101.full.pdf">this article</a> interesting. Scientists used techniques based on BoW to calculate the frequency of words used cross 17 world languages. They found there is a consistent pattern in terms of the frequency of words being used in human languages. Some mad scientists even <a href="http://grantome.com/grant/NSF/PHY-1530544">want to use this technique to analyze dolphin language</a> because they believe they can build corpora based on the sounds dolphins make, correlate the dolphin language corpora with human language corpora, and potentially understand what dolphins speak. :astonished: :astonished: :astonished:</p>
+<p>Data analytics is now entering almost every discipline and profession. You will want to reflect on how you will apply your data analytics skills to the fields you are familiar with – in creative ways. There are tons of fun secrets waiting for you to discover with data analytics.</p>
+</body>
+</html>

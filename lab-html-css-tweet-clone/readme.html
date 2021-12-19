@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>readme</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="html-css-tweet-clone">HTML &amp; CSS | Tweet clone</h1>
+<h2 id="section"></h2>
+<p>In this Module Exercise we will apply all the concepts we have been learning:</p>
+<ul>
+<li>Create a stylesheet for our HTML page.</li>
+<li>Change the HTML styles through CSS selectors and rules.</li>
+<li>Select HTML elements through type, class or id.</li>
+<li>Use the box model structure and change its properties.</li>
+<li>Control the HTML layout and change the position of a block or inline element.</li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>Jack Dorsey created <a href="https://www.twitter.com">Twitter</a> in 2006. Once it was ready to launch, he created his twitter account and published the following:</p>
+<p>“just setting up my twttr”</p>
+<p>It was March, 21st. <strong>We will clone this first tweet from Jack’s account to learn HTML and CSS :)</strong></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Go to the <a href="https://github.com/ironhack-labs/lab-html-css-tweet-clone">CSS module exercise repository</a>.</li>
+<li>Click on the button “Clone or download” and a window will appear:</li>
+</ul>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_7a9dddc55bc1db6400a021dfe6e10978.png" /></p>
+<ul>
+<li><p>Click the button “Download as zip”</p></li>
+<li><p>Make sure you use:</p>
+<ul>
+<li>Block elements for the main container of the tweet.</li>
+<li>Inline elements for the bottom icons: reply, retweet, and favorites.</li>
+<li>Use the images in the <code>img</code> folder to complete the designs.</li>
+<li>Use the following colors:</li>
+</ul>
+<pre><code>  body
+  - background:        rgb(244, 248, 249)
+
+  tweet
+  - background:        rgb(255, 255, 255)
+  - border:            rgb(225, 232, 237)
+  - user name:         rgb(0, 0, 0)
+  - user account:      rgb(104, 109, 129)
+  - text:              rgb(0, 0, 0)
+  - date:              rgb(101, 116, 127)
+  - bottom text color: rgb(105, 120, 130)
+  - follow button:     rgb(85, 172, 238)</code></pre>
+<ul>
+<li>Finally, the font is “Helvetica”.</li>
+</ul></li>
+</ul>
+<h2 id="exercise">Exercise</h2>
+<p>We have learned a lot of new stuff about HTML and CSS. Now, we will work with an small example to practice all what we learned. We are going to clone a tweet.</p>
+<p>Please, find a screenshot of the expected results below:</p>
+<p><img src="https://i.imgur.com/RlfYX9s.png" /></p>
+<h3 id="starter-code">Starter Code</h3>
+<p>The starter code contains all the files, images and basic setup to replicate the first tweet of the story.</p>
+<p><strong>Hint: Structure your blocks</strong></p>
+<p>When we structure a new HTML page, we need to forget about the details at the beginning:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_bff1b8530666f243c035e13c6ba99478.png" /></p>
+<p>Start creating the biggest blocks. If it helps you, give them a different background or a solid <code>border</code> property, so you can see the real dimensions of each.</p>
+<p>Once all the blocks have the right dimensions, start creating the blocks inside that blocks. Finally, create the inline elements like texts or images.</p>
+<h2 id="extra-resources">Extra Resources</h2>
+<ul>
+<li><a href="https://discover.twitter.com/first-tweet#jack">First tweet</a>. You can figure out the first tweet of any twitter account.</li>
+</ul>
+</body>
+</html>

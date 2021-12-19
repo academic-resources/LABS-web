@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-mysql-select">Lab | MySQL Select</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this lab you will practice how to use the MySQL <code>SELECT</code> statement which will be extremely useful in your future work as a data analyst/scientist/engineer. <strong>You will use the <code>publications</code> database that we used in the <em>Joins and Relationships</em> lesson.</strong> In case you haven’t had that database, <a href="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/data-static/data/module-1/publications.sql.zip">here</a> is the link to download the database file.</p>
+<p>You will create a <code>solutions.sql</code> file in the <code>your-code</code> directory to record your solutions to all challenges.</p>
+<h2 id="challenge-1---who-have-published-what-at-where">Challenge 1 - Who Have Published What At Where?</h2>
+<p>In this challenge you will write a MySQL <code>SELECT</code> query that joins various tables to figure out what titles each author has published at which publishers. Your output should have at least the following columns:</p>
+<ul>
+<li><code>AUTHOR ID</code> - the ID of the author</li>
+<li><code>LAST NAME</code> - author last name</li>
+<li><code>FIRST NAME</code> - author first name</li>
+<li><code>TITLE</code> - name of the published title</li>
+<li><code>PUBLISHER</code> - name of the publisher where the title was published</li>
+</ul>
+<p>Your output will look something like below:</p>
+<figure>
+<img src="challenge-1.png" alt="Challenge 1 output" /><figcaption aria-hidden="true">Challenge 1 output</figcaption>
+</figure>
+<p><em>Note: the screenshot above is not the complete output.</em></p>
+<p>If your query is correct, the total rows in your output should be the same as the total number of records in Table <code>titleauthor</code>.</p>
+<h2 id="challenge-2---who-have-published-how-many-at-where">Challenge 2 - Who Have Published How Many At Where?</h2>
+<p>Elevating from your solution in Challenge 1, query how many titles each author has published at each publisher. Your output should look something like below:</p>
+<figure>
+<img src="challenge-2.png" alt="Challenge 2 output" /><figcaption aria-hidden="true">Challenge 2 output</figcaption>
+</figure>
+<p><em>Note: the screenshot above is not the complete output.</em></p>
+<p>To check if your output is correct, sum up the <code>TITLE COUNT</code> column. The sum number should be the same as the total number of records in Table <code>titleauthor</code>.</p>
+<p><em>Hint: In order to count the number of titles published by an author, you need to use <a href="https://dev.mysql.com/doc/refman/8.0/en/counting-rows.html">MySQL COUNT</a>. Also check out <a href="https://dev.mysql.com/doc/refman/8.0/en/group-by-modifiers.html">MySQL Group By</a> because you will count the rows of different groups of data. Refer to the references and learn by yourself. These features will be formally discussed in the Temp Tables and Subqueries lesson.</em></p>
+<h2 id="challenge-3---best-selling-authors">Challenge 3 - Best Selling Authors</h2>
+<p>Who are the top 3 authors who have sold the highest number of titles? Write a query to find out.</p>
+<p>Requirements:</p>
+<ul>
+<li>Your output should have the following columns:
+<ul>
+<li><code>AUTHOR ID</code> - the ID of the author</li>
+<li><code>LAST NAME</code> - author last name</li>
+<li><code>FIRST NAME</code> - author first name</li>
+<li><code>TOTAL</code> - total number of titles sold from this author</li>
+</ul></li>
+<li>Your output should be ordered based on <code>TOTAL</code> from high to low.</li>
+<li>Only output the top 3 best selling authors.</li>
+</ul>
+<p><em>Hint: In order to calculate the total of profits of an author, you need to use the <a href="https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.html#function_sum">MySQL SUM function</a>. Refer to the reference and learn how to use it.</em></p>
+<h2 id="challenge-4---best-selling-authors-ranking">Challenge 4 - Best Selling Authors Ranking</h2>
+<p>Now modify your solution in Challenge 3 so that the output will display all 23 authors instead of the top 3. Note that the authors who have sold 0 titles should also appear in your output (ideally display <code>0</code> instead of <code>NULL</code> as the <code>TOTAL</code>). Also order your results based on <code>TOTAL</code> from high to low.</p>
+<h2 id="bonus-challenge---most-profiting-authors">Bonus Challenge - Most Profiting Authors</h2>
+<p>Authors earn money from their book sales in two ways: advance and royalties. An advance is the money that the publisher pays the author before the book comes out. The royalties the author will receive is typically a percentage of the entire book sales. The total profit an author receives by publishing a book is the sum of the advance and the royalties.</p>
+<p>Given the information above, who are the 3 most profiting authors and how much royalties each of them have received? Write a query to find out.</p>
+<p>Requirements:</p>
+<ul>
+<li>Your output should have the following columns:
+<ul>
+<li><code>AUTHOR ID</code> - the ID of the author</li>
+<li><code>LAST NAME</code> - author last name</li>
+<li><code>FIRST NAME</code> - author first name</li>
+<li><code>PROFIT</code> - total profit the author has received combining the advance and royalties</li>
+</ul></li>
+<li>Your output should be ordered from higher <code>PROFIT</code> values to lower values.</li>
+<li>Only output the top 3 most profiting authors.</li>
+</ul>
+<p><em>Hints:</em></p>
+<ul>
+<li>If a title has multiple authors, how they split the royalties can be found in the <code>royaltyper</code> column of the <code>titleauthor</code> table.</li>
+<li>We assume the coauthors will split the advance in the same way as the royalties.</li>
+</ul>
+<h2 id="deliverables">Deliverables</h2>
+<ul>
+<li><code>solution.sql</code> that contains all your MySQL queries.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Add <code>solutions.sql</code> to git</li>
+<li>Commit your code</li>
+<li>Push to your fork</li>
+<li>Create a pull request to the class repo</li>
+</ul>
+<h2 id="references">References</h2>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/counting-rows.html">MySQL Reference: Counting Rows</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/group-by-modifiers.html">MySQL Reference: Group By</a></p>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/group-by-functions.html#function_sum">MySQL Reference: SUM Function</a></p>
+</body>
+</html>

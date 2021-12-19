@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-canvas-race-car">LAB | Canvas Race Car</h1>
+<h2 id="introduction">Introduction</h2>
+<p>We are ready to start making some games with <code>canvas</code> help, so in this first exercise, we will a <strong>Car Race</strong> using some basic animations we learned today.</p>
+<p>Remember, you have the Learning Units to check any concept you might need. We are working with the <code>2D</code> context, so you should think the canvas is a cartesian plane, where you can move elements changing their position in any of the <code>axis</code>.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li><p>Upon completion, run the following commands:</p>
+<pre><code>git add .
+git commit -m &quot;done&quot;
+git push origin master</code></pre></li>
+<li><p>Create Pull Request so your TAs can check up your work.</p></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-1-draw-the-game-board">Iteration 1: Draw the game board</h3>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_ab5a6ba28003829bd3d8d485feeee649.png" /></p>
+<p>The first thing we need is to create our board. The left side of the image is already on the HTML file, but when we click on the <strong>Start Game</strong> button, we need to create the canvas and display the road.</p>
+<p>The canvas HTML element is already part of the HTML starter code provided in the <code>index.html</code> file. In the <code>images</code> folder, you can find the image of the raod.</p>
+<h3 id="iteration-2-draw-the-car">Iteration 2: Draw the car</h3>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_9a8f35a079a1343f39cee4028ab8a081.png" /></p>
+<p>Once we have our road, we need the player’s car. The same as for the raod, in the <code>images</code> folder, you will find a <code>.png</code> file you should use.</p>
+<h3 id="iteration-3-make-the-car-move-right-and-left">Iteration 3: Make the car move right and left</h3>
+<p>In our game, the player will only be able to move the car to the right and left. Using <code>left</code> and <code>right</code> arrows, the player should be able to move the car.</p>
+<p>:bulb: Remember the boundaries!</p>
+<h3 id="iteration-4-create-obstacles">Iteration 4: Create obstacles</h3>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_618fa6bbeed08f1e74b9457af1ecaf4c.png" /></p>
+<p>Now let’s make this interesting. We should create obstacles that show up every specific amount of time.</p>
+<p>They will always start in the position <strong>0</strong> of the <code>y</code> axis (the obstacles will be coming from the top of the canvas), but you should make them appear in a random place of the <code>x</code> axis.</p>
+<h3 id="iteration-5-move-the-obstacles">Iteration 5: Move the obstacles</h3>
+<p>For moving the obstacles, we need to update our <code>canvas</code> continuously. In this iteration, you need to continually change the position of the obstacles in every update, making them move down the road.</p>
+<h3 id="iteration-6-points-points-points">Iteration 6: Points, points, points</h3>
+<p>Oh! If we want to challenge somebody, we need to quantify who is making it better. So we need to add a <strong>score</strong>. Go ahead and add a method to count points while you keep the car avoiding obstacles.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_e4b1a09cee1b1a827a2c68023d0d2b1f.png" /></p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_4e64a09180fd0add2766f7e28ebce6bf.png" /></p>
+<p><br></p>
+<p><strong>Happy coding!</strong> :heart:</p>
+</body>
+</html>

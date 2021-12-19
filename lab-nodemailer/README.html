@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="sign-up-confirmation-email">Sign up Confirmation Email</h1>
+<h2 id="introduction">Introduction</h2>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/37091320-032a2cb0-2208-11e8-8b73-27060f1960c3.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Almost every time we register on a web app, we have to confirm our account by clicking on a link that’s been sent to our email. This is a great way to avoid registering users with fake info. In this lab, we will do the same exact thing - create app that will allow users to signup but their status will be by default set to <code>Pending Confirmation</code> and after they get the email verification code to their email and respond to it, their status will be changed to <code>active</code>. We will use <strong>Nodemailer</strong> for this!</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Then clone this repo</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Upon completion, run the following commands:</li>
+</ul>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="our-gift---auth-flag">Our gift 🎁 - Auth Flag</h3>
+<p>The <code>irongenerator</code> is pretty awesome, and with this new feature, you will love it even more. When running the <code>irongenerate nameOfYourProject</code> command on the terminal, you get a pretty cool express application ready to start working, but if you add the <code>--auth</code> flag, you will get the same application with PassportJS’s <code>signup</code> and <code>login</code> already set up.</p>
+<p>So inside the folder you just cloned, go ahead and run the following command:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> irongenerate lab-nodemailer <span class="at">--auth</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> cd lab-nodemailer</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> npm install</span></code></pre></div>
+<p>Awesome huh? Let’s start!</p>
+<h3 id="iteration-1---user-model">Iteration 1 - User Model</h3>
+<p>First, we need to modify the <code>User</code> model. Inside the <code>models</code> folder, you will find a <code>user.js</code> file. We already have the <code>username</code> and <code>password</code> fields, so we need to add the followings:</p>
+<ul>
+<li><strong><code>status</code></strong> - will be a string, and you should add an <code>enum</code> because the only possible values are: <em>“Pending Confirmation”</em> or <em>“Active”</em>. By default, when a new user is created, it will be set to <em>“Pending Confirmation”</em>.</li>
+<li><strong><code>confirmationCode</code></strong> - here we will store a confirmation code; it will be unique for each user.</li>
+<li><strong><code>email</code></strong> - the user will complete the signup form with the email they will use to confirm the account.</li>
+</ul>
+<h3 id="iteration-2---signup-process">Iteration 2 - Signup Process</h3>
+<h4 id="adding-the-new-fields">Adding the new fields</h4>
+<p>On the <code>auth/signup.hbs</code> file you need to add an <code>input</code> tag for the <strong>email</strong>. When the user clicks on the <code>signup</code> button, you should store the following values in the database:</p>
+<ul>
+<li><strong>username</strong> - from the <code>req.body</code>;</li>
+<li><strong>password</strong> - after hashing the value of the <code>password</code> field from the <code>req.body</code>;</li>
+<li><strong>email</strong> - from the <code>req.body</code>;</li>
+<li><strong>confirmationCode</strong> - for creating a confirmation code, you can use any methodology, from installing the npm package for email verification to simplest <code>Math.random()</code> function on some string.</li>
+</ul>
+<p>Example:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> characters <span class="op">=</span> <span class="st">&#39;0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ&#39;</span><span class="op">;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">let</span> token <span class="op">=</span> <span class="st">&#39;&#39;</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (<span class="kw">let</span> i <span class="op">=</span> <span class="dv">0</span><span class="op">;</span> i <span class="op">&lt;</span> <span class="dv">25</span><span class="op">;</span> i<span class="op">++</span>) {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    token <span class="op">+=</span> characters[<span class="bu">Math</span><span class="op">.</span><span class="fu">floor</span>(<span class="bu">Math</span><span class="op">.</span><span class="fu">random</span>() <span class="op">*</span> characters<span class="op">.</span><span class="at">length</span> )]<span class="op">;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Now, you have to store the token in the <code>confirmationCode</code> field.</p>
+<h4 id="sending-the-email">Sending the email</h4>
+<p>After creating the user, you should send the email to the address the user put on the <code>email</code> field. Remember to use <strong>Nodemailer</strong> for this. You should include the following URL in the email:</p>
+<p><code>http://localhost:3000/auth/confirm/THE-CONFIRMATION-CODE-OF-THE-USER</code></p>
+<h3 id="iteration-3---confirmation-route">Iteration 3 - Confirmation Route</h3>
+<p>When the user clicks on the URL we included in the email, we should make a comparison of the <code>confirmationCode</code> on the URL and the one in the database. You should create a route: <code>/confirm/:confirmCode</code> inside the <code>routes/auth.js</code> file.</p>
+<p>Inside the route, after comparing the confirmation code, you have to set the <code>status</code> field of the user to ‘Active’. Then render a <code>confirmation.hbs</code> view, letting the user know that everything went perfect, or showing the error.</p>
+<h3 id="iteration-4---profile-view">Iteration 4 - Profile View</h3>
+<p>Finally, you have to create a <code>profile.hbs</code> view, where you have to render the <code>username</code> and the <code>status</code> of the user.</p>
+<h3 id="bonus-styling-the-email">Bonus! Styling the Email</h3>
+<p>Sending the email that contains only the URL is super boring! Feel free to style it better.</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/37099024-ab0d7c9a-221f-11e8-9458-49f813437e2c.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>Happy Coding! :heart:</p>
+</body>
+</html>

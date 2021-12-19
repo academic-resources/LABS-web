@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-thinking-in-react">LAB | Thinking in React</h1>
+<!-- ![image](https://media.giphy.com/media/AnRrZMk7NNf4oF8IzS/giphy.gif) -->
+<p>We believe that up to this point we all understand that <strong>in React everything is a component</strong>. A React app is built of components, usually a lot of them, and they are <em>usually</em> nested into one another. To refresh our memory, <strong>a component is a reusable piece of code, which defines how certain features should look and behave on the UI</strong>. Now one more time, we will be <em>thinking and acting</em> in that direction. Maybe through past two days we still didn’t see how important is to <strong>plan</strong> our apps prior to building them but now we will emphasize this approach as well. In this exercise, we’ll walk you through the <em>thinking process</em> of building a searchable product data table using React.</p>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<pre class="shell"><code>$ cd lab-thinking-in-react
+$ npm install
+$ npm start</code></pre>
+<h2 id="submission">Submission</h2>
+<ul>
+<li><p>Upon completion, run the following commands:</p>
+<pre><code>git add .
+git commit -m &quot;done&quot;
+git push origin master</code></pre></li>
+<li><p>Create Pull Request so your TAs can check up your work.</p></li>
+</ul>
+<h2 id="introduction">Introduction</h2>
+<p>In <code>src</code> folder, you can find <code>data.json</code> file with some data about products of a random store.</p>
+<p>Example of given data:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode json"><code class="sourceCode json"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="er">...</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">{</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;category&quot;</span><span class="fu">:</span> <span class="st">&quot;Sporting Goods&quot;</span><span class="fu">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;price&quot;</span><span class="fu">:</span> <span class="st">&quot;$49.99&quot;</span><span class="fu">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;stocked&quot;</span><span class="fu">:</span> <span class="kw">true</span><span class="fu">,</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">&quot;name&quot;</span><span class="fu">:</span> <span class="st">&quot;Football&quot;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="fu">}</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="er">...</span></span></code></pre></div>
+<p>By taking quick look at available data, we can see that all the products have following fields: <em>category</em>, <em>price</em>, <em>stocked</em> and <em>name</em>, of which <em>stocked</em> is type <em>boolean</em> (this information will be valuable soon). Also, keep in mind, you won’t have to work with <em>category</em> field in none of the iterations.</p>
+<p>You will be dealing with multiple components which need to update depending on changes in other components, so you will have to <em>lift the state up</em> so each change properly reflects through all the other components. 🙏🏻 And please, don’t forget, this is just an exercise, part of learning process, and no one expects from you to do it perfectly in this short amount of time. Think through it, ask questions, be curious and explore all possibilities. Let’s do this! :wink:</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-1-break-the-ui-into-a-component-hierarchy">Iteration 1 | Break The UI Into A Component Hierarchy</h3>
+<p>So remember: the proper planning will save you a lot of time when building the app. The first thing you’ll want to do is to make sketch on piece of paper: draw boxes around every component (and sub-component) and give them all names. Possible approach could be something like this:</p>
+<!-- ![image](https://user-images.githubusercontent.com/23629340/42808309-54d1594a-89b3-11e8-9df3-450127e4459e.png) -->
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_e51857195e0f883bc5514619c231a02f.jpg" alt="whole_product_table" /><figcaption aria-hidden="true">whole_product_table</figcaption>
+</figure>
+<p>As you can see here, we have four components in our app:</p>
+<ul>
+<li><strong>FilterableProductTable (orange):</strong> contains the entirety of the example (read between the lines, this is going to be our <em>App.js</em>)</li>
+<li><strong>SearchBar (blue):</strong> receives a user’s search term</li>
+<li><strong>ProductTable (green):</strong> displays all the products but also shows filtered products based on the user’s search</li>
+<li><strong>ProductRow (red):</strong> displays a row (<em>table data</em>) for each product</li>
+</ul>
+<p>Now that we’ve identified the components in our app, let’s arrange them into a hierarchy. Components that appear within another component should appear as a child in the hierarchy:</p>
+<ul>
+<li>FilterableProductTable
+<ul>
+<li>SearchBar</li>
+<li>ProductTable
+<ul>
+<li>ProductRow</li>
+</ul></li>
+</ul></li>
+</ul>
+<h3 id="iteration-2-build-a-static-version-using-react">Iteration 2 | Build A Static Version using React</h3>
+<p>Let’s first create <code>components</code> folder and start from creating our first component <code>&lt;FilterableProductTable /&gt;</code>. This component will be the <em>mother</em> of all the other components. Let’s import it to <code>App.js</code> and also, let’s import <code>data.json</code> there as well. To kick off the project, we’ll give you a starter hint: this component will pass in (and down) the products from the <em>data.json</em>. So you’ll have something like this in your <code>App.js</code>:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode jsx"><code class="sourceCode javascriptreact"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">&lt;!--</span> App<span class="op">.</span><span class="at">js</span> <span class="op">--&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> React <span class="im">from</span> <span class="st">&#39;react&#39;</span><span class="op">;</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> jsondata <span class="im">from</span> <span class="st">&#39;../data.json&#39;</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> <span class="st">&#39;./App.css&#39;</span><span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> FilterableProductTable <span class="im">from</span> <span class="st">&#39;./components/FilterableProductTable&#39;</span><span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">App</span>() {</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>  <span class="cf">return</span> (</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="ot">className</span><span class="op">=</span><span class="st">&quot;App&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>      <span class="fu">&lt;FilterableProductTable</span> <span class="ot">products</span><span class="op">=</span><span class="va">{</span> jsondata<span class="op">.</span><span class="at">data</span> <span class="va">}</span> <span class="fu">/&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  )<span class="op">;</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="im">export</span> <span class="im">default</span> App<span class="op">;</span></span></code></pre></div>
+<p>Okay, now it’s your turn: create <code>&lt;SearchBar /&gt;</code>, <code>&lt;ProductTable /&gt;</code> and <code>&lt;ProductRow /&gt;</code> components and make them statically display the search bar and all the products. The <em>checkbox</em> part of the search component is BONUS. Also, notice that products that are out of stock are displayed in <strong>red</strong>. <em>Hint:</em> In your <em>ProductRow</em> component most likely you will receive some props from parent component. <em>props</em> will be product object, again most likely :relaxed: . This will give you chance to set nice if statement saying that if the product is out of stock (false), the product name should appear in red.</p>
+<!-- ![image](https://user-images.githubusercontent.com/23629340/42808421-95a78a66-89b3-11e8-85c1-3246127a7f1a.png) -->
+<h3 id="iteration-3-add-some-dynamic---filter-the-products">Iteration 3 | Add some dynamic - Filter the Products</h3>
+<p>Ok, we are ready to give some life to our app. Go ahead and add the filter functionality. Every time somebody types a letter, the list should update, based on the user’s input. <em>Hint:</em> Setting the <code>search</code> actually can be easily done through <code>form</code> and <code>onChange</code> handler, which will update the state on every keystroke.</p>
+<figure>
+<img src="https://media.giphy.com/media/AnRrZMk7NNf4oF8IzS/giphy.gif" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<h3 id="iteration-4-bonus---the-checkbox-filter">Iteration 4 | BONUS - The Checkbox Filter</h3>
+<p>As a part of the search box, we can add a check box to help us filter through the products that are in stock. <em>Hint:</em> Setting the <code>inStock</code> also can be done through <code>form</code> and <code>onChange</code> handler, which will update the state depending of the value of <em>checked</em> property. We know that setting the search and checkbox will probably be the biggest challenge but don’t be discouraged - you already know this, you just have to develop way of thinking so you can apply the knowledge that you grasped through lessons so far.</p>
+<p>￼<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_bda46746e1a2efec4f4b0c16117842ea.png" alt="products_in_stock" /></p>
+<h3 id="iteration-5-bonus---styling-your-app">Iteration 5 | BONUS - Styling your app</h3>
+<p>Feel free to style it how ever you want. :art:</p>
+<p>Happy coding! :heart:</p>
+</body>
+</html>

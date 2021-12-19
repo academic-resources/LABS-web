@@ -1,0 +1,23 @@
+
+
+body h2 {
+  margin-left: 5%;
+}
+
+.info-wrapper {
+  display: flex;
+  padding: 4% 10%;
+}
+
+.info-wrapper img {
+  height: 300px;
+}
+
+.info-wrapper .text-info p {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.info-wrapper .text-info span {
+  font-weight: 400;
+}

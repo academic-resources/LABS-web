@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-dom-memory-game">LAB | DOM Memory Game</h1>
+<p><br></p>
+<h2 id="introduction">Introduction</h2>
+<p>We just learned how to use (Vanilla) JavaScript to manipulate DOM elements. Great! Let’s practice a bit more and have fun while developing a game.</p>
+<p><br></p>
+<figure>
+<img src="https://i.imgur.com/H6GLZGQ.jpg" alt="Memory Game Board" /><figcaption aria-hidden="true">Memory Game Board</figcaption>
+</figure>
+<p><br></p>
+<p>Do you remember that game called Memory that you used to play with the actual paper cards? To win, you needed to memorize the position of the paired card. Well, the logic of the game we will be building is the same.</p>
+<ul>
+<li>The game consists of an even number of cards (precisely, <strong>24</strong>) with a specific image on one side and a generic blue background on the other side.</li>
+<li>Each image appears on two cards.</li>
+</ul>
+<p><strong>The game rules:</strong></p>
+<ul>
+<li>When the game starts, all cards are turned face down.</li>
+<li>The player then flips over two cards, selecting them by clicking on them.</li>
+<li>If the selected two cards have the same image, they remain face up. Otherwise, the cards flip back over after a short time.</li>
+</ul>
+<p>The goal of the game is to get all the cards flipped face-up in the least number of tries. That means that a lower number of attempts scores better.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo.</li>
+<li>Clone this repo.</li>
+<li>Visit the “actions” tab in your fork, and enable workflows.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, run the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">&quot;Solved lab&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin master</span></code></pre></div>
+<p>Create Pull Request so your TAs can check up your work.</p>
+<p><br></p>
+<h2 id="automated-tests">Automated Tests</h2>
+<p>This lab includes an automated testing suite. For DOM-related labs, our automated tests should be seen as a secondary tool, that helps you to programmatically understand whether your solution is correct and allows the educational team to track your progress.</p>
+<p>To run the automated tests, please, open your terminal, change directories into the root of the lab, and run <code>npm install</code> to install the test runner. Now, you can run the <code>npm run test:watch</code> command to run automated tests in watch mode. Open the resulting <code>lab-solution.html</code> file with the “Live Server” VSCode extension to always see the most up-to-date test results.</p>
+<p><br></p>
+<h2 id="instructions">Instructions</h2>
+<p><br></p>
+<h3 id="iteration-1-initial-set-up">Iteration 1: Initial set up</h3>
+<p>First, you will do some routine work: we need to make sure that all files we need are connected to the file that is rendering cards in the browser. The file that is rendering cards is actually <code>index.html</code>, so we have to <strong>make sure that the <em>styles</em> and <em>JS files</em> are loading</strong> when we open the game in the browser:</p>
+<ul>
+<li><strong>styles</strong>: don’t forget to add the link to the CSS file in the <code>&lt;head&gt;</code> of your page,</li>
+<li><strong>the logic</strong>: take a look at the <code>js/index.js</code> and <code>js/memory.js</code> files. You already have one file for the logic and one file for the HTML/CSS interactions (DOM manipulation).</li>
+</ul>
+<p>After connecting them properly, you should be able to see the board, the cards, and the score.</p>
+<p><br></p>
+<h3 id="iteration-2-plan-your-game">Iteration 2: Plan your game</h3>
+<p>In this iteration, you will work on the game logic. You can see this part, like defining the methods that will take care of the game logic. No visible result will be shown just yet, and we will make sure everything works properly just by printing everything in the console. You should be working in the <code>js/memory.js</code> file.</p>
+<p>The game logic for this game is pretty simple:</p>
+<ol type="1">
+<li>we need a <code>MemoryGame</code> class,</li>
+<li>we need a <em>method</em> to <em>shuffle</em> cards,</li>
+<li>we need a <em>method</em> to <em>compare cards</em>, and</li>
+<li>we need a <em>method</em> to check if the game is finished.</li>
+</ol>
+<p><em>Side note:</em> We will make a single-player version of the game, which will simplify some of the logic.</p>
+<p>Let’s do this step by step.</p>
+<p><br></p>
+<h4 id="iteration-2.1-the-memorygame-class">Iteration 2.1: The <code>MemoryGame</code> class</h4>
+<p>If you open <code>js/memory.js</code> file, you will see that it is preset for you:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> MemoryGame {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>(cards) {</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">this</span><span class="op">.</span><span class="at">cards</span> <span class="op">=</span> cards<span class="op">;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">// add the rest of the class properties here</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">shuffleCards</span>() {</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">checkIfPair</span>(card1<span class="op">,</span> card2) {</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">checkIfFinished</span>() {</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ol type="1">
+<li>The <code>MemoryGame</code> class: we created a <code>MemoryGame</code> class and, as we can see in its constructor, it will receive an array of cards as a parameter and set this array to a <code>this.cards</code> property.</li>
+<li>We also need a <code>this.pickedCards</code> array, where we will be storing the cards the user has clicked so we can compare them.</li>
+<li>Finally, a <code>this.pairsClicked</code> and <code>this.pairsGuessed</code> properties where will be adding every time a user choose and guess a pair. Go ahead and add these to the constructor.</li>
+</ol>
+<p><br></p>
+<h4 id="iteration-2.2-the-class-methods">Iteration 2.2: The class methods</h4>
+<ol type="1">
+<li><p>Create logic for the method <code>shuffleCards()</code> to shuffle the cards - every time you create a new game, the order of the cards should change.</p>
+<p><strong>Hint:</strong> It would be a good idea to implement something like a <a href="https://en.wikipedia.org/wiki/Fisher%E2%80%93Yates_shuffle">Fisher-Yates Shuffle</a>. If you struggle with this method, you can skip it for the moment and go back to it later.</p></li>
+<li><p>When a user picks 2 cards, we will need to check if they are the same. Let’s create logic for the method <code>checkIfPair()</code>, which will receive two parameters, the names of both cards selected by the user (example: <code>'ironman'</code> and <code>'batman'</code>). The method will add 1 to our <code>pairsClicked</code> property, and if the cards are the same also add 1 to <code>pairsGuessed</code>. It should return <code>true</code> or <code>false</code> depending on the result of comparing both cards.</p>
+<p>So, to summarize, we will have to update <em>pairsClicked</em> on every two open cards by a user - it doesn’t matter if the cards are the same. If two cards that we are comparing are the same, then <em>pairsGuessed</em> gets updated with +1.</p></li>
+<li><p>Finally, we need to make sure our game ends, and for that, we can add some logic to the <code>checkIfFinished()</code> method. Here we need to check if our property <code>pairsGuessed</code> has reached <em>the numbers of pairs the game has</em>.</p></li>
+</ol>
+<p><br></p>
+<h4 id="the-layout-and-the-logic-files">The layout and the logic files</h4>
+<p>When the logic is down, you will move forward to <code>js/index.js</code> and work on the interactions. What do we consider as interaction is what happens when the user clicks on the card: -how do we get the movement/flipping sides effect,</p>
+<ul>
+<li>how we keep the cards showing images if they are found to be the same and -how do we make cards flip back to the blue background if the cards are not the same? All the time, keep in mind, we need to work only with two cards at the same time.</li>
+</ul>
+<p><br></p>
+<h3 id="htmlcss-interactions">HTML/CSS Interactions</h3>
+<p>Think about the interactions your user and the game will have: basically, the user will click on elements of the page (cards) and receive some result - whether they guessed the pair or not.</p>
+<ul>
+<li>The first thing that is done for us - each card’s information is dynamically filled in the tiles, and the board is pre-filled with cards for us. As we want this behavior to be triggered as soon as the page loads, we need to wrap it under a <code>load</code> event. This is also already done for us.</li>
+</ul>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// js/index.js</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;load&#39;</span><span class="op">,</span> (<span class="bu">event</span>) <span class="kw">=&gt;</span> {</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// some code goes here</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<ul>
+<li>The other important interaction is the click listener. On click on every single card, we can get some information about that specific card. This code snippet, which is also already provided for us, serves for that.</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// js/index.js</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co">// Bind the click event of each element to a function</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="bu">document</span><span class="op">.</span><span class="fu">querySelectorAll</span>(<span class="st">&#39;.card&#39;</span>)<span class="op">.</span><span class="fu">forEach</span>((card) <span class="kw">=&gt;</span> {</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  card<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;click&#39;</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// </span><span class="al">TODO</span><span class="co">: write some code here</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&#39;Card clicked: &#39;</span><span class="op">,</span> card)<span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>To flip a card, you can have multiple approaches. We will give you two possible ways (but you can find even more than that):</p>
+<ul>
+<li>Option 1: on click, add the class <code>turned</code> next to the class <code>card</code> to the <code>div</code> that represents each card - like in the following example:</li>
+</ul>
+<div class="sourceCode" id="cb5"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- Only display the back that is blue --&gt;</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;card&quot;</span> <span class="er">data-card-name</span><span class="ot">=</span><span class="st">&quot;ironman&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;back&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;ironman.jpg&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;front&quot;</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;background: url(img/ironman.jpg) no-repeat&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">&lt;!-- After flipping --&gt;</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;card turned&quot;</span> <span class="er">data-card-name</span><span class="ot">=</span><span class="st">&quot;ironman&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;back&quot;</span> <span class="er">name</span><span class="ot">=</span><span class="st">&quot;ironman.jpg&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;div</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;front&quot;</span> <span class="er">style</span><span class="ot">=</span><span class="st">&quot;background: url(img/ironman.jpg) no-repeat&quot;</span><span class="kw">&gt;&lt;/div&gt;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<ul>
+<li>Option 2: another alternative is to toggle the classes <em>back</em> and <em>front</em> when the user clicks on a card. For this functionality, the method <code>element.classList.toggle()</code> can be very helpful. This method receives a string as the first argument (the class to toggle). <a href="https://stackoverflow.com/questions/23663151/whats-the-point-of-the-second-argument-in-element-classlist-toggle/23663302#23663302">It can also receive a second <em>optional</em> argument with a boolean expression</a> (in that case, the class is added when the expression is true, and removed when the expression is false):</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">/* one argument */</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>el<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">toggle</span>(<span class="st">&#39;foobar&#39;</span>)<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">// if it doesn&#39;t have the class &#39;foobar&#39; --&gt; add the class &#39;foobar&#39;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">// if it already has the class &#39;foobar&#39; --&gt; remove the class &#39;foobar&#39;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">/* two arguments */</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>el<span class="op">.</span><span class="at">classList</span><span class="op">.</span><span class="fu">toggle</span>(<span class="st">&#39;abc&#39;</span><span class="op">,</span> someBool)<span class="op">;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co">// if someBool evaluates to true -&gt; add the class &#39;abc&#39;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">// if someBool evaluates to false -&gt; remove the class &#39;abc&#39;</span></span></code></pre></div>
+<p>Now when you have cards flipping from back to front and vice versa, you have to make sure you call <code>.checkIfPair(card1, card2)</code> method. If the two cards are the same, they should get class <em>blocked</em>, which is going to keep them flipped so we can see images.</p>
+<p><em>Hint 1</em>: The array of picked cards can’t ever hold more than two cards. <em>Hint 2</em>: Make sure you call <code>checkIfFinished</code> method to check if the condition for the end of the game is true, and if so, you can just alert the end, or be more creative and add some text on the canvas - displaying <em>You won!!!</em></p>
+<p><br></p>
+<h2 id="extra-resources">Extra Resources</h2>
+<ul>
+<li><a href="https://bost.ocks.org/mike/shuffle/">Fisher-Yates Shuffle</a></li>
+</ul>
+<p><br></p>
+<p><strong>Happy coding!</strong> 💙</p>
+</body>
+</html>

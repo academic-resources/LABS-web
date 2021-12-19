@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-canvas-hangman">LAB | Canvas Hangman</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this exercise, we are going to create the classic game <a href="https://en.wikipedia.org/wiki/Hangman_(game)">Hangman</a>. How to play this game, what are the rules? Just in case you don’t know, in this game, we have to figure out a secret word by guessing one letter at a time. However, with each error, the man will get one step closer to death! The goal is to successfully guess the word before the man gets hanged.</p>
+<p><img src="https://i.imgur.com/wrQrY1T.png" /></p>
+<p>As we have learned, we can’t confront the whole game without splitting it up into smaller steps. We will split it up into three different parts: structure, logic, and game layout. This technique is known as <strong>incremental build.</strong></p>
+<p>We will separate the game logic from the visuals, which we will create using <code>canvas</code>. When we are done with the logic part, we should be able to “play” the game from the console. What does this mean? We should be able to create hangman object and call the methods on it to change its properties, just the same as eventually we will do combined with the graphical representation of the game.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, run the following commands:</p>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<p>Create Pull Request so your TAs can check up your work.</p>
+<h2 id="tests">Tests!</h2>
+<p>In order to help you develop the game logic, we have added some <strong>Jasmine</strong> tests. Open the <code>SpecRunner.html</code> to check them. To see each test, open the <code>tests/hangman.spec.js</code> file.</p>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-1-the-game-logic">Iteration 1: The game logic</h3>
+<p>In the <code>javascript/hangman.js</code> file, create Hangman class and its methods as described below.</p>
+<h4 id="hangman-class">Hangman Class</h4>
+<p>First let’s take a look at the starter code in the <code>hangman.js</code> file. We can see that, in this file, we will be developing the <code>Hangman</code> class, and all its methods. The <code>Hangman</code> class has <code>constructor</code> method and it expects an array of words as the single parameter.</p>
+<p>Let’s start with properties. <code>Hangman</code> should have the following properties:</p>
+<ul>
+<li><p><strong>words</strong> - an <code>array</code> to store all the words that could be given to a player to guess. When the class is instantiated, all the words passed to the constructor as an argument will be saved in this property.</p></li>
+<li><p><strong>secretWord</strong> - here we will store the word that has been picked as a secret word for the current game. Every time a new game starts, a random word from the <code>this.words</code> array needs to be picked as the secret word to be guessed by the player. That is, when the class is instantiated, call the method <code>pickWord()</code> and save the result to the property <code>secretWord</code>.</p></li>
+<li><p><strong>letters</strong> - an <code>array</code> in which we will store the letters that the user has already picked while trying to guess the secret word. It is important to keep the track of these letters so we can, later on, apply some logic to prevent users from repeating them.</p></li>
+<li><p><strong>guessedLetters</strong> - a <code>string</code> to store the <em>letters</em> user chose and guessed. We will use this to know when the user has won.</p></li>
+<li><p><strong>errorsLeft</strong> - the initial/start value should be 10, and it should decrease every time a user picks a letter that doesn’t appear in the word they need to guess.</p></li>
+</ul>
+<h4 id="the-hangman-methods">The Hangman methods</h4>
+<p>Now, let’s move to the <code>Hangman</code> methods. Keep working in the same file.</p>
+<ul>
+<li><p><code>pickWord()</code> - a method that returns a random word from the array of <code>words</code>.</p></li>
+<li><p><code>checkIfLetter(keyCode)</code> - a method that returns <em>true</em> or <em>false</em> depending on the <code>keyCode</code> of the key pressed by the user: if the <code>keyCode</code> corresponds to a character from <code>a-z</code>, it should return <em>true</em>, otherwise, it should return <em>false</em>. You can use <a href="https://keycode.info/">keycode.info</a> to find out which codes refer to each key.</p></li>
+<li><p><code>checkClickedLetters(letter)</code> - a method that should check if the letter passed as an argument has already been pressed. It should return <em>true</em> if it was not or <em>false</em> in the opposite case.</p></li>
+<li><p><code>addCorrectLetter(letter)</code> - a method that should add the passed letter to the <code>guessedLetters</code> property. This could be a good place to check if the user won.</p></li>
+<li><p><code>addWrongLetter(letter)</code> - a method that should subtract one from the variable <code>errorsLeft</code>. It also should push this letter in the array of letters if the letter is not there already.</p></li>
+<li><p><code>checkGameOver()</code> - a method that checks if the user has any errors left. If the number of errors is greater than 0, the method should return <em>false</em> (the game continues). In opposite case, if there is no more errors left, the method should return true.</p></li>
+<li><p><code>checkWinner()</code> - a method that should check if the user won and return the corresponding boolean value.</p></li>
+</ul>
+<h3 id="iteration-2-draw-in-canvas">Iteration 2: Draw in Canvas</h3>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_3e1e1919b29ba77e77cdcec2ed7b92c5.png" /></p>
+<p>Now we need to develop some visuals in order to finish our game. As we said, we will do it in a different file separating it from the logic.</p>
+<h4 id="hangmancanvas-class">HangmanCanvas class</h4>
+<p>In the <code>javascript/canvas.js</code> file, you can see <code>HangmanCanvas</code> class and it has the following properties:</p>
+<ul>
+<li><p><strong>context</strong> - the canvas context has been already captured in its property <code>this.context</code>.</p></li>
+<li><p><strong>secretWord</strong> - the <em>HangmanCanvas</em> class should know which random secret word has been chosen. This is actually super doable since it receives this word as an argument, as we can see in its constructor.</p></li>
+</ul>
+<p>:bulb: <em>Hint</em>: You can uncomment now the code provided in the <code>javascript/hangman.js</code> file:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">// javascript/hangman.js</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="co">// HINT (uncomment when start working on the canvas portion of the lab)</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>hangman<span class="op">.</span><span class="at">secretWord</span> <span class="op">=</span> hangman<span class="op">.</span><span class="fu">pickWord</span>()<span class="op">;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>hangmanCanvas <span class="op">=</span> <span class="kw">new</span> <span class="fu">HangmanCanvas</span>(hangman<span class="op">.</span><span class="at">secretWord</span>)<span class="op">;</span></span></code></pre></div>
+<h4 id="the-hangmancanvas-methods">The HangmanCanvas methods</h4>
+<ul>
+<li><p><strong>createBoard()</strong> - the method that should clear the <code>canvas</code>, so every time we start the game we have a clean one. This method also should call the next one we will define, the <em>drawLines()</em>.</p></li>
+<li><p><strong>drawLines()</strong> - the method that should draw one line for each letter of the secret word. At this point we know the secret word the user has to guess.</p></li>
+<li><p><strong>writeCorrectLetter(index)</strong> and <strong>writeWrongLetter(letter, errorsLeft)</strong> - the methods that should write the letter on which the user has just clicked, on the appropriate part of the canvas. After checking if the letter was not already clicked, we should write it on our board. If the secret word includes the letter, we should write it in the position where it belongs, and if the letter is not included in the secret word, we should write it on the top right corner, so that the user knows which letters were already clicked.</p></li>
+<li><p><strong>drawHangman(errorsLeft)</strong> - the method that should draw the <strong>hangman</strong>. You will see that the drawing is composed of multiple lines and one circle. Go ahead and experiment, you will see it is pretty straightforward. :wink:</p></li>
+</ul>
+<h3 id="bonus">Bonus</h3>
+<p>Your game is finished! Anybody can play it, but we need to show them something when they win or lose, so go ahead and create two additional methods <strong><code>gameOver()</code></strong> and <strong><code>winner()</code></strong>, to utilize the images available in the <code>images</code> folder.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_1dc0d7772d204da800d078c153c12e47.png" /></p>
+<p>Happy coding! :heart:</p>
+</body>
+</html>

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="intro-to-node">Intro to Node</h1>
+<h2 id="introduction">Introduction</h2>
+<p>Today is our first day using Node, so we will practice doing some basic operations. <strong>Ready to start?</strong></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li><p>Upon completion, run the following commands:</p>
+<pre><code>git add .
+git commit -m &quot;done&quot;
+git push origin master</code></pre></li>
+<li><p>Create Pull Request so your TAs can check up your work.</p></li>
+</ul>
+<h2 id="testing---introduction">Testing - Introduction</h2>
+<p>This exercise will be completed through a series of tests. You should be familiar with testing from previous lessons and exercises, but just in case, here is a short recap of Intro to testing. :wink:</p>
+<h3 id="what-is-testing">What is testing?</h3>
+<p><em>Software testing is a process of executing an application to validate and verify that it meets the business and technical requirements and works as expected.</em></p>
+<p>Testing is a <strong>process</strong>, not a single activity. As early as we start developing and conducting tests, the better are chances that we can prevent deficiencies in the code or product design.</p>
+<p>In this exercise, we have created all the tests you need to create the solution, and you have to execute them all and create the code to accomplish all the requirements.</p>
+<p>Tests prove that your code actually works in every situation in which it’s designed to work. Even when you are improving the design or creating new features, you can change your current code without breaking what already works.</p>
+<h3 id="testing-with-mocha">Testing with Mocha</h3>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_99e6ffece1023c0fe141512493fc6ad2.png" /></p>
+<p><a href="https://mochajs.org/">Mocha</a> is a feature-rich JavaScript testing framework running on Node.js and in the browser, making asynchronous testing simple and fun.</p>
+<!-- Mocha tests run serially, allowing for flexible and accurate reporting, while mapping uncaught exceptions to the correct test cases. -->
+<p>We have already included Mocha in the project you just forked, so let’s see how to use it to implement our code.</p>
+<h3 id="usage">Usage</h3>
+<p>To start using mocha, you have to install it as a dependency for this project. Remember that we should always use the Node Package Manager (npm) to manage all the packages in our projects.</p>
+<p>Run the following command:</p>
+<pre><code>$ npm install mocha</code></pre>
+<p>After this step, we will see <code>dependencies</code> in the <em>package.json</em> and mocha will be there.</p>
+<p><em>Note</em>: The current version of mocha is 6.2.2.</p>
+<h2 id="project-structure">Project Structure</h2>
+<p>Before we start coding, let’s explain the provided project structure:</p>
+<pre><code>.
+├── test
+│   └── index.spec.js
+└─ package.json
+└─ index.js</code></pre>
+<p>We are going to be working with the <strong><code>index.js</code></strong> file. Here we will write the implementation of our <code>SortedList</code> class.</p>
+<p>The <code>test</code> folder contains all the tests we will execute with Mocha.</p>
+<h3 id="running-the-tests">Running the tests</h3>
+<p>Running our tests with Mocha is super easy; you just have to run <code>npm test</code>.</p>
+<!-- Before you run this command, make sure you navigate to the `starter-code` directory. -->
+<pre><code>$ npm test
+
+&gt; lab-intro-node@1.0.0 test /Users/Sandra/Desktop/iron-labs/lab-intro-node
+&gt; mocha
+
+
+  SortedList
+    Constructor
+      1) should have items and length properties
+    #add(x)
+      2) should add a single value to SortedList
+      3) should add a third value to SortedList
+      4) should add a value while keeping the list sorted
+    #get(i)
+      5) should return an OutOfBounds exception if there is no element in that position
+      6) should return the element in that position
+    #max()
+      7) should return an EmptySortedList exception if there is no elements in the list
+      8) should return the max (highest) value in the list
+    #min()
+      9) should return an EmptySortedList exception if there are no elements in the list
+      10) should return the min (lowest) value in the list
+    #sum()
+      11) should return the sum of all elements in the list
+      12) should return 0 for an empty sorted list
+    #avg()
+      13) should return an EmptySortedList exception if there are no elements
+      14) should return the average of elements in the list
+
+  0 passing (13ms)
+  14 failing</code></pre>
+<p>Don’t worry that none of the tests are passing… you will make them ALL PASS!! :smile:</p>
+<h2 id="instructions">Instructions</h2>
+<p>The task here is to create a class that maintains a <strong>sorted list of numbers in ascending order</strong>.</p>
+<p>Go in the <code>index.js</code> file and there you will find the bare bones of the <em>SortedList</em> class.</p>
+<p>The <strong>SortedList</strong> class will have the following methods:</p>
+<h3 id="iteration-1-constructor">Iteration 1: constructor()</h3>
+<p><code>new SortedList</code> should create a new object from the <code>SortedList</code> class.</p>
+<p>The object should have two properties: <code>items</code> and <code>length</code>.</p>
+<ul>
+<li><code>items</code> should be an array,</li>
+<li><code>length</code> should be the number of elements in the array.</li>
+</ul>
+<h3 id="iteration-2-additem">Iteration 2: add(item)</h3>
+<p>The <code>add(item)</code> method should add the value <code>item</code> to the items array, ensuring that <strong>the items array stays sorted in ascending order</strong>. What does this mean? Well, if an array of items has these elements: <code>[2, 5, 7]</code>, and if <code>6</code> is added, the array of items should be as follows: <code>[2, 5, 6, 7]</code>.</p>
+<p>Here you should also make sure that the length property gets updated accordingly when new items are added to the list.</p>
+<h3 id="iteration-3-getpos">Iteration 3: get(pos)</h3>
+<p>The <code>get(pos)</code> method will get the value at index <code>pos</code> in the list. <br> <em>Example</em>: if an instance of SortedList has elements: [2, 5, 7], when <code>get(2)</code> called, return should be <code>7</code> since this is element in that position in the array. Check the tests to see more examples.</p>
+<p>In addition, make sure you <em>throw</em> an error with the message <em>OutOfBounds</em> if a user tries to get an element in the non-existing position (e.g. <em>if the array has 5 elements and we are trying to get the element on the position 7</em>).</p>
+<p>To throw an error, you can do the following:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">&#39;OutOfBounds&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<!-- ### Iteration 4: make that list sorted!
+
+Up to this moment, in the `add(item)` method we were just adding elements in the array of _items_. Our ultimate goal is to make this array _sorted in ascending order_. <br>
+What does this mean? Well, if array of items has these elements: [2, 5, 7], if `6` is added, the array of items should be as follows: [2, 5, 6, 7]. See the failing tests for more examples and details. -->
+<h3 id="iteration-4-max">Iteration 4: max()</h3>
+<p>The <code>max()</code> method should return the highest value of the array.</p>
+<p>In case you have an empty <code>SortedList</code>, you must throw an error with the message “EmptySortedList”. For this, you can use:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="cf">throw</span> <span class="kw">new</span> <span class="bu">Error</span>(<span class="st">&#39;EmptySortedList&#39;</span>)<span class="op">;</span></span></code></pre></div>
+<h3 id="iteration-5-min">Iteration 5: min()</h3>
+<p>The <code>min()</code> method should return the lowest value of the array.</p>
+<p>In case you have an empty <code>SortedList</code>, you must throw an error with the message “EmptySortedList”.</p>
+<h2 id="bonus-iterations">Bonus iterations</h2>
+<h3 id="iteration-6-sum">Iteration 6: sum()</h3>
+<p>The <code>sum()</code> method should return the sum value of the array. At this point, we will not tell you anything else. Just go ahead and check the corresponding test and see if anything else needs to be added. You can do this! :heart:</p>
+<h3 id="iteration-7-avg">Iteration 7: avg()</h3>
+<p>The <code>avg()</code> method should return the average value of the array.</p>
+<p>Just as before, check the corresponding test to see if there’s anything else that needs to be added.</p>
+<p>And you have reached the end!</p>
+<p>Happy Coding! :heart:</p>
+</body>
+</html>

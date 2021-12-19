@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-express-cinema">LAB | Express Cinema</h1>
+<p><br><br></p>
+<h2 id="introduction">Introduction</h2>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36983687-49a3d64e-2093-11e8-8b86-b11813f0cdba.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>The goal of this exercise is to learn how to seed the database on your own and to be able to create a cinema web page, where we will display the list of movies. In addition to that, you will create a detail page, where more details will be shown for each movie individually.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, run the following commands:</p>
+<pre><code>$ git add .
+$ git commit -m &quot;done&quot;
+$ git push origin master</code></pre>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<p><br><br></p>
+<h2 id="instructions">Instructions</h2>
+<p><br></p>
+<h3 id="iteration-0-initialize-the-project">Iteration 0 | Initialize the project</h3>
+<p><strong>This lab has the starer code based on the IronLauncher, the Express Generator.</strong></p>
+<p>After forking and cloning the project, you will have install all the dependencies:</p>
+<pre class="shell"><code>$ npm install</code></pre>
+<p>To run the app:</p>
+<pre class="shell"><code>$  npm run dev</code></pre>
+<p>Now you are ready to start. 🚀</p>
+<p><br></p>
+<h3 id="iteration-1-seed-the-database">Iteration 1 | Seed the database</h3>
+<p>First, we need to seed our database. Below you will find an array of objects with info for 8 movies. You should create two files:</p>
+<ul>
+<li>In the root, create a folder <code>models</code> and in it add the <code>Movie.model.js</code> file for the Movie model.</li>
+<li>In the root, create a folder <code>seeds</code> and inside create the <code>movies.seed.js</code> file and write the code necessary to seed the database.</li>
+</ul>
+<p>Below you will find the seeds you should add to the <code>seeds/movies.seed.js</code>. As shown below, each of the movies has the same properties (<em>title</em>, <em>director</em>, etc.) so based on the available information, go ahead and create the <code>Movie</code> model in the <code>models/Movie.model.js</code> file.</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// To insert in &quot;seeds/movies.seed.js&quot;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> movies <span class="op">=</span> [</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;A Wrinkle in Time&quot;</span><span class="op">,</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="dt">director</span><span class="op">:</span> <span class="st">&quot;Ava DuVernay&quot;</span><span class="op">,</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="dt">stars</span><span class="op">:</span> [<span class="st">&quot;Storm Reid&quot;</span><span class="op">,</span> <span class="st">&quot;Oprah Winfrey&quot;</span><span class="op">,</span> <span class="st">&quot;Reese Witherspoon&quot;</span>]<span class="op">,</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="dt">image</span><span class="op">:</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;https://images-na.ssl-images-amazon.com/images/M/MV5BMjMxNjQ5MTI3MV5BMl5BanBnXkFtZTgwMjQ2MTAyNDM@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;</span><span class="op">,</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Following the discovery of a new form of space travel as well as Meg&#39;s father&#39;s disappearance, she, her brother, and her friend must join three magical beings - Mrs. Whatsit, Mrs. Who, and Mrs. Which - to travel across the universe to rescue him from a terrible evil.&quot;</span><span class="op">,</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="dt">showtimes</span><span class="op">:</span> [<span class="st">&quot;13:00&quot;</span><span class="op">,</span> <span class="st">&quot;15:30&quot;</span><span class="op">,</span> <span class="st">&quot;18:00&quot;</span><span class="op">,</span> <span class="st">&quot;20:10&quot;</span><span class="op">,</span> <span class="st">&quot;22:40&quot;</span>]</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;The Strangers: Prey at Night&quot;</span><span class="op">,</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="dt">director</span><span class="op">:</span> <span class="st">&quot;Johannes Roberts&quot;</span><span class="op">,</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>    <span class="dt">stars</span><span class="op">:</span> [<span class="st">&quot;Christina Hendricks&quot;</span><span class="op">,</span> <span class="st">&quot;Bailee Madison&quot;</span><span class="op">,</span> <span class="st">&quot;Martin Henderson&quot;</span>]<span class="op">,</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a>    <span class="dt">image</span><span class="op">:</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;https://images-na.ssl-images-amazon.com/images/M/MV5BMTY1OTIwODgzMV5BMl5BanBnXkFtZTgwMzUyMDgzNDM@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;</span><span class="op">,</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;A family&#39;s road trip takes a dangerous turn when they arrive at a secluded mobile home park to stay with some relatives and find it mysteriously deserted. Under the cover of darkness, three masked psychopaths pay them a visit to test the family&#39;s every limit as they struggle to survive.&quot;</span><span class="op">,</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    <span class="dt">showtimes</span><span class="op">:</span> [<span class="st">&quot;13:50&quot;</span><span class="op">,</span> <span class="st">&quot;16:20&quot;</span><span class="op">,</span> <span class="st">&quot;19:20&quot;</span><span class="op">,</span> <span class="st">&quot;22:10&quot;</span>]</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;The Hurricane Heist&quot;</span><span class="op">,</span></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="dt">director</span><span class="op">:</span> <span class="st">&quot;Rob Cohen&quot;</span><span class="op">,</span></span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    <span class="dt">stars</span><span class="op">:</span> [<span class="st">&quot;Toby Kebbell&quot;</span><span class="op">,</span> <span class="st">&quot;Maggie Grace&quot;</span><span class="op">,</span> <span class="st">&quot;Ryan Kwanten&quot;</span>]<span class="op">,</span></span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    <span class="dt">image</span><span class="op">:</span></span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;https://images-na.ssl-images-amazon.com/images/M/MV5BMzg3Y2MyNjgtMzk4ZS00OTU3LWEwZmMtN2Y0NTdlZjU0NGFiXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;</span><span class="op">,</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Thieves attempt a massive heist against the U.S. Treasury as a Category 5 hurricane approaches one of its Mint facilities.&quot;</span><span class="op">,</span></span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a>    <span class="dt">showtimes</span><span class="op">:</span> [<span class="st">&quot;13:10&quot;</span><span class="op">,</span> <span class="st">&quot;15:40&quot;</span><span class="op">,</span> <span class="st">&quot;18:20&quot;</span><span class="op">,</span> <span class="st">&quot;20:50&quot;</span><span class="op">,</span> <span class="st">&quot;23:10&quot;</span>]</span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;Gringo&quot;</span><span class="op">,</span></span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="dt">director</span><span class="op">:</span> <span class="st">&quot;Nash Edgerton&quot;</span><span class="op">,</span></span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="dt">stars</span><span class="op">:</span> [<span class="st">&quot;Joel Edgerton&quot;</span><span class="op">,</span> <span class="st">&quot;Charlize Theron&quot;</span><span class="op">,</span> <span class="st">&quot;David Oyelowo&quot;</span>]<span class="op">,</span></span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="dt">image</span><span class="op">:</span></span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;https://images-na.ssl-images-amazon.com/images/M/MV5BMjAyMTk2MTQ3Ml5BMl5BanBnXkFtZTgwNDQ2ODE0NDM@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;</span><span class="op">,</span></span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span></span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;GRINGO, a dark comedy mixed with white-knuckle action and dramatic intrigue, explores the battle of survival for businessman Harold Soyinka (David Oyelowo) when he finds himself crossing the line from law-abiding citizen to wanted criminal.&quot;</span><span class="op">,</span></span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    <span class="dt">showtimes</span><span class="op">:</span> [<span class="st">&quot;13:40&quot;</span><span class="op">,</span> <span class="st">&quot;15:50&quot;</span><span class="op">,</span> <span class="st">&quot;19:00&quot;</span><span class="op">,</span> <span class="st">&quot;21:20&quot;</span><span class="op">,</span> <span class="st">&quot;23:50&quot;</span>]</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;Thoroughbreds&quot;</span><span class="op">,</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>    <span class="dt">director</span><span class="op">:</span> <span class="st">&quot;Cory Finley&quot;</span><span class="op">,</span></span>
+<span id="cb4-47"><a href="#cb4-47" aria-hidden="true" tabindex="-1"></a>    <span class="dt">stars</span><span class="op">:</span> [<span class="st">&quot;Anya Taylor-Joy&quot;</span><span class="op">,</span> <span class="st">&quot;Olivia Cooke&quot;</span><span class="op">,</span> <span class="st">&quot;Anton Yelchin&quot;</span>]<span class="op">,</span></span>
+<span id="cb4-48"><a href="#cb4-48" aria-hidden="true" tabindex="-1"></a>    <span class="dt">image</span><span class="op">:</span></span>
+<span id="cb4-49"><a href="#cb4-49" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;https://images-na.ssl-images-amazon.com/images/M/MV5BNDcyNDA4NDAzN15BMl5BanBnXkFtZTgwODQxMDQ5NDM@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;</span><span class="op">,</span></span>
+<span id="cb4-50"><a href="#cb4-50" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span></span>
+<span id="cb4-51"><a href="#cb4-51" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Two upper-class teenage girls in suburban Connecticut rekindle their unlikely friendship after years of growing apart. Together, they hatch a plan to solve both of their problems-no matter what the cost.&quot;</span><span class="op">,</span></span>
+<span id="cb4-52"><a href="#cb4-52" aria-hidden="true" tabindex="-1"></a>    <span class="dt">showtimes</span><span class="op">:</span> [<span class="st">&quot;13:00&quot;</span><span class="op">,</span> <span class="st">&quot;15:30&quot;</span><span class="op">,</span> <span class="st">&quot;18:00&quot;</span><span class="op">,</span> <span class="st">&quot;20:10&quot;</span><span class="op">,</span> <span class="st">&quot;22:40&quot;</span>]</span>
+<span id="cb4-53"><a href="#cb4-53" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-54"><a href="#cb4-54" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb4-55"><a href="#cb4-55" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;The Leisure Seeker&quot;</span><span class="op">,</span></span>
+<span id="cb4-56"><a href="#cb4-56" aria-hidden="true" tabindex="-1"></a>    <span class="dt">director</span><span class="op">:</span> <span class="st">&quot;Paolo Virzì&quot;</span><span class="op">,</span></span>
+<span id="cb4-57"><a href="#cb4-57" aria-hidden="true" tabindex="-1"></a>    <span class="dt">stars</span><span class="op">:</span> [<span class="st">&quot;Helen Mirren&quot;</span><span class="op">,</span> <span class="st">&quot;Donald Sutherland&quot;</span><span class="op">,</span> <span class="st">&quot;Janel Moloney&quot;</span>]<span class="op">,</span></span>
+<span id="cb4-58"><a href="#cb4-58" aria-hidden="true" tabindex="-1"></a>    <span class="dt">image</span><span class="op">:</span></span>
+<span id="cb4-59"><a href="#cb4-59" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;https://images-na.ssl-images-amazon.com/images/M/MV5BMTg1NTg2MzcyNF5BMl5BanBnXkFtZTgwNjMwMDIzNDM@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;</span><span class="op">,</span></span>
+<span id="cb4-60"><a href="#cb4-60" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span></span>
+<span id="cb4-61"><a href="#cb4-61" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;A runaway couple goes on an unforgettable journey in the faithful old RV they call The Leisure Seeker, traveling from Boston to The Ernest Hemingway Home in Key West. They recapture their passion for life and their love for each other on a road trip that provides revelation and surprise right up to the very end.&quot;</span><span class="op">,</span></span>
+<span id="cb4-62"><a href="#cb4-62" aria-hidden="true" tabindex="-1"></a>    <span class="dt">showtimes</span><span class="op">:</span> [<span class="st">&quot;13:40&quot;</span><span class="op">,</span> <span class="st">&quot;15:50&quot;</span><span class="op">,</span> <span class="st">&quot;19:00&quot;</span><span class="op">,</span> <span class="st">&quot;21:20&quot;</span><span class="op">,</span> <span class="st">&quot;23:50&quot;</span>]</span>
+<span id="cb4-63"><a href="#cb4-63" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-64"><a href="#cb4-64" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb4-65"><a href="#cb4-65" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;Black Panther&quot;</span><span class="op">,</span></span>
+<span id="cb4-66"><a href="#cb4-66" aria-hidden="true" tabindex="-1"></a>    <span class="dt">director</span><span class="op">:</span> <span class="st">&quot;Ryan Coogler&quot;</span><span class="op">,</span></span>
+<span id="cb4-67"><a href="#cb4-67" aria-hidden="true" tabindex="-1"></a>    <span class="dt">stars</span><span class="op">:</span> [<span class="st">&quot;Chadwick Boseman&quot;</span><span class="op">,</span> <span class="st">&quot;Michael B. Jordan&quot;</span><span class="op">,</span> <span class="st">&quot;Lupita Nyong&#39;o&quot;</span>]<span class="op">,</span></span>
+<span id="cb4-68"><a href="#cb4-68" aria-hidden="true" tabindex="-1"></a>    <span class="dt">image</span><span class="op">:</span></span>
+<span id="cb4-69"><a href="#cb4-69" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;https://images-na.ssl-images-amazon.com/images/M/MV5BMTg1MTY2MjYzNV5BMl5BanBnXkFtZTgwMTc4NTMwNDI@._V1_UX182_CR0,0,182,268_AL_.jpg&quot;</span><span class="op">,</span></span>
+<span id="cb4-70"><a href="#cb4-70" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span></span>
+<span id="cb4-71"><a href="#cb4-71" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;T&#39;Challa, the King of Wakanda, rises to the throne in the isolated, technologically advanced African nation, but his claim is challenged by a vengeful outsider who was a childhood victim of T&#39;Challa&#39;s father&#39;s mistake.&quot;</span><span class="op">,</span></span>
+<span id="cb4-72"><a href="#cb4-72" aria-hidden="true" tabindex="-1"></a>    <span class="dt">showtimes</span><span class="op">:</span> [<span class="st">&quot;13:50&quot;</span><span class="op">,</span> <span class="st">&quot;16:20&quot;</span><span class="op">,</span> <span class="st">&quot;19:20&quot;</span><span class="op">,</span> <span class="st">&quot;22:10&quot;</span>]</span>
+<span id="cb4-73"><a href="#cb4-73" aria-hidden="true" tabindex="-1"></a>  }<span class="op">,</span></span>
+<span id="cb4-74"><a href="#cb4-74" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb4-75"><a href="#cb4-75" aria-hidden="true" tabindex="-1"></a>    <span class="dt">title</span><span class="op">:</span> <span class="st">&quot;Red Sparrow&quot;</span><span class="op">,</span></span>
+<span id="cb4-76"><a href="#cb4-76" aria-hidden="true" tabindex="-1"></a>    <span class="dt">director</span><span class="op">:</span> <span class="st">&quot;Francis Lawrence&quot;</span><span class="op">,</span></span>
+<span id="cb4-77"><a href="#cb4-77" aria-hidden="true" tabindex="-1"></a>    <span class="dt">stars</span><span class="op">:</span> [<span class="st">&quot;Jennifer Lawrence&quot;</span><span class="op">,</span> <span class="st">&quot;Joel Edgerton&quot;</span><span class="op">,</span> <span class="st">&quot;Matthias Schoenaerts&quot;</span>]<span class="op">,</span></span>
+<span id="cb4-78"><a href="#cb4-78" aria-hidden="true" tabindex="-1"></a>    <span class="dt">image</span><span class="op">:</span></span>
+<span id="cb4-79"><a href="#cb4-79" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;https://images-na.ssl-images-amazon.com/images/M/MV5BMTA3MDkxOTc4NDdeQTJeQWpwZ15BbWU4MDAxNzgyNTQz._V1_UX182_CR0,0,182,268_AL_.jpg&quot;</span><span class="op">,</span></span>
+<span id="cb4-80"><a href="#cb4-80" aria-hidden="true" tabindex="-1"></a>    <span class="dt">description</span><span class="op">:</span></span>
+<span id="cb4-81"><a href="#cb4-81" aria-hidden="true" tabindex="-1"></a>      <span class="st">&quot;Ballerina Dominika Egorova is recruited to &#39;Sparrow School,&#39; a Russian intelligence service where she is forced to use her body as a weapon. Her first mission, targeting a C.I.A. agent, threatens to unravel the security of both nations.&quot;</span><span class="op">,</span></span>
+<span id="cb4-82"><a href="#cb4-82" aria-hidden="true" tabindex="-1"></a>    <span class="dt">showtimes</span><span class="op">:</span> [<span class="st">&quot;13:00&quot;</span><span class="op">,</span> <span class="st">&quot;15:30&quot;</span><span class="op">,</span> <span class="st">&quot;18:00&quot;</span><span class="op">,</span> <span class="st">&quot;20:10&quot;</span><span class="op">,</span> <span class="st">&quot;22:40&quot;</span>]</span>
+<span id="cb4-83"><a href="#cb4-83" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb4-84"><a href="#cb4-84" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span>
+<span id="cb4-85"><a href="#cb4-85" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-86"><a href="#cb4-86" aria-hidden="true" tabindex="-1"></a><span class="co">// Add here the script that will be run to actually seed the database (feel free to refer to the previous lesson)</span></span>
+<span id="cb4-87"><a href="#cb4-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-88"><a href="#cb4-88" aria-hidden="true" tabindex="-1"></a><span class="co">// ... your code here</span></span></code></pre></div>
+<p><br></p>
+<h3 id="iteration-2-the-home-page">Iteration 2 | The Home Page</h3>
+<p>Now when you have all movies in the database, you shall proceed to getting them to be displayed to the user.</p>
+<p>We need our home page. Simple and beautiful, you can use the <code>index.hbs</code> to create the following home page:</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36986664-acd6af14-209a-11e8-816d-b62417239c53.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p>The <code>button</code> should be a link redirecting to the <code>/movies</code> route. (<em>You will create this route in the following iteration.</em>)</p>
+<p><br></p>
+<h3 id="iteration-3-list-the-movies">Iteration 3 | List the Movies</h3>
+<p>Proceed to creating the <code>/movies</code> route. We need to list all the movies we have in our database. You should create a <code>movies.hbs</code> file, and display a list of all the movies. To summarize, in this iteration your goal is to create <code>/movies</code> route that will render <code>movies.hbs</code> view. This view should have all the movie titles and movie images displaying. In addition to this, as displayed on the image below, add the link <em>See more</em> that should point to the each movie details page. (<em>You will be creating this page in the following iteration.</em>)</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36986832-240fe492-209b-11e8-94de-a7334af41076.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><br></p>
+<h3 id="iteration-4-display-movie-details">Iteration 4 | Display Movie Details</h3>
+<p>Finally, you have to create a view to display the details about each movie. You need a <code>movie/:id</code> route, where the user can check all the info about each movie, after clicking on the <code>See More</code> button shown on the <code>/movies</code> view.</p>
+<figure>
+<img src="https://user-images.githubusercontent.com/23629340/36986933-6f8060b4-209b-11e8-8571-496914f9ae96.png" alt="image" /><figcaption aria-hidden="true">image</figcaption>
+</figure>
+<p><br></p>
+<h2 id="bonus-styling">Bonus: Styling</h2>
+<p>Our app should be pretty ugly right now if you (correctly) focused on the back-end during this exercise. To be a fully functioning web app, we need to add some styles.</p>
+<p>In your layout require bootstrap, and add some very basic styles to make our movies app look “ready” for production.</p>
+<p>That’s it!</p>
+<p><br></p>
+<p><strong>Happy coding!</strong> :heart:</p>
+</body>
+</html>

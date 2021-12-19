@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-js-clue---mixing-objects-and-arrays">LAB | JS Clue - Mixing objects and arrays</h1>
+<p>Do you remember the classic detective board game Clue? It was a very popular game in the 90’s.</p>
+<p>The plot starts with the death of Mr. Boddy, the very wealthy owner of Tudor Manor. He was killed under <em>highly suspicious circumstances</em>, and it’s the player’s mission to uncover which <strong>suspect</strong> murdered him, what <strong>weapon</strong> was used, and in which <strong>room</strong> of the mansion the crime took place.</p>
+<p>When playing Clue, these three details are represented by a <strong>suspect</strong> card, a <strong>weapon</strong> card and a <strong>room</strong> card that are kept hidden in an envelope for the duration of the game. By progressively revealing the remaining cards, the players can infer which are the three cards that are hidden. When a player is confident that they know the solution to the mystery, they will try to reveal it. If a player guesses correctly, they win the game.</p>
+<p align="center">
+<img width="400" src="https://i.imgur.com/AZWieq9.jpg=300"/>
+</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+<li>Visit the “Actions” tab in your fork, and enable workflows</li>
+</ul>
+<p><br></p>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Upon completion, run the following commands:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">&quot;done&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">git</span> push origin master</span></code></pre></div>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<p><br></p>
+<h2 id="remember-our-tests">Remember our tests!</h2>
+<p>We will be working with automated tests again!</p>
+<p>Please, open your terminal, change directories into the root of the lab, and run <code>npm install</code> to install the test runner. Now, you can run the <code>npm run test:watch</code> command to run automated tests in <em>watch mode</em>. Open the resulting <code>lab-solution.html</code> file with the “Live Server” VSCode extension to always see the most up-to-date test results.</p>
+<p><em>Hint:</em></p>
+<pre class="shell"><code>$ cd lab-javascript-clue
+$ npm install
+$ npm run test:watch</code></pre>
+<p><br></p>
+<h2 id="instructions">Instructions</h2>
+<p>You will be working in the <code>src/clue.js</code> file. The test requirements (<code>tests/clue.spec.js</code>) will guide you in solving the following iterations.</p>
+<p><br></p>
+<h3 id="iteration-1-create-the-cards">Iteration 1: Create the cards</h3>
+<p>Clue has three different <em>card types</em>: <strong>suspects</strong>, <strong>rooms</strong>, and <strong>weapons</strong>.</p>
+<p>Let’s create an <code>array</code> for every <em>card type</em>. These arrays should be named <code>suspectsArray</code>, <code>weaponsArray</code>, <code>roomsArray</code>. Each array will contain <em>objects</em>, where each <em>object</em> represents one card.</p>
+<p>All of the information you need about <strong>suspects</strong>, <strong>rooms</strong>, and <strong>weapons</strong> can be found on the <code>DATA.md</code> file.</p>
+<p><em>Suggestion</em>: Copy this data into the <code>clue.js</code> file and model it into objects nested inside your cards arrays. This is a great chance for you to experiment with IDE shortcuts, multiple-line selection, find and replace, and other great features that VS Code provides.</p>
+<p><br></p>
+<h4 id="suspects">Suspects</h4>
+<p>All of six possible <em>suspects</em> in Clue have a <strong>first name</strong>, <strong>last name</strong>, <strong>occupation</strong>, <strong>age</strong>, <strong>description</strong>, <strong>image</strong> and <strong>color</strong>.</p>
+<p>To complete this iteration, you should have an array that looks something like the following:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> suspectsArray <span class="op">=</span> [</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  {</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="dt">firstName</span><span class="op">:</span> <span class="st">&#39;Jacob&#39;</span><span class="op">,</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    <span class="dt">lastName</span><span class="op">:</span> <span class="st">&#39;Green&#39;</span><span class="op">,</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="dt">occupation</span><span class="op">:</span> <span class="st">&#39;Entrepreneur&#39;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="co">// ...</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>]<span class="op">;</span></span></code></pre></div>
+<p><br></p>
+<h4 id="weapons">Weapons</h4>
+<p>There are a total of nine <em>weapons</em>. Each of them has a different <strong>name</strong> and <strong>weight</strong>.</p>
+<p><br></p>
+<h4 id="rooms">Rooms</h4>
+<p>The game board represents the blueprints of the mansion and features fifteen different <em>rooms</em>. Each room will only have a <strong>name</strong>.</p>
+<p><br></p>
+<h3 id="iteration-2-create-the-mystery">Iteration 2: Create the mystery</h3>
+<p>At the beginning of the game, players shuffle each of the card stacks to create a combination of <em>suspect</em>, <em>weapon</em> and <em>room</em>. This will be the mystery to solve.</p>
+<p><br></p>
+<h4 id="random-selector">Random selector</h4>
+<p>Declare a function named <code>selectRandom</code> to randomly select one element from a card stack. The function should expect an <code>array</code> as an argument, and should return a random element from the array.</p>
+<p><br></p>
+<h4 id="create-the-mystery">Create the mystery</h4>
+<p>Declare a function named <code>pickMystery</code> that takes no arguments and returns an object with three properties: <em>suspect</em>, <em>weapon</em> and <em>room</em>, each holding as a value a card of that specific type. You can get a random card of each type by calling <code>selectRandom</code> on each card stack.</p>
+<p><br></p>
+<h3 id="iteration-3-reveal-the-mystery">Iteration 3: Reveal the mystery</h3>
+<p>At last, we are ready to reveal the mystery.</p>
+<p>Declare a function named <code>revealMystery</code> that receives an <em>envelope</em> <code>object</code> (with the shape of the object returned by <code>pickMystery</code>) as the single argument, and returns a reveal message in the following format:</p>
+<p><strong>&lt;FIRST NAME&gt; &lt;LAST NAME&gt; killed Mr. Boddy using the &lt;WEAPON&gt; in the &lt;ROOM&gt;!</strong></p>
+<p><br></p>
+<h2 id="extra-resources">Extra Resources</h2>
+<ul>
+<li><a href="http://eloquentjavascript.net/04_data.html">Data Structures: Objects and Arrays</a></li>
+<li><a href="http://whatculture.com/offbeat/20-mind-blowing-facts-you-didnt-know-about-cluedo">20 Mind-blowing facts about Cluedo</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Cluedo">Cluedo - Wikipedia</a></li>
+</ul>
+<p><strong>Happy coding!</strong> 💙</p>
+</body>
+</html>

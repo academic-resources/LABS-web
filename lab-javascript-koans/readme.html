@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>readme</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-js-koans">LAB | JS Koans</h1>
+<h2 id="koans">Koans</h2>
+<p><img src="https://i.imgur.com/9Ug9NBn.png" /></p>
+<pre><code>Two monks were arguing on top of a hill about a big
+flag at the top of a temple. One monk reflected:
+
+&gt; &quot;The flag is moving&quot;
+
+The other thought for a while and said:
+
+&gt; &quot;The wind is moving.&quot;.
+
+The sixth patriarch happened to be passing by.
+
+He told them:
+
+&gt; &quot;Not the wind, not the flag; The mind is moving.&quot;</code></pre>
+<p><br></p>
+<h3 id="what-are-the-koans">What are the Koans?</h3>
+<p><a href="https://en.wikipedia.org/wiki/K%C5%8Dan">Koans</a> (公案) originate from Zen Buddhism, and are paradoxical riddles or stories used to test “students” on their path to enlightenment. They are designed to provoke thought or doubt in the student’s mind. We are here to learn to code, so… what are the Koans?</p>
+<p>The Koans are a series of assertions you must solve to understand how a programming language works. This is the first step to become a better developer. The Koans become increasingly more difficult as you continue, so don’t feel discouraged as you move forward through them.</p>
+<p>There are Koans for all the programming languages. We will work with JavaScript Koans. The mechanism is the following:</p>
+<ul>
+<li>You get an assertion that is not passing a <strong>test</strong>.</li>
+<li>You have to give the test the correct expected result to pass it.</li>
+</ul>
+<p>We are going to test the code assertions through Jest. We have introduced two new concepts here: tests and <a href="https://jestjs.io/">Jest</a>. Let’s do a brief introduction to both of them.</p>
+<p><br></p>
+<h2 id="testing">Testing</h2>
+<p>When we are coding, we have to be sure that our code is working as we expect. More than that, when we update our existing code, we have to be 100% sure that our old code is still working. As our website becomes larger, it becomes more difficult to check that all our features are working as we expect. How can we automatize this process? The answer is with <strong>testing</strong>.</p>
+<p><br></p>
+<h3 id="introduction-to-testing">Introduction to testing</h3>
+<p>Testing allows us to check if the full set of features we have build is working as we expect. Sometimes you can create new features that override or damage the old ones. We avoid this with testing.</p>
+<p>For now, you have enough with this brief introduction. We will learn testing in depth later on the course.</p>
+<p><br></p>
+<h3 id="anatomy-of-a-test">Anatomy of a test</h3>
+<p>The syntax to create a test depends on the framework we are using. So we will explain the basic anatomy of a test with <a href="https://en.wikipedia.org/wiki/Pseudocode">pseudocode</a>.</p>
+<p>Given a function with some parameters, we expect to get a result. If the result is what we are expecting, the test will pass. If we get an unexpected result, the test will fail. The framework will show the tests that are passing in green, and the tests that are failing in red.</p>
+<p>Let’s suppose we have the following function:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">add</span>(num1<span class="op">,</span> num2) {</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>If we pass as parameters to the <code>add</code> function the numbers 1 and 2, we should get a 3 as a result. So we are calling the <code>add</code> function with two numbers, and we expect from the function to return us the sum of those numbers.</p>
+<p>If we get 3 as a result, the test will pass. If we get any other result, the test will fail. In pseudo code, it would be something like this:</p>
+<pre><code>given the parameters 1 and 2 to the add function, we expect to get 3 as a result</code></pre>
+<p>This is the anatomy of a test. We have the knowledge to understand what is a test and how it works. Now we will introduce you to a JavaScript framework to test our application.</p>
+<p><br></p>
+<h2 id="jest">Jest</h2>
+<p><a href="https://jestjs.io/">Jest</a> is a JavaScript testing framework used to test JavaScript code. If you take a look at the documentation, you will see that it has many options to test our code. In this lab, we will work with <a href="https://jestjs.io/docs/expect"><code>expects</code></a> and <a href="https://jestjs.io/docs/using-matchers"><code>matchers</code></a>.</p>
+<p><br></p>
+<h3 id="describe-it-expect-and-matchers">Describe, it, expect and matchers</h3>
+<p>To understand better what are the parts of the test in Jest, we will walk through an example. This is the first test we will find in our Koans:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">describe</span>(<span class="st">&#39;the JavaScript language&#39;</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">describe</span>(<span class="st">&#39;has different types and operators&#39;</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">it</span>(<span class="st">&#39;considers numbers to be equal to their string representation&#39;</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>      <span class="fu">expect</span>(<span class="dv">1</span> <span class="op">==</span> <span class="st">&#39;1&#39;</span>)<span class="op">.</span><span class="fu">toBeTruthy</span>()<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>      <span class="fu">expect</span>(<span class="dv">1</span> <span class="op">!=</span> <span class="st">&#39;1&#39;</span>)<span class="op">.</span><span class="fu">toBeFalsy</span>()<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>We will go through each different part of the test to explain all of them:</p>
+<p><br></p>
+<h4 id="describe">describe</h4>
+<p>It’s used to group different tests on our code. This is very helpful when we see the results of the tests. In the code above, we have two different describes:</p>
+<ul>
+<li>The first one will group <strong>all</strong> our tests. It has a description indicating that we are going to test the JavaScript language.</li>
+<li>The second one indicates to us that we will test the different types and operators that JavaScript has.</li>
+</ul>
+<p>As you can see, those are just information strings. When we execute our tests, they appear in the page grouping the different tests we have. This is very helpful when we have a lot of tests to identify where is a test that is not passing.</p>
+<h4 id="it">it</h4>
+<p>It receives a <code>string</code> that indicates what we are testing. It has to be a clear description of what we are going to do. In our example, we are testing that JavaScript considers the numbers to be equal to their string representation.</p>
+<h4 id="expect">expect</h4>
+<p>What we are expecting in the test. This function contains the expression we want to test. This expression has to coincide with the matcher of the test. If they agree, the test will pass. If they disagree, the test will fail.</p>
+<h4 id="matcher">matcher</h4>
+<p>The matchers are going to determine if a test will pass or not. The expression in the expect has to agree with the matcher. In our example, we are testing that JavaScript considers the numbers to be equal to their string representation. The matcher we selected is <code>.toBeTruthy()</code>.</p>
+<p>So, the test <code>expect(1 == "1").toBeTruthy()</code> will pass. There is a huge list of matchers on testing. We don’t have to know all of them for the exercise. We will work on testing in another lesson. The matchers we will use here are:</p>
+<ul>
+<li><code>.toBeTruthy()</code> and <code>.toBeFalsy()</code>. We expect the expression to be truthy or falsy</li>
+<li><code>.toEqual()</code>. We expect the expression to be equal than the value passed as a parameter, and it has also to be the same type: i.e. <code>expect(1).toBe(1)</code></li>
+<li><code>.toBe()</code>. We expect the expression to be equal than the value passed as a parameter, but not necessarily the same type: i.e. <code>expect(1).toBe("1")</code></li>
+</ul>
+<p>We will see there are many matchers we can use. Right now, we just need the ones described above to do the Koans.</p>
+<p><br></p>
+<h2 id="exercise">Exercise</h2>
+<h3 id="requirements">Requirements</h3>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+<li>Visit the “Actions” tab in your fork, and enable workflows.</li>
+</ul>
+<p><br></p>
+<h3 id="submission">Submission</h3>
+<p>Upon completion, run the following commands:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">&quot;done&quot;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin master</span></code></pre></div>
+<p>Create Pull Request so your TAs can check up your work.</p>
+<p><br></p>
+<h3 id="instructions">Instructions</h3>
+<p>We need to execute our tests. After you forked and cloned this repo, open your terminal, change directories into the root of the lab, and run <code>npm install</code> to install the test runner. Next, you can run the <code>npm run test:watch</code> command to run automated tests. Open the resulting <code>lab-solution.html</code> file with the “Live Server” VSCode extension to see the test results.</p>
+<p>In the beginning, you will see all the tests in green. This is because only the tests that are passing are un-commented. The tests we have to implement are commented out.</p>
+<p><br></p>
+<p>All the tests are located inside the <code>tests</code> folder. Open the <code>koans.spec.js</code> file and uncomment the following line: ⠀</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">it</span>(<span class="st">&quot;surprises me, NaN is not comparable with NaN&quot;</span><span class="op">,</span> () <span class="kw">=&gt;</span> { {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(<span class="dv">5</span> <span class="op">/</span> <span class="st">&quot;a&quot;</span>)<span class="op">.</span><span class="fu">toEqual</span>(<span class="dv">5</span> <span class="op">/</span> <span class="st">&quot;a&quot;</span>)<span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">//expect(typeof(NaN)).toEqual();</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">expect</span>(<span class="pp">isNaN</span>(<span class="dv">5</span> <span class="op">/</span> <span class="st">&quot;a&quot;</span>))<span class="op">.</span><span class="fu">toBeTruthy</span>()<span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p><br> ⠀ When we uncomment the line and save the file, tests will refresh and we will see something like that:</p>
+<p><img src="https://education-team-2020.s3-eu-west-1.amazonaws.com/web-dev/labs/tests-passed-failed.png" /> ⠀ <br></p>
+<p><strong>The main goal is not to finish all the tests. We want you to understand why each test is failing and how does JavaScript work in specific scopes.</strong></p>
+<p>To do that, the correct workflow is the one used on <a href="https://en.wikipedia.org/wiki/Test-driven_development">TDD</a>:</p>
+<ul>
+<li>Uncomment the test</li>
+<li>Refresh the page to see that the un-commented test is failing</li>
+<li>Change the code to pass the test</li>
+<li>Refresh the page to see that the test is passing</li>
+</ul>
+<p>⠀ This process has to be done for each test. <strong>Do not uncomment all the tests and launch the app. It will be more difficult for you to see if your code is passing the tests.</strong></p>
+<p>As we said, this is the first step to become a better developer.</p>
+<p>Good luck to all of you and happy coding. :heart:</p>
+</body>
+</html>

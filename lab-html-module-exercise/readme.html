@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>readme</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="module-exercise-html-css">Module Exercise: HTML &amp; CSS</h1>
+<h2 id="section"></h2>
+<p>In this exercise you will be able to apply all the concepts you’ve just learned, such as:</p>
+<ul>
+<li>using different HTML tags,</li>
+<li>structuring your HTML page with <strong>block elements</strong>, and</li>
+<li>adding content to your HTML page with <strong>inline elements</strong>.</li>
+</ul>
+<h2 id="getting-started">Getting started</h2>
+<ul>
+<li>Click on the button “Clone or download” and a window will appear: <img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_e1d537a0f12e005606bc1fae2277bb70.jpeg" /></li>
+<li><strong>Click the button “Download as zip”</strong></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="introduction">Introduction</h3>
+<p>In this exercise, you will clone one of the previous versions of the landing page of <strong>NPM website</strong>. NPM is a package manager for NodeJS, and you will be using it heavily throughout this course.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_66957e0bffb5e59c6b1713c489323168.png" /></p>
+<p>You can see the larger version of this picture <a href="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_66957e0bffb5e59c6b1713c489323168.png">here</a>. If you’re struggling to see the details, feel free to zoom in to 200%. Just by taking a look to this picture, we can conclude that we will have to apply quite a few styles on our web page: different background colors, font weight (bold, normal), and elements being positioned very deliberately with CSS.</p>
+<p>We will devide our work into two parts: - part I - create web page with no styles, just add HTML elements - part II - add styles and make it perfect 😌</p>
+<p>So let’s get started!</p>
+<h3 id="starter-code">Starter Code</h3>
+<p>The <code>starter-code</code> folder contains an <code>index.html</code> file with the main structure already created. We provided the <code>images</code> folder with all the images necessary to successfully finish the exercise.</p>
+<h3 id="part-i---the-pure-html-no-styles-applied">Part I - the pure HTML (no styles applied)</h3>
+<p>This is kind of our goal 🙃: <img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_fb961b15cf7fcd5867273a3e77d3a0cf.png" /></p>
+<p>The most difficult part of this exercise is deciding how to structure the page and picking the correct <em>semantic</em> tags for the job. Picking the right semantic tags will make your job easier in the next exercise when it comes time to styling.</p>
+<p>Our recommendation is to try to keep it simple. Try to identify the different sections, and add <code>id</code>’s or <code>classes</code> to each <code>&lt;div&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;ul&gt;</code>, or <code>&lt;header&gt;</code> block elements to identify these elements:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_ca5d8ed98c9fb2a2bb25e7cb38c1578d.png" /></p>
+<p>You can view a larger version of this picture <a href="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_ca5d8ed98c9fb2a2bb25e7cb38c1578d.png">here</a>.</p>
+<h4 id="html-1-nav-header">HTML 1 | Nav &amp; Header</h4>
+<p>Your task in this iteration will be to create the <code>nav</code> and <code>header</code>, which are the first two sections of the page.</p>
+<p><strong>Example</strong></p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_689037695dcb47e060b94a695af8b9f1.png" /></p>
+<p>We could try to represent this navigation bar as follows:</p>
+<pre class="htmlmixed"><code>&lt;nav&gt;
+  &lt;div class=&quot;top-left&quot;&gt;
+    &lt;a class = &quot;heart&quot; href=&quot;#&quot;&gt;♥︎&lt;/a&gt;
+    &lt;span class=&quot;acronym&quot;&gt;Neophobe Plebeian Mumpsimus&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;ul class=&quot;top-links&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;npm Enterprise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;features&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;pricing&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;documentation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;support&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+<p>Since there are no styles applied, our final result won’t look like the one on the picture, but rather somewhat like this:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_7867a5c5ff21731593eac7c0692399c5.png" /></p>
+<p>After the navigation bar, create the header (on the sectioned image, it’s marked with white). When done, move to the next iteration 🚀</p>
+<h4 id="html-2-content-sections">HTML 2 | Content Sections</h4>
+<p>Take a look at the sectioned image one more time and you can see we have three sections below the header. Create <code>section</code> tags and give each of them <code>id</code>s so you can identify them easily.</p>
+<p>Fill in the content for each of these sections: lists, headings, paragraphs, divs, etc.</p>
+<p><strong>All images can be found in your <code>images</code> folder!</strong></p>
+<p>The final result should be similar to this:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_ae419a271f480bd9f0b04e1038e68e46.png" /> <img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_625bd4f1a833cf02d0d8ec2823aa5809.png" /></p>
+<p>The time has come! We’ll make it pretty! 🎨</p>
+<h3 id="part-ii---cssstyles">Part II - CSS/styles</h3>
+<h4 id="css-1-setup">CSS 1 | Setup</h4>
+<p>As you might recall, the first thing we have to do to add styles to our page is to create a <code>styles.css</code> file and link it to our <code>index.html</code>.</p>
+<p>So let’s begin by creating a new file, in the same folder as our HTML file, and name it <code>styles.css</code></p>
+<p>Then, we need to add the following line to the <code>&lt;head&gt;</code> of our HTML file:</p>
+<pre class="htmlmixed"><code>&lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;&gt;</code></pre>
+<p>Now we are ready to start adding some styles to our page.</p>
+<p><strong>Hint</strong>: You might want to consider adding the following line to your CSS, just to confirm that you have linked it correctly:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>body{</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">red</span><span class="op">;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>If you the changes you just made in your <code>styles.ccs</code> file and refresh your browser, the whole page should turn red. If this happens, you know that you have linked the CSS file correctly. (<em>You can delete that from your CSS once you have confirmed it’s working.</em>) :wink:</p>
+<h4 id="css-2-the-navbar">CSS 2 | The Navbar</h4>
+<p>In the first part of this exercise, you created the navbar and it looks like this:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_7867a5c5ff21731593eac7c0692399c5.png" /></p>
+<p>Right now, we are going to add some CSS to make it look a little more like this:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_689037695dcb47e060b94a695af8b9f1.png" /></p>
+<p>The first thing we notice is that the navbar has a <em>red background</em> and the <em>text inside the nav</em> is <em>white</em>.</p>
+<p>Furthermore, all the words/phrases on the right side of the nav are links, but they are all white as well, and they are not underlined. And as we said, they are on the right side :smile: This positioning has to be done through CSS as well.</p>
+<p>This is our HTML:</p>
+<pre class="htmlmixed"><code>&lt;nav&gt;
+  &lt;div class=&quot;top-left&quot;&gt;
+    &lt;a class = &quot;heart&quot; href=&quot;#&quot;&gt;♥︎&lt;/a&gt;
+    &lt;span class=&quot;acronym&quot;&gt;Neophobe Plebeian Mumpsimus&lt;/span&gt;
+  &lt;/div&gt;
+  &lt;ul class=&quot;top-links&quot;&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;npm Enterprise&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;features&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;pricing&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;documentation&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href=&quot;#&quot;&gt;support&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;</code></pre>
+<p>And now we will add this to the <code>style.css</code> file:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>nav {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">background-color</span>: <span class="cn">#C12127</span><span class="op">;</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="fu">rgba(</span><span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">0.8</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding-top</span>: <span class="dv">15</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">height</span>: <span class="dv">100</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>nav a {</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">color</span>: <span class="fu">rgba(</span><span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">255</span><span class="op">,</span><span class="dv">0.8</span><span class="fu">)</span><span class="op">;</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">text-decoration</span>: <span class="dv">none</span><span class="op">;</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>This will make your <code>nav</code> having the right colors, but we still have a long way to go. The next thing that becomes obvious when we do this is that our list of links all fall on the left side, one on top of each other (why don’t they go next to each other? 🤯 what type of element is an <code>&lt;li&gt;</code>? block or inline? 🤔).</p>
+<p><strong>Hint</strong>: We also added a <code>height</code> property to the <code>nav</code>. This is just to make it easier to see while you are working on it, this is not meant to be interpreted as the correct height.</p>
+<p>In order to move the links where they need to go, we will <code>float</code> the <code>&lt;ul&gt;</code> to the right and display all the links inside the list as <code>inline-block</code> elements, which give most of benefits of a block element, but allows them so “sit” next to each other.</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode css"><code class="sourceCode css"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">.top-links</span> {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">inline-block</span><span class="op">;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">float</span>: <span class="dv">right</span><span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">padding</span>: <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">0</span> <span class="dv">20</span><span class="dt">px</span> <span class="dv">0</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="fu">.top-links</span> li {</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">display</span>: <span class="dv">inline-block</span><span class="op">;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">margin</span>: <span class="dv">0</span> <span class="dv">10</span><span class="dt">px</span><span class="op">;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>Now our <code>nav</code> should look something like this:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_dfe04b547a044dd725e790e04b2bdc5f.png" /></p>
+<p><strong>Which property we should add to make the navbar look like the one on picture we clone?</strong></p>
+<p>Think about how you are going to change the vertical alighment of both sections. You might notice that the current font is not the right one but let that not stress you, try to find some that is similar. Later in the course you’ll be able to get it when inspecting the page anyway.</p>
+<h4 id="css-3-header">CSS 3 | Header</h4>
+<p>The header is composed of two seperate pieces: one with a search bar and logo, the other with some text content and a button. First, divide this section into halves using divs:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_aecfece6e918c7ada45d206826ad504d.png" /></p>
+<p><strong>Hints</strong></p>
+<ul>
+<li>You can center the second <code>div</code> by giving it a width, and a <code>margin: 0 auto</code>.</li>
+<li>The image of a city next to “Build Amazing Things” can be floated right to position it to the side of the text content.</li>
+</ul>
+<p><strong>Colors</strong></p>
+<ul>
+<li><strong>Font</strong> - White</li>
+<li><strong>Button</strong> - <code>rgb(240, 146, 51)</code></li>
+<li><strong>Background</strong> - <code>rgb(32, 101, 136)</code></li>
+<li><strong>Search Bar Background</strong> - <code>rgb(31, 82, 111)</code></li>
+</ul>
+<h4 id="css-4-collaboration-section">CSS 4 | Collaboration Section</h4>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_02e9ef3361b5fdc52e9e46b58ae72202.png" /></p>
+<p><strong>Hints</strong></p>
+<ul>
+<li>Wrap the content in a <code>div</code>, and give it either padding or a width and <code>margin: 0 auto</code> to center it.</li>
+<li>Float the div containing the heading, ul and button to the right of the image.</li>
+</ul>
+<p><strong>Colors</strong></p>
+<ul>
+<li><strong>Font</strong> - White</li>
+<li><strong>Background</strong> - <code>rgb(39, 53, 71)</code></li>
+<li><strong>Button</strong> - <code>rgb(203, 56, 55)</code></li>
+</ul>
+<h4 id="css-5-what-is-npm">CSS 5 | What is npm</h4>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_e18b75e8dff15d1392bf006a2b1d6e66.png" /></p>
+<p><strong>Hints</strong></p>
+<ul>
+<li>The background of this section is actually an image ❗️ so use <code>background-size</code> property and set it to have value <code>cover</code> to have it cover the section.</li>
+<li>Use absolute positioning for the <code>div</code> containing the text. Remember, when you use absolute positioning you must position the <code>section</code> as <em>relative</em>.</li>
+</ul>
+<p><strong>Colors</strong></p>
+<ul>
+<li><strong>Font</strong> - White</li>
+<li><strong>Button</strong> - <code>rgb(49, 68, 88)</code></li>
+</ul>
+<h4 id="css-6-what-can-you-make">CSS 6 | What can you make?</h4>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_ff3f981a0a2e23c3270f42238fea37c6.png" /></p>
+<p>This section is composed of 2 other sections: - one containing a heading and text content, and -the other containing 3 sections, each with a logo, a bolded description, and some descriptive text.</p>
+<p><strong>Hints</strong></p>
+<ul>
+<li>First, split the <code>section</code> into 2 divs, one containing the heading and “The npm registry hosts…”, the other containing the three different logos &amp; their descriptions.</li>
+<li>Once again, the content can be centered using either padding or <code>margin: 0 auto</code>. <em>There seems to be a pattern here</em> 🙃. Make a class for this and the other divs with a similar layout.</li>
+<li>Each <code>div</code> containing the logo should take approximately 33% (a third) of the parent’s container.</li>
+</ul>
+<p><strong>Colors</strong></p>
+<ul>
+<li><strong>Font: Heading</strong> - <code>rgb(83, 88, 98)</code></li>
+<li><strong>Font: Secondary / Paragraph text</strong> - <code>rgb(135, 145, 156)</code></li>
+<li><strong>Links</strong> - <code>rgb(208, 74, 73)</code></li>
+<li><strong>Background</strong> - White</li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>In this exercise, you’ve built a clone of a piece of the npm home page. This site is very complexed so if you managed to make it look anything like the original, good job! 🏆</p>
+<p>This concludes the HTML / CSS module. Next up is JavaScript, so get some rest, drink some coffee, and get ready to learn the muscles that make things move on a web page.</p>
+<p>Happy coding! :heart:</p>
+</body>
+</html>

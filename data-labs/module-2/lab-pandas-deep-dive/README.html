@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-pandas-deep-dive">Lab | Pandas Deep Dive</h1>
+<h2 id="introduction">Introduction</h2>
+<p>By this point in the program, you should have learned how to perform a variety of operations using the Pandas library.</p>
+<p>In this lab, again you will be working on <a href="your-code/main.ipynb">main.ipynb</a>. Read the instructions and questions in the Jupyter notebook and provide your answers. Make sure to test your answers in Python.</p>
+<h2 id="goals">Goals</h2>
+<p>In this lab, you will examine a data file named <code>apple_store.csv</code> downloadable from <a href="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/data-static/data/apple_store.csv">this link</a>. This file contains information of over 7,000 Apple Store apps such as ID, name, size in bytes, price, number of ratings, user rating, prime genre, and so on. You will use Pandas to import the data source and examine the data in order to answer several questions described next.</p>
+<h3 id="challenge-questions">Challenge Questions</h3>
+<ul>
+<li><p>How many apps are there in the data source?</p></li>
+<li><p>What is the average rating of all apps?</p></li>
+<li><p>How many apps have an average rating no less than 4?</p></li>
+<li><p>How many genres are there in total for all the apps?</p></li>
+<li><p>What are the top 3 genres that have the most number of apps?</p></li>
+<li><p>Which genre is most likely to contain free apps?</p></li>
+<li><p>If a developer tries to make money by developing and selling Apple Store apps, in which genre should s/he develop the apps? Please assume all apps cost the same amount of time and expense to develop.</p></li>
+</ul>
+<h2 id="deliverables">Deliverables</h2>
+<ul>
+<li><code>main.ipynb</code> with your responses to each of the questions above.</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, add your version of <code>main.ipynb</code> to git. Then commit git and push your branch to the remote.</p>
+<h2 id="resources">Resources</h2>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/api.html">Pandas Documentation</a></p>
+<p><a href="https://pandas.pydata.org/pandas-docs/stable/10min.html">10 Minutes to Pandas</a></p>
+<p><a href="https://www.google.com/search?q=how+to+use+pandas+python">Google Search</a></p>
+<h2 id="additional-challenges-for-the-nerds">Additional Challenges for the Nerds</h2>
+<h3 id="pandas-tutorial-data-analysis-with-python-part-1"><a href="https://www.dataquest.io/blog/pandas-python-tutorial/">Pandas Tutorial: Data analysis with Python | Part 1</a></h3>
+<p>If you have completed the <code>apple_store</code> challenge without much difficulty, you will find this tutorial pretty easy. However, it’s still a great tutorial to read because it explains a lot of the thinking process behind codes. You can skim through this tutorial quickly to check if there’s anything you still don’t know.</p>
+<h3 id="pandas-tutorial-data-analysis-with-python-part-2"><a href="https://www.dataquest.io/blog/pandas-tutorial-python-2/">Pandas Tutorial: Data analysis with Python | Part 2</a></h3>
+<p>This is an advanced tutorial about Pandas that involves <a href="http://www.cogsci.nl/blog/a-simple-explanation-of-character-encoding-in-python.html">character encoding</a>, <a href="https://pandas.pydata.org/pandas-docs/stable/generated/pandas.DataFrame.apply.html">Pandas DataFrame <code>apply</code> method</a>, <a href="https://docs.python.org/3/tutorial/controlflow.html#lambda-expressions">Python <code>lambda</code> expression</a>, Python functional programming (you’ll learn later this week), data cleaning (you’ll learn later this week), and plotting with <code>matplotlib</code> (you’ll learn in Module 2). There is a lot of new information but if you manage to complete this tutorial you’ll be far ahead of your classmates.</p>
+<p>The most challenging part of this course is Module 3. In Module 1 and 2 most students should be able to complete with moderate efforts. What will make you truly stand out is how deep you can dive in Module 3, which depends on your level of accomplishment in Module 1 and 2. Therefore, if you have the power to accomplish more (in terms of both the depth and breadth) in the first two modules we will certainly encourage you to.</p>
+</body>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png" alt="IronHack Logo" /><figcaption aria-hidden="true">IronHack Logo</figcaption>
+</figure>
+<h1 id="final-project-comprehensive-data-analytics-project">Final Project: Comprehensive Data Analytics Project</h1>
+<h2 id="table-of-content">Table of Content</h2>
+<p><strong><a href="#overview">Overview</a></strong></p>
+<p><strong><a href="#project-instructions">Project Instructions</a></strong></p>
+<ul>
+<li><a href="#day-1">Day 1</a></li>
+<li><a href="#day-2">Day 2</a></li>
+<li><a href="#day-3">Day 3</a></li>
+<li><a href="#day-4">Day 4</a></li>
+</ul>
+<p><strong><a href="#necessary-deliverables">Necessary Deliverables</a></strong></p>
+<p><strong><a href="#presentation-guideline-and-criteria">Presentation Guideline and Criteria</a></strong></p>
+<p><strong><a href="#5-tips-for-successful-completion">5 Tips for Successful Completion</a></strong></p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>The goal of this project is to give you an opportunity to demonstrate the skills you have built throughout this program. In this project, you will use Python, SQL, and Tableau to put together a complete analytics workflow, including:</p>
+<ul>
+<li>Data acquisition</li>
+<li>Data wrangling</li>
+<li>Data storage</li>
+<li>Data exploration and analysis</li>
+<li>Feature selection</li>
+<li>Machine learning model training</li>
+<li>Model evaluation</li>
+<li>Reporting and presentation of insights</li>
+</ul>
+<p>The final project is structured into 4 days in which you build up your deliverables progressively and iteratively. We have provided a list of data sets for you to choose from. However, you are encouraged to obtain your own data sets. Using the knowledge you have acquired and your experience working with data, you will come up with a plan for what you are going to do and then design the project around the data set you have chosen.</p>
+<p><strong>You will be working individually for this project</strong>, but we’ll be guiding you along the process and helping you as you go. You will be working on this project over the course of 4 days. The proposed progression for each day is listed below. However, if you finish a certain step ahead of time, you can proceed to the next step. In that case, you will conduct more iterations of your deliverables by for example deep cleanining your data, selecting better features, comparing different ML models, improving model predictions, and so on. Also, remember that data analysis is iterative. So from time to time you may need to step back to a previous phase and iterate.</p>
+<h3 id="day-1---brain-storming-and-data-preparation">Day 1 - Brain Storming and Data Preparation</h3>
+<ul>
+<li>Idea generation &amp; planning</li>
+<li>Data gathering &amp; cleaning</li>
+<li>Data storage</li>
+</ul>
+<h3 id="day-2---exploratory-data-analysis">Day 2 - Exploratory Data Analysis</h3>
+<ul>
+<li>Data exploration</li>
+<li>Data visualization</li>
+<li>Data transformation</li>
+</ul>
+<h3 id="day-3---data-analysis-first-iteration">Day 3 - Data Analysis First Iteration</h3>
+<ul>
+<li>Feature selection</li>
+<li>Model training and evaluation</li>
+<li>Model evaluation</li>
+</ul>
+<h3 id="day-4---data-analysis-more-iterations">Day 4 - Data Analysis More Iterations</h3>
+<ul>
+<li>Iterations on your modeling</li>
+<li>Model evaluation and comparison</li>
+<li>Prepare for presentation</li>
+</ul>
+<hr />
+<h2 id="project-instructions">Project Instructions</h2>
+<h3 id="day-1">Day 1</h3>
+<p>On the first day of your project, you will be planning your project, choosing a data set, downloading and cleaning it, and storing it in a MySQL database.</p>
+<p>To get started, explore and choose from one of the following data sets:</p>
+<ul>
+<li><a href="https://www.kaggle.com/blastchar/telco-customer-churn">Telecom Customer Churn Data Set</a></li>
+<li><a href="https://www.kaggle.com/osmi/mental-health-in-tech-survey">Mental Health in Tech Survey Data Set</a></li>
+<li><a href="https://www.kaggle.com/usdot/flight-delays">Flight Delays and Cancellations Data Set</a></li>
+<li><a href="https://www.kaggle.com/nickhould/craft-cans">Craft Beers Data Set</a></li>
+<li><a href="https://www.kaggle.com/rhuebner/human-resources-data-set">Human Resources Data Set</a></li>
+</ul>
+<p>These are all Kaggle data sets, so you can gain some context about them by looking at the field descriptions and the <em>Overview</em> tab for each data set. You can also get project ideas by looking at the different <em>Kernels</em> that people have created using the data sets and the approaches they have taken, but please <strong>do not plagiarize or copy someone else’s work.</strong> Remember that the goal of this project is to demonstrate <em>your</em> skills, not someone else’s.</p>
+<p>You are free to use other data sources from <a href="https://www.kaggle.com">Kaggle</a>, <a href="https://archive.ics.uci.edu/ml/datasets.html">UCI ML Repository</a>, <a href="https://www.data.gov/">data.gov</a>, public APIs, websites, etc. However you will need to spend more time to search and evaluate the quality and complexity of the data set you want to use. Discuss with your instructor as early as possible regarding your project ideas in order to avoid potential blockers.</p>
+<h4 id="project-ideas">Project Ideas</h4>
+<p>As you are evaluating the data sets and deciding which you would like to use for your project, think about the different types of information that could be extracted from each one and what problems you could potentially solve. You are not required to use machine learning but it is definitely a plus if you use it. It is totally fine if you are more of a business-focused person and use Tableau to extract business intelligence from the data. It is also fine if you are more of a traditional data analyst and primarily conduct statistical analysis on your data. But challenging your own limit is always beneficial.</p>
+<p>Below are some ideas for the data sets we selected for you which can help get you started with these data sets.</p>
+<h5 id="telecom-customer-churn">Telecom Customer Churn</h5>
+<p>This data set is great for practicing supervised machine learning. The most obvious supervised learning problem to model with this data set is attempting to predict churn (whether or not a customer is going to leave). Another supervised problem you can try to solve is predicting tenure, or how long a customer will end up staying with the company. There are also a lot of ways to slice, dice, and analyze this data set - for example, looking at how monthly charges increase or decrease depending on different types of contract, tenure, and services provided.</p>
+<h5 id="mental-health-in-tech">Mental Health in Tech</h5>
+<p>This data set is also good for supervised learning, where you would attempt to predict the whether the employee taking the survey has received treatment for mental health (treatment variable). You can also analyze how the other variables in the data set contribute to whether someone seeks treatment for mental health and explore what types of environments result in employees with the best mental heath states.</p>
+<h5 id="flight-delays-and-cancellations">Flight Delays and Cancellations</h5>
+<p>This relational data set can help you practice your SQL joins as well as supervised learning as you attempt to predict which flights will be delayed and by how much time. There are also a variety of ways to explore this data set to determine which airlines are most efficient, what times of day there tends to be the most delays, which cities have more frequent delays than others, and how all this changes over time.</p>
+<h5 id="craft-beers">Craft Beers</h5>
+<p>This relational data set has fewer variables than the others, and that means that choosing it for your project will require you to apply some extra creativity. For example, you can create categorical variables out of the numeric abv and ibu variables to categorize a beer’s strength and hopiness. You can also use string operations on the style field to extract additional keyword-based categories (e.g. IPAs, American, English, Wheat, etc.). For modeling, you can attempt to predict the style of the beer or the probability that it falls into a particular style. Alternatively, you can attempt to compute similarity between beers to determine which ones are most like which other ones.</p>
+<h5 id="human-resources">Human Resources</h5>
+<p>This is another relational data set where you can practice your SQL joins as well as data wrangling, analysis, and machine learning. As far as applying machine learning to this data set, you can attempt to cluster employees together into similar groups, you can attempt to predict performance scores or pay rate, or you can attempt to predict whether an employee will be terminated within a certain amount of time. Additionally, you can also analyze the relationship between pay and performance by position, department, and manager as well as employee demographics.</p>
+<p>Once you have chosen a data set, you will need to download it. In order to do so, you will need to create a free Kaggle account if you don’t already have one. Once you have downloaded the data, you should perform the steps below:</p>
+<ul>
+<li>Create a new MySQL database where your data will eventually be stored.</li>
+<li>Create a new Jupyter Notebook for your project.</li>
+<li>In the Jupyter Notebook, read the data files using Python.</li>
+<li>Perform any necessary data wrangling and cleaning using Python.</li>
+<li>Create a connection to your MySQL database using <code>pymysql</code> and <code>sqlalchemy</code> and write the clean version of the data to the database.</li>
+</ul>
+<h4 id="additional-ideas">Additional Ideas</h4>
+<h5 id="analyze-your-own-facebook-data">Analyze Your Own Facebook Data</h5>
+<p>Do you know you can download your own Facebook data to your harddisk? You can use this data to do social network analysis or visualize your friendships.</p>
+<p><strong>Warning: Downloading your Facebook data takes a lot of time.</strong> You need to first request your data in your Facebook account. Then Facebook will prepare your data for you to download as a ZIP file. If you request all your data (e.g. posts, photos, likes, friends, places, etc.), it takes at least a whole day for Facebook to get your data ready. But instead of requesting all your data, you can also request only the categories you want to analyze such as friends and places, which takes significantly less time. In either case, request your data as early as you can so that you can have the data before the project week begins.</p>
+<p>Besides, when you request your data from Facebook, choose if you would like the data to be in JSON or HTML format. It’s a strategic choice depending on what topic you want to work on for your final project. If you request JSON, you will be able to focus on data visualization and analysis. If you request HTML, the data may be more suitable for natural language processing but you will need to spend time on parsing the HTML data.</p>
+<p>Resources:</p>
+<p><a href="https://www.facebook.com/help/1701730696756992">Accessing &amp; Downloading Your Facebook Information</a></p>
+<p><a href="https://linkurio.us/blog/how-to-visualize-your-facebook-network/">How to Visualize Your Facebook Network</a></p>
+<p><a href="http://www.fmsasg.com/socialnetworkanalysis/facebook/">Facebook Social Network Analysis</a></p>
+<h5 id="web-scraping">Web Scraping</h5>
+<p>The web is a free source of unlimited data. There are Wikipedia, Google Maps, YouTube, Amazon, and countless content you can download and dig. General advise? Choose a website you know well and are conerned about. Use API instead of HTML data if you can.</p>
+<p>Resources:</p>
+<p><a href="https://www.quora.com/What-are-some-interesting-web-scraping-projects-you-have-done">What are some interesting web scraping projects you have done</a></p>
+<p><a href="https://www.agenty.com/docs/blog/39/web-scraping-top-15-ways-to-use-it-for-business">Web Scraping: Top 15 Ways To Use It For Business</a></p>
+<h5 id="data-visualization">Data Visualization</h5>
+<p>In addition to your Facebook data, there are tons of other data visualizaiton ideas. You can visualize virtually everything such as people, animals, countries, products, music, weather, Github, etc.</p>
+<p>Resources:</p>
+<p><a href="https://blog.udacity.com/2015/01/15-data-visualizations-will-blow-mind.html">15 Data Visualizations That Will Blow Your Mind</a></p>
+<p><a href="https://carto.com/blog/eighty-data-visualizations-examples-using-location-data-maps/">80 Data Visualization Examples Using Location Data and Maps</a></p>
+<h5 id="even-more">Even More</h5>
+<p><a href="https://www.analyticsvidhya.com/blog/2018/05/24-ultimate-data-science-projects-to-boost-your-knowledge-and-skills/">24 Ultimate Data Science Projects To Boost Your Knowledge and Skills</a></p>
+<p><a href="https://www.quora.com/What-are-some-good-data-science-projects">What are some good data science projects?</a></p>
+<h3 id="day-2">Day 2</h3>
+<p>On the second day of your project, you will start with the clean data set you stored in your database on the previous day. You will explore, analyze, and visualize the data using Python and Tableau, applying the variety of techniques you learned throughout the program.</p>
+<ul>
+<li>In your Jupyter Notebook, read the clean data from your MySQL database.</li>
+<li>Using Pandas, generate summaries of the data and calculate descriptive statistics.</li>
+<li>Practice generating a few basic charts and graphs using <code>matplotlib</code> or <code>seaborn</code> as well.</li>
+<li>Export your clean data set to a CSV file.</li>
+<li>Open Tableau Public and load the CSV file.</li>
+<li>Explore the data in Tableau and look for interesting insights.</li>
+<li>Put together an annotated Tableau Story communicating the insights you have discovered.</li>
+</ul>
+<h3 id="day-3">Day 3</h3>
+<p>On the third day of your project, you will be using the analysis you performed and the insights you discovered the previous day to help frame your machine learning problem, select and engineer appropriate features, train your models, and evaluate performance.</p>
+<ul>
+<li>If you are planning on doing supervised machine learning, identify the target variable you would like to train a model to predict. Also determine whether you will be doing regression (target variable is continuous) or classification (target variable is discrete).</li>
+<li>Perform feature selection/engineering to arrive at the features you feel best represent the problem you are trying to solve. During this stage, you may need to normalize or scale your variables.</li>
+<li>Train a couple machine learning models on the data.</li>
+<li>Evaluate the performance of the models.</li>
+<li>Prepare a presentation of your findings and results.</li>
+</ul>
+<h3 id="day-4">Day 4</h3>
+<p>Should you have a fourth day of final project work, you should spend the day refining your machine learning models and your presentation. If you have time, you may also go back and perform additional data exploration and analysis.</p>
+<ul>
+<li>Continue iterating on your machine learning models with the objective of optimizing their performance.</li>
+<li>Organize your machine learning steps into a pipeline that performs feature selection/engineering, model training, model evaluation, and model storage.</li>
+<li>Further refine your presentation based on additional findings and results.</li>
+</ul>
+<h2 id="necessary-deliverables">Necessary Deliverables</h2>
+<p>A <a href="final-project-template.md">Final Project Template</a> has been prepared for you to document and report your final project. You can use the structure in that template to prepare your report or presentation. But you are not limited to the Markdown file format in turning in your report as long as you follow the structure prescribed in the template.</p>
+<p>The following deliverables should be pushed to your Github repo.</p>
+<ul>
+<li>A Jupyter Notebook (.ipynb) file containing all your Python code.</li>
+<li>A data folder containing your original data set and your clean data set in CSV format.</li>
+<li>Your final project report/presentation created from template.</li>
+</ul>
+<h2 id="presentation-guideline-and-criteria">Presentation Guideline and Criteria</h2>
+<h3 id="format">Format</h3>
+<ul>
+<li>Presentation Time: 12 minutes</li>
+<li>Q &amp; A: 3 minutes</li>
+<li><strong>Total Time:</strong> 15 minutes</li>
+</ul>
+<h3 id="attire">Attire</h3>
+<ul>
+<li>DRESS TO IMPRESS: <a href="https://en.wikipedia.org/wiki/Smart_casual">Smart casual</a> would be great</li>
+</ul>
+<h3 id="outputs">Outputs</h3>
+<ul>
+<li>A presentation in <a href="https://slides.com/">slides.com</a></li>
+<li>A demo deployed on GitHub Pages</li>
+<li>The presentation and demo will be executed on a class computer (instead of your own)</li>
+<li>Get ready to explain some of your code in GitHub</li>
+</ul>
+<h3 id="things-you-might-want-to-talk-about">Things you might want to talk about</h3>
+<ul>
+<li>Short presentation of yourself:
+<ul>
+<li>Who are you?</li>
+<li>A hobby you have.</li>
+<li><strong>Note: we are getting you ready for final presentation!</strong></li>
+</ul></li>
+<li>Elevator pitch:
+<ul>
+<li>Data set you chose.</li>
+<li>Why did you chose that data set?</li>
+<li>The most important thing you learned.</li>
+</ul></li>
+<li>One technical challenge you faced:
+<ul>
+<li>Explain the challenge.</li>
+<li>Explain how and what you did to overcome it.</li>
+<li>Show and explain code snippets in your presentation slides.</li>
+</ul></li>
+<li>Git:
+<ul>
+<li>Display a screenshot of your GitHub graphs to show your commit frequency and how much work you did.</li>
+</ul></li>
+<li>Final Project Walkthrough:
+<ul>
+<li>Walk the audience through the data set you chose, providing an overview of some of the fields and other information contained in the data.</li>
+<li>Walk the audience through your process of cleaning, exploring, analyzing, and performing machine learning on your data including what tools and techniques you employed, what avenues you decided to pursue and why, what interesting insights you discovered, and what lessons you learned.</li>
+</ul></li>
+</ul>
+<p>Below are a few videos of the Ironhack Hackshow where our graudates presented their final projects. Take a quick look on how our past students presented their projects.</p>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=MnUxEL3iiig">Web Dev final project demo</a></li>
+<li><a href="https://www.youtube.com/watch?v=oII8I2nl7WM">UX/UI final project demo</a></li>
+<li><a href="https://www.youtube.com/watch?v=64Jav707V9E">Hackshow diciembre 2017 - Madrid</a> (Spanish)</li>
+</ul>
+<h2 id="tips-for-successful-completion">5 Tips for Successful Completion</h2>
+<ul>
+<li><p>Generate a project idea that solves a data problem with practical values. Make sure the problem you try to solve is clearly defined. Make sure the scope of the problem is manageable so that you can complete within the project timeframe. Meanwhile, think beyond the problem itself - can your solution of the problem inform how to solve other bigger/deeper problems?</p></li>
+<li><p>Obtain timely feedback on your ideas, plans, progress, and products from the instructional staff. This ensures you stay on the right track and deliver impressive results.</p></li>
+<li><p>Be prepared for technical difficulties. Manage your time wisely and pace yourself. Stick to the project agenda strictly.</p></li>
+<li><p>Commit your codes and push to Github on regular basis. You should commit every time you complete a task and push at least once a day. This will help you avoid accidential data loss and is also the easiest way to document your iterative development process.</p></li>
+<li><p>Before final project presentation, test every component and step of your demo. Make sure your demo will run smoothly.</p></li>
+</ul>
+<h2 id="may-the-force-be-with-you">May the force be with you!</h2>
+</body>
+</html>

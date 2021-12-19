@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-api-scavenger-game">Lab | API Scavenger Game</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In the lesson, you have learned how to make Python requests to APIs and parse the JSON responses to extract the information you need. In this lab, you will practice these skills by playing an API scavenger hunt game. In case you haven’t played scavenger hunt when you were a kid, in a scavenger hunt players need to collect a list of items and they receive clues to help them in the mission. In this lab, you will be seeking secrets hidden inside the massive data from the API. Your data analytics skills will make you a cool API detective.</p>
+<h2 id="getting-started">Getting Started</h2>
+<p>In order to get started, we’d like you to create an access token in your <a href="https://github.com/settings/tokens">Github account</a>.</p>
+<ol type="1">
+<li>Click <code>Generate new token</code> in the page.</li>
+<li>Enter token description.</li>
+<li>Select the scopes for which you allow the token to access. Check at least all the <code>repo</code> checkboxes as shown in the screenshot below.</li>
+<li>Click <code>Generate token</code>. Github will create a personal access token for you.</li>
+</ol>
+<figure>
+<img src="../../images/github-create-token.png" alt="Github create personal token" /><figcaption aria-hidden="true">Github create personal token</figcaption>
+</figure>
+<p>A personal access token is a secret password to allow you or your app to make remote requests to the Github API. It is the same <a href="https://oauth.net/">oAuth</a> technology as the Twitter developer access token discussed in the lesson but in Github you don’t need to wait for the approval and your token will be available immediately.</p>
+<p>:exclamation: Make sure you save the token on your computer because this is the only time you will see the token string. If for any reason you lost your token, simply come back to Github and re-authorize yourself a new token.</p>
+<p>:warning: <strong>Do not share your Github personal access token with anyone else! Hackers can use your token to do bad things that make damage and result in suspension of your account.</strong></p>
+<p>After generating the token, you can test it with <code>curl</code> in the Terminal. Assuming your Git username is <code>johndoe</code> and token is <code>d10ev1shpm10x5qox9ckw1k9b792p9rq0ogplpn5cyo55</code>, you can make the curl command in the following way:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> curl <span class="at">-u</span> johndoe:d10ev1shpm10x5qox9ckw1k9b792p9rq0ogplpn5cyo55 https://api.github.com/user<span class="kw">`</span></span></code></pre></div>
+<p>If your token is valid, you will see a JSON response that looks like:</p>
+<pre><code>{
+  &quot;login&quot;: &quot;johndoe&quot;,
+  &quot;id&quot;: 1234567,
+  &quot;node_id&quot;: &quot;MDQ6VXNlcjE2NTk3OTg=&quot;,
+  &quot;avatar_url&quot;: &quot;https://avatars3.githubusercontent.com/u/1659798?v=4&quot;,
+  &quot;gravatar_id&quot;: &quot;&quot;,
+  &quot;url&quot;: &quot;https://api.github.com/users/johndoe&quot;,
+  &quot;html_url&quot;: &quot;https://github.com/johndoe&quot;,
+  &quot;followers_url&quot;: &quot;https://api.github.com/users/johndoe/followers&quot;,
+  ...
+}</code></pre>
+<p>Because it is inconvenient to read long API responses in Terminal, you can export the response into a physical file with the following command:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> curl <span class="at">-u</span> johndoe:d10ev1shpm10x5qox9ckw1k9b792p9rq0ogplpn5cyo55 https://api.github.com/user<span class="kw">`</span> <span class="op">&gt;</span> output.json</span></code></pre></div>
+<p>Then you can open <code>output.json</code> with your favorite text editor to have a deep look.</p>
+<p>:information_source: Access token is one of the ways to authenticate requests to Github API. Alternatively, you can also use your Github username and password. However, you’ll need to manually enter your password every time when you make API requests. In contrast, access token allows you to make requests without entering password manually. For more information about Github API authentications, refer to <a href="https://developer.github.com/v3/auth/">this</a> and <a href="https://developer.github.com/v3/oauth_authorizations/">this</a> documentation.</p>
+<p>:information_source: From now on, we will not give you step-by-step instructions in the labs. You already have the foundation in Python and data analytics that allows you to research data solutions. We will, however, provide general guidance on how to complete your lab assignments. In case you find it difficult to tackle your assignments with the general guidance, please don’t hesitate to ask the instructional team. We are here to help! :v:</p>
+<h2 id="goals">Goals</h2>
+<h3 id="challenge-1-fork-languages">Challenge 1: Fork Languages</h3>
+<p>You will find out how many programming languages are used among all the forks created from the main lab repo of your bootcamp. Assuming the main lab repo is <code>ironhack-datalabs/madrid-oct-2018</code>, you will:</p>
+<ol type="1">
+<li><p>Obtain the full list of forks created from the main lab repo via Github API.</p></li>
+<li><p>Loop the JSON response to find out the <code>language</code> attribute of each fork. Use an array to store the <code>language</code> attributes of each fork.</p>
+<ul>
+<li><em>Hint: Each language should appear only once in your array.</em></li>
+</ul></li>
+<li><p>Print the language array. It should be something like:</p>
+<p><code>["Python", "Jupyter Notebook", "HTML"]</code></p></li>
+</ol>
+<p>Again, the documentation of Github API is <a href="https://developer.github.com/v3/">here</a>.</p>
+<h3 id="challenge-2-count-commits">Challenge 2: Count Commits</h3>
+<p>Count how many commits were made in the past week.</p>
+<ol type="1">
+<li><p>Obtain all the commits made in the past week via API, which is a JSON array that contains multiple commit objects.</p></li>
+<li><p>Count how many commit objects are contained in the array.</p></li>
+</ol>
+<h3 id="challenge-3-hidden-cold-joke">Challenge 3: Hidden Cold Joke</h3>
+<p>Using Python, call Github API to find out the cold joke contained in the 24 secret files in the following repo:</p>
+<p>https://github.com/ironhack-datalabs/scavenger</p>
+<p>The filenames of the secret files contain <code>.scavengerhunt</code> and they are scattered in different directories of this repo. The secret files are named from <code>.0001.scavengerhunt</code> to <code>.0024.scavengerhunt</code>. They are scattered randomly throughout this repo. You need to <strong>search for these files by calling the Github API</strong>, not searching the local files on your computer.</p>
+<p>Notes:</p>
+<ul>
+<li><p>Github API documentation can be found <a href="https://developer.github.com/v3/">here</a>.</p></li>
+<li><p>You will need to study the Github API documentation to decide which API endpoint to call and what parameters to use in order to obtain the information you need. Unless you are already super familiar with Github API or super lucky, you probably will do some trials and errors. Therefore, be prepared to go back and forth in studying the API documentation, testing, and revising until you obtain what you need.</p></li>
+<li><p>After receiving the JSON data object, you need to inspect its structure and decide how to parse the data.</p></li>
+<li><p>When you test your requests with Github API, sometimes you may be blocked by Github with an error message that reads:</p>
+<blockquote>
+<p>You have triggered an abuse detection mechanism and have been temporarily blocked from content creation. Please retry your request again later.</p>
+</blockquote>
+<p>Don’t worry. Check the parameters in your request and wait for a minute or two before you make additional requests.</p></li>
+</ul>
+<p><strong>After you find out the secrete files:</strong></p>
+<ol type="1">
+<li><p>Sort the filenames ascendingly.</p></li>
+<li><p>Read the content of each secret files into an array of strings.</p></li>
+<li><p>Concatenate the strings in the array separating each two with a whitespace.</p></li>
+<li><p>Print out the joke.</p></li>
+</ol>
+<h2 id="deliverables">Deliverables</h2>
+<ul>
+<li><p><code>challenge-1.py</code> or <code>challenge-1.ipynb</code> that contains your solution to Challenge 1.</p></li>
+<li><p><code>challenge-2.py</code> or <code>challenge-1.ipynb</code> that contains your solution to Challenge 2.</p></li>
+<li><p><code>challenge-3.py</code> or <code>challenge-1.ipynb</code> that contains your solution to Challenge 3.</p></li>
+</ul>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, add your deliverables to git. Then commit git and push your code to the remote.</p>
+<h2 id="resources">Resources</h2>
+<p><a href="https://developer.github.com/v3/">Github RESTFUL API Documentation</a></p>
+<p><a href="https://oauth.net/">OAuth</a></p>
+<p><a href="https://developer.github.com/v3/oauth_authorizations/">Github oAuth Authorizations API</a></p>
+<p><a href="https://developer.github.com/v3/auth/">Github Other Authorizations API</a></p>
+<h2 id="additional-challenge-for-the-nerds">Additional Challenge for the Nerds</h2>
+<p>So far we have practiced a lot with the <code>GET</code> method but not <code>PUT</code>, <code>POST</code>, <code>PATCH</code>, or <code>DELETE</code>. If you wonder what are the differences, refer to the following:</p>
+<p>https://spring.io/understanding/REST</p>
+<p>Simply put, the <code>GET</code> method only allows you to obtain data from API. But the other methods allow you to modify the data stored in the database behind the API. The API must be programmed to support each of these methods though.</p>
+<p>The additional challenge for the nerds is for you to use the <code>PUT</code> method to create a file in your own repo. You need to grant the correct permissions to your access token in order to make <code>PUT</code> requests to your repo.</p>
+<h3 id="note">Note:</h3>
+<p>You don’t have to use Python in this complex challenge. Simply find out how to do that with <code>curl</code> as proof of concept. That’s adequate for the purpose of practicing <code>PUT</code> for API.</p>
+<h3 id="steps">Steps:</h3>
+<ol type="1">
+<li><p>Create a new repo (don’t use your forked repo for the lab because you don’t want to ruin your lab codes). Assuming your repo is called <code>johndoe/test-repo</code>.</p></li>
+<li><p>Call the following API endpoint to create a new file called <code>test.txt</code>:</p>
+<p><code>https://api.github.com/repos/johndoe/test-repo/contents/test.txt</code></p>
+<p>Notes:</p>
+<ul>
+<li><p>You’ll need to supply a JSON object as the parameter of the <code>PUT</code> method that contains at least <code>message</code> and <code>content</code>.</p></li>
+<li><p>The <code>content</code> string must be encoded with <a href="https://en.wikipedia.org/wiki/Base64">Base64</a>. Here is a website for you to <a href="https://www.base64encode.org/">encode a regular string to Base64</a>.</p></li>
+</ul>
+<p>For detailed documentation, see: https://developer.github.com/v3/repos/contents/#create-a-file</p></li>
+<li><p>If successful, you should see the following example response from the API:</p></li>
+</ol>
+<pre><code>{
+  &quot;content&quot;: {
+    &quot;name&quot;: &quot;test.txt&quot;,
+    &quot;path&quot;: &quot;test.txt&quot;,
+    &quot;sha&quot;: &quot;0d5a690c8fad5e605a6e8766295d9d459d65de42&quot;,
+    &quot;size&quot;: 20,
+    &quot;url&quot;: &quot;https://api.github.com/repos/johndoe/test-repo/contents/test.txt?ref=master&quot;,
+    &quot;html_url&quot;: &quot;https://github.com/johndoe/test-repo/blob/master/test.txt&quot;,
+    &quot;git_url&quot;: &quot;https://api.github.com/repos/johndoe/test-repo/git/blobs/0d5a690c8fad5e605a6e8766295d9d459d65de42&quot;,
+    &quot;download_url&quot;: &quot;https://raw.githubusercontent.com/johndoe/test-repo/master/test.txt&quot;,
+    &quot;type&quot;: &quot;file&quot;,
+    &quot;_links&quot;: {
+      &quot;self&quot;: &quot;https://api.github.com/repos/johndoe/test-repo/contents/test.txt?ref=master&quot;,
+      &quot;git&quot;: &quot;https://api.github.com/repos/johndoe/test-repo/git/blobs/0d5a690c8fad5e605a6e8766295d9d459d65de42&quot;,
+      &quot;html&quot;: &quot;https://github.com/johndoe/test-repo/blob/master/test.txt&quot;
+    }
+  },
+  &quot;commit&quot;: {
+    &quot;sha&quot;: &quot;16f2907406174e8068ecf976fb6abc24f004a62b&quot;,
+    &quot;node_id&quot;: &quot;MDY6Q29tbWl0MTQ3NjgxMjMyOjE2ZjI5MDc0MDYxNzRlODA2OGVjZjk3NmZiNmFiYzI0ZjAwNGE2MmI=&quot;,
+    &quot;url&quot;: &quot;https://api.github.com/repos/johndoe/test-repo/git/commits/16f2907406174e8068ecf976fb6abc24f004a62b&quot;,
+    &quot;html_url&quot;: &quot;https://github.com/johndoe/test-repo/commit/16f2907406174e8068ecf976fb6abc24f004a62b&quot;,
+    &quot;author&quot;: {
+      &quot;name&quot;: &quot;John Doe&quot;,
+      &quot;email&quot;: &quot;john.doe@gmail.com&quot;,
+      &quot;date&quot;: &quot;2018-10-30T04:37:34Z&quot;
+    },
+    &quot;committer&quot;: {
+      &quot;name&quot;: &quot;John Doe&quot;,
+      &quot;email&quot;: &quot;john.doe@gmail.com&quot;,
+      &quot;date&quot;: &quot;2018-10-30T04:37:34Z&quot;
+    },
+    &quot;tree&quot;: {
+      &quot;sha&quot;: &quot;116ad37d3680a79ef1cf9f555abb0579e293f5b4&quot;,
+      &quot;url&quot;: &quot;https://api.github.com/repos/johndoe/test-repo/git/trees/116ad37d3680a79ef1cf9f555abb0579e293f5b4&quot;
+    },
+    &quot;message&quot;: &quot;test&quot;,
+    &quot;parents&quot;: [
+      {
+        &quot;sha&quot;: &quot;1ab3d7a806e0a44f39ffbb63618fb26938f968ac&quot;,
+        &quot;url&quot;: &quot;https://api.github.com/repos/johndoe/test-repo/git/commits/1ab3d7a806e0a44f39ffbb63618fb26938f968ac&quot;,
+        &quot;html_url&quot;: &quot;https://github.com/johndoe/test-repo/commit/1ab3d7a806e0a44f39ffbb63618fb26938f968ac&quot;
+      }
+    ],
+    &quot;verification&quot;: {
+      &quot;verified&quot;: false,
+      &quot;reason&quot;: &quot;unsigned&quot;,
+      &quot;signature&quot;: null,
+      &quot;payload&quot;: null
+    }
+  }
+}</code></pre>
+</body>
+</html>

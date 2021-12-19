@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<figure>
+<img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_d5c5793015fec3be28a63c4fa3dd4d55.png" alt="IronHack Logo" /><figcaption aria-hidden="true">IronHack Logo</figcaption>
+</figure>
+<h1 id="lab-advanced-mysql">Lab | Advanced MySQL</h1>
+<h2 id="introduction">Introduction</h2>
+<p>In this lab you will practice MySQL Subqueries, Temp Tables, and Action Queries. <strong>We will again use the <a href="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/data-static/data/module-1/publications.sql.zip">publications database</a> used in the <em>Joins and Relationships</em> lesson.</strong></p>
+<p>Create a <code>solutions.sql</code> file in the <code>your-code</code> directory to record your solutions to all challenges.</p>
+<h2 id="challenge-1---most-profiting-authors">Challenge 1 - Most Profiting Authors</h2>
+<p>In this challenge let’s have a close look at the bonus challenge of the previous <em>MySQL SELECT</em> lab – <strong>who are the top 3 most profiting authors</strong>? Even if you have solved or think you have solved that problem in the previous lab, please still complete this challenge because the step-by-step guidances are helpful to train your problem-solving thinking.</p>
+<p>In order to solve this problem, it is important for you to keep the following points in mind:</p>
+<ul>
+<li><p>In table <code>sales</code>, a title can appear several times. The royalties need to be calculated for each sale.</p></li>
+<li><p>Despite a title can have multiple <code>sales</code> records, the advance must be calculated only once for each title.</p></li>
+<li><p>In your eventual solution, you need to sum up the following profits for each individual author:</p>
+<ul>
+<li>All advances which is calculated exactly once for each title.</li>
+<li>All royalties in each sale.</li>
+</ul></li>
+</ul>
+<p>Therefore, you will not be able to achieve the goal with a single SELECT query. Instead, you will need to follow several steps in order to achieve the eventual solution. Below is an overview of the steps:</p>
+<ol type="1">
+<li><p>Calculate the royalty of each sale for each author.</p></li>
+<li><p>Using the output from Step 1 as a temp table, aggregate the total royalties for each title for each author.</p></li>
+<li><p>Using the output from Step 2 as a temp table, calculate the total profits of each author by aggregating the advances and total royalties of each title.</p></li>
+</ol>
+<p>Below we’ll guide you through each step. In your <code>solutions.sql</code>, please include the SELECT queries of each step so that your TA can review your problem-solving process.</p>
+<h3 id="step-1-calculate-the-royalties-of-each-sales-for-each-author">Step 1: Calculate the royalties of each sales for each author</h3>
+<p>Write a SELECT query to obtain the following output:</p>
+<ul>
+<li>Title ID</li>
+<li>Author ID</li>
+<li>Royalty of each sale for each author
+<ul>
+<li>The formular is: <code>sales_royalty = titles.price * sales.qty * titles.royalty / 100 * titleauthor.royaltyper / 100</code></li>
+<li>Note that <code>titles.royalty</code> and <code>titleauthor.royaltyper</code> are divided by 100 respectively because they are percentage numbers instead of floats.</li>
+</ul></li>
+</ul>
+<p>In the output of this step, each title may appear more than once for each author. This is because a title can have more than one sales.</p>
+<h3 id="step-2-aggregate-the-total-royalties-for-each-title-for-each-author">Step 2: Aggregate the total royalties for each title for each author</h3>
+<p>Using the output from Step 1, write a query to obtain the following output:</p>
+<ul>
+<li>Title ID</li>
+<li>Author ID</li>
+<li>Aggregated royalties of each title for each author
+<ul>
+<li>Hint: use the <em>SUM</em> subquery and group by both <code>au_id</code> and <code>title_id</code></li>
+</ul></li>
+</ul>
+<p>In the output of this step, each title should appear only once for each author.</p>
+<h3 id="step-3-calculate-the-total-profits-of-each-author">Step 3: Calculate the total profits of each author</h3>
+<p>Now that each title has exactly one row for each author where the advance and royalties are available, we are ready to obtain the eventual output. Using the output from Step 2, write a query to obtain the following output:</p>
+<ul>
+<li>Author ID</li>
+<li>Profits of each author by aggregating the advance and total royalties of each title</li>
+</ul>
+<p>Sort the output based on a total profits from high to low, and limit the number of rows to 3.</p>
+<h2 id="challenge-2---alternative-solution">Challenge 2 - Alternative Solution</h2>
+<p>In the previous challenge, you may have developed your solution in either of the following ways:</p>
+<ul>
+<li>Derived tables (see <a href="https://dev.mysql.com/doc/refman/8.0/en/derived-tables.html">reference</a>)</li>
+<li>Creating MySQL temporary tables in the initial steps, and query the temporary tables in the subsequent steps.</li>
+</ul>
+<p>Either way you have used, we’d like you to try the other way. Include your alternative solution in <code>solutions.sql</code>.</p>
+<h3 id="additional-learning">Additional Learning</h3>
+<p>In the context of this lab, you may use either the derived table or the temp table way to develop the solution. You may feel the former is more convenient than the latter way. However, you need to know each way is suitable in certain contexts. Derived tables are kept in the MySQL runtime memory and will be lost once the query execution is completed. In contrast, temp tables are physically – though temporarily – stored in MySQL. As long as your user session is not expired, you can access the data in the temp tables readily.</p>
+<p>If the data in your database are changing frequently, each time when you use derived tables to retrieve information, you may find the results are different. In contrast, once the temp tables are created, the data stored in the temp tables are persistent. Even if the relevant data in your database have changed, the data in the temp tables will remain the same unless you have updated the temp data. Therefore, if you care about the timeliness of the results, you should use derived tables so that you will always receive the latest information.</p>
+<p>However, if your data are massive and queries are complicated, you receive signficiant performance benefits by using temp tables. Because when you use temp tables, the time-consuming calculations (which we call expensive database transactions) are only performed once and the results are persistent. When you query the temp tables repeatedly, you will not perform expensive transactions again and again in your database.</p>
+<h2 id="challenge-3">Challenge 3</h2>
+<p>Elevating from your solution in Challenge 1 &amp; 2, create a permanent table named <code>most_profiting_authors</code> to hold the data about the most profiting authors. The table should have 2 columns:</p>
+<ul>
+<li><code>au_id</code> - Author ID</li>
+<li><code>profits</code> - The profits of the author aggregating the advances and royalties</li>
+</ul>
+<p>Include your solution in <code>solutions.sql</code>.</p>
+<h3 id="additional-learning-1">Additional Learning</h3>
+<p>To balance the performance of database transactions and the timeliness of the data, software/data engineers often schedule automatic scripts to query the data periodically and save the results in persistent summary tables. Then when needed they retrieve the data from the summary tables instead of performing the expensive database transactions again and again. In this way, the results will be a little outdated but the data we want can be instantly retrieved.</p>
+<h2 id="references">References</h2>
+<p><a href="https://dev.mysql.com/doc/refman/8.0/en/derived-tables.html">MySQL Reference: Derived Tables</a></p>
+<p><a href="https://stackoverflow.com/questions/2326395/which-one-have-better-performance-derived-tables-or-temporary-tables">Which one have better performance : Derived Tables or Temporary Tables</a></p>
+</body>
+</html>

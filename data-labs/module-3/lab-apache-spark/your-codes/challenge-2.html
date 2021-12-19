@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>challenge-2</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="challenge-2-deploy-spark-in-databricks-community-edition">Challenge 2: Deploy Spark in Databricks Community Edition</h1>
+<p>In this challenge you will create an account at <a href="https://databricks.com/">Databricks</a> and deploy an Apache Spark instance in cluster mode. Databricks was founded by the same team who created Apache Spark. They provide a series of solutions to satisfy the data needs by businesses, data scientists, data engineers, and education. Their <a href="https://sparkhub.databricks.com">SparkHub</a> is a cool community that provides various resources for Spark developers and data engineers.</p>
+<h2 id="objectives">Objectives</h2>
+<ul>
+<li>Register an account at Databricks.</li>
+<li>Deploy an Apache Spark instance in the Databricks Community website.</li>
+<li>Explore what you can do with Databricks Spark instance.</li>
+</ul>
+<h2 id="step-1-learn-about-databricks">Step 1: Learn About Databricks</h2>
+<p>Watch the following video to have a general understanding what you can do with Databricks.</p>
+<p><strong>Introduction to Databricks</strong></p>
+<p><a href="https://www.youtube.com/watch?v=WaxMj5_SLUI"><img src="databricks.jpg" alt="Databricks" /></a></p>
+<h2 id="step-2-register-databricks-account">Step 2: Register Databricks Account</h2>
+<p>In order to use the Databricks service, you need to create a community account. Go to <a href="https://community.cloud.databricks.com/">community.cloud.databricks.com/</a> and click <em>Sign Up</em>. Follow the instructions to create your account and activate it in the verification email they send you.</p>
+<h2 id="step-3-create-spark-instance">Step 3: Create Spark Instance</h2>
+<ol type="1">
+<li><p>After creating your Databricks account and logging in, you will enter your account home. There is a vertical menu on the left and one of the menu item is <em>Clusters</em>. Click it.</p></li>
+<li><p>Now you’ll see a list of your available Apache Spark clusters. But so far you haven’t created one. So click <em>Create Cluster</em>.</p></li>
+<li><p>In the New Cluster page, enter a cluster name, choose the Runtime Version (any of the versions in the dropdown list should work but you can choose newer versions that are not <em>Beta</em>). Select Python version 3 (consistent with the version we use in this course), then click <em>Create Cluster</em>.</p></li>
+<li><p>It takes a minute or two for the new cluster to finish deployment. Once the deployment is finished, you will see it in the <em>Interactive Clusters</em> list whose state should be <em>Running</em>.</p>
+<ul>
+<li>If you’re done working with the cluster, you can terminate the cluster.</li>
+<li>You can also restart or clone the cluster.</li>
+<li>If you have a community account and your Databricks cluster is idling for over 2 hours, Databricks will automatically terminate your cluster in order to recycle technical resources. If that happens, you just need to re-deploy a new cluster.</li>
+</ul></li>
+</ol>
+<h2 id="step-4-test-your-spark-instance-in-jupyter-notebook">Step 4: Test Your Spark Instance in Jupyter Notebook</h2>
+<ol type="1">
+<li><p>Now click the <em>databricks</em> icon in the nav menu to go back to the welcome page. Create a new Jupyter Notebook in the <em>Common Tasks</em>.</p></li>
+<li><p>You will see a very familiar web interface that is identical to the vanilla Jupyter Notebook we installed from open source. However, there are slight differences than the vanilla Jupyter Notebook.</p></li>
+<li><p>Let’s benchmark the <code>estimate_pi</code> function we used in Challenge 1. See how many seconds does Databricks Notebook take to complete.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode python"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> timeit <span class="im">import</span> default_timer <span class="im">as</span> timer</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> inside(p):</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Generate a random point and check if the point is within the circle with radius=1.</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co">        (bool) whether the generated point is within the circle area</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    x, y <span class="op">=</span> np.random.random(), np.random.random()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x<span class="op">*</span>x <span class="op">+</span> y<span class="op">*</span>y <span class="op">&lt;</span> <span class="dv">1</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> estimate_pi(num_samples):</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    <span class="co">&quot;&quot;&quot;</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co">    Estimate the value of Pi by means of repeated sampling. Benchmark the repeated sampling time cost.</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co">    Params:</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co">        num_sampes (int): the number of sample points to generate</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="co">        (float) estimated value of Pi</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a><span class="co">    &quot;&quot;&quot;</span></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Executing Spark job...&quot;</span>)</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    start <span class="op">=</span> timer()</span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>    dots <span class="op">=</span> <span class="bu">list</span>(<span class="bu">filter</span>(inside,<span class="bu">list</span>(<span class="bu">range</span>(num_samples)))) </span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    count <span class="op">=</span> <span class="bu">len</span>(dots)</span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    end <span class="op">=</span> timer()</span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">&quot;Spark job ended. Total time elapsed: </span><span class="sc">%s</span><span class="st">&quot;</span> <span class="op">%</span> (end<span class="op">-</span>start))</span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span>(<span class="fl">4.0</span> <span class="op">*</span> count <span class="op">/</span> num_samples)</span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>estimate_pi(<span class="dv">5000000</span>)</span></code></pre></div></li>
+<li><p>Now let’s benchmark the <code>estimate_pi_parallel</code> function you wrote in Challenge 1. Note that in the Databricks Notebook, <code>SparkContext</code> class is not available. However, there is a <code>SparkSession</code> instance called <code>spark</code> you can use. <code>spark.sparkContext.parallelize</code> is the way you can do parallel programming.</p></li>
+<li><p>After you’re done, you can publish your Databricks notebook by clicking the <em>Publish</em> button on the top right. Here is an <a href="https://databricks-prod-cloudfront.cloud.databricks.com/public/4027ec902e239c93eaaa8714f173bcfc/1703412207731938/2169070836696660/7635369984325857/latest.html">example of the published notebook on Estimate Pi Test</a> published on Databricks.</p></li>
+</ol>
+<h2 id="step-5-learn-more-about-what-you-can-do-with-databricks">Step 5: Learn More About What You can Do With Databricks</h2>
+<p>Watch the following video tutorials on how to use Databricks. Follow each video and try it out with your Databricks Notebook.</p>
+<h3 id="data-exploration-with-databricks">Data Exploration with Databricks</h3>
+<p><a href="https://www.youtube.com/watch?v=mPTzJDs0EkI"><img src="data-exploration.jpg" alt="Data Exploration with Databricks" /></a></p>
+<ul>
+<li><p>How to load internal datasets in Databricks Notebook</p></li>
+<li><p>How to visualize data in Databricks Notebook</p></li>
+</ul>
+<h3 id="upload-flat-file-to-databricks-table">Upload Flat File to Databricks Table</h3>
+<p><a href="https://www.youtube.com/watch?v=H5LxjaJgpSk"><img src="upload-data.jpg" alt="Upload Data" /></a></p>
+<ul>
+<li><p>Upload data files to Databricks</p></li>
+<li><p>Create table from uploaded data files</p></li>
+<li><p>Use Spark SQL to query data</p></li>
+</ul>
+<h2 id="summary">Summary</h2>
+<p>Databricks is an extremely cool product which provides the complete solution for learning, development, and production. Unfortunately, the Databricks Community Edition has very limited features. With a paid Databricks plan, there are lots of more powerful features you can use such as:</p>
+<ul>
+<li><p><a href="https://docs.databricks.com/user-guide/bi/jdbc-odbc-bi.html">Connect BI tools (e.g. Tableau) to Spark server using JDBC/ODBC driver</a>.</p></li>
+<li><p><a href="https://docs.databricks.com/user-guide/jobs.html">Schedule Jupyter Notebook execution jobs</a>.</p></li>
+<li><p><a href="https://www.youtube.com/watch?v=etKTJTxaad0">Team collaboration</a>.</p></li>
+<li><p><a href="https://www.youtube.com/watch?v=NR1MYg_7oSg">Establishing an end-to-end ML data pipeline</a>.</p></li>
+</ul>
+<p>If you feel you want to use Databricks in your final project, you may consider starting a 14-day trial for Databricks so that you can use its advanced features.</p>
+</body>
+</html>

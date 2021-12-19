@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-js-vikings">LAB | JS Vikings</h1>
+<h2 id="introduction">Introduction</h2>
+<p>We have learned Object-oriented programming and how <code>class</code> and inheritance work in JavaScript. Now lets work with our Viking friends, applying all of the concepts we have just learned.</p>
+<p><br></p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo.</li>
+<li>Clone this repo.</li>
+<li>Visit the “Actions” tab in your fork, and enable workflows.</li>
+</ul>
+<p><br></p>
+<h2 id="submission">Submission</h2>
+<p>Upon completion, run the following commands:</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">&quot;Solved lab&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin master</span></code></pre></div>
+<p>Create Pull Request so your TAs can check up your work.</p>
+<p><br></p>
+<h3 id="test-test-test">Test, test, test!</h3>
+<p>Please, open your terminal, change directories into the root of the lab, and run <code>npm install</code> to install the test runner. Next, run the <code>npm run test:watch</code> command to run the automated tests.</p>
+<pre class="shell"><code>$ cd lab-javascript-vikings
+$ npm install
+$ npm run test:watch</code></pre>
+<p><br></p>
+<p>Open the resulting <code>lab-solution.html</code> file with the “Live Server” VSCode extension to see the test results. You will see that most of the tests are failing. Let’s get to work to make all of them pass!</p>
+<p><br></p>
+<h2 id="instructions">Instructions</h2>
+<p>We must write the correct code in the <code>src/viking.js</code> file to make the test pass. In this file you will find the following starter code:</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Soldier</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Soldier {}</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="co">// Viking</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Viking {}</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co">// Saxon</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Saxon {}</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co">// War</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> War {}</span></code></pre></div>
+<p>In this case, the test says that <em>Soldier class should receive 2 arguments (health &amp; strength)</em>, so we have to write the correct code that passes this test. Let’s make the <code>Soldier</code> class receive two arguments:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Soldier</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Soldier {</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">constructor</span>(health<span class="op">,</span> strength) {}</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co">// Viking</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Viking {}</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">// Saxon</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Saxon {}</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">// War</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> War {}</span></code></pre></div>
+<p><br></p>
+<h3 id="iteration-1-soldier">Iteration 1: Soldier</h3>
+<p>Modify the <code>Soldier</code> class and add 2 methods to it: <code>attack()</code>, and <code>receiveDamage()</code>.</p>
+<h4 id="class">class</h4>
+<ul>
+<li>should receive <strong>2 arguments</strong> (health &amp; strength)</li>
+<li>should receive the <strong><code>health</code> property</strong> as its <strong>1st argument</strong></li>
+<li>should receive the <strong><code>strength</code> property</strong> as its <strong>2nd argument</strong></li>
+</ul>
+<h4 id="attack-method"><code>attack()</code> method</h4>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>0 arguments</strong></li>
+<li>should return <strong>the <code>strength</code> property of the <code>Soldier</code></strong></li>
+</ul>
+<h4 id="receivedamage-method"><code>receiveDamage()</code> method</h4>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>1 argument</strong> (the damage)</li>
+<li>should remove the received damage from the <code>health</code> property</li>
+<li><strong>shouldn’t return</strong> anything</li>
+</ul>
+<p><br></p>
+<h3 id="iteration-2-viking">Iteration 2: Viking</h3>
+<p>A <code>Viking</code> is a <code>Soldier</code> with an additional property, their <code>name</code>. They also have a different <code>receiveDamage()</code> method and new method, <code>battleCry()</code>.</p>
+<p>Modify the <code>Viking</code> class, have it inherit from <code>Soldier</code>, re-implement the <code>receiveDamage()</code> method for <code>Viking</code>, and add a new <code>battleCry()</code> method.</p>
+<h4 id="inheritance">inheritance</h4>
+<ul>
+<li><code>Viking</code> should <strong>extend</strong> <code>Soldier</code></li>
+</ul>
+<h4 id="class-1">class</h4>
+<ul>
+<li>should receive <strong>3 arguments</strong> (name, health &amp; strength)</li>
+<li>should receive the <strong><code>name</code> property</strong> as its <strong>1st argument</strong></li>
+<li>should receive the <strong><code>health</code> property</strong> as its <strong>2nd argument</strong></li>
+<li>should receive the <strong><code>strength</code> property</strong> as its <strong>3rd argument</strong></li>
+</ul>
+<h4 id="attack-method-1"><code>attack()</code> method</h4>
+<p>(This method should be <strong>inherited</strong> from <code>Soldier</code>, no need to re-implement it.)</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>0 arguments</strong></li>
+<li>should return <strong>the <code>strength</code> property of the <code>Viking</code></strong></li>
+</ul>
+<h4 id="receivedamage-method-1"><code>receiveDamage()</code> method</h4>
+<p>(This method needs to be <strong>re-implemented</strong> for <code>Viking</code> because the <code>Viking</code> version needs to have different return values.)</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>1 argument</strong> (the damage)</li>
+<li>should remove the received damage from the <code>health</code> property</li>
+<li><strong>if the <code>Viking</code> is still alive</strong>, it should return <strong>“NAME has received DAMAGE points of damage”</strong></li>
+<li><strong>if the <code>Viking</code> dies</strong>, it should return <strong>“NAME has died in act of combat”</strong></li>
+</ul>
+<h4 id="battlecry-method"><code>battleCry()</code> method</h4>
+<p><a href="http://www.artofmanliness.com/2015/06/08/battle-cries/">Learn more about battle cries</a>.</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>0 arguments</strong></li>
+<li>should return <strong>“Odin Owns You All!”</strong></li>
+</ul>
+<p><br></p>
+<h3 id="iteration-3-saxon">Iteration 3: Saxon</h3>
+<p>A <code>Saxon</code> is a weaker kind of <code>Soldier</code>. Unlike a <code>Viking</code>, a <code>Saxon</code> has no name. Their <code>receiveDamage()</code> method will also be different than the original <code>Soldier</code> version.</p>
+<p>Modify the <code>Saxon</code>, constructor function, have it inherit from <code>Soldier</code> and re-implement the <code>receiveDamage()</code> method for <code>Saxon</code>.</p>
+<h4 id="inheritance-1">inheritance</h4>
+<ul>
+<li><code>Saxon</code> should extend <code>Soldier</code></li>
+</ul>
+<h4 id="class-2">class</h4>
+<ul>
+<li>You don’t have to include constructor method since this class will inherit perfectly from the parents class, both, the health and the strength (it <code>extends</code> Soldier class :wink: )</li>
+</ul>
+<h4 id="attack-method-2"><code>attack()</code> method</h4>
+<p>(This method should be <strong>inherited</strong> from <code>Soldier</code>, no need to re-implement it.)</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>0 arguments</strong></li>
+<li>should return <strong>the <code>strength</code> property of the <code>Saxon</code></strong></li>
+</ul>
+<h4 id="receivedamage-method-2"><code>receiveDamage()</code> method</h4>
+<p>(This method needs to be <strong>re-implemented</strong> for <code>Saxon</code> because the <code>Saxon</code> version needs to have different return values.)</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>1 argument</strong> (the damage)</li>
+<li>should remove the received damage from the <code>health</code> property</li>
+<li><strong>if the Saxon is still alive</strong>, it should return <strong><em>“A Saxon has received DAMAGE points of damage”</em></strong></li>
+<li><strong>if the Saxon dies</strong>, it should return <strong><em>“A Saxon has died in combat”</em></strong></li>
+</ul>
+<p><br></p>
+<h3 id="bonus---iteration-4-war">BONUS - Iteration 4: War</h3>
+<p>Now we get to the good stuff: WAR! Our <code>War</code> class will allow us to have a <code>Viking</code> army and a <code>Saxon</code> army that battle each other.</p>
+<p>Modify the <code>War</code> class and add 5 methods to its <code>class</code>:</p>
+<ul>
+<li><code>addViking()</code></li>
+<li><code>addSaxon()</code></li>
+<li><code>vikingAttack()</code></li>
+<li><code>saxonAttack()</code></li>
+<li><code>showStatus()</code></li>
+</ul>
+<h4 id="class-3">class</h4>
+<p>When we first create a <code>War</code>, the armies should be empty. We will add soldiers to the armies later.</p>
+<ul>
+<li>should receive <strong>0 arguments</strong></li>
+<li>should assign an empty array to the <strong><code>vikingArmy</code> property</strong></li>
+<li>should assign an empty array to the <strong><code>saxonArmy</code> property</strong></li>
+</ul>
+<h4 id="addviking-method"><code>addViking()</code> method</h4>
+<p>Adds 1 <code>Viking</code> to the <code>vikingArmy</code>. If you want a 10 <code>Viking</code> army, you need to call this 10 times.</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>1 argument</strong> (a <code>Viking</code> object)</li>
+<li>should add the received <code>Viking</code> to the army</li>
+<li><strong>shouldn’t return</strong> anything</li>
+</ul>
+<h4 id="addsaxon-method"><code>addSaxon()</code> method</h4>
+<p>The <code>Saxon</code> version of <code>addViking()</code>.</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>1 argument</strong> (a <code>Saxon</code> object)</li>
+<li>should add the received <code>Saxon</code> to the army</li>
+<li><strong>shouldn’t return</strong> anything</li>
+</ul>
+<h4 id="vikingattack-method"><code>vikingAttack()</code> method</h4>
+<p>A <code>Saxon</code> (chosen at random) has their <code>receiveDamage()</code> method called with the damage equal to the <code>strength</code> of a <code>Viking</code> (also chosen at random). This should only perform a single attack and the <code>Saxon</code> doesn’t get to attack back.</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>0 arguments</strong></li>
+<li>should make a <code>Saxon</code> <code>receiveDamage()</code> equal to the <code>strength</code> of a <code>Viking</code></li>
+<li>should remove dead saxons from the army</li>
+<li>should return <strong>result of calling <code>receiveDamage()</code> of a <code>Saxon</code></strong> with the <code>strength</code> of a <code>Viking</code></li>
+</ul>
+<h4 id="saxonattack-method"><code>saxonAttack()</code> method</h4>
+<p>The <code>Saxon</code> version of <code>vikingAttack()</code>. A <code>Viking</code> receives the damage equal to the <code>strength</code> of a <code>Saxon</code>.</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>0 arguments</strong></li>
+<li>should make a <code>Viking</code> <code>receiveDamage()</code> equal to the <code>strength</code> of a <code>Saxon</code></li>
+<li>should remove dead vikings from the army</li>
+<li>should return <strong>result of calling <code>receiveDamage()</code> of a <code>Viking</code></strong> with the <code>strength</code> of a <code>Saxon</code></li>
+</ul>
+<p><br></p>
+<h3 id="super-bonus---iteration-5">SUPER BONUS - Iteration 5</h3>
+<p>Since there is a lot of repetitive code in the previous two iterations, <em>vikingAttack()</em> and <em>saxonAttack()</em> try to create one <em>generic</em> method and call it in the case of <em>vikingAttack</em> and in the case of <em>saxonAttack</em> instead of using almost the same code for both methods. (This iteration doesn’t have test, so ask your TAs and your instructor to give you feedback on the quality of your code after the refactor.)</p>
+<h4 id="showstatus-method"><code>showStatus()</code> method</h4>
+<p>Returns the current status of the <code>War</code> based on the size of the armies.</p>
+<ul>
+<li>should be a function</li>
+<li>should receive <strong>0 arguments</strong></li>
+<li><strong>if the <code>Saxon</code> array is empty</strong>, should return <strong><em>“Vikings have won the war of the century!”</em></strong></li>
+<li><strong>if the <code>Viking</code> array is empty</strong>, should return <strong><em>“Saxons have fought for their lives and survived another day…”</em></strong></li>
+<li><strong>if there are at least 1 <code>Viking</code> and 1 <code>Saxon</code></strong>, should return <strong><em>“Vikings and Saxons are still in the thick of battle.”</em></strong></li>
+</ul>
+<p><strong>Happy Coding!</strong> 💙</p>
+</body>
+</html>

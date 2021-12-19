@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-react-ironnutrition">LAB | React IronNutrition</h1>
+<h2 id="introduction">Introduction</h2>
+<p>You just realized that since the beginning of the bootcamp, your diet is not healthy and it may have an impact on your health (and productivity), now and in the long term.</p>
+<p>To take care of the food you eat, you decided to create a nutrition app that will track everything you eat!</p>
+<p><img src="https://media.giphy.com/media/fH0dyqpPJRvTbiF5rJ/giphy.gif" /></p>
+<h2 id="setup">Setup</h2>
+<ul>
+<li>Fork this repo</li>
+<li>Clone this repo</li>
+</ul>
+<pre class="shell"><code>$ cd lab-react-ironnutrution
+$ npm install
+$ npm start</code></pre>
+<h2 id="submission">Submission</h2>
+<ul>
+<li><p>Upon completion, run the following commands:</p>
+<pre><code>git add .
+git commit -m &quot;done&quot;
+git push origin master</code></pre></li>
+<li><p>Create Pull Request so your TAs can check up your work.</p></li>
+</ul>
+<h2 id="instructions">Instructions</h2>
+<h3 id="iteration-0-setup">Iteration 0 | Setup</h3>
+<h4 id="bulma-installation">Bulma installation</h4>
+<p>We will use <a href="https://bulma.io/">Bulma</a> for the design :)</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode sh"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> npm install bulma <span class="at">--save</span></span></code></pre></div>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> <span class="st">&#39;bulma/css/bulma.css&#39;</span><span class="op">;</span></span></code></pre></div>
+<h4 id="import-a-json">Import a JSON</h4>
+<p>Import the foods from the <code>foods.json</code>.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> foods <span class="im">from</span> <span class="st">&#39;./foods.json&#39;</span><span class="op">;</span></span></code></pre></div>
+<h4 id="about-the-design">About the design</h4>
+<p>If you struggle with the design, you can find a static example of what is expected inside file <code>style-guides.html</code>.</p>
+<p>So let’s start!</p>
+<h3 id="iteration-1-create-foodbox-component">Iteration 1 | Create <code>FoodBox</code> component</h3>
+<p>Create a <code>FoodBox</code> component that takes at least <code>food</code> as a prop and displays a box with all the information about an ingredient.</p>
+<p>You can use this HTML snippet to display properly the <code>FoodBox</code>:</p>
+<div class="sourceCode" id="cb6"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;div</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;box&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;article</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;media&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;media-left&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;figure</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;image is-64x64&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;img</span> <span class="er">src</span><span class="ot">=</span><span class="st">&quot;https://i.imgur.com/eTmWoAN.png&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;/figure&gt;</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;media-content&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;div</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;content&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;p&gt;</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>          <span class="kw">&lt;strong&gt;</span>Pizza<span class="kw">&lt;/strong&gt;</span> <span class="kw">&lt;br</span> <span class="kw">/&gt;</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>          <span class="kw">&lt;small&gt;</span>400 cal<span class="kw">&lt;/small&gt;</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/p&gt;</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;div</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;media-right&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;div</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;field has-addons&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;control&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>          <span class="kw">&lt;input</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;input&quot;</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;number&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;1&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;div</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;control&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>          <span class="kw">&lt;button</span> <span class="er">className</span><span class="ot">=</span><span class="st">&quot;button is-info&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>            +</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>          <span class="kw">&lt;/button&gt;</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>        <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/div&gt;</span></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/article&gt;</span></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/div&gt;</span></span></code></pre></div>
+<p><img src="https://i.imgur.com/bY9i5Rw.png" /></p>
+<h3 id="iteration-2-display-food">Iteration 2 | Display food</h3>
+<p>In your <code>App</code> component (your main component), display as many <code>FoodBox</code> as elements inside the variable <code>foods</code>.</p>
+<p><img src="https://i.imgur.com/3TVQJDO.png" /></p>
+<h3 id="iteration-3-add-new-food">Iteration 3 | Add new food</h3>
+<p>Create a button to add new foods.</p>
+<p>When a user clicks the button, a form will appear with fields for a name, number of calories, and an image.</p>
+<p>When the user clicks submit, the food will be added to the list.</p>
+<p>The form should disappear when the user clicks the submit button.</p>
+<h3 id="iteration-4-implement-search-bar">Iteration 4 | Implement search bar</h3>
+<p>Create a <code>Search</code> component to perform a search that updates the list of all meal.</p>
+<p><img src="https://i.imgur.com/XaOpAx8.png" /></p>
+<h3 id="iteration-5-create-add-buttons">Iteration 5 | Create add buttons</h3>
+<p>On your <code>FoodBox</code>, you have an input an “+” button. Use them so that when a user clicks on the button, it adds them on a list on the right called “<em>Today’s foods</em>”.</p>
+<p>You will also need to display the total amount of calories at the bottom of the list as a recap.</p>
+<p><img src="https://media.giphy.com/media/fH0dyqpPJRvTbiF5rJ/giphy.gif" /></p>
+<p>If you don’t remember how to create responsive columns with Bulma, you can check the <a href="https://bulma.io/documentation/columns/basics/">documentation</a>.</p>
+<h3 id="iteration-6-bonus-group-ingredients">Iteration 6 | Bonus | Group ingredients</h3>
+<p>You made an awesome application, but you have found a little problem in the UX. For example, if you click twice on “Pizza”, it will display 2 lines “<em>1 Pizza = 400 cal</em>” instead of 1 line “<em>2 Pizza = 800 cal</em>”. Fix that problem.</p>
+<h3 id="iteration-7-bonus-allow-the-user-to-remove-an-ingredient">Iteration 7 | Bonus | Allow the user to remove an ingredient</h3>
+<p>On the “<em>Today’s food</em>”, add a trash icon to let users removing one of their items.</p>
+<p>Happy coding! :heart:</p>
+</body>
+</html>

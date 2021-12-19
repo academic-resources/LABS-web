@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>README</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<h1 id="lab-ironhack-cart">LAB | Ironhack Cart</h1>
+<figure>
+<img src="https://i.imgur.com/s2Qxc9Z.jpg" alt="shopping cart" /><figcaption aria-hidden="true">shopping cart</figcaption>
+</figure>
+<h2 id="introduction">Introduction</h2>
+<p>E-commerce has proven to be a big game-changer in the 21st century economy. As one of the largest sales channels, second only to physical retail, e-commerce <a href="https://www.statista.com/statistics/379046/worldwide-retail-e-commerce-sales/">is expected</a> to be responsible for 6.3 trillion USD in worldwide sales by the year 2024.</p>
+<p>E-commerce is, however, a highly competitive business, and building a positive user experience is crucial to retaining customers and improving conversions. As such, it is not uncommon for companies to make a significant investment in optimizing the purchase flow on their e-commerce platforms.</p>
+<p>One of the largest components of this experience is <strong>the shopping cart</strong>.</p>
+<p>In this lab, we will be building the <strong>IronCart</strong>, a shopping cart for the unofficial Ironhack merchandising store. Visitors should be able to add and remove products from the shopping cart, as well as to modify the number (quantity) of items that they want to purchase. Additionally, users should be able to see the subtotal and total price for the items they have added.</p>
+<h2 id="requirements">Requirements</h2>
+<ul>
+<li>Fork this repo.</li>
+<li>Clone it to your machine.</li>
+<li>Visit the “actions” tab in your fork, and enable workflows</li>
+</ul>
+<h2 id="submission">Submission</h2>
+<ul>
+<li>Upon completion, run the following commands:</li>
+</ul>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git add .</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git commit <span class="at">-m</span> <span class="st">&quot;Lab solved&quot;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> git push origin master</span></code></pre></div>
+<ul>
+<li>Create Pull Request so your TAs can check up your work.</li>
+</ul>
+<h2 id="automated-tests">Automated Tests</h2>
+<p>This lab includes an automated testing suite. For DOM related labs, our automated tests should be seen as a secondary tool, that helps you to programmatically understand wether your solution is correct and allows the educational team to track your progress.</p>
+<p>To run the automated tests, please, open your terminal, change directories into the root of the lab, and run <code>npm install</code> to install the test runner. Now, you can run the <code>npm run test:watch</code> command to run automated tests in watch mode. Open the resulting <code>lab-solution.html</code> file with the “Live Server” VSCode extension to always see the most up to date test results.</p>
+<h2 id="instructions">Instructions</h2>
+<p>Most of the changes you will be making will be in the <code>js/index.js</code> file. We added the initial markup in <code>index.html</code>, and some basic stylings that you will not need to change in the <code>css/style.css</code> file. While developing, make sure you use the same class names as the ones already used (and available in the CSS file) to make our shopping cart nice and clean.</p>
+<p>Let’s go!</p>
+<h3 id="iteration-1-updatesubtotal">Iteration 1: <code>updateSubtotal</code></h3>
+<p>Open the <code>index.html</code> in your browser. As you can see, for now, there is only one row in the table which represents one product. In this first iteration, you will be focused just on that product, and later on, we will help you to think of ways how to scale to having multiple products.</p>
+<p>Let’s take a look at the provided HTML code. We have the <strong>table tag with the id <code>#cart</code></strong>, as shown below:</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table</span> <span class="er">id</span><span class="ot">=</span><span class="st">&quot;cart&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;thead&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>Product Name<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>Unit Price<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>Quantity<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>Subtotal<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>      <span class="kw">&lt;th&gt;</span>Action<span class="kw">&lt;/th&gt;</span></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/thead&gt;</span></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tbody&gt;</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;tr</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;product&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>      <span class="co">&lt;!-- ... --&gt;</span></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;/tr&gt;</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tbody&gt;</span></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- ... --&gt;</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
+<p><img src="https://i.imgur.com/zCWQYg2.png" /></p>
+<p>The one product we currently have in our <code>#cart</code> is placed in the <code>tr</code> with the class <code>product</code> (<strong>that goes inside of <code>tbody</code></strong>):</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;tr</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;product&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;td</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;name&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;span&gt;</span>Ironhack Rubber Duck<span class="kw">&lt;/span&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/td&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;td</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;price&quot;</span><span class="kw">&gt;</span>$<span class="kw">&lt;span&gt;</span>25.00<span class="kw">&lt;/span&gt;&lt;/td&gt;</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;td</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;quantity&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;input</span> <span class="er">type</span><span class="ot">=</span><span class="st">&quot;number&quot;</span> <span class="er">value</span><span class="ot">=</span><span class="st">&quot;0&quot;</span> <span class="er">min</span><span class="ot">=</span><span class="st">&quot;0&quot;</span> <span class="er">placeholder</span><span class="ot">=</span><span class="st">&quot;Quantity&quot;</span> <span class="kw">/&gt;</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/td&gt;</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;td</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;subtotal&quot;</span><span class="kw">&gt;</span>$<span class="kw">&lt;span&gt;</span>0<span class="kw">&lt;/span&gt;&lt;/td&gt;</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;td</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;action&quot;</span><span class="kw">&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">&lt;button</span> <span class="er">class</span><span class="ot">=</span><span class="st">&quot;btn btn-remove&quot;</span><span class="kw">&gt;</span>Remove<span class="kw">&lt;/button&gt;</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/td&gt;</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/tr&gt;</span></span></code></pre></div>
+<p>The product has a <strong>price</strong> and <strong>quantity</strong> (where quantity represents how many items of a specific product a user has added in the cart). In the provided code, we see that there is also a <strong>subtotal price</strong>. The subtotal price will be the result of the <em>multiplication</em> of those values.</p>
+<p>Your goal is to calculate the subtotal price, but let’s approach it gradually. Let’s break it down to a couple of steps:</p>
+<ul>
+<li><strong>Step 0</strong>: In this step, our goal is to help you understand the provided code in the <code>js/index.js</code>. Thanks to the provided code, the <code>Calculate Prices</code> button already has some functionality. Using the DOM manipulation, we got the element with the <code>id="calculate"</code> and added an event listener <code>click</code> to it. When clicked, this button will fire the <code>calculateAll()</code> function. The following code snippet does exactly what we explained:</li>
+</ul>
+<div class="sourceCode" id="cb4"><pre class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">// js/index.js</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="bu">window</span><span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;load&#39;</span><span class="op">,</span> () <span class="kw">=&gt;</span> {</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> calculatePricesBtn <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">getElementById</span>(<span class="st">&#39;calculate&#39;</span>)<span class="op">;</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>  calculatePricesBtn<span class="op">.</span><span class="fu">addEventListener</span>(<span class="st">&#39;click&#39;</span><span class="op">,</span> calculateAll)<span class="op">;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>})<span class="op">;</span></span></code></pre></div>
+<p>Don’t get confused with <a href="https://www.w3schools.com/jsref/met_document_addeventlistener.asp">.addEventListener()</a> method, it does exactly the same as <a href="https://www.w3schools.com/tags/ev_onclick.asp">onclick()</a>, with some differences about which you can find more <a href="https://stackoverflow.com/questions/6348494/addeventlistener-vs-onclick">here</a>. In this lab, you can use whichever method you prefer.</p>
+<p>Ok, let’s move to the <code>calculateAll()</code> function. In this function, we used <code>querySelector</code> to get the first (and currently the only) DOM element with the class <code>product</code>. This element (which we saved in the variable named <code>singleProduct</code>) is passed as an argument to the <code>updateSubtotal()</code> function. As you can find in the comments, the provided code snippet is used only for testing purposes within iteration 1.</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">calculateAll</span>() {</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// code in the following two lines is added just for testing purposes.</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="co">// it runs when only iteration 1 is completed. at later point, it can be removed.</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> singleProduct <span class="op">=</span> <span class="bu">document</span><span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;.product&#39;</span>)<span class="op">;</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">updateSubtotal</span>(singleProduct)<span class="op">;</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="co">// end of test</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ITERATION 2</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ITERATION 3</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="co">//...</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>And finally, we started the <code>updateSubtotal(product)</code> function. For now, the only thing this function is doing is alerting <code>Calculate Prices clicked!</code> when the <em>Calculate Prices</em> button is clicked.</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_e50868b669d962f3ddb26802e5a16638.gif" /></p>
+<p>Let’s start:</p>
+<ul>
+<li><strong>Step 1</strong>: Inside <code>updateSubtotal()</code>, create two variables (we suggest naming them <code>price</code> and <code>quantity</code>) and use your just gained DOM manipulation skills to GET DOM elements that hold price and quantity. To give you a head start, you could use the following code to get the DOM element holding the <code>price</code>:</li>
+</ul>
+<div class="sourceCode" id="cb6"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">// js/index.js</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">updateSubtotal</span>(product) {</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  <span class="kw">const</span> price <span class="op">=</span> product<span class="op">.</span><span class="fu">querySelector</span>(<span class="st">&#39;.price span&#39;</span>)<span class="op">;</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ... your code goes here</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<ul>
+<li><p><strong>Step 2</strong>: Now, when you got the above mentioned DOM elements, your next step should be extracting the specific values from them. <em>Hint</em>: maybe <code>innerHTML</code> rings a bell? In case you are curious to find other ways to achieve the same result, you can start with checking <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent"><code>textContent</code></a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/innerText"><code>innerText</code></a> on Google. Additionally, you can extract the value from an input by accessing an <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#htmlattrdefvalue">the input element’s <code>value</code> property</a>. However, don’t get distracted here, let this be your <em>additional reading</em> when you complete the lab.</p></li>
+<li><p><strong>Step 3</strong>: Use the values you extracted from the above mentioned DOM elements to calculate the subtotal price. You can create a new variable, and its value will be equal to the product of these values. Ex. If a user picked 3 Ironhack Rubber Ducks, they should see that the subtotal is 75 dollars ($25 * 3 = $75).</p></li>
+<li><p><strong>Step 4</strong>: Now, when you are becoming DOM manipulation ninja, use your skills once again to get the DOM element that should hold the subtotal. <em>Hint</em>: it is the element with the class <code>subtotal</code>.</p></li>
+<li><p><strong>Step 5</strong>: In step 3, you calculated the subtotal price, and in step 4, you got the DOM element that should have displaying this price. In this step, your goal is to set the subtotal price to the corresponding DOM element. Also, make sure this function returns the value of subtotal so you can use it later when needed.</p></li>
+</ul>
+<p>In this iteration, you have completed creating the function <code>updateSubtotal</code> that <strong>calculates the subtotal</strong> for this specific product, <strong>updates the subtotal value</strong> for that same product in the DOM and return the <strong>subtotal value</strong>.</p>
+<p>As a single argument, the function should take a <strong>DOM node</strong> that corresponds to a single <code>tr</code> element with a <code>product</code> class. In the boilerplate code included, we called it <code>product</code>.</p>
+<div class="sourceCode" id="cb7"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">updateSubtotal</span>(product) {</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>:bulb: <em>Hint</em>: Make sure your <code>calculateAll()</code> function has the testing code we previously mentioned. If the code is in its place after you successfully finished the <code>updateSubtotal()</code> function, you should be able to see the corresponding updates in the <code>Subtotal</code> field in the table.</p>
+<p>Check <a href="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_30b87c596b79954f63b3482d2f320fe4.gif">here</a> the expected output.</p>
+<hr>
+<h3 id="iteration-2-calculateall">Iteration 2: <code>calculateAll()</code></h3>
+<p>Our current code works perfectly for one product, but we expect to have more than one product on our cart. As such, we will use <code>calculateAll</code> to trigger the update of subtotals for every product.</p>
+<p>Complete the function named <code>calculateAll()</code>. Its purpose is to call the function <code>updateSubtotal</code> with every <code>tr.product</code> DOM node in the <code>table#cart</code>.</p>
+<p>To start, remove or comment out the existing code inside the <code>calculateAll()</code> (the code we used for the testing purposes). Also, let’s add a new product to our <code>index.html</code> file. Duplicate the <code>tr</code> with the class <code>product</code>, rename the product inside, and change the product price.</p>
+<p><img src="https://i.imgur.com/Pv4NmR8.png" /></p>
+<p>:bulb: <em>Hint</em>: Start with getting the DOM nodes for each product row. Currently, we have two products; thus, we have two rows with the class <code>product</code>. Maybe using <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/getElementsByClassName">getElementsByClassName</a> could serve well here.</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode js"><code class="sourceCode javascript"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">function</span> <span class="fu">calculateAll</span>() {</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>  <span class="co">// ...</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>}</span></code></pre></div>
+<p>The final output should look like the following:</p>
+<p><img src="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_0efb56fc0e5717469417e806fa7cde12.gif" /></p>
+<hr>
+<h3 id="iteration-3-total">Iteration 3: Total</h3>
+<p>Our calculation functionality is still incomplete. The subtotal for each product is being updated, but the total value remains untouched.</p>
+<p>At the end of the <code>calculateAll()</code> function, reuse the total value you just calculated in the previous iteration and update the corresponding DOM element. Calculate the total price for the products in your cart by summing all of the subtotals returned by <code>updateSubtotal()</code> when it was called with each product.</p>
+<p>Lastly, display that value on your DOM.</p>
+<p><img src="https://i.imgur.com/SCtdzMd.png" /></p>
+<hr>
+<h2 id="bonus-iterations">Bonus Iterations</h2>
+<h3 id="iteration-4-removing-a-product">Iteration 4: Removing a product</h3>
+<p>Users should be able to remove products from their carts. For that purpose, every product row in our table has a “Remove” button at the end.</p>
+<p>But let’s try to solve our problem one bit at a time. Inside of the existing function you’re passing to <code>window.addEventListener()</code>, start with querying the document for all “Remove” buttons, loop through them, and add a <code>click</code> event listener to each, passing a named function <code>removeProduct</code> as the callback argument. If you need a hint on how to do this, just take a look at how we did it with adding event listener on the <code>calculatePricesBtn</code>.</p>
+<p>We already declared <code>removeProduct(event)</code> and added some starter code. After you are done with querying the remove buttons and adding the <code>click</code> event listener on them, open the console and click on any <code>Remove</code> button.</p>
+<p>As we can see, <code>removeProduct(event)</code> expects the event as a single argument, and that is going to trigger the removal of the corresponding product from the cart.</p>
+<p>:bulb: Tip: To access the element an event was fired on, you can reference <code>event.currentTarget</code>. To remove a node from the DOM, you need to access its parent node and call <a href="https://developer.mozilla.org/en-US/docs/Web/API/Node/removeChild"><code>removeChild</code></a> on it. You can access the parent of a DOM node from its property <code>parentNode</code>.</p>
+<p>Make sure the price gets updated accordingly when you remove products from the shopping cart.</p>
+<p>Click <a href="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_17b1e9e4d2606239163dddbc5b2a3d9f.gif">here</a> to see the expected result.</p>
+<hr>
+<h3 id="iteration-5-creating-new-products">Iteration 5: Creating new products</h3>
+<p>To finish it off, we will allow the user to add a custom product to their cart.</p>
+<p>Uncomment the <code>tfoot</code> element and its children from the <code>index.html</code> file:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode html"><code class="sourceCode html"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;table&gt;</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;tbody&gt;</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="co">&lt;!-- ... --&gt;</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>  <span class="kw">&lt;/tbody&gt;</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>  <span class="co">&lt;!-- &lt;tfoot&gt;</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co">    &lt;tr class=&quot;create-product&quot;&gt;</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="co">      &lt;td&gt;</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co">        &lt;input type=&quot;text&quot; placeholder=&quot;Product Name&quot; /&gt;</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a><span class="co">      &lt;/td&gt;</span></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="co">      &lt;td&gt;</span></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co">        &lt;input type=&quot;number&quot; min=&quot;0&quot; value=&quot;0&quot; placeholder=&quot;Product Price&quot; /&gt;</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="co">      &lt;/td&gt;</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a><span class="co">      &lt;td&gt;&lt;/td&gt;</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="co">      &lt;td&gt;&lt;/td&gt;</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="co">      &lt;td&gt;</span></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="co">        &lt;button id=&quot;create&quot; class=&quot;btn&quot;&gt;Create Product&lt;/button&gt;</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="co">      &lt;/td&gt;</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="co">    &lt;/tr&gt;</span></span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a><span class="co">  &lt;/tfoot&gt; --&gt;</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="kw">&lt;/table&gt;</span></span></code></pre></div>
+<p><img src="https://i.imgur.com/J8aserm.png" /></p>
+<p>The two inputs inside of <code>tfoot</code> represent the name for the new product and the unit price, respectively. The “Create Product” button should add a new product to the cart when triggered.</p>
+<p>Add a <code>click</code> event handler to the “Create Product” that will take a function named <code>createProduct</code> as a callback.</p>
+<p>In <code>createProduct</code> you should target the name and unit price input DOM nodes, extract their values, add a new row to the table with the product name and unitary price, as well as the quantity input and “Remove” button, and ensure that all of the functionality works as expected.</p>
+<p>Remember, the new product should look undistinguished and behave like any of the products previously included in the cart. As such, one should be able to calculate its subtotal when the “Calculate All” button is clicked, and remove the product.</p>
+<p>When the product creation is finalized, please, clear the input fields in the creation form.</p>
+<p>Click <a href="https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_00abbd15326ec24d93147196024458f6.gif">here</a> to see the expected result.</p>
+<p><br></p>
+<p><strong>Happy coding! 💙</strong></p>
+</body>
+</html>
